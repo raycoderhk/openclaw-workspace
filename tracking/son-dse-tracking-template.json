@@ -1,0 +1,322 @@
+{
+  "template_name": "兒子 DSE 學術追蹤系統",
+  "version": "1.0",
+  "created": "2026-03-07",
+  "student_info": {
+    "name": "兒子",
+    "school": "聖公會林護紀念中學",
+    "class": "4E",
+    "student_no": "28",
+    "dse_year": "2028"
+  },
+  "tracking_schedule": {
+    "frequency": "每學期",
+    "checkpoints": [
+      {
+        "name": "中四上",
+        "date": "2026-01",
+        "status": "✅ 已完成"
+      },
+      {
+        "name": "中四下",
+        "date": "2026-07",
+        "status": "⏳ 待進行"
+      },
+      {
+        "name": "中五上",
+        "date": "2027-01",
+        "status": "⏳ 待進行"
+      },
+      {
+        "name": "中五下",
+        "date": "2027-07",
+        "status": "⏳ 待進行"
+      },
+      {
+        "name": "中六上",
+        "date": "2028-01",
+        "status": "⏳ 待進行"
+      },
+      {
+        "name": "DSE 考試",
+        "date": "2028-03",
+        "status": "⏳ 待進行"
+      }
+    ]
+  },
+  "baseline_data": {
+    "checkpoint": "中四上 (2026-01)",
+    "overall_ranking": {
+      "class_rank": 6,
+      "class_total": 29,
+      "percentage": "20.7%",
+      "average_score": "74.90%"
+    },
+    "subjects": {
+      "chinese": {
+        "name": "中文",
+        "type": "核心",
+        "score": 178,
+        "max_score": 300,
+        "percentage": "59.3%",
+        "rank": 48,
+        "total": 122,
+        "percentile": "39.3%",
+        "school_dse_5plus": "26%",
+        "predicted_grade": "3-4",
+        "target_grade": "5",
+        "gap": "+16 名",
+        "action": "補習 + 閱讀寫作"
+      },
+      "english": {
+        "name": "英文",
+        "type": "核心",
+        "score": 325,
+        "max_score": 400,
+        "percentage": "81.25%",
+        "rank": 20,
+        "total": 122,
+        "percentile": "16.4%",
+        "school_dse_5plus": "34%",
+        "predicted_grade": "5*",
+        "target_grade": "5*",
+        "gap": "達標",
+        "action": "保持"
+      },
+      "math_core": {
+        "name": "數學 (必修)",
+        "type": "核心",
+        "score": 137,
+        "max_score": 200,
+        "percentage": "68.5%",
+        "rank": 20,
+        "total": 122,
+        "percentile": "16.4%",
+        "school_dse_5plus": "48%",
+        "predicted_grade": "5*",
+        "target_grade": "5*",
+        "gap": "達標",
+        "action": "保持"
+      },
+      "math_m2": {
+        "name": "數學 (延伸 M2)",
+        "type": "選修",
+        "score": 60,
+        "max_score": 100,
+        "percentage": "60%",
+        "rank": 15,
+        "total": 62,
+        "percentile": "24.2%",
+        "school_dse_5plus": "62%",
+        "predicted_grade": "4-5",
+        "target_grade": "5",
+        "gap": "監察中",
+        "action": "如跌出頭 30% 轉 M1",
+        "risk": "高 (drop 科效應)"
+      },
+      "physics": {
+        "name": "物理",
+        "type": "選修",
+        "score": 118,
+        "max_score": 150,
+        "percentage": "78.7%",
+        "rank": 6,
+        "total": 63,
+        "percentile": "9.5%",
+        "school_dse_5plus": "46%",
+        "predicted_grade": "5*/5**",
+        "target_grade": "5*/5**",
+        "gap": "達標",
+        "action": "衝 5**"
+      },
+      "chemistry": {
+        "name": "化學",
+        "type": "選修",
+        "score": 121,
+        "max_score": 150,
+        "percentage": "80.7%",
+        "rank": 12,
+        "total": 65,
+        "percentile": "18.5%",
+        "school_dse_5plus": "48%",
+        "predicted_grade": "5/5*",
+        "target_grade": "5*",
+        "gap": "微跌",
+        "action": "保持頭 20%"
+      },
+      "ict": {
+        "name": "ICT",
+        "type": "選修",
+        "score": 138,
+        "max_score": 150,
+        "percentage": "92%",
+        "rank": 1,
+        "total": 30,
+        "percentile": "3.3%",
+        "school_dse_5plus": "28%",
+        "predicted_grade": "5/5**",
+        "target_grade": "5**",
+        "gap": "保持第 1",
+        "action": "唔可以跌",
+        "risk": "中 (人數少)"
+      },
+      "citizenship": {
+        "name": "公民與社會",
+        "type": "核心",
+        "score": 84,
+        "max_score": 100,
+        "percentage": "84%",
+        "rank": 6,
+        "total": 122,
+        "percentile": "4.9%",
+        "school_dse_5plus": "N/A",
+        "predicted_grade": "5**",
+        "target_grade": "N/A",
+        "gap": "不計入最佳 5 科",
+        "action": "保持"
+      }
+    }
+  },
+  "dse_predictions": {
+    "best_5_subjects": {
+      "original": "27.5-28.5 分",
+      "adjusted": "26-28 分",
+      "change": "-0.5 至 -1.5",
+      "subjects": [
+        {"name": "ICT", "grade": "5/5**", "score": "5-6"},
+        {"name": "物理", "grade": "5*/5**", "score": "5.5-6"},
+        {"name": "化學", "grade": "5/5*", "score": "5-5.5"},
+        {"name": "英文", "grade": "5/5*", "score": "5-5.5"},
+        {"name": "數學", "grade": "5/5*", "score": "5-5.5"}
+      ]
+    },
+    "university_targets": [
+      {
+        "university": "香港科技大學",
+        "program": "電腦科學",
+        "requirement": "26-27 分",
+        "prediction": "26-28 分",
+        "status": "✅ 好穩",
+        "subject_bonus": "✅ 數學+M2+ICT+ 物理"
+      },
+      {
+        "university": "香港大學",
+        "program": "工程",
+        "requirement": "24-25 分",
+        "prediction": "26-28 分",
+        "status": "✅ 超標",
+        "subject_bonus": "✅ 數學+M2+ 物理 + 化學"
+      },
+      {
+        "university": "中文大學",
+        "program": "電腦科學/工程",
+        "requirement": "23-24 分",
+        "prediction": "26-28 分",
+        "status": "✅ 超標",
+        "subject_bonus": "✅ 數學+M2+ICT"
+      },
+      {
+        "university": "城市大學",
+        "program": "電腦科學/工程",
+        "requirement": "20-22 分",
+        "prediction": "26-28 分",
+        "status": "✅ 獎學金級",
+        "subject_bonus": "✅ 全匹配"
+      }
+    ]
+  },
+  "action_items": {
+    "high_priority": [
+      {
+        "subject": "中文",
+        "action": "補習 + 閱讀寫作",
+        "target": "提升至頭 26% (32 名內)",
+        "deadline": "中五前",
+        "status": "⏳ 進行中"
+      },
+      {
+        "subject": "M2",
+        "action": "監察名次",
+        "target": "保持頭 20%",
+        "deadline": "每學期",
+        "status": "⏳ 進行中",
+        "contingency": "跌出頭 30% → 轉 M1"
+      },
+      {
+        "subject": "ICT",
+        "action": "保持第 1",
+        "target": "唔可以跌",
+        "deadline": "持續",
+        "status": "⏳ 進行中"
+      }
+    ],
+    "medium_priority": [
+      {
+        "subject": "物理",
+        "action": "衝 5**",
+        "target": "提升至頭 5%",
+        "deadline": "中五下",
+        "status": "⏳ 進行中"
+      },
+      {
+        "subject": "化學",
+        "action": "保持",
+        "target": "維持頭 20%",
+        "deadline": "持續",
+        "status": "⏳ 進行中"
+      }
+    ],
+    "low_priority": [
+      {
+        "subject": "英文/數學",
+        "action": "保持",
+        "target": "維持頭 15-20%",
+        "deadline": "持續",
+        "status": "⏳ 進行中"
+      }
+    ]
+  },
+  "semester_template": {
+    "checkpoint_name": "中四下 / 中五上 / 中五下 / 中六上",
+    "date": "YYYY-MM",
+    "subjects": {
+      "subject_name": {
+        "score": 0,
+        "max_score": 0,
+        "percentage": "0%",
+        "rank": 0,
+        "total": 0,
+        "percentile": "0%",
+        "change_from_last": "+/-X 名",
+        "predicted_grade": "X",
+        "target_grade": "X",
+        "gap": "描述",
+        "action": "行動"
+      }
+    },
+    "overall_changes": {
+      "class_rank_change": "+/-X",
+      "average_score_change": "+/-X%",
+      "new_actions": [],
+      "completed_actions": []
+    }
+  },
+  "alerts": {
+    "critical": [
+      "中文需提升 16 名先到 Level 5",
+      "M2 如跌出頭 30% 需考慮轉 M1",
+      "ICT 必須保持第 1 (人數少變數大)"
+    ],
+    "warnings": [
+      "選修科 drop 科效應會影響百分比預測",
+      "中六人數會減少 15-25%",
+      "需每學期更新預測"
+    ]
+  },
+  "notes": [
+    "2026-03-07: 建立追蹤模板",
+    "2026-03-07: 完成中四上分析",
+    "2026-03-07: 發送 PDF 報告至 raycoderhk@gmail.com",
+    "下次更新：中四下 (2026-07)"
+  ]
+}
