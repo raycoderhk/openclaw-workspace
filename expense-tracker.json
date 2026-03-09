@@ -16,17 +16,33 @@
     {
       "id": "exp-001",
       "date": "2026-03-09",
-      "merchant": "小荳芽教育中心 (荃灣)",
+      "merchant": "小童芽教育中心 (荃灣)",
       "category": "education",
       "description": "3 月武術學費 - 5 堂課",
       "amount": 1350,
       "classDates": ["2026-03-01", "2026-03-08", "2026-03-15", "2026-03-22", "2026-03-29"],
       "for": "daughter",
-      "notes": "武術課程，每月 5 堂，每堂約$270",
+      "notes": "武術課程，每月 5 堂，每堂$270",
       "tags": ["daughter", "martial-arts", "tuition", "recurring"]
+    },
+    {
+      "id": "exp-002",
+      "date": "2026-02-22",
+      "merchant": "小童芽教育中心 (荃灣)",
+      "category": "education",
+      "description": "武術學費 - 4 堂課 (2/22 押金 + 3 月 4 堂)",
+      "amount": 1080,
+      "classDates": ["2026-02-22", "2026-03-04"],
+      "for": "daughter",
+      "notes": "押金 + 學費組合",
+      "tags": ["daughter", "martial-arts", "tuition", "deposit"]
     }
   ],
   "monthlySummary": {
+    "2026-02": {
+      "education": 1080,
+      "total": 1080
+    },
     "2026-03": {
       "education": 1350,
       "total": 1350
