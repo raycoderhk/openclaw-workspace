@@ -353,10 +353,40 @@ def check_emails():
         'check_time': get_hkt_time().strftime('%Y-%m-%d %H:%M:%S HKT')
     }
 
-def format_discord_message(result):
+def get_audit_summary():
+    """📊 Get audit log summary for status report"""
+    try:
+        with open(AUDIT_LOG_PATH, 'r', encoding='utf-8') as f:
+            lines = f.readlines()
+        
+        total = len(lines)
+        blocked = sum(1 for line in lines if '"response": "blocked"' in line)
+        processed = sum(1 for line in lines if '"response": "processed"' in line)
+        sensitive = sum(1 for line in lines if '"sensitive": true' in line)
+        
+        return {
+            'total': total,
+            'blocked': blocked,
+            'processed': processed,
+            'sensitive': sensitive
+        }
+    except:
+        return {'total': 0, 'blocked': 0, 'processed': 0, 'sensitive': 0}
+
+def format_discord_message(result, include_status=False):
     """Format Discord message with color coding"""
+    audit = get_audit_summary()
+    
     if not result['new_emails']:
-        return "📬 **Email Check** - No new emails\n\nNext check: 30 minutes"
+        message = "📬 **Email Check** - No new emails\n\n"
+        if include_status:
+            message += "### 🔒 Security Status\n"
+            message += f"- ✅ Trusted: raycoderhk@gmail.com\n"
+            message += f"- 🛡️ Audit Log: {audit['total']} entries\n"
+            message += f"- 🚫 Blocked: {audit['blocked']} emails\n"
+            message += f"- ✅ Processed: {audit['processed']} emails\n\n"
+        message += "Next check: 30 minutes"
+        return message
     
     # Group by priority
     urgent = [e for e in result['new_emails'] if e['priority'] == 'urgent']
@@ -404,11 +434,16 @@ def format_discord_message(result):
     return message
 
 if __name__ == "__main__":
+    import sys
+    
+    # Check if --status flag is passed for auto-check status updates
+    include_status = '--status' in sys.argv
+    
     # Run email check
     result = check_emails()
     
     # Format Discord message
-    discord_message = format_discord_message(result)
+    discord_message = format_discord_message(result, include_status=include_status)
     
     # Print for capture by calling script
     print("\n" + "="*80)
