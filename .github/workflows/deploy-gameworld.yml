@@ -16,15 +16,17 @@ jobs:
       - name: Checkout code
         uses: actions/checkout@v4
       
-      - name: Deploy to Zeabur
-        uses: zeabur/action@v1
-        with:
-          zeabur-api-key: ${{ secrets.ZEABUR_API_KEY }}
-          project-id: ${{ secrets.ZEABUR_GAMEWORLD_PROJECT_ID }}
-          service-id: ${{ secrets.ZEABUR_GAMEWORLD_SERVICE_ID }}
-          environment: production
-        
-      - name: Deployment Complete
+      - name: Install Zeabur CLI
         run: |
+          curl -Ls https://github.com/zeabur/cli/releases/latest/download/zeabur-cli-linux-amd64 -o /tmp/zeabur
+          chmod +x /tmp/zeabur
+      
+      - name: Deploy to Zeabur
+        env:
+          ZEABUR_API_KEY: ${{ secrets.ZEABUR_API_KEY }}
+          ZEABUR_PROJECT_ID: ${{ secrets.ZEABUR_GAMEWORLD_PROJECT_ID }}
+          ZEABUR_SERVICE_ID: ${{ secrets.ZEABUR_GAMEWORLD_SERVICE_ID }}
+        run: |
+          /tmp/zeabur deploy --project $ZEABUR_PROJECT_ID --service $ZEABUR_SERVICE_ID --dir games/2048-game
           echo "✅ Gameworld deployed successfully!"
           echo "🌐 URL: https://gameworld.zeabur.app"
