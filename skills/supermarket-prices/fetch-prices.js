@@ -16,7 +16,8 @@ const path = require('path');
 // Configuration
 const CONFIG = {
     // GitHub Raw URL (fetched by GitHub Actions from Consumer Council)
-    DATA_URL: process.env.PRICEWATCH_DATA_URL || 'https://raw.githubusercontent.com/raycoderhk/2048-game/main/data/pricewatch.json',
+    // CORRECT REPO: openclaw-knowledge (not 2048-game)
+    DATA_URL: process.env.PRICEWATCH_DATA_URL || 'https://raw.githubusercontent.com/raycoderhk/openclaw-knowledge/main/data/pricewatch.json',
     DATA_DIR: path.join(process.cwd(), 'data'),
     LOG_FILE: path.join(process.cwd(), 'logs', 'fetch-prices.log'),
     RETRY_COUNT: 3,
