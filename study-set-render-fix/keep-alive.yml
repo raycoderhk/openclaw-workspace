@@ -1,0 +1,36 @@
+name: Render Keep-Alive
+
+on:
+  schedule:
+    # Run every 10 minutes to keep Render app awake
+    - cron: '*/10 * * * *'
+  workflow_dispatch:  # Allow manual trigger
+
+jobs:
+  ping-render:
+    runs-on: ubuntu-latest
+    timeout-minutes: 5  # Allow up to 5 minutes for cold start
+    steps:
+      - name: 🔔 Ping Render service to keep it warm...
+        run: |
+          echo "🔔 Pinging Render service to keep it warm..."
+          echo "Timestamp: $(date -u '+%Y-%m-%d %H:%M:%S UTC')"
+          
+          # Ping with extended timeouts for cold start
+          # Render free tier sleeps after 15 mins, cold start takes 30-60s
+          RESPONSE=$(curl -s -o /dev/null -w "%{http_code}" \
+            --connect-timeout 60 \  # Wait up to 60s for connection (cold start)
+            --max-time 120 \        # Total operation timeout 120s
+            "${{ secrets.RENDER_APP_URL }}")
+          
+          echo "Response code: $RESPONSE"
+          
+          if [ "$RESPONSE" -ge 200 ] && [ "$RESPONSE" -lt 400 ]; then
+            echo "✅ App is awake and responding!"
+            echo "✅ Next ping in 10 minutes (app will stay warm)"
+            exit 0
+          else
+            echo "❌ App ping failed with status: $RESPONSE"
+            echo "💡 Check Render dashboard: https://dashboard.render.com/"
+            exit 1
+          fi
