@@ -17,7 +17,7 @@
     "dotenv": "^16.0.0"
   },
   "config": {
-    "dataEndpoint": "https://data.gov.hk/data/dataset/cc-pricewatch/resource/latest.json",
+    "dataEndpoint": "https://raw.githubusercontent.com/raycoderhk/2048-game/main/data/pricewatch.json",
     "database": "./data/supermarket_prices.db",
     "cronSchedule": "0 6 * * *",
     "timezone": "Asia/Hong_Kong"

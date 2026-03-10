@@ -15,8 +15,8 @@ const path = require('path');
 
 // Configuration
 const CONFIG = {
-    // TODO: Replace with actual endpoint from DATA.GOV.HK
-    DATA_URL: process.env.PRICEWATCH_DATA_URL || 'https://data.gov.hk/data/dataset/cc-pricewatch/resource/latest.json',
+    // GitHub Raw URL (fetched by GitHub Actions from Consumer Council)
+    DATA_URL: process.env.PRICEWATCH_DATA_URL || 'https://raw.githubusercontent.com/raycoderhk/2048-game/main/data/pricewatch.json',
     DATA_DIR: path.join(process.cwd(), 'data'),
     LOG_FILE: path.join(process.cwd(), 'logs', 'fetch-prices.log'),
     RETRY_COUNT: 3,
@@ -46,8 +46,11 @@ async function fetchWithRetry(url, retries = CONFIG.RETRY_COUNT) {
             const response = await fetch(url, {
                 timeout: CONFIG.TIMEOUT,
                 headers: {
-                    'User-Agent': 'OpenClaw-PriceWatch-Bot/1.0',
-                    'Accept': 'application/json'
+                    'User-Agent': 'Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/120.0.0.0 Safari/537.36',
+                    'Accept': 'application/json, text/javascript, */*; q=0.01',
+                    'Accept-Language': 'en-US,en;q=0.9,zh-HK;q=0.8',
+                    'Referer': 'https://online-price-watch.consumer.org.hk/',
+                    'Connection': 'keep-alive'
                 }
             });
             
@@ -56,7 +59,7 @@ async function fetchWithRetry(url, retries = CONFIG.RETRY_COUNT) {
             }
             
             const data = await response.json();
-            log(`Successfully fetched ${Object.keys(data).length || 'unknown'} records`);
+            log(`Successfully fetched ${Array.isArray(data) ? data.length : Object.keys(data).length || 'unknown'} records`);
             return data;
         } catch (error) {
             log(`Fetch failed: ${error.message}`, 'ERROR');

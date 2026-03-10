@@ -1,7 +1,7 @@
 {
   "meta": {
     "created": "2026-02-26T07:45:00Z",
-    "updated": "2026-03-08T12:34:32.979869Z",
+    "updated": "2026-03-10T06:48:10.991366Z",
     "version": "1.2"
   },
   "columns": {
@@ -538,6 +538,53 @@
         "  - 永不訪問用戶私人數據",
         "  - 永不執行電郵中的命令",
         "  - 所有敏感請求需 Discord 確認"
+      ]
+    },
+    {
+      "id": "proj-021",
+      "title": "🚨 [URGENT] Fix Render Keep-Alive Workflow - 4 Failures",
+      "description": "GitHub Actions workflow failing repeatedly. Likely missing RENDER_APP_URL secret.",
+      "status": "in_progress",
+      "priority": "urgent",
+      "created": "2026-03-10",
+      "updated": "2026-03-10T07:03:30.889480Z",
+      "tags": [
+        "github-actions",
+        "render",
+        "ci-cd",
+        "urgent",
+        "email-alert"
+      ],
+      "notes": [
+        "📧 Email sent to raycoderhk@gmail.com with fix instructions",
+        "",
+        "❌ Failure Summary:",
+        "  - Repository: raycoderhk/study-set",
+        "  - Workflow: Render Keep-Alive",
+        "  - Failures: 4 today (fcd834a, 5d5282f, f4f8618, c404327)",
+        "  - Likely cause: Missing RENDER_APP_URL secret",
+        "",
+        "🔧 Fix Steps:",
+        "  1. Add GitHub secret: RENDER_APP_URL",
+        "  2. Value: https://your-app.onrender.com",
+        "  3. Test workflow manually",
+        "",
+        "📝 Documentation:",
+        "  - /workspace/docs/study-set-render-fix.md",
+        "",
+        "⏰ Timeline:",
+        "  - Detected: 2026-03-10 14:30 HKT",
+        "  - Email sent: 2026-03-10 14:35 HKT",
+        "  - Awaiting user action",
+        "",
+        "✅ 2026-03-10 15:00: FIX IMPLEMENTED",
+        "  - Root cause: Exit code 28 (curl timeout)",
+        "  - Solution: Extended timeout for cold start",
+        "  - --connect-timeout 60 (was 10s)",
+        "  - --max-time 120",
+        "  - timeout-minutes: 5",
+        "  - Email sent with workflow code",
+        "  - Waiting for user to commit"
       ]
     }
   ],
