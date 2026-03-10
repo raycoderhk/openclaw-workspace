@@ -9,12 +9,20 @@ WORKSPACE="/home/node/.openclaw/workspace"
 
 echo "📬 Running email check..."
 
-# Run email checker with --status flag for auto-check status updates
-OUTPUT=$(python3 "$SCRIPT_DIR/email-checker.py" --status 2>&1)
+# Run email checker with flags:
+# --status: Include security status
+# --only-new: Only post if there are NEW emails (silent if no new)
+OUTPUT=$(python3 "$SCRIPT_DIR/email-checker.py" --status --only-new 2>&1)
 EXIT_CODE=$?
 
 # Extract Discord message
 DISCORD_MSG=$(echo "$OUTPUT" | sed -n '/DISCORD_MESSAGE_START/,/DISCORD_MESSAGE_END/p' | sed '1d;$d')
+
+# Check if there's nothing to post (no new emails)
+if [ "$DISCORD_MSG" = "NO_NEW_EMAILS" ] || [ -z "$DISCORD_MSG" ]; then
+    echo "✅ No new emails - staying silent (as requested)"
+    exit 0
+fi
 
 if [ -z "$DISCORD_MSG" ]; then
     echo "❌ Failed to get email check output"

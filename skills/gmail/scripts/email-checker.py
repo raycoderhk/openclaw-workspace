@@ -423,10 +423,14 @@ def get_security_mode_summary():
     """🔒 Get security mode description"""
     return f"STRICT MODE - Only trust {TRUSTED_SENDERS[0]}"
 
-def format_discord_message(result, include_status=False):
+def format_discord_message(result, include_status=False, only_on_new=False):
     """Format Discord message with color coding"""
     audit = get_audit_summary()
     security_mode = get_security_mode_summary()
+    
+    # If only_on_new mode and no new emails, return None (silent)
+    if only_on_new and not result['new_emails']:
+        return None
     
     if not result['new_emails']:
         message = "📬 **Email Check** - No new emails\n\n"
@@ -488,19 +492,25 @@ def format_discord_message(result, include_status=False):
 if __name__ == "__main__":
     import sys
     
-    # Check if --status flag is passed for auto-check status updates
+    # Check flags
+    # --status: Include security status summary
+    # --only-new: Only post if there are NEW emails (silent if no new emails)
     include_status = '--status' in sys.argv
+    only_on_new = '--only-new' in sys.argv or '--silent-if-empty' in sys.argv
     
     # Run email check
     result = check_emails()
     
     # Format Discord message
-    discord_message = format_discord_message(result, include_status=include_status)
+    discord_message = format_discord_message(result, include_status=include_status, only_on_new=only_on_new)
     
     # Print for capture by calling script
     print("\n" + "="*80)
     print("DISCORD_MESSAGE_START")
-    print(discord_message)
+    if discord_message:
+        print(discord_message)
+    else:
+        print("NO_NEW_EMAILS")  # Signal to wrapper that there's nothing to post
     print("DISCORD_MESSAGE_END")
     print("="*80)
     
