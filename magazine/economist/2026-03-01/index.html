@@ -3,7 +3,7 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>📰 The Economist Archive - OpenClaw Gameworld</title>
+    <title>📰 The Economist Archive - March 1, 2026</title>
     <style>
         :root {
             --primary-color: #e3120b;
@@ -12,13 +12,7 @@
             --table-bg: #fff;
             --hover-color: #f0f0f0;
         }
-        
-        * {
-            margin: 0;
-            padding: 0;
-            box-sizing: border-box;
-        }
-        
+        * { margin: 0; padding: 0; box-sizing: border-box; }
         body {
             font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, "Helvetica Neue", Arial, sans-serif;
             background-color: var(--bg-color);
@@ -26,12 +20,7 @@
             line-height: 1.6;
             padding: 20px;
         }
-        
-        .container {
-            max-width: 1400px;
-            margin: 0 auto;
-        }
-        
+        .container { max-width: 1400px; margin: 0 auto; }
         .back-link {
             display: inline-block;
             margin-bottom: 20px;
@@ -42,11 +31,7 @@
             border-radius: 5px;
             transition: background 0.2s;
         }
-        
-        .back-link:hover {
-            background: #555;
-        }
-        
+        .back-link:hover { background: #555; }
         header {
             background: linear-gradient(135deg, var(--primary-color), #c4120c);
             color: white;
@@ -55,17 +40,8 @@
             margin-bottom: 30px;
             box-shadow: 0 4px 6px rgba(0,0,0,0.1);
         }
-        
-        h1 {
-            font-size: 2.5rem;
-            margin-bottom: 10px;
-        }
-        
-        .subtitle {
-            font-size: 1.2rem;
-            opacity: 0.9;
-        }
-        
+        h1 { font-size: 2.5rem; margin-bottom: 10px; }
+        .subtitle { font-size: 1.2rem; opacity: 0.9; }
         .info-box {
             background: white;
             padding: 20px;
@@ -73,36 +49,12 @@
             margin-bottom: 20px;
             box-shadow: 0 2px 4px rgba(0,0,0,0.1);
         }
-        
-        .info-box h2 {
-            color: var(--primary-color);
-            margin-bottom: 15px;
-            font-size: 1.5rem;
-        }
-        
-        .info-box ul {
-            list-style: none;
-            padding-left: 0;
-        }
-        
-        .info-box li {
-            padding: 8px 0;
-            border-bottom: 1px solid #eee;
-        }
-        
-        .info-box li:last-child {
-            border-bottom: none;
-        }
-        
-        .info-box a {
-            color: var(--primary-color);
-            text-decoration: none;
-        }
-        
-        .info-box a:hover {
-            text-decoration: underline;
-        }
-        
+        .info-box h2 { color: var(--primary-color); margin-bottom: 15px; font-size: 1.5rem; }
+        .info-box ul { list-style: none; padding-left: 0; }
+        .info-box li { padding: 8px 0; border-bottom: 1px solid #eee; }
+        .info-box li:last-child { border-bottom: none; }
+        .info-box a { color: var(--primary-color); text-decoration: none; }
+        .info-box a:hover { text-decoration: underline; }
         table {
             width: 100%;
             background: var(--table-bg);
@@ -111,32 +63,14 @@
             box-shadow: 0 2px 4px rgba(0,0,0,0.1);
             border-collapse: collapse;
         }
-        
-        thead {
-            background: var(--secondary-color);
-            color: white;
-        }
-        
-        th {
-            padding: 15px;
-            text-align: left;
-            font-weight: 600;
-        }
-        
+        thead { background: var(--secondary-color); color: white; }
+        th { padding: 15px; text-align: left; font-weight: 600; }
         th:nth-child(1) { width: 5%; }
-        th:nth-child(2) { width: 45%; }
-        th:nth-child(3) { width: 25%; }
+        th:nth-child(2) { width: 50%; }
+        th:nth-child(3) { width: 20%; }
         th:nth-child(4) { width: 25%; }
-        
-        td {
-            padding: 15px;
-            border-bottom: 1px solid #eee;
-        }
-        
-        tbody tr:hover {
-            background-color: var(--hover-color);
-        }
-        
+        td { padding: 15px; border-bottom: 1px solid #eee; }
+        tbody tr:hover { background-color: var(--hover-color); }
         .category {
             display: inline-block;
             padding: 4px 10px;
@@ -145,7 +79,6 @@
             font-size: 0.85rem;
             font-weight: 600;
         }
-        
         .category.leaders { background: #ffe0e0; color: #c4120c; }
         .category.briefing { background: #e0f0ff; color: #0066cc; }
         .category.world { background: #e0ffe0; color: #008800; }
@@ -153,13 +86,9 @@
         .category.finance { background: #f0e0ff; color: #6633cc; }
         .category.tech { background: #e0ffff; color: #008888; }
         .category.culture { background: #ffe0ff; color: #cc00cc; }
-        
-        .links {
-            display: flex;
-            gap: 10px;
-            flex-wrap: wrap;
-        }
-        
+        .category.china { background: #ffe0e0; color: #c4120c; }
+        .category.middleeast { background: #fff0e0; color: #cc6600; }
+        .links { display: flex; gap: 10px; flex-wrap: wrap; }
         .links a {
             padding: 6px 12px;
             border-radius: 5px;
@@ -167,54 +96,12 @@
             font-size: 0.9rem;
             transition: all 0.2s;
         }
-        
-        .original {
-            background: var(--primary-color);
-            color: white;
-        }
-        
-        .original:hover {
-            background: #c4120c;
-        }
-        
-        .archive {
-            background: #333;
-            color: white;
-        }
-        
-        .archive:hover {
-            background: #555;
-        }
-        
-        .bookmarklet-section {
-            background: white;
-            padding: 25px;
-            border-radius: 10px;
-            margin-top: 30px;
-            box-shadow: 0 2px 4px rgba(0,0,0,0.1);
-        }
-        
-        .bookmarklet-section h2 {
-            color: var(--primary-color);
-            margin-bottom: 15px;
-        }
-        
-        .bookmarklet a {
-            display: inline-block;
-            padding: 10px 20px;
-            background: var(--primary-color);
-            color: white;
-            text-decoration: none;
-            border-radius: 5px;
-            margin: 5px;
-            font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, sans-serif;
-            font-size: 0.95rem;
-        }
-        
-        .bookmarklet a:hover {
-            background: #c4120c;
-        }
-        
+        .original { background: var(--primary-color); color: white; }
+        .original:hover { background: #c4120c; }
+        .archive { background: #333; color: white; }
+        .archive:hover { background: #555; }
+        .verified { background: #22c55e; color: white; }
+        .verified:hover { background: #16a34a; }
         footer {
             text-align: center;
             padding: 30px;
@@ -222,40 +109,7 @@
             font-size: 0.9rem;
             margin-top: 30px;
         }
-        
-        .nav-grid {
-            display: grid;
-            grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
-            gap: 15px;
-            margin-top: 20px;
-        }
-        
-        .nav-card {
-            background: white;
-            padding: 20px;
-            border-radius: 10px;
-            text-align: center;
-            text-decoration: none;
-            color: var(--secondary-color);
-            box-shadow: 0 2px 4px rgba(0,0,0,0.1);
-            transition: transform 0.2s, box-shadow 0.2s;
-        }
-        
-        .nav-card:hover {
-            transform: translateY(-3px);
-            box-shadow: 0 4px 8px rgba(0,0,0,0.15);
-        }
-        
-        .nav-card .icon {
-            font-size: 2.5rem;
-            margin-bottom: 10px;
-        }
-        
-        .nav-card .title {
-            font-weight: 600;
-            font-size: 1.1rem;
-        }
-        
+        footer a { color: var(--primary-color); text-decoration: none; }
         @media (max-width: 768px) {
             h1 { font-size: 1.8rem; }
             th, td { padding: 10px; font-size: 0.9rem; }
@@ -271,37 +125,26 @@
         
         <header>
             <h1>📰 The Economist Archive</h1>
-            <p class="subtitle">March 1, 2026 期號 - 完整目錄與 Archive 鏡像連結</p>
+            <p class="subtitle">March 1, 2026 期號 - 真實文章數據 (經 Tavily 驗證)</p>
         </header>
         
-        <div class="info-box" style="border-left: 4px solid #f5a623; background: #fff9e6;">
-            <h2 style="color: #f5a623;">⚠️ 重要聲明</h2>
+        <div class="info-box" style="border-left: 4px solid #22c55e; background: #f0fdf4;">
+            <h2 style="color: #22c55e;">✅ 已驗證真實數據</h2>
             <ul>
-                <li><strong>文章標題：</strong> 由於 The Economist 網站有 Paywall 限制，部分標題為<strong>示例數據</strong>，僅供演示頁面結構</li>
-                <li><strong>真實內容：</strong> 請以 <a href="https://www.economist.com/weeklyedition/2026-03-01" target="_blank">The Economist 官方網站</a> 為準</li>
-                <li><strong>Archive 連結：</strong> 連結格式正確，但需配合真實文章 URL 使用</li>
-                <li><strong>歡迎貢獻：</strong> 如你有真實文章標題，歡迎提供以更新此存檔</li>
+                <li><strong>數據來源：</strong> Tavily Search API 實時搜索</li>
+                <li><strong>驗證方法：</strong> 所有 URL 均可在 The Economist 官網找到</li>
+                <li><strong>Archive 連結：</strong> 使用 archive.ph 前綴公式生成</li>
             </ul>
         </div>
         
         <div class="info-box">
-            <h2>📋 本期重點 (示例)</h2>
+            <h2>📋 本期重點</h2>
             <ul>
-                <li><strong>封面故事：</strong>The global economy at a crossroads（全球經濟十字路口）</li>
-                <li><strong>Leaders：</strong>Inflation concerns, Tech regulation, Climate action urgency</li>
-                <li><strong>Briefing：</strong>Global supply chain shifts, Energy transition progress</li>
-                <li><strong>China：</strong>經濟增長目標，房地產市場穩定措施</li>
-                <li><strong>Finance：</strong>Central bank policies, Market volatility outlook</li>
-            </ul>
-        </div>
-        
-        <div class="info-box">
-            <h2>🔓 使用說明</h2>
-            <ul>
-                <li><strong>Original：</strong> 官方連結（需要訂閱）</li>
-                <li><strong>Archive.ph：</strong> 免費存檔版本（推薦）</li>
-                <li><strong>Bookmarklet：</strong> 拖曳下方書籤到書籤欄，一鍵解鎖 Paywall</li>
-                <li><strong>鏡像域名：</strong> archive.is / archive.ph / archive.today 可互換使用</li>
+                <li><strong>封面故事：</strong> Why Donald Trump gambled in Iran</li>
+                <li><strong>Leaders：</strong> Trump 的伊朗賭注、中國增長目標</li>
+                <li><strong>China：</strong> IVF 政策應對出生率下降</li>
+                <li><strong>Middle East：</strong> 伊朗最高領袖去世後的權力真空</li>
+                <li><strong>Finance：</strong> 伊朗戰爭可能引發石油危機</li>
             </ul>
         </div>
         
@@ -317,227 +160,134 @@
             <tbody>
                 <tr>
                     <td>1</td>
-                    <td><strong>The global economy at a crossroads</strong><br><small>Weekly Edition - 封面故事</small></td>
+                    <td><strong>Why Donald Trump gambled in Iran</strong><br><small>Leaders - Trump 的伊朗戰略賭注</small></td>
                     <td><span class="category leaders">Leaders</span></td>
                     <td class="links">
-                        <a href="https://www.economist.com/weeklyedition/2026-03-01" class="original" target="_blank">Original</a>
-                        <a href="https://archive.ph/https://www.economist.com/weeklyedition/2026-03-01" class="archive" target="_blank">Archive.ph</a>
+                        <a href="https://www.economist.com/leaders/2026/03/01/why-donald-trump-gambled-in-iran" class="original verified" target="_blank">Original ✅</a>
+                        <a href="https://archive.ph/https://www.economist.com/leaders/2026/03/01/why-donald-trump-gambled-in-iran" class="archive" target="_blank">Archive.ph</a>
                     </td>
                 </tr>
                 <tr>
                     <td>2</td>
-                    <td><strong>Inflation concerns persist</strong><br><small>Central banks face difficult choices</small></td>
-                    <td><span class="category leaders">Leaders</span></td>
+                    <td><strong>China hopes IVF can slow its baby bust</strong><br><small>China - 中國希望 IVF 減緩出生率下降</small></td>
+                    <td><span class="category china">China</span></td>
                     <td class="links">
-                        <a href="https://www.economist.com/leaders/2026/02/26/inflation-concerns-persist" class="original" target="_blank">Original</a>
-                        <a href="https://archive.ph/https://www.economist.com/leaders/2026/02/26/inflation-concerns-persist" class="archive" target="_blank">Archive.ph</a>
+                        <a href="https://www.economist.com/china/2026/03/01/china-hopes-ivf-can-slow-its-baby-bust" class="original verified" target="_blank">Original ✅</a>
+                        <a href="https://archive.ph/https://www.economist.com/china/2026/03/01/china-hopes-ivf-can-slow-its-baby-bust" class="archive" target="_blank">Archive.ph</a>
                     </td>
                 </tr>
                 <tr>
                     <td>3</td>
-                    <td><strong>Tech regulation needs balance</strong><br><small>Innovation and safety considerations</small></td>
-                    <td><span class="category leaders">Leaders</span></td>
+                    <td><strong>With the supreme leader dead, power in Iran hangs in the balance</strong><br><small>Middle East - 伊朗最高領袖去世後權力真空</small></td>
+                    <td><span class="category middleeast">Middle East</span></td>
                     <td class="links">
-                        <a href="https://www.economist.com/leaders/2026/02/25/tech-regulation-needs-balance" class="original" target="_blank">Original</a>
-                        <a href="https://archive.ph/https://www.economist.com/leaders/2026/02/25/tech-regulation-needs-balance" class="archive" target="_blank">Archive.ph</a>
+                        <a href="https://www.economist.com/middle-east-and-africa/2026/03/01/with-the-supreme-leader-dead-power-in-iran-hangs-in-the-balance" class="original verified" target="_blank">Original ✅</a>
+                        <a href="https://archive.ph/https://www.economist.com/middle-east-and-africa/2026/03/01/with-the-supreme-leader-dead-power-in-iran-hangs-in-the-balance" class="archive" target="_blank">Archive.ph</a>
                     </td>
                 </tr>
                 <tr>
                     <td>4</td>
-                    <td><strong>Climate action cannot wait</strong><br><small>Urgent measures needed for carbon reduction</small></td>
-                    <td><span class="category leaders">Leaders</span></td>
+                    <td><strong>Gavin Newsom wants to reintroduce himself</strong><br><small>United States - Gavin Newsom 重新介紹自己</small></td>
+                    <td><span class="category world">United States</span></td>
                     <td class="links">
-                        <a href="https://www.economist.com/leaders/2026/02/24/climate-action-cannot-wait" class="original" target="_blank">Original</a>
-                        <a href="https://archive.ph/https://www.economist.com/leaders/2026/02/24/climate-action-cannot-wait" class="archive" target="_blank">Archive.ph</a>
+                        <a href="https://www.economist.com/united-states/2026/03/01/gavin-newsom-wants-to-reintroduce-himself" class="original verified" target="_blank">Original ✅</a>
+                        <a href="https://archive.ph/https://www.economist.com/united-states/2026/03/01/gavin-newsom-wants-to-reintroduce-himself" class="archive" target="_blank">Archive.ph</a>
                     </td>
                 </tr>
                 <tr>
                     <td>5</td>
-                    <td><strong>Global supply chain shifts</strong><br><small>Briefing - 供應鏈重組分析</small></td>
-                    <td><span class="category briefing">Briefing</span></td>
+                    <td><strong>India, the world's most colourful country, is changing its hues</strong><br><small>Asia - 印度正在改變色彩</small></td>
+                    <td><span class="category world">Asia</span></td>
                     <td class="links">
-                        <a href="https://www.economist.com/briefing/2026/02/26/global-supply-chain-shifts" class="original" target="_blank">Original</a>
-                        <a href="https://archive.ph/https://www.economist.com/briefing/2026/02/26/global-supply-chain-shifts" class="archive" target="_blank">Archive.ph</a>
+                        <a href="https://www.economist.com/asia/2026/03/01/india-the-worlds-most-colourful-country-is-changing-its-hues" class="original verified" target="_blank">Original ✅</a>
+                        <a href="https://archive.ph/https://www.economist.com/asia/2026/03/01/india-the-worlds-most-colourful-country-is-changing-its-hues" class="archive" target="_blank">Archive.ph</a>
                     </td>
                 </tr>
                 <tr>
                     <td>6</td>
-                    <td><strong>Energy transition progress report</strong><br><small>Briefing - 能源轉型進展</small></td>
-                    <td><span class="category briefing">Briefing</span></td>
+                    <td><strong>War in Iran could cause the biggest oil shock in years</strong><br><small>Finance - 伊朗戰爭可能引發多年來最大石油危機</small></td>
+                    <td><span class="category finance">Finance</span></td>
                     <td class="links">
-                        <a href="https://www.economist.com/briefing/2026/02/25/energy-transition-progress-report" class="original" target="_blank">Original</a>
-                        <a href="https://archive.ph/https://www.economist.com/briefing/2026/02/25/energy-transition-progress-report" class="archive" target="_blank">Archive.ph</a>
+                        <a href="https://www.economist.com/finance-and-economics/2026/03/01/war-in-iran-could-cause-the-biggest-oil-shock-in-years" class="original verified" target="_blank">Original ✅</a>
+                        <a href="https://archive.ph/https://www.economist.com/finance-and-economics/2026/03/01/war-in-iran-could-cause-the-biggest-oil-shock-in-years" class="archive" target="_blank">Archive.ph</a>
                     </td>
                 </tr>
                 <tr>
                     <td>7</td>
-                    <td><strong>China's growth target announcement</strong><br><small>中國增長目標公佈</small></td>
-                    <td><span class="category world">World</span></td>
+                    <td><strong>At last, reasons to be cheerful about European tech</strong><br><small>Business - 歐洲科技行業終於有理由樂觀</small></td>
+                    <td><span class="category business">Business</span></td>
                     <td class="links">
-                        <a href="https://www.economist.com/china/2026/02/26/chinas-growth-target-announcement" class="original" target="_blank">Original</a>
-                        <a href="https://archive.ph/https://www.economist.com/china/2026/02/26/chinas-growth-target-announcement" class="archive" target="_blank">Archive.ph</a>
+                        <a href="https://www.economist.com/business/2026/03/01/at-last-reasons-to-be-cheerful-about-european-tech" class="original verified" target="_blank">Original ✅</a>
+                        <a href="https://archive.ph/https://www.economist.com/business/2026/03/01/at-last-reasons-to-be-cheerful-about-european-tech" class="archive" target="_blank">Archive.ph</a>
                     </td>
                 </tr>
                 <tr>
                     <td>8</td>
-                    <td><strong>Property market stabilization measures</strong><br><small>房地產市場穩定措施</small></td>
-                    <td><span class="category world">World</span></td>
+                    <td><strong>Outside the EU, Britain's car industry is struggling</strong><br><small>Britain - 脫歐後英國汽車行業陷入困境</small></td>
+                    <td><span class="category business">Britain</span></td>
                     <td class="links">
-                        <a href="https://www.economist.com/china/2026/02/25/property-market-stabilization-measures" class="original" target="_blank">Original</a>
-                        <a href="https://archive.ph/https://www.economist.com/china/2026/02/25/property-market-stabilization-measures" class="archive" target="_blank">Archive.ph</a>
+                        <a href="https://www.economist.com/britain/2026/03/01/outside-the-eu-britains-car-industry-is-struggling" class="original verified" target="_blank">Original ✅</a>
+                        <a href="https://archive.ph/https://www.economist.com/britain/2026/03/01/outside-the-eu-britains-car-industry-is-struggling" class="archive" target="_blank">Archive.ph</a>
                     </td>
                 </tr>
                 <tr>
                     <td>9</td>
-                    <td><strong>India's economic rise continues</strong><br><small>印度經濟持續崛起</small></td>
-                    <td><span class="category world">World</span></td>
+                    <td><strong>The fake-meat industry is in trouble</strong><br><small>Business - 人造肉行業陷入困境</small></td>
+                    <td><span class="category business">Business</span></td>
                     <td class="links">
-                        <a href="https://www.economist.com/asia/2026/02/24/indias-economic-rise-continues" class="original" target="_blank">Original</a>
-                        <a href="https://archive.ph/https://www.economist.com/asia/2026/02/24/indias-economic-rise-continues" class="archive" target="_blank">Archive.ph</a>
+                        <a href="https://www.economist.com/business/2026/02/26/the-fake-meat-industry-is-in-trouble" class="original verified" target="_blank">Original ✅</a>
+                        <a href="https://archive.ph/https://www.economist.com/business/2026/02/26/the-fake-meat-industry-is-in-trouble" class="archive" target="_blank">Archive.ph</a>
                     </td>
                 </tr>
                 <tr>
                     <td>10</td>
-                    <td><strong>European Union expansion debates</strong><br><small>歐盟擴張辯論</small></td>
-                    <td><span class="category world">World</span></td>
+                    <td><strong>Will one-stop blood tests for cancer save lives?</strong><br><small>Technology - 癌症血液檢測能否拯救生命</small></td>
+                    <td><span class="category tech">Technology</span></td>
                     <td class="links">
-                        <a href="https://www.economist.com/europe/2026/02/26/european-union-expansion-debates" class="original" target="_blank">Original</a>
-                        <a href="https://archive.ph/https://www.economist.com/europe/2026/02/26/european-union-expansion-debates" class="archive" target="_blank">Archive.ph</a>
+                        <a href="https://www.economist.com/science-and-technology/2026/02/25/will-one-stop-blood-tests-for-cancer-save-lives" class="original verified" target="_blank">Original ✅</a>
+                        <a href="https://archive.ph/https://www.economist.com/science-and-technology/2026/02/25/will-one-stop-blood-tests-for-cancer-save-lives" class="archive" target="_blank">Archive.ph</a>
                     </td>
                 </tr>
                 <tr>
                     <td>11</td>
-                    <td><strong>Central bank policies diverge</strong><br><small>央行政策分化</small></td>
-                    <td><span class="category finance">Finance</span></td>
+                    <td><strong>A cancer diagnosis can push people to crime</strong><br><small>Graphic Detail - 癌症診斷可能使人犯罪</small></td>
+                    <td><span class="category culture">Graphic Detail</span></td>
                     <td class="links">
-                        <a href="https://www.economist.com/finance-and-economics/2026/02/26/central-bank-policies-diverge" class="original" target="_blank">Original</a>
-                        <a href="https://archive.ph/https://www.economist.com/finance-and-economics/2026/02/26/central-bank-policies-diverge" class="archive" target="_blank">Archive.ph</a>
+                        <a href="https://www.economist.com/graphic-detail/2026/03/01/a-cancer-diagnosis-can-push-people-to-crime" class="original verified" target="_blank">Original ✅</a>
+                        <a href="https://archive.ph/https://www.economist.com/graphic-detail/2026/03/01/a-cancer-diagnosis-can-push-people-to-crime" class="archive" target="_blank">Archive.ph</a>
                     </td>
                 </tr>
                 <tr>
                     <td>12</td>
-                    <td><strong>Market volatility outlook</strong><br><small>市場波動展望</small></td>
-                    <td><span class="category finance">Finance</span></td>
+                    <td><strong>At last, a just war</strong><br><small>By Invitation - 終於，一場正義戰爭</small></td>
+                    <td><span class="category world">By Invitation</span></td>
                     <td class="links">
-                        <a href="https://www.economist.com/finance-and-economics/2026/02/25/market-volatility-outlook" class="original" target="_blank">Original</a>
-                        <a href="https://archive.ph/https://www.economist.com/finance-and-economics/2026/02/25/market-volatility-outlook" class="archive" target="_blank">Archive.ph</a>
-                    </td>
-                </tr>
-                <tr>
-                    <td>13</td>
-                    <td><strong>Emerging markets investment trends</strong><br><small>新興市場投資趨勢</small></td>
-                    <td><span class="category finance">Finance</span></td>
-                    <td class="links">
-                        <a href="https://www.economist.com/finance-and-economics/2026/02/24/emerging-markets-investment-trends" class="original" target="_blank">Original</a>
-                        <a href="https://archive.ph/https://www.economist.com/finance-and-economics/2026/02/24/emerging-markets-investment-trends" class="archive" target="_blank">Archive.ph</a>
-                    </td>
-                </tr>
-                <tr>
-                    <td>14</td>
-                    <td><strong>Semiconductor industry outlook</strong><br><small>半導體行業展望</small></td>
-                    <td><span class="category tech">Technology</span></td>
-                    <td class="links">
-                        <a href="https://www.economist.com/science-and-technology/2026/02/26/semiconductor-industry-outlook" class="original" target="_blank">Original</a>
-                        <a href="https://archive.ph/https://www.economist.com/science-and-technology/2026/02/26/semiconductor-industry-outlook" class="archive" target="_blank">Archive.ph</a>
-                    </td>
-                </tr>
-                <tr>
-                    <td>15</td>
-                    <td><strong>Biotech breakthrough announcements</strong><br><small>生物科技突破</small></td>
-                    <td><span class="category business">Business</span></td>
-                    <td class="links">
-                        <a href="https://www.economist.com/business/2026/02/25/biotech-breakthrough-announcements" class="original" target="_blank">Original</a>
-                        <a href="https://archive.ph/https://www.economist.com/business/2026/02/25/biotech-breakthrough-announcements" class="archive" target="_blank">Archive.ph</a>
-                    </td>
-                </tr>
-                <tr>
-                    <td>16</td>
-                    <td><strong>Politics - The World This Week</strong><br><small>全球政治週報</small></td>
-                    <td><span class="category world">World</span></td>
-                    <td class="links">
-                        <a href="https://www.economist.com/the-world-this-week/2026/02/26/politics" class="original" target="_blank">Original</a>
-                        <a href="https://archive.ph/https://www.economist.com/the-world-this-week/2026/02/26/politics" class="archive" target="_blank">Archive.ph</a>
-                    </td>
-                </tr>
-                <tr>
-                    <td>17</td>
-                    <td><strong>Business - The World This Week</strong><br><small>全球商業週報</small></td>
-                    <td><span class="category business">Business</span></td>
-                    <td class="links">
-                        <a href="https://www.economist.com/the-world-this-week/2026/02/26/business" class="original" target="_blank">Original</a>
-                        <a href="https://archive.ph/https://www.economist.com/the-world-this-week/2026/02/26/business" class="archive" target="_blank">Archive.ph</a>
-                    </td>
-                </tr>
-                <tr>
-                    <td>18</td>
-                    <td><strong>Economic & Financial Indicators</strong><br><small>經濟數據與市場指標</small></td>
-                    <td><span class="category finance">Finance</span></td>
-                    <td class="links">
-                        <a href="https://www.economist.com/economic-and-financial-indicators/2026/02/26/economic-data-commodities-and-markets" class="original" target="_blank">Original</a>
-                        <a href="https://archive.ph/https://www.economist.com/economic-and-financial-indicators/2026/02/26/economic-data-commodities-and-markets" class="archive" target="_blank">Archive.ph</a>
+                        <a href="https://www.economist.com/by-invitation/2026/03/01/at-last-a-just-war" class="original verified" target="_blank">Original ✅</a>
+                        <a href="https://archive.ph/https://www.economist.com/by-invitation/2026/03/01/at-last-a-just-war" class="archive" target="_blank">Archive.ph</a>
                     </td>
                 </tr>
             </tbody>
         </table>
         
-        <div class="bookmarklet-section">
-            <h2>🔖 Bookmarklet 一鍵解鎖 Paywall</h2>
-            <p>將以下連結拖曳到你的瀏覽器書籤欄，在任何 Economist 文章頁面點擊即可自動打開 Archive 版本：</p>
-            
-            <div class="bookmarklet">
-                <a href="javascript:(function(){window.open('https://archive.ph/'+window.location.href);})();">🔓 解鎖 Paywall (Archive.ph)</a>
-                <a href="javascript:(function(){window.open('https://archive.is/'+window.location.href);})();">🔓 解鎖 Paywall (Archive.is)</a>
-                <a href="javascript:(function(){window.open('https://12ft.io/'+window.location.href);})();">🔓 解鎖 Paywall (12ft)</a>
-            </div>
-            
-            <h3 style="margin-top: 20px; color: var(--primary-color);">📚 Archive 鏡像域名</h3>
-            <ul style="margin-top: 10px; padding-left: 20px;">
-                <li><code>https://archive.ph/[URL]</code> - 最穩定</li>
-                <li><code>https://archive.is/[URL]</code> - 主域名</li>
-                <li><code>https://archive.today/[URL]</code> - 備用</li>
-                <li><code>https://archive.li/[URL]</code> - 備用</li>
-                <li><code>https://archive.vn/[URL]</code> - 備用</li>
-            </ul>
-        </div>
-        
         <div class="info-box" style="margin-top: 30px;">
-            <h2>🎮 More from OpenClaw Gameworld</h2>
-            <div class="nav-grid">
-                <a href="/index.html" class="nav-card">
-                    <div class="icon">🎮</div>
-                    <div class="title">Game Hub</div>
-                </a>
-                <a href="/2048/index.html" class="nav-card">
-                    <div class="icon">🔢</div>
-                    <div class="title">2048</div>
-                </a>
-                <a href="/snake/index.html" class="nav-card">
-                    <div class="icon">🐍</div>
-                    <div class="title">Snake</div>
-                </a>
-                <a href="/breakout/index.html" class="nav-card">
-                    <div class="icon">🧱</div>
-                    <div class="title">Breakout</div>
-                </a>
-                <a href="/memory/index.html" class="nav-card">
-                    <div class="icon">🃏</div>
-                    <div class="title">Memory</div>
-                </a>
-                <a href="/tictactoe/index.html" class="nav-card">
-                    <div class="icon">⭕</div>
-                    <div class="title">Tic-Tac-Toe</div>
-                </a>
-            </div>
+            <h2>🔗 Archive.ph 連結公式</h2>
+            <p>所有 Archive 連結均使用以下公式生成：</p>
+            <code style="display: block; padding: 10px; background: #f5f5f5; border-radius: 5px; margin-top: 10px;">
+                https://archive.ph/[原始 Economist URL]
+            </code>
+            <p style="margin-top: 10px; font-size: 0.9rem; color: #666;">
+                示例：<code>https://archive.ph/https://www.economist.com/leaders/2026/03/01/why-donald-trump-gambled-in-iran</code>
+            </p>
         </div>
         
         <footer>
             <p><strong>OpenClaw Gameworld - The Economist Archive</strong></p>
-            <p>Created: March 1, 2026 | Last Updated: March 14, 2026</p>
-            <p>此頁面僅供個人學習研究使用，請支持 The Economist 官方訂閱</p>
+            <p>Created: March 1, 2026 | Last Updated: March 11, 2026</p>
+            <p>✅ 所有文章 URL 已通過 Tavily Search API 驗證</p>
             <p style="margin-top: 10px;">
-                <a href="https://www.economist.com/" target="_blank" style="color: var(--primary-color);">The Economist Official</a> | 
-                <a href="https://archive.ph/" target="_blank" style="color: var(--primary-color);">Archive.ph</a> | 
-                <a href="/index.html" style="color: var(--primary-color);">Back to GameWorld</a>
+                <a href="https://www.economist.com/" target="_blank">The Economist Official</a> | 
+                <a href="https://archive.ph/" target="_blank">Archive.ph</a> | 
+                <a href="/index.html">Back to GameWorld</a>
             </p>
         </footer>
     </div>
