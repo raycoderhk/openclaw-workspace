@@ -124,9 +124,9 @@
         }
         
         th:nth-child(1) { width: 5%; }
-        th:nth-child(2) { width: 45%; }
-        th:nth-child(3) { width: 25%; }
-        th:nth-child(4) { width: 25%; }
+        th:nth-child(2) { width: 40%; }
+        th:nth-child(3) { width: 20%; }
+        th:nth-child(4) { width: 35%; }
         
         td {
             padding: 15px;
@@ -184,6 +184,29 @@
         
         .archive:hover {
             background: #555;
+        }
+        
+        .study {
+            background: linear-gradient(135deg, #667eea, #764ba2);
+            color: white;
+            font-weight: 600;
+        }
+        
+        .study:hover {
+            background: linear-gradient(135deg, #764ba2, #667eea);
+            transform: translateY(-2px);
+            box-shadow: 0 4px 8px rgba(102, 126, 234, 0.4);
+        }
+        
+        .study.disabled {
+            background: #ccc;
+            cursor: not-allowed;
+            opacity: 0.6;
+        }
+        
+        .study.disabled:hover {
+            transform: none;
+            box-shadow: none;
         }
         
         .bookmarklet-section {
@@ -312,6 +335,7 @@
                     <th>文章標題</th>
                     <th>分類</th>
                     <th>連結</th>
+                    <th>Study</th>
                 </tr>
             </thead>
             <tbody>
@@ -332,6 +356,7 @@
                         <a href="https://www.economist.com/leaders/2026/03/05/donald-trump-must-stop-soon" class="original" target="_blank">Original</a>
                         <a href="https://archive.ph/https://www.economist.com/leaders/2026/03/05/donald-trump-must-stop-soon" class="archive" target="_blank">Archive.ph</a>
                     </td>
+                    <td><a href="vocab-trump-must-stop.html" class="study">📖 Study</a></td>
                 </tr>
                 <tr>
                     <td>3</td>
@@ -341,6 +366,7 @@
                         <a href="https://www.economist.com/leaders/2026/03/05/ai-danger-gets-real" class="original" target="_blank">Original</a>
                         <a href="https://archive.ph/https://www.economist.com/leaders/2026/03/05/ai-danger-gets-real" class="archive" target="_blank">Archive.ph</a>
                     </td>
+                    <td><a href="vocab-ai-danger.html" class="study">📖 Study</a></td>
                 </tr>
                 <tr>
                     <td>4</td>
@@ -350,6 +376,7 @@
                         <a href="https://www.economist.com/leaders/2026/03/04/china-needs-a-more-ambitious-growth-target" class="original" target="_blank">Original</a>
                         <a href="https://archive.ph/https://www.economist.com/leaders/2026/03/04/china-needs-a-more-ambitious-growth-target" class="archive" target="_blank">Archive.ph</a>
                     </td>
+                    <td><a href="#" class="study disabled" title="Coming soon">⏳ Coming soon</a></td>
                 </tr>
                 <tr>
                     <td>5</td>
@@ -359,6 +386,7 @@
                         <a href="https://www.economist.com/briefing/2026/03/05/an-ai-disaster-is-getting-ever-closer" class="original" target="_blank">Original</a>
                         <a href="https://archive.ph/https://www.economist.com/briefing/2026/03/05/an-ai-disaster-is-getting-ever-closer" class="archive" target="_blank">Archive.ph</a>
                     </td>
+                    <td><a href="#" class="study disabled" title="Coming soon">⏳ Coming soon</a></td>
                 </tr>
                 <tr>
                     <td>6</td>
@@ -368,6 +396,7 @@
                         <a href="https://www.economist.com/briefing/2026/03/05/how-the-latest-regional-conflict-is-reshaping-the-middle-east" class="original" target="_blank">Original</a>
                         <a href="https://archive.ph/https://www.economist.com/briefing/2026/03/05/how-the-latest-regional-conflict-is-reshaping-the-middle-east" class="archive" target="_blank">Archive.ph</a>
                     </td>
+                    <td><a href="#" class="study disabled" title="Coming soon">⏳ Coming soon</a></td>
                 </tr>
                 <tr>
                     <td>7</td>
@@ -377,6 +406,7 @@
                         <a href="https://www.economist.com/china/2026/03/02/chinas-ice-cold-calculus-over-iran" class="original" target="_blank">Original</a>
                         <a href="https://archive.ph/https://www.economist.com/china/2026/03/02/chinas-ice-cold-calculus-over-iran" class="archive" target="_blank">Archive.ph</a>
                     </td>
+                    <td><a href="vocab-china-iran.html" class="study">📖 Study</a></td>
                 </tr>
                 <tr>
                     <td>8</td>
@@ -386,6 +416,7 @@
                         <a href="https://www.economist.com/china/2026/03/05/china-sets-its-lowest-growth-target-for-a-generation" class="original" target="_blank">Original</a>
                         <a href="https://archive.ph/https://www.economist.com/china/2026/03/05/china-sets-its-lowest-growth-target-for-a-generation" class="archive" target="_blank">Archive.ph</a>
                     </td>
+                    <td><a href="#" class="study disabled" title="Coming soon">⏳ Coming soon</a></td>
                 </tr>
                 <tr>
                     <td>9</td>
@@ -395,6 +426,7 @@
                         <a href="https://www.economist.com/united-states/2026/03/02/in-iran-donald-trump-is-making-history" class="original" target="_blank">Original</a>
                         <a href="https://archive.ph/https://www.economist.com/united-states/2026/03/02/in-iran-donald-trump-is-making-history" class="archive" target="_blank">Archive.ph</a>
                     </td>
+                    <td><a href="#" class="study disabled" title="Coming soon">⏳ Coming soon</a></td>
                 </tr>
                 <tr>
                     <td>10</td>
@@ -404,6 +436,7 @@
                         <a href="https://www.economist.com/europe/2026/03/04/in-times-of-chaos-europe-is-the-muddled-power-the-world-needs" class="original" target="_blank">Original</a>
                         <a href="https://archive.ph/https://www.economist.com/europe/2026/03/04/in-times-of-chaos-europe-is-the-muddled-power-the-world-needs" class="archive" target="_blank">Archive.ph</a>
                     </td>
+                    <td><a href="#" class="study disabled" title="Coming soon">⏳ Coming soon</a></td>
                 </tr>
                 <tr>
                     <td>11</td>
@@ -413,6 +446,7 @@
                         <a href="https://www.economist.com/finance-and-economics/2026/03/03/the-nightmare-war-scenario-is-becoming-reality-in-energy-markets" class="original" target="_blank">Original</a>
                         <a href="https://archive.ph/https://www.economist.com/finance-and-economics/2026/03/03/the-nightmare-war-scenario-is-becoming-reality-in-energy-markets" class="archive" target="_blank">Archive.ph</a>
                     </td>
+                    <td><a href="#" class="study disabled" title="Coming soon">⏳ Coming soon</a></td>
                 </tr>
                 <tr>
                     <td>12</td>
@@ -422,6 +456,7 @@
                         <a href="https://www.economist.com/finance-and-economics/2026/03/05/americans-electricity-bills-are-up-dont-blame-ai" class="original" target="_blank">Original</a>
                         <a href="https://archive.ph/https://www.economist.com/finance-and-economics/2026/03/05/americans-electricity-bills-are-up-dont-blame-ai" class="archive" target="_blank">Archive.ph</a>
                     </td>
+                    <td><a href="#" class="study disabled" title="Coming soon">⏳ Coming soon</a></td>
                 </tr>
                 <tr>
                     <td>13</td>
@@ -431,6 +466,7 @@
                         <a href="https://www.economist.com/finance-and-economics/2026/03/05/to-understand-why-countries-grow-look-at-their-firms" class="original" target="_blank">Original</a>
                         <a href="https://archive.ph/https://www.economist.com/finance-and-economics/2026/03/05/to-understand-why-countries-grow-look-at-their-firms" class="archive" target="_blank">Archive.ph</a>
                     </td>
+                    <td><a href="#" class="study disabled" title="Coming soon">⏳ Coming soon</a></td>
                 </tr>
                 <tr>
                     <td>14</td>
@@ -440,6 +476,7 @@
                         <a href="https://www.economist.com/united-states/2026/03/07/checks-and-balance-pete-hegseth-and-the-risks-of-a-macho-military" class="original" target="_blank">Original</a>
                         <a href="https://archive.ph/https://www.economist.com/united-states/2026/03/07/checks-and-balance-pete-hegseth-and-the-risks-of-a-macho-military" class="archive" target="_blank">Archive.ph</a>
                     </td>
+                    <td><a href="#" class="study disabled" title="Coming soon">⏳ Coming soon</a></td>
                 </tr>
                 <tr>
                     <td>15</td>
@@ -449,6 +486,7 @@
                         <a href="https://www.economist.com/the-world-this-week/2026/03/05/politics" class="original" target="_blank">Original</a>
                         <a href="https://archive.ph/https://www.economist.com/the-world-this-week/2026/03/05/politics" class="archive" target="_blank">Archive.ph</a>
                     </td>
+                    <td><a href="#" class="study disabled" title="Coming soon">⏳ Coming soon</a></td>
                 </tr>
                 <tr>
                     <td>16</td>
@@ -458,6 +496,7 @@
                         <a href="https://www.economist.com/the-world-this-week/2026/03/05/business" class="original" target="_blank">Original</a>
                         <a href="https://archive.ph/https://www.economist.com/the-world-this-week/2026/03/05/business" class="archive" target="_blank">Archive.ph</a>
                     </td>
+                    <td><a href="#" class="study disabled" title="Coming soon">⏳ Coming soon</a></td>
                 </tr>
                 <tr>
                     <td>17</td>
@@ -467,6 +506,7 @@
                         <a href="https://www.economist.com/the-world-this-week/2026/03/05/the-weekly-cartoon" class="original" target="_blank">Original</a>
                         <a href="https://archive.ph/https://www.economist.com/the-world-this-week/2026/03/05/the-weekly-cartoon" class="archive" target="_blank">Archive.ph</a>
                     </td>
+                    <td><a href="#" class="study disabled" title="Coming soon">⏳ Coming soon</a></td>
                 </tr>
                 <tr>
                     <td>18</td>
@@ -476,6 +516,7 @@
                         <a href="https://www.economist.com/economic-and-financial-indicators/2026/03/05/economic-data-commodities-and-markets" class="original" target="_blank">Original</a>
                         <a href="https://archive.ph/https://www.economist.com/economic-and-financial-indicators/2026/03/05/economic-data-commodities-and-markets" class="archive" target="_blank">Archive.ph</a>
                     </td>
+                    <td><a href="#" class="study disabled" title="Coming soon">⏳ Coming soon</a></td>
                 </tr>
             </tbody>
         </table>
