@@ -1,0 +1,16 @@
+{
+  "name": "community-hub-extractor",
+  "version": "1.0.0",
+  "description": "Extract useful community tips from WhatsApp chat exports",
+  "type": "module",
+  "scripts": {
+    "parse": "node src/parser.js",
+    "classify": "node src/classifier.js",
+    "import": "node src/import-to-supabase.js",
+    "full": "node src/full-pipeline.js"
+  },
+  "dependencies": {
+    "@supabase/supabase-js": "^2.39.0",
+    "dotenv": "^16.3.1"
+  }
+}

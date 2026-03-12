@@ -1,0 +1,1939 @@
+[
+  {
+    "date": "2023-05-29",
+    "time": "16:50:24",
+    "datetime": "2023-05-29T16:50:24.000Z",
+    "sender": "~ Ming",
+    "text": "據悉拍片前，涉事設計公司曾向相關媒體表示牆身改動合法。故不排除涉事單位疑似主力牆並非全拆，當師傅報告看到牆內有鋼筋時，負責人或認為大半牆身仍保留應有相當支撐能力，繼而決定繼續爆窿裝門。",
+    "raw": "[29/5/2023, 16:50:24] ~ Ming: 據悉拍片前，涉事設計公司曾向相關媒體表示牆身改動合法。故不排除涉事單位疑似主力牆並非全拆，當師傅報告看到牆內有鋼筋時，負責人或認為大半牆身仍保留應有相當支撐能力，繼而決定繼續爆窿裝門。",
+    "category": "news",
+    "useful": true,
+    "summary": "Discussion about a design company's claim that wall modifications were legal.",
+    "entities": [
+      "設計公司"
+    ],
+    "language": "zh"
+  },
+  {
+    "date": "2023-05-29",
+    "time": "20:14:08",
+    "datetime": "2023-05-29T20:14:08.000Z",
+    "sender": "Maple 愉景住客",
+    "text": "日出康城主力牆風波 方國珊：屋宇署已要求業主盡快還原主力牆 15天內開展工程",
+    "raw": "[29/5/2023, 20:14:08] Maple 愉景住客: 日出康城主力牆風波 方國珊：屋宇署已要求業主盡快還原主力牆 15天內開展工程",
+    "category": "news",
+    "useful": true,
+    "summary": "Update on the main wall controversy in Lohas Park, with the Buildings Department requesting restoration.",
+    "entities": [
+      "日出康城",
+      "屋宇署"
+    ],
+    "language": "zh"
+  },
+  {
+    "date": "2023-05-29",
+    "time": "21:29:31",
+    "datetime": "2023-05-29T21:29:31.000Z",
+    "sender": "Maple 愉景住客",
+    "text": "要搵認可人士計好數",
+    "raw": "[29/5/2023, 21:29:31] Maple 愉景住客: 要搵認可人士計好數",
+    "category": "repair",
+    "useful": true,
+    "summary": "Mention of needing to consult a qualified professional for calculations.",
+    "entities": [
+      "認可人士"
+    ],
+    "language": "zh"
+  },
+  {
+    "date": "2023-05-29",
+    "time": "23:36:56",
+    "datetime": "2023-05-29T23:36:56.000Z",
+    "sender": "Maple 愉景住客",
+    "text": "薄身唔係主力牆",
+    "raw": "[29/5/2023, 23:36:56] Maple 愉景住客: 薄身唔係主力牆",
+    "category": "repair",
+    "useful": true,
+    "summary": "Clarification that a thin wall is not a main structural wall.",
+    "entities": [],
+    "language": "zh"
+  },
+  {
+    "date": "2023-05-29",
+    "time": "23:44:14",
+    "datetime": "2023-05-29T23:44:14.000Z",
+    "sender": "Maple 愉景住客",
+    "text": "幅牆Physically拆唔拆得",
+    "raw": "[29/5/2023, 23:44:14] Maple 愉景住客: 幅牆Physically拆唔拆得",
+    "category": "repair",
+    "useful": true,
+    "summary": "Question about whether a wall can be physically removed.",
+    "entities": [],
+    "language": "zh"
+  },
+  {
+    "date": "2023-05-29",
+    "time": "16:58:06",
+    "datetime": "2023-05-29T16:58:06.000Z",
+    "sender": "拜仁Brian 卓偉賢 愉城",
+    "text": "一句講晒，業主大鑊",
+    "raw": "[29/5/2023, 16:58:06] 拜仁Brian 卓偉賢 愉城: 一句講晒，業主大鑊",
+    "category": "community",
+    "useful": true,
+    "summary": "Fire safety regulations for open kitchens in buildings (2011).",
+    "entities": [
+      "Maple 愉景住客"
+    ],
+    "language": "zh"
+  },
+  {
+    "date": "2023-05-29",
+    "time": "19:56:47",
+    "datetime": "2023-05-29T19:56:47.000Z",
+    "sender": "LALA🌺 七座37A",
+    "text": "一係開冷氣",
+    "raw": "[29/5/2023, 19:56:47] LALA🌺 七座37A: 一係開冷氣",
+    "category": "education",
+    "useful": true,
+    "summary": "Exam on the 4th.",
+    "entities": [
+      "LALA🌺 七座37A"
+    ],
+    "language": "zh"
+  },
+  {
+    "date": "2023-05-29",
+    "time": "21:23:37",
+    "datetime": "2023-05-29T21:23:37.000Z",
+    "sender": "Maple 愉景住客",
+    "text": "點會唔識",
+    "raw": "[29/5/2023, 21:23:37] Maple 愉景住客: 點會唔識",
+    "category": "news",
+    "useful": true,
+    "summary": "G.E.M. (鄧紫棋) lived in 麗城花園 and later moved to 韻濤居.",
+    "entities": [
+      "G.E.M",
+      "鄧紫棋",
+      "麗城花園",
+      "韻濤居"
+    ],
+    "language": "zh"
+  },
+  {
+    "date": "2023-05-29",
+    "time": "23:36:56",
+    "datetime": "2023-05-29T23:36:56.000Z",
+    "sender": "Maple 愉景住客",
+    "text": "薄身唔係主力牆",
+    "raw": "[29/5/2023, 23:36:56] Maple 愉景住客: 薄身唔係主力牆",
+    "category": "community",
+    "useful": true,
+    "summary": "Public housing cannot be renovated.",
+    "entities": [
+      "Maple 愉景住客"
+    ],
+    "language": "zh"
+  },
+  {
+    "date": "2023-05-30",
+    "time": "08:12:13",
+    "datetime": "2023-05-30T08:12:13.000Z",
+    "sender": "LALA🌺 七座37A",
+    "text": "如下午6時前未有回應",
+    "raw": "[30/5/2023, 08:12:13] LALA🌺 七座37A: 如下午6時前未有回應",
+    "category": "news",
+    "useful": true,
+    "summary": "Incident where Lin Youjia (林宥嘉) hit a reporter.",
+    "entities": [
+      "Lam Roman",
+      "林宥嘉"
+    ],
+    "language": "zh"
+  },
+  {
+    "date": "2023-05-29",
+    "time": "17:49:02",
+    "datetime": "2023-05-29T17:49:02.000Z",
+    "sender": "LALA🌺 七座37A",
+    "text": "加油丫！",
+    "raw": "[29/5/2023, 17:49:02] LALA🌺 七座37A: 加油丫！",
+    "category": "shopping",
+    "useful": true,
+    "summary": "Mentions Donki and Namco.",
+    "entities": [
+      "Donki",
+      "Namco"
+    ],
+    "language": "zh"
+  },
+  {
+    "date": "2023-05-29",
+    "time": "20:50:14",
+    "datetime": "2023-05-29T20:50:14.000Z",
+    "sender": "~ Andy",
+    "text": "要做好多野先至可以補救！",
+    "raw": "[29/5/2023, 20:50:14] ~ Andy: 要做好多野先至可以補救！ ",
+    "category": "community",
+    "useful": true,
+    "summary": "Suggests directly complaining to the management office.",
+    "entities": [
+      "管理處"
+    ],
+    "language": "zh"
+  },
+  {
+    "date": "2023-05-29",
+    "time": "21:23:37",
+    "datetime": "2023-05-29T21:23:37.000Z",
+    "sender": "Maple 愉景住客",
+    "text": "點會唔識",
+    "raw": "[29/5/2023, 21:23:37] Maple 愉景住客: 點會唔識",
+    "category": "repair",
+    "useful": true,
+    "summary": "Asks for recommendations for air conditioning repair technicians.",
+    "entities": [],
+    "language": "zh"
+  },
+  {
+    "date": "2023-05-30",
+    "time": "00:06:09",
+    "datetime": "2023-05-30T00:06:09.000Z",
+    "sender": "~ Rick",
+    "text": "勁，朗拿度D 師弟👍",
+    "raw": "[30/5/2023, 00:06:09] ~ Rick: 勁，朗拿度D 師弟👍",
+    "category": "service",
+    "useful": true,
+    "summary": "Mentions Quick Lock Center.",
+    "entities": [
+      "快捷鎖類中心"
+    ],
+    "language": "zh"
+  },
+  {
+    "date": "2023-05-29",
+    "time": "16:36:10",
+    "datetime": "2023-05-29T16:36:10.000Z",
+    "sender": "~ YC",
+    "text": "不過應該冇包",
+    "raw": "[29/5/2023, 16:36:10] ~ YC: 不過應該冇包",
+    "category": "repair",
+    "useful": true,
+    "summary": "Mention of not being able to reinstall a regular lock",
+    "entities": [],
+    "language": "zh"
+  },
+  {
+    "date": "2023-05-29",
+    "time": "17:01:52",
+    "datetime": "2023-05-29T17:01:52.000Z",
+    "sender": "Dicky",
+    "text": "未到call loan",
+    "raw": "[29/5/2023, 17:01:52] Dicky: 未到call loan",
+    "category": "doctor",
+    "useful": true,
+    "summary": "Mention of experiencing tinnitus for almost a month",
+    "entities": [],
+    "language": "zh"
+  },
+  {
+    "date": "2023-05-29",
+    "time": "17:49:02",
+    "datetime": "2023-05-29T17:49:02.000Z",
+    "sender": "LALA🌺 七座37A",
+    "text": "加油丫！",
+    "raw": "[29/5/2023, 17:49:02] LALA🌺 七座37A: 加油丫！",
+    "category": "doctor",
+    "useful": true,
+    "summary": "Criticism of Western medicine's approach to ear problems",
+    "entities": [],
+    "language": "zh"
+  },
+  {
+    "date": "2023-05-29",
+    "time": "17:59:55",
+    "datetime": "2023-05-29T17:59:55.000Z",
+    "sender": "LALA🌺 七座37A",
+    "text": "咁攪笑",
+    "raw": "[29/5/2023, 17:59:55] LALA🌺 七座37A: 咁攪笑",
+    "category": "doctor",
+    "useful": true,
+    "summary": "Mention of a friend who had tinnitus",
+    "entities": [],
+    "language": "zh"
+  },
+  {
+    "date": "2023-05-29",
+    "time": "20:14:08",
+    "datetime": "2023-05-29T20:14:08.000Z",
+    "sender": "Maple 愉景住客",
+    "text": "日出康城主力牆風波 方國珊：屋宇署已要求業主盡快還原主力牆 15天內開展工程",
+    "raw": "[29/5/2023, 20:14:08] Maple 愉景住客: 日出康城主力牆風波 方國珊：屋宇署已要求業主盡快還原主力牆 15天內開展工程",
+    "category": "doctor",
+    "useful": true,
+    "summary": "Mention of trying Chinese medicine and acupuncture for tinnitus",
+    "entities": [],
+    "language": "zh"
+  },
+  {
+    "date": "2023-05-29",
+    "time": "20:50:14",
+    "datetime": "2023-05-29T20:50:14.000Z",
+    "sender": "~ Andy",
+    "text": "要做好多野先至可以補救！",
+    "raw": "[29/5/2023, 20:50:14] ~ Andy: 要做好多野先至可以補救！ ",
+    "category": "doctor",
+    "useful": true,
+    "summary": "Mention of undergoing a brain scan and ear tube surgery",
+    "entities": [],
+    "language": "zh"
+  },
+  {
+    "date": "2023-05-29",
+    "time": "21:23:37",
+    "datetime": "2023-05-29T21:23:37.000Z",
+    "sender": "Maple 愉景住客",
+    "text": "點會唔識",
+    "raw": "[29/5/2023, 21:23:37] Maple 愉景住客: 點會唔識",
+    "category": "doctor",
+    "useful": true,
+    "summary": "Mention of suffering from tinnitus for six years, worsening recently",
+    "entities": [],
+    "language": "zh"
+  },
+  {
+    "date": "2023-05-29",
+    "time": "21:29:31",
+    "datetime": "2023-05-29T21:29:31.000Z",
+    "sender": "Maple 愉景住客",
+    "text": "要搵認可人士計好數",
+    "raw": "[29/5/2023, 21:29:31] Maple 愉景住客: 要搵認可人士計好數",
+    "category": "doctor",
+    "useful": true,
+    "summary": "Criticism of doctors attributing issues to autonomic nerves",
+    "entities": [],
+    "language": "zh"
+  },
+  {
+    "date": "2023-05-29",
+    "time": "21:29:55",
+    "datetime": "2023-05-29T21:29:55.000Z",
+    "sender": "Maple 愉景住客",
+    "text": "有權",
+    "raw": "[29/5/2023, 21:29:55] Maple 愉景住客: 有權",
+    "category": "doctor",
+    "useful": true,
+    "summary": "Warning about the mental health impact of ear problems",
+    "entities": [],
+    "language": "zh"
+  },
+  {
+    "date": "2023-05-29",
+    "time": "22:42:50",
+    "datetime": "2023-05-29T22:42:50.000Z",
+    "sender": "~ YC",
+    "text": "根據嗰段片話",
+    "raw": "[29/5/2023, 22:42:50] ~ YC: 根據嗰段片話",
+    "category": "community",
+    "useful": true,
+    "summary": "Announcement of a clearance action in the eco-valley of Discovery Park",
+    "entities": [
+      "愉景新城環保谷"
+    ],
+    "language": "zh"
+  },
+  {
+    "date": "2023-05-29",
+    "time": "22:43:07",
+    "datetime": "2023-05-29T22:43:07.000Z",
+    "sender": "~ YC",
+    "text": "同埋依照業主嘅意願要好似酒店套房咁",
+    "raw": "[29/5/2023, 22:43:07] ~ YC: 同埋依照業主嘅意願要好似酒店套房咁",
+    "category": "community",
+    "useful": true,
+    "summary": "Announcement of a clearance action in the eco-valley of Discovery Park",
+    "entities": [
+      "愉景新城環保谷"
+    ],
+    "language": "zh"
+  },
+  {
+    "date": "2023-05-29",
+    "time": "23:36:56",
+    "datetime": "2023-05-29T23:36:56.000Z",
+    "sender": "Maple 愉景住客",
+    "text": "薄身唔係主力牆",
+    "raw": "[29/5/2023, 23:36:56] Maple 愉景住客: 薄身唔係主力牆",
+    "category": "community",
+    "useful": true,
+    "summary": "Announcement of a clearance action in the eco-valley of Discovery Park",
+    "entities": [
+      "愉景新城環保谷"
+    ],
+    "language": "zh"
+  },
+  {
+    "date": "2023-05-29",
+    "time": "23:37:47",
+    "datetime": "2023-05-29T23:37:47.000Z",
+    "sender": "Maple 愉景住客",
+    "text": "冇問題呀",
+    "raw": "[29/5/2023, 23:37:47] Maple 愉景住客: 冇問題呀",
+    "category": "community",
+    "useful": true,
+    "summary": "Announcement of a clearance action in the eco-valley of Discovery Park",
+    "entities": [
+      "愉景新城環保谷"
+    ],
+    "language": "zh"
+  },
+  {
+    "date": "2023-05-29",
+    "time": "23:44:14",
+    "datetime": "2023-05-29T23:44:14.000Z",
+    "sender": "Maple 愉景住客",
+    "text": "幅牆Physically拆唔拆得",
+    "raw": "[29/5/2023, 23:44:14] Maple 愉景住客: 幅牆Physically拆唔拆得",
+    "category": "community",
+    "useful": true,
+    "summary": "Mention of the eco-valley of Discovery Park",
+    "entities": [
+      "愉景新城環保谷"
+    ],
+    "language": "zh"
+  },
+  {
+    "date": "2023-05-30",
+    "time": "07:54:36",
+    "datetime": "2023-05-30T07:54:36.000Z",
+    "sender": "LALA🌺 七座37A",
+    "text": "@⁨~𝐸𝓂𝒾𝓁𝓎 𝐿𝒶𝒾🧝🏻‍♀️⁩",
+    "raw": "[30/5/2023, 07:54:36] LALA🌺 七座37A: @⁨~𝐸𝓂𝒾𝓁𝓎 𝐿𝒶𝒾🧝🏻‍♀️⁩ ",
+    "category": "community",
+    "useful": true,
+    "summary": "Clarification that the group is limited to Discovery Park residents",
+    "entities": [
+      "愉城鄰居"
+    ],
+    "language": "zh"
+  },
+  {
+    "date": "2023-05-30",
+    "time": "08:12:13",
+    "datetime": "2023-05-30T08:12:13.000Z",
+    "sender": "LALA🌺 七座37A",
+    "text": "如下午6時前未有回應",
+    "raw": "[30/5/2023, 08:12:13] LALA🌺 七座37A: 如下午6時前未有回應",
+    "category": "tech_tip",
+    "useful": true,
+    "summary": "Mention of Pantel displaying a specific location",
+    "entities": [
+      "Pantel"
+    ],
+    "language": "zh"
+  },
+  {
+    "date": "2023-05-29",
+    "time": "17:01:52",
+    "datetime": "2023-05-29T17:01:52.000Z",
+    "sender": "Dicky",
+    "text": "未到call loan",
+    "raw": "[29/5/2023, 17:01:52] Dicky: 未到call loan",
+    "category": "traffic",
+    "useful": true,
+    "summary": "Bus stop available downstairs.",
+    "entities": [
+      "Maple 愉景住客"
+    ],
+    "language": "zh"
+  },
+  {
+    "date": "2023-05-29",
+    "time": "17:49:02",
+    "datetime": "2023-05-29T17:49:02.000Z",
+    "sender": "LALA🌺 七座37A",
+    "text": "加油丫！",
+    "raw": "[29/5/2023, 17:49:02] LALA🌺 七座37A: 加油丫！",
+    "category": "traffic",
+    "useful": true,
+    "summary": "KMB monthly pass costs $780.",
+    "entities": [
+      "Lam",
+      "九巴"
+    ],
+    "language": "zh"
+  },
+  {
+    "date": "2023-05-29",
+    "time": "19:56:47",
+    "datetime": "2023-05-29T19:56:47.000Z",
+    "sender": "LALA🌺 七座37A",
+    "text": "一係開冷氣",
+    "raw": "[29/5/2023, 19:56:47] LALA🌺 七座37A: 一係開冷氣",
+    "category": "traffic",
+    "useful": true,
+    "summary": "Prefer waiting for buses 934 and 934A after work.",
+    "entities": [
+      "Maple 愉景住客",
+      "934",
+      "934A"
+    ],
+    "language": "zh"
+  },
+  {
+    "date": "2023-05-29",
+    "time": "20:14:08",
+    "datetime": "2023-05-29T20:14:08.000Z",
+    "sender": "Maple 愉景住客",
+    "text": "日出康城主力牆風波 方國珊：屋宇署已要求業主盡快還原主力牆 15天內開展工程",
+    "raw": "[29/5/2023, 20:14:08] Maple 愉景住客: 日出康城主力牆風波 方國珊：屋宇署已要求業主盡快還原主力牆 15天內開展工程",
+    "category": "traffic",
+    "useful": true,
+    "summary": "Bus 934A takes a longer route compared to 934.",
+    "entities": [
+      "Lily",
+      "934A",
+      "934",
+      "愉景新城"
+    ],
+    "language": "zh"
+  },
+  {
+    "date": "2023-05-29",
+    "time": "21:23:37",
+    "datetime": "2023-05-29T21:23:37.000Z",
+    "sender": "Maple 愉景住客",
+    "text": "點會唔識",
+    "raw": "[29/5/2023, 21:23:37] Maple 愉景住客: 點會唔識",
+    "category": "traffic",
+    "useful": true,
+    "summary": "Bus 934 is not a full-day service.",
+    "entities": [
+      "Maple 愉景住客",
+      "934"
+    ],
+    "language": "zh"
+  },
+  {
+    "date": "2023-05-29",
+    "time": "21:29:31",
+    "datetime": "2023-05-29T21:29:31.000Z",
+    "sender": "Maple 愉景住客",
+    "text": "要搵認可人士計好數",
+    "raw": "[29/5/2023, 21:29:31] Maple 愉景住客: 要搵認可人士計好數",
+    "category": "traffic",
+    "useful": true,
+    "summary": "Bus arrives every 20 minutes.",
+    "entities": [
+      "Maple 愉景住客"
+    ],
+    "language": "zh"
+  },
+  {
+    "date": "2023-05-29",
+    "time": "21:29:55",
+    "datetime": "2023-05-29T21:29:55.000Z",
+    "sender": "Maple 愉景住客",
+    "text": "有權",
+    "raw": "[29/5/2023, 21:29:55] Maple 愉景住客: 有權",
+    "category": "traffic",
+    "useful": true,
+    "summary": "Bus 934 is highly recommended.",
+    "entities": [
+      "Maple 愉景住客",
+      "934"
+    ],
+    "language": "zh"
+  },
+  {
+    "date": "2023-05-29",
+    "time": "21:32:25",
+    "datetime": "2023-05-29T21:32:25.000Z",
+    "sender": "Maple 愉景住客",
+    "text": "D獨立屋就有機會做",
+    "raw": "[29/5/2023, 21:32:25] Maple 愉景住客: D獨立屋就有機會做",
+    "category": "traffic",
+    "useful": true,
+    "summary": "Get off at Hong Kong Station and walk to Sheung Wan via the bridge.",
+    "entities": [
+      "Maple 愉景住客",
+      "香港站",
+      "上環"
+    ],
+    "language": "zh"
+  },
+  {
+    "date": "2023-05-29",
+    "time": "21:47:48",
+    "datetime": "2023-05-29T21:47:48.000Z",
+    "sender": "Maple 愉景住客",
+    "text": "圓床啦",
+    "raw": "[29/5/2023, 21:47:48] Maple 愉景住客: 圓床啦",
+    "category": "traffic",
+    "useful": true,
+    "summary": "List of bus routes: 934, A31, 243M, 930X.",
+    "entities": [
+      "Rick",
+      "934",
+      "A31",
+      "243M",
+      "930X"
+    ],
+    "language": "zh"
+  },
+  {
+    "date": "2023-05-29",
+    "time": "22:43:07",
+    "datetime": "2023-05-29T22:43:07.000Z",
+    "sender": "~ YC",
+    "text": "同埋依照業主嘅意願要好似酒店套房咁",
+    "raw": "[29/5/2023, 22:43:07] ~ YC: 同埋依照業主嘅意願要好似酒店套房咁",
+    "category": "traffic",
+    "useful": true,
+    "summary": "Request for a list of bus routes from 愉城 to various areas faster than MTR.",
+    "entities": [
+      "Lam",
+      "愉城"
+    ],
+    "language": "zh"
+  },
+  {
+    "date": "2023-05-29",
+    "time": "23:36:56",
+    "datetime": "2023-05-29T23:36:56.000Z",
+    "sender": "Maple 愉景住客",
+    "text": "薄身唔係主力牆",
+    "raw": "[29/5/2023, 23:36:56] Maple 愉景住客: 薄身唔係主力牆",
+    "category": "traffic",
+    "useful": true,
+    "summary": "Bus 48X is not fast.",
+    "entities": [
+      "Maple 愉景住客",
+      "48X"
+    ],
+    "language": "zh"
+  },
+  {
+    "date": "2023-05-29",
+    "time": "23:37:47",
+    "datetime": "2023-05-29T23:37:47.000Z",
+    "sender": "Maple 愉景住客",
+    "text": "冇問題呀",
+    "raw": "[29/5/2023, 23:37:47] Maple 愉景住客: 冇問題呀",
+    "category": "traffic",
+    "useful": true,
+    "summary": "Bus service to East Tsim Sha Tsui is okay.",
+    "entities": [
+      "Maple 愉景住客",
+      "尖東"
+    ],
+    "language": "zh"
+  },
+  {
+    "date": "2023-05-30",
+    "time": "00:06:09",
+    "datetime": "2023-05-30T00:06:09.000Z",
+    "sender": "~ Rick",
+    "text": "勁，朗拿度D 師弟👍",
+    "raw": "[30/5/2023, 00:06:09] ~ Rick: 勁，朗拿度D 師弟👍",
+    "category": "traffic",
+    "useful": true,
+    "summary": "Consider bus 43X if not going to the city center.",
+    "entities": [
+      "Maple 愉景住客",
+      "43X"
+    ],
+    "language": "zh"
+  },
+  {
+    "date": "2023-05-30",
+    "time": "08:12:13",
+    "datetime": "2023-05-30T08:12:13.000Z",
+    "sender": "LALA🌺 七座37A",
+    "text": "如下午6時前未有回應",
+    "raw": "[30/5/2023, 08:12:13] LALA🌺 七座37A: 如下午6時前未有回應",
+    "category": "community",
+    "useful": true,
+    "summary": "The air-conditioned bridge is a private developer's project.",
+    "entities": [
+      "Maple 愉景住客"
+    ],
+    "language": "zh"
+  },
+  {
+    "date": "2023-05-30",
+    "time": "08:17:44",
+    "datetime": "2023-05-30T08:17:44.000Z",
+    "sender": "LALA🌺 七座37A",
+    "text": "唔好話牆先",
+    "raw": "[30/5/2023, 08:17:44] LALA🌺 七座37A: 唔好話牆先",
+    "category": "community",
+    "useful": true,
+    "summary": "The lift construction is completed.",
+    "entities": [
+      "Maple 愉景住客"
+    ],
+    "language": "zh"
+  },
+  {
+    "date": "2023-05-29",
+    "time": "16:50:24",
+    "datetime": "2023-05-29T16:50:24.000Z",
+    "sender": "~ Ming",
+    "text": "據悉拍片前，涉事設計公司曾向相關媒體表示牆身改動合法。故不排除涉事單位疑似主力牆並非全拆，當師傅報告看到牆內有鋼筋時，負責人或認為大半牆身仍保留應有相當支撐能力，繼而決定繼續爆窿裝門。",
+    "raw": "[29/5/2023, 16:50:24] ~ Ming: 據悉拍片前，涉事設計公司曾向相關媒體表示牆身改動合法。故不排除涉事單位疑似主力牆並非全拆，當師傅報告看到牆內有鋼筋時，負責人或認為大半牆身仍保留應有相當支撐能力，繼而決定繼續爆窿裝門。",
+    "category": "traffic",
+    "useful": true,
+    "summary": "Bus route 234x arrival info and driver behavior.",
+    "entities": [
+      "234x",
+      "九巴app"
+    ],
+    "language": "zh"
+  },
+  {
+    "date": "2023-05-29",
+    "time": "17:01:52",
+    "datetime": "2023-05-29T17:01:52.000Z",
+    "sender": "Dicky",
+    "text": "未到call loan",
+    "raw": "[29/5/2023, 17:01:52] Dicky: 未到call loan",
+    "category": "traffic",
+    "useful": true,
+    "summary": "Bike path construction update (2.3KM).",
+    "entities": [
+      "單車徑"
+    ],
+    "language": "zh"
+  },
+  {
+    "date": "2023-05-29",
+    "time": "17:49:02",
+    "datetime": "2023-05-29T17:49:02.000Z",
+    "sender": "LALA🌺 七座37A",
+    "text": "加油丫！",
+    "raw": "[29/5/2023, 17:49:02] LALA🌺 七座37A: 加油丫！",
+    "category": "traffic",
+    "useful": true,
+    "summary": "Traffic congestion towards East Kowloon.",
+    "entities": [
+      "東九"
+    ],
+    "language": "zh"
+  },
+  {
+    "date": "2023-05-29",
+    "time": "17:59:55",
+    "datetime": "2023-05-29T17:59:55.000Z",
+    "sender": "LALA🌺 七座37A",
+    "text": "咁攪笑",
+    "raw": "[29/5/2023, 17:59:55] LALA🌺 七座37A: 咁攪笑",
+    "category": "traffic",
+    "useful": true,
+    "summary": "Severe traffic due to broken-down vehicle.",
+    "entities": [],
+    "language": "zh"
+  },
+  {
+    "date": "2023-05-29",
+    "time": "19:56:47",
+    "datetime": "2023-05-29T19:56:47.000Z",
+    "sender": "LALA🌺 七座37A",
+    "text": "一係開冷氣",
+    "raw": "[29/5/2023, 19:56:47] LALA🌺 七座37A: 一係開冷氣",
+    "category": "traffic",
+    "useful": true,
+    "summary": "Request for list of faster bus routes from 愉城 to various districts.",
+    "entities": [
+      "愉城",
+      "港九",
+      "港鐵"
+    ],
+    "language": "zh"
+  },
+  {
+    "date": "2023-05-29",
+    "time": "21:29:31",
+    "datetime": "2023-05-29T21:29:31.000Z",
+    "sender": "Maple 愉景住客",
+    "text": "要搵認可人士計好數",
+    "raw": "[29/5/2023, 21:29:31] Maple 愉景住客: 要搵認可人士計好數",
+    "category": "traffic",
+    "useful": true,
+    "summary": "Bus route 34 suggestion from 大涌道福來村站 to 荃灣西站.",
+    "entities": [
+      "大涌道福來村站",
+      "34",
+      "荃灣西站"
+    ],
+    "language": "zh"
+  },
+  {
+    "date": "2023-05-29",
+    "time": "21:29:55",
+    "datetime": "2023-05-29T21:29:55.000Z",
+    "sender": "Maple 愉景住客",
+    "text": "有權",
+    "raw": "[29/5/2023, 21:29:55] Maple 愉景住客: 有權",
+    "category": "traffic",
+    "useful": true,
+    "summary": "Morning commute time discussion.",
+    "entities": [],
+    "language": "zh"
+  },
+  {
+    "date": "2023-05-29",
+    "time": "21:32:25",
+    "datetime": "2023-05-29T21:32:25.000Z",
+    "sender": "Maple 愉景住客",
+    "text": "D獨立屋就有機會做",
+    "raw": "[29/5/2023, 21:32:25] Maple 愉景住客: D獨立屋就有機會做",
+    "category": "traffic",
+    "useful": true,
+    "summary": "Suggestion to use village bus.",
+    "entities": [
+      "村巴"
+    ],
+    "language": "zh"
+  },
+  {
+    "date": "2023-05-29",
+    "time": "21:47:48",
+    "datetime": "2023-05-29T21:47:48.000Z",
+    "sender": "Maple 愉景住客",
+    "text": "圓床啦",
+    "raw": "[29/5/2023, 21:47:48] Maple 愉景住客: 圓床啦",
+    "category": "traffic",
+    "useful": true,
+    "summary": "Request for list of faster bus routes from 愉城 to various districts.",
+    "entities": [
+      "愉城",
+      "港九",
+      "港鐵"
+    ],
+    "language": "zh"
+  },
+  {
+    "date": "2023-05-29",
+    "time": "23:37:47",
+    "datetime": "2023-05-29T23:37:47.000Z",
+    "sender": "Maple 愉景住客",
+    "text": "冇問題呀",
+    "raw": "[29/5/2023, 23:37:47] Maple 愉景住客: 冇問題呀",
+    "category": "traffic",
+    "useful": true,
+    "summary": "Request for list of faster bus routes from 愉城 to various districts.",
+    "entities": [
+      "愉城",
+      "港九",
+      "港鐵"
+    ],
+    "language": "zh"
+  },
+  {
+    "date": "2023-05-29",
+    "time": "23:44:14",
+    "datetime": "2023-05-29T23:44:14.000Z",
+    "sender": "Maple 愉景住客",
+    "text": "幅牆Physically拆唔拆得",
+    "raw": "[29/5/2023, 23:44:14] Maple 愉景住客: 幅牆Physically拆唔拆得",
+    "category": "traffic",
+    "useful": true,
+    "summary": "Request for list of faster bus routes from 愉城 to various districts.",
+    "entities": [
+      "愉城",
+      "港九",
+      "港鐵"
+    ],
+    "language": "zh"
+  },
+  {
+    "date": "2023-05-30",
+    "time": "00:06:09",
+    "datetime": "2023-05-30T00:06:09.000Z",
+    "sender": "~ Rick",
+    "text": "勁，朗拿度D 師弟👍",
+    "raw": "[30/5/2023, 00:06:09] ~ Rick: 勁，朗拿度D 師弟👍",
+    "category": "traffic",
+    "useful": true,
+    "summary": "Request for list of faster bus routes from 愉城 to various districts.",
+    "entities": [
+      "愉城",
+      "港九",
+      "港鐵"
+    ],
+    "language": "zh"
+  },
+  {
+    "date": "2023-05-30",
+    "time": "07:54:36",
+    "datetime": "2023-05-30T07:54:36.000Z",
+    "sender": "LALA🌺 七座37A",
+    "text": "@⁨~𝐸𝓂𝒾𝓁𝓎 𝐿𝒶𝒾🧝🏻‍♀️⁩",
+    "raw": "[30/5/2023, 07:54:36] LALA🌺 七座37A: @⁨~𝐸𝓂𝒾𝓁𝓎 𝐿𝒶𝒾🧝🏻‍♀️⁩ ",
+    "category": "traffic",
+    "useful": true,
+    "summary": "Request for list of faster bus routes from 愉城 to various districts.",
+    "entities": [
+      "愉城",
+      "港九",
+      "港鐵"
+    ],
+    "language": "zh"
+  },
+  {
+    "date": "2023-05-30",
+    "time": "07:55:17",
+    "datetime": "2023-05-30T07:55:17.000Z",
+    "sender": "LALA🌺 七座37A",
+    "text": "為求盡量保障大家安全",
+    "raw": "[30/5/2023, 07:55:17] LALA🌺 七座37A: 為求盡量保障大家安全",
+    "category": "traffic",
+    "useful": true,
+    "summary": "Request for list of faster bus routes from 愉城 to various districts.",
+    "entities": [
+      "愉城",
+      "港九",
+      "港鐵"
+    ],
+    "language": "zh"
+  },
+  {
+    "date": "2023-05-30",
+    "time": "08:12:13",
+    "datetime": "2023-05-30T08:12:13.000Z",
+    "sender": "LALA🌺 七座37A",
+    "text": "如下午6時前未有回應",
+    "raw": "[30/5/2023, 08:12:13] LALA🌺 七座37A: 如下午6時前未有回應",
+    "category": "traffic",
+    "useful": true,
+    "summary": "Bus routes from 愉城 to various districts.",
+    "entities": [
+      "愉城",
+      "港九"
+    ],
+    "language": "zh"
+  },
+  {
+    "date": "2023-05-30",
+    "time": "08:17:44",
+    "datetime": "2023-05-30T08:17:44.000Z",
+    "sender": "LALA🌺 七座37A",
+    "text": "唔好話牆先",
+    "raw": "[30/5/2023, 08:17:44] LALA🌺 七座37A: 唔好話牆先",
+    "category": "traffic",
+    "useful": true,
+    "summary": "List of bus routes from 愉城 to various districts.",
+    "entities": [
+      "愉城"
+    ],
+    "language": "zh"
+  },
+  {
+    "date": "2023-05-29",
+    "time": "19:56:47",
+    "datetime": "2023-05-29T19:56:47.000Z",
+    "sender": "LALA🌺 七座37A",
+    "text": "一係開冷氣",
+    "raw": "[29/5/2023, 19:56:47] LALA🌺 七座37A: 一係開冷氣",
+    "category": "news",
+    "useful": true,
+    "summary": "District councilor to meet with Food and Environmental Hygiene Department regarding rodent issue at Tsuen Cheong Centre.",
+    "entities": [
+      "Tsuen Cheong Centre",
+      "Food and Environmental Hygiene Department"
+    ],
+    "language": "zh"
+  },
+  {
+    "date": "2023-05-29",
+    "time": "16:38:46",
+    "datetime": "2023-05-29T16:38:46.000Z",
+    "sender": "🎃🎃🎃",
+    "text": "呢單野業主就衰硬",
+    "raw": "[29/5/2023, 16:38:46] 🎃🎃🎃: 呢單野業主就衰硬",
+    "category": "tech_tip",
+    "useful": true,
+    "summary": "Hang Seng Insurance offers coverage for lost electronic products.",
+    "entities": [
+      "恆生保險"
+    ],
+    "language": "zh"
+  },
+  {
+    "date": "2023-05-29",
+    "time": "16:58:06",
+    "datetime": "2023-05-29T16:58:06.000Z",
+    "sender": "拜仁Brian 卓偉賢 愉城",
+    "text": "一句講晒，業主大鑊",
+    "raw": "[29/5/2023, 16:58:06] 拜仁Brian 卓偉賢 愉城: 一句講晒，業主大鑊",
+    "category": "education",
+    "useful": true,
+    "summary": "Happy schools are characterized by less homework, shallow teaching, and fewer tests.",
+    "entities": [],
+    "language": "zh"
+  },
+  {
+    "date": "2023-05-29",
+    "time": "20:14:08",
+    "datetime": "2023-05-29T20:14:08.000Z",
+    "sender": "Maple 愉景住客",
+    "text": "日出康城主力牆風波 方國珊：屋宇署已要求業主盡快還原主力牆 15天內開展工程",
+    "raw": "[29/5/2023, 20:14:08] Maple 愉景住客: 日出康城主力牆風波 方國珊：屋宇署已要求業主盡快還原主力牆 15天內開展工程",
+    "category": "education",
+    "useful": true,
+    "summary": "For more information about Tsuen Wan schools, PM the sender.",
+    "entities": [
+      "荃基"
+    ],
+    "language": "zh"
+  },
+  {
+    "date": "2023-05-29",
+    "time": "21:23:37",
+    "datetime": "2023-05-29T21:23:37.000Z",
+    "sender": "Maple 愉景住客",
+    "text": "點會唔識",
+    "raw": "[29/5/2023, 21:23:37] Maple 愉景住客: 點會唔識",
+    "category": "doctor",
+    "useful": true,
+    "summary": "The sender has been undergoing acupuncture and consulting both Chinese and Western medicine practitioners.",
+    "entities": [],
+    "language": "zh"
+  },
+  {
+    "date": "2023-05-29",
+    "time": "23:37:47",
+    "datetime": "2023-05-29T23:37:47.000Z",
+    "sender": "Maple 愉景住客",
+    "text": "冇問題呀",
+    "raw": "[29/5/2023, 23:37:47] Maple 愉景住客: 冇問題呀",
+    "category": "education",
+    "useful": true,
+    "summary": "The sender's child learned multiplication by watching YouTube.",
+    "entities": [
+      "YouTube"
+    ],
+    "language": "zh"
+  },
+  {
+    "date": "2023-05-29",
+    "time": "23:44:14",
+    "datetime": "2023-05-29T23:44:14.000Z",
+    "sender": "Maple 愉景住客",
+    "text": "幅牆Physically拆唔拆得",
+    "raw": "[29/5/2023, 23:44:14] Maple 愉景住客: 幅牆Physically拆唔拆得",
+    "category": "education",
+    "useful": true,
+    "summary": "A child learned multiplication tables by K2 and was surprised her grandmother also knew them.",
+    "entities": [],
+    "language": "zh"
+  },
+  {
+    "date": "2023-05-30",
+    "time": "07:55:17",
+    "datetime": "2023-05-30T07:55:17.000Z",
+    "sender": "LALA🌺 七座37A",
+    "text": "為求盡量保障大家安全",
+    "raw": "[30/5/2023, 07:55:17] LALA🌺 七座37A: 為求盡量保障大家安全",
+    "category": "traffic",
+    "useful": true,
+    "summary": "Bus route list from Yu City to various districts.",
+    "entities": [
+      "愉城"
+    ],
+    "language": "zh"
+  },
+  {
+    "date": "2023-05-29",
+    "time": "17:49:02",
+    "datetime": "2023-05-29T17:49:02.000Z",
+    "sender": "LALA🌺 七座37A",
+    "text": "加油丫！",
+    "raw": "[29/5/2023, 17:49:02] LALA🌺 七座37A: 加油丫！",
+    "category": "education",
+    "useful": true,
+    "summary": "Prepared 12 fill-in-the-blank questions for kids to practice idioms.",
+    "entities": [],
+    "language": "zh"
+  },
+  {
+    "date": "2023-05-29",
+    "time": "17:59:55",
+    "datetime": "2023-05-29T17:59:55.000Z",
+    "sender": "LALA🌺 七座37A",
+    "text": "咁攪笑",
+    "raw": "[29/5/2023, 17:59:55] LALA🌺 七座37A: 咁攪笑",
+    "category": "education",
+    "useful": true,
+    "summary": "Provided 12 fill-in-the-blank questions for kids.",
+    "entities": [],
+    "language": "zh"
+  },
+  {
+    "date": "2023-05-29",
+    "time": "22:42:50",
+    "datetime": "2023-05-29T22:42:50.000Z",
+    "sender": "~ YC",
+    "text": "根據嗰段片話",
+    "raw": "[29/5/2023, 22:42:50] ~ YC: 根據嗰段片話",
+    "category": "community",
+    "useful": true,
+    "summary": "Management office visited twice regarding an issue.",
+    "entities": [
+      "管理處"
+    ],
+    "language": "zh"
+  },
+  {
+    "date": "2023-05-29",
+    "time": "23:37:47",
+    "datetime": "2023-05-29T23:37:47.000Z",
+    "sender": "Maple 愉景住客",
+    "text": "冇問題呀",
+    "raw": "[29/5/2023, 23:37:47] Maple 愉景住客: 冇問題呀",
+    "category": "community",
+    "useful": true,
+    "summary": "Only one high-floor unit is currently under renovation.",
+    "entities": [],
+    "language": "zh"
+  },
+  {
+    "date": "2023-05-29",
+    "time": "23:44:14",
+    "datetime": "2023-05-29T23:44:14.000Z",
+    "sender": "Maple 愉景住客",
+    "text": "幅牆Physically拆唔拆得",
+    "raw": "[29/5/2023, 23:44:14] Maple 愉景住客: 幅牆Physically拆唔拆得",
+    "category": "community",
+    "useful": true,
+    "summary": "Middle floor of Block 11 is frequently renovated at night.",
+    "entities": [
+      "11座"
+    ],
+    "language": "zh"
+  },
+  {
+    "date": "2023-05-30",
+    "time": "08:12:13",
+    "datetime": "2023-05-30T08:12:13.000Z",
+    "sender": "LALA🌺 七座37A",
+    "text": "如下午6時前未有回應",
+    "raw": "[30/5/2023, 08:12:13] LALA🌺 七座37A: 如下午6時前未有回應",
+    "category": "community",
+    "useful": true,
+    "summary": "Need to persistently follow up with the management office.",
+    "entities": [
+      "管理處"
+    ],
+    "language": "zh"
+  },
+  {
+    "date": "2023-05-30",
+    "time": "08:17:44",
+    "datetime": "2023-05-30T08:17:44.000Z",
+    "sender": "LALA🌺 七座37A",
+    "text": "唔好話牆先",
+    "raw": "[30/5/2023, 08:17:44] LALA🌺 七座37A: 唔好話牆先",
+    "category": "community",
+    "useful": true,
+    "summary": "Suggest not involving the Food and Environmental Hygiene Department initially.",
+    "entities": [
+      "食環署"
+    ],
+    "language": "zh"
+  },
+  {
+    "date": "2023-05-29",
+    "time": "21:23:37",
+    "datetime": "2023-05-29T21:23:37.000Z",
+    "sender": "Maple 愉景住客",
+    "text": "點會唔識",
+    "raw": "[29/5/2023, 21:23:37] Maple 愉景住客: 點會唔識",
+    "category": "tech_tip",
+    "useful": true,
+    "summary": "Asks for methods to integrate resident card into Apple Watch/Apple Pay/Xiaomi Band.",
+    "entities": [
+      "Apple Watch",
+      "Apple Pay",
+      "小米手環"
+    ],
+    "language": "zh"
+  },
+  {
+    "date": "2023-05-29",
+    "time": "21:29:31",
+    "datetime": "2023-05-29T21:29:31.000Z",
+    "sender": "Maple 愉景住客",
+    "text": "要搵認可人士計好數",
+    "raw": "[29/5/2023, 21:29:31] Maple 愉景住客: 要搵認可人士計好數",
+    "category": "restaurant",
+    "useful": true,
+    "summary": "Asks if Maxim's offers crab dishes for lunch or dinner.",
+    "entities": [
+      "美心"
+    ],
+    "language": "zh"
+  },
+  {
+    "date": "2023-05-29",
+    "time": "23:37:47",
+    "datetime": "2023-05-29T23:37:47.000Z",
+    "sender": "Maple 愉景住客",
+    "text": "冇問題呀",
+    "raw": "[29/5/2023, 23:37:47] Maple 愉景住客: 冇問題呀",
+    "category": "childcare",
+    "useful": true,
+    "summary": "Asks if a note is needed when a domestic helper takes leave for a trip to Thailand.",
+    "entities": [],
+    "language": "zh"
+  },
+  {
+    "date": "2023-05-30",
+    "time": "00:06:09",
+    "datetime": "2023-05-30T00:06:09.000Z",
+    "sender": "~ Rick",
+    "text": "勁，朗拿度D 師弟👍",
+    "raw": "[30/5/2023, 00:06:09] ~ Rick: 勁，朗拿度D 師弟👍",
+    "category": "news",
+    "useful": true,
+    "summary": "Reports a fatal accident involving hikers swept away by waves at Ap Lei Pai.",
+    "entities": [
+      "鴨脷洲鴨脷排"
+    ],
+    "language": "zh"
+  },
+  {
+    "date": "2023-05-30",
+    "time": "07:55:17",
+    "datetime": "2023-05-30T07:55:17.000Z",
+    "sender": "LALA🌺 七座37A",
+    "text": "為求盡量保障大家安全",
+    "raw": "[30/5/2023, 07:55:17] LALA🌺 七座37A: 為求盡量保障大家安全",
+    "category": "news",
+    "useful": true,
+    "summary": "Reports thunderstorms caused by Typhoon Mawar, with possible lightning strike on a unit.",
+    "entities": [
+      "瑪娃"
+    ],
+    "language": "zh"
+  },
+  {
+    "date": "2023-05-29",
+    "time": "21:29:31",
+    "datetime": "2023-05-29T21:29:31.000Z",
+    "sender": "Maple 愉景住客",
+    "text": "要搵認可人士計好數",
+    "raw": "[29/5/2023, 21:29:31] Maple 愉景住客: 要搵認可人士計好數",
+    "category": "childcare",
+    "useful": true,
+    "summary": "Experience with overseas childcare services.",
+    "entities": [],
+    "language": "zh"
+  },
+  {
+    "date": "2023-05-29",
+    "time": "23:37:47",
+    "datetime": "2023-05-29T23:37:47.000Z",
+    "sender": "Maple 愉景住客",
+    "text": "冇問題呀",
+    "raw": "[29/5/2023, 23:37:47] Maple 愉景住客: 冇問題呀",
+    "category": "restaurant",
+    "useful": true,
+    "summary": "Review of chestnut cream dessert.",
+    "entities": [],
+    "language": "zh"
+  },
+  {
+    "date": "2023-05-29",
+    "time": "23:44:14",
+    "datetime": "2023-05-29T23:44:14.000Z",
+    "sender": "Maple 愉景住客",
+    "text": "幅牆Physically拆唔拆得",
+    "raw": "[29/5/2023, 23:44:14] Maple 愉景住客: 幅牆Physically拆唔拆得",
+    "category": "restaurant",
+    "useful": true,
+    "summary": "Feedback on dessert quality.",
+    "entities": [],
+    "language": "zh"
+  },
+  {
+    "date": "2023-05-30",
+    "time": "07:55:17",
+    "datetime": "2023-05-30T07:55:17.000Z",
+    "sender": "LALA🌺 七座37A",
+    "text": "為求盡量保障大家安全",
+    "raw": "[30/5/2023, 07:55:17] LALA🌺 七座37A: 為求盡量保障大家安全",
+    "category": "restaurant",
+    "useful": true,
+    "summary": "Description of sesame dessert with mochi.",
+    "entities": [],
+    "language": "zh"
+  },
+  {
+    "date": "2023-05-29",
+    "time": "16:50:24",
+    "datetime": "2023-05-29T16:50:24.000Z",
+    "sender": "~ Ming",
+    "text": "據悉拍片前，涉事設計公司曾向相關媒體表示牆身改動合法。故不排除涉事單位疑似主力牆並非全拆，當師傅報告看到牆內有鋼筋時，負責人或認為大半牆身仍保留應有相當支撐能力，繼而決定繼續爆窿裝門。",
+    "raw": "[29/5/2023, 16:50:24] ~ Ming: 據悉拍片前，涉事設計公司曾向相關媒體表示牆身改動合法。故不排除涉事單位疑似主力牆並非全拆，當師傅報告看到牆內有鋼筋時，負責人或認為大半牆身仍保留應有相當支撐能力，繼而決定繼續爆窿裝門。",
+    "category": "news",
+    "useful": true,
+    "summary": "Suspect was subdued on the spot.",
+    "entities": [],
+    "language": "zh"
+  },
+  {
+    "date": "2023-05-29",
+    "time": "20:14:08",
+    "datetime": "2023-05-29T20:14:08.000Z",
+    "sender": "Maple 愉景住客",
+    "text": "日出康城主力牆風波 方國珊：屋宇署已要求業主盡快還原主力牆 15天內開展工程",
+    "raw": "[29/5/2023, 20:14:08] Maple 愉景住客: 日出康城主力牆風波 方國珊：屋宇署已要求業主盡快還原主力牆 15天內開展工程",
+    "category": "news",
+    "useful": true,
+    "summary": "News reports mention over 20 stabbings.",
+    "entities": [],
+    "language": "zh"
+  },
+  {
+    "date": "2023-05-29",
+    "time": "21:29:55",
+    "datetime": "2023-05-29T21:29:55.000Z",
+    "sender": "Maple 愉景住客",
+    "text": "有權",
+    "raw": "[29/5/2023, 21:29:55] Maple 愉景住客: 有權",
+    "category": "news",
+    "useful": true,
+    "summary": "Two people were stabbed at Hollywood Plaza, suspect subdued on the spot.",
+    "entities": [
+      "荷里活廣場"
+    ],
+    "language": "zh"
+  },
+  {
+    "date": "2023-05-29",
+    "time": "21:47:48",
+    "datetime": "2023-05-29T21:47:48.000Z",
+    "sender": "Maple 愉景住客",
+    "text": "圓床啦",
+    "raw": "[29/5/2023, 21:47:48] Maple 愉景住客: 圓床啦",
+    "category": "news",
+    "useful": true,
+    "summary": "A person hit the suspect with a chair, causing him to stop.",
+    "entities": [],
+    "language": "zh"
+  },
+  {
+    "date": "2023-05-29",
+    "time": "22:42:50",
+    "datetime": "2023-05-29T22:42:50.000Z",
+    "sender": "~ YC",
+    "text": "根據嗰段片話",
+    "raw": "[29/5/2023, 22:42:50] ~ YC: 根據嗰段片話",
+    "category": "news",
+    "useful": true,
+    "summary": "Suspect bought a knife before committing murder at Diamond Hill.",
+    "entities": [
+      "鑽石山"
+    ],
+    "language": "zh"
+  },
+  {
+    "date": "2023-05-29",
+    "time": "23:37:47",
+    "datetime": "2023-05-29T23:37:47.000Z",
+    "sender": "Maple 愉景住客",
+    "text": "冇問題呀",
+    "raw": "[29/5/2023, 23:37:47] Maple 愉景住客: 冇問題呀",
+    "category": "news",
+    "useful": true,
+    "summary": "Shanghai sees a surge of flying ants, netizens share creative solutions.",
+    "entities": [
+      "上海"
+    ],
+    "language": "zh"
+  },
+  {
+    "date": "2023-05-29",
+    "time": "23:44:14",
+    "datetime": "2023-05-29T23:44:14.000Z",
+    "sender": "Maple 愉景住客",
+    "text": "幅牆Physically拆唔拆得",
+    "raw": "[29/5/2023, 23:44:14] Maple 愉景住客: 幅牆Physically拆唔拆得",
+    "category": "news",
+    "useful": true,
+    "summary": "Hollywood Plaza murder case.",
+    "entities": [
+      "荷里活廣場"
+    ],
+    "language": "zh"
+  },
+  {
+    "date": "2023-05-30",
+    "time": "07:55:17",
+    "datetime": "2023-05-30T07:55:17.000Z",
+    "sender": "LALA🌺 七座37A",
+    "text": "為求盡量保障大家安全",
+    "raw": "[30/5/2023, 07:55:17] LALA🌺 七座37A: 為求盡量保障大家安全",
+    "category": "community",
+    "useful": true,
+    "summary": "Call to stop sharing videos and seek professional help if emotionally distressed.",
+    "entities": [],
+    "language": "zh"
+  },
+  {
+    "date": "2023-05-29",
+    "time": "17:49:02",
+    "datetime": "2023-05-29T17:49:02.000Z",
+    "sender": "LALA🌺 七座37A",
+    "text": "加油丫！",
+    "raw": "[29/5/2023, 17:49:02] LALA🌺 七座37A: 加油丫！",
+    "category": "service",
+    "useful": true,
+    "summary": "Asking neighbors for experience with installing shower boards for elderly in original bathtubs.",
+    "entities": [],
+    "language": "zh"
+  },
+  {
+    "date": "2023-05-29",
+    "time": "17:59:55",
+    "datetime": "2023-05-29T17:59:55.000Z",
+    "sender": "LALA🌺 七座37A",
+    "text": "咁攪笑",
+    "raw": "[29/5/2023, 17:59:55] LALA🌺 七座37A: 咁攪笑",
+    "category": "service",
+    "useful": true,
+    "summary": "Explaining the need for a shower board for elderly to sit and turn into the bathtub.",
+    "entities": [],
+    "language": "zh"
+  },
+  {
+    "date": "2023-05-29",
+    "time": "19:56:47",
+    "datetime": "2023-05-29T19:56:47.000Z",
+    "sender": "LALA🌺 七座37A",
+    "text": "一係開冷氣",
+    "raw": "[29/5/2023, 19:56:47] LALA🌺 七座37A: 一係開冷氣",
+    "category": "restaurant",
+    "useful": true,
+    "summary": "Mentioning Delish restaurant.",
+    "entities": [
+      "Delish"
+    ],
+    "language": "en"
+  },
+  {
+    "date": "2023-05-29",
+    "time": "20:14:08",
+    "datetime": "2023-05-29T20:14:08.000Z",
+    "sender": "Maple 愉景住客",
+    "text": "日出康城主力牆風波 方國珊：屋宇署已要求業主盡快還原主力牆 15天內開展工程",
+    "raw": "[29/5/2023, 20:14:08] Maple 愉景住客: 日出康城主力牆風波 方國珊：屋宇署已要求業主盡快還原主力牆 15天內開展工程",
+    "category": "restaurant",
+    "useful": true,
+    "summary": "Early dining discount at Delish.",
+    "entities": [
+      "Delish"
+    ],
+    "language": "zh"
+  },
+  {
+    "date": "2023-05-29",
+    "time": "20:50:14",
+    "datetime": "2023-05-29T20:50:14.000Z",
+    "sender": "~ Andy",
+    "text": "要做好多野先至可以補救！",
+    "raw": "[29/5/2023, 20:50:14] ~ Andy: 要做好多野先至可以補救！ ",
+    "category": "restaurant",
+    "useful": true,
+    "summary": "Upgraded to Latte at Delish for an extra $12.",
+    "entities": [
+      "Delish",
+      "Latte"
+    ],
+    "language": "mixed"
+  },
+  {
+    "date": "2023-05-29",
+    "time": "21:29:55",
+    "datetime": "2023-05-29T21:29:55.000Z",
+    "sender": "Maple 愉景住客",
+    "text": "有權",
+    "raw": "[29/5/2023, 21:29:55] Maple 愉景住客: 有權",
+    "category": "restaurant",
+    "useful": true,
+    "summary": "Describing the fried item as chestnut and purple sweet potato cake.",
+    "entities": [
+      "栗子紫薯餅"
+    ],
+    "language": "zh"
+  },
+  {
+    "date": "2023-05-29",
+    "time": "21:47:48",
+    "datetime": "2023-05-29T21:47:48.000Z",
+    "sender": "Maple 愉景住客",
+    "text": "圓床啦",
+    "raw": "[29/5/2023, 21:47:48] Maple 愉景住客: 圓床啦",
+    "category": "restaurant",
+    "useful": true,
+    "summary": "Commenting on the quality of the food.",
+    "entities": [],
+    "language": "zh"
+  },
+  {
+    "date": "2023-05-29",
+    "time": "16:38:46",
+    "datetime": "2023-05-29T16:38:46.000Z",
+    "sender": "🎃🎃🎃",
+    "text": "呢單野業主就衰硬",
+    "raw": "[29/5/2023, 16:38:46] 🎃🎃🎃: 呢單野業主就衰硬",
+    "category": "community",
+    "useful": true,
+    "summary": "There is a major controversy in the Tsuen Wan Owners' Committee.",
+    "entities": [
+      "荃威"
+    ],
+    "language": "zh"
+  },
+  {
+    "date": "2023-05-29",
+    "time": "17:49:02",
+    "datetime": "2023-05-29T17:49:02.000Z",
+    "sender": "LALA🌺 七座37A",
+    "text": "加油丫！",
+    "raw": "[29/5/2023, 17:49:02] LALA🌺 七座37A: 加油丫！",
+    "category": "traffic",
+    "useful": true,
+    "summary": "Traffic issues in Ma Wan are unlikely to be resolved.",
+    "entities": [
+      "馬灣"
+    ],
+    "language": "zh"
+  },
+  {
+    "date": "2023-05-29",
+    "time": "20:50:14",
+    "datetime": "2023-05-29T20:50:14.000Z",
+    "sender": "~ Andy",
+    "text": "要做好多野先至可以補救！",
+    "raw": "[29/5/2023, 20:50:14] ~ Andy: 要做好多野先至可以補救！ ",
+    "category": "traffic",
+    "useful": true,
+    "summary": "A residential complex has severe traffic congestion at the southern parking lot.",
+    "entities": [],
+    "language": "zh"
+  },
+  {
+    "date": "2023-05-29",
+    "time": "20:14:08",
+    "datetime": "2023-05-29T20:14:08.000Z",
+    "sender": "Maple 愉景住客",
+    "text": "日出康城主力牆風波 方國珊：屋宇署已要求業主盡快還原主力牆 15天內開展工程",
+    "raw": "[29/5/2023, 20:14:08] Maple 愉景住客: 日出康城主力牆風波 方國珊：屋宇署已要求業主盡快還原主力牆 15天內開展工程",
+    "category": "community",
+    "useful": true,
+    "summary": "The mall will open in July.",
+    "entities": [
+      "商場"
+    ],
+    "language": "zh"
+  },
+  {
+    "date": "2023-05-29",
+    "time": "21:29:31",
+    "datetime": "2023-05-29T21:29:31.000Z",
+    "sender": "Maple 愉景住客",
+    "text": "要搵認可人士計好數",
+    "raw": "[29/5/2023, 21:29:31] Maple 愉景住客: 要搵認可人士計好數",
+    "category": "traffic",
+    "useful": true,
+    "summary": "Crossing the harbor is very convenient.",
+    "entities": [],
+    "language": "zh"
+  },
+  {
+    "date": "2023-05-29",
+    "time": "21:32:25",
+    "datetime": "2023-05-29T21:32:25.000Z",
+    "sender": "Maple 愉景住客",
+    "text": "D獨立屋就有機會做",
+    "raw": "[29/5/2023, 21:32:25] Maple 愉景住客: D獨立屋就有機會做",
+    "category": "community",
+    "useful": true,
+    "summary": "The clubhouse services are excellent.",
+    "entities": [
+      "會所"
+    ],
+    "language": "zh"
+  },
+  {
+    "date": "2023-05-29",
+    "time": "22:43:07",
+    "datetime": "2023-05-29T22:43:07.000Z",
+    "sender": "~ YC",
+    "text": "同埋依照業主嘅意願要好似酒店套房咁",
+    "raw": "[29/5/2023, 22:43:07] ~ YC: 同埋依照業主嘅意願要好似酒店套房咁",
+    "category": "community",
+    "useful": true,
+    "summary": "The low-floor garden view in Phase 2 is nice and affordable, and kids enjoy looking at the pool.",
+    "entities": [
+      "二期內園景",
+      "泳池"
+    ],
+    "language": "zh"
+  },
+  {
+    "date": "2023-05-29",
+    "time": "23:44:14",
+    "datetime": "2023-05-29T23:44:14.000Z",
+    "sender": "Maple 愉景住客",
+    "text": "幅牆Physically拆唔拆得",
+    "raw": "[29/5/2023, 23:44:14] Maple 愉景住客: 幅牆Physically拆唔拆得",
+    "category": "tech_tip",
+    "useful": true,
+    "summary": "Shared a YouTube video link.",
+    "entities": [
+      "https://youtu.be/f7hbWvHKns0"
+    ],
+    "language": "en"
+  },
+  {
+    "date": "2023-05-29",
+    "time": "21:29:31",
+    "datetime": "2023-05-29T21:29:31.000Z",
+    "sender": "Maple 愉景住客",
+    "text": "要搵認可人士計好數",
+    "raw": "[29/5/2023, 21:29:31] Maple 愉景住客: 要搵認可人士計好數",
+    "category": "news",
+    "useful": true,
+    "summary": "Injury case in Sham Shui Po, three children injured.",
+    "entities": [
+      "深水埗桂林街"
+    ],
+    "language": "zh"
+  },
+  {
+    "date": "2023-05-29",
+    "time": "21:29:55",
+    "datetime": "2023-05-29T21:29:55.000Z",
+    "sender": "Maple 愉景住客",
+    "text": "有權",
+    "raw": "[29/5/2023, 21:29:55] Maple 愉景住客: 有權",
+    "category": "news",
+    "useful": true,
+    "summary": "Assault case in Sham Shui Po, three children injured by their father.",
+    "entities": [
+      "深水埗桂林街"
+    ],
+    "language": "zh"
+  },
+  {
+    "date": "2023-05-29",
+    "time": "23:37:47",
+    "datetime": "2023-05-29T23:37:47.000Z",
+    "sender": "Maple 愉景住客",
+    "text": "冇問題呀",
+    "raw": "[29/5/2023, 23:37:47] Maple 愉景住客: 冇問題呀",
+    "category": "news",
+    "useful": true,
+    "summary": "Sham Shui Po woman claims husband killed three daughters, children hospitalized.",
+    "entities": [
+      "深水埗"
+    ],
+    "language": "zh"
+  },
+  {
+    "date": "2023-05-29",
+    "time": "21:29:55",
+    "datetime": "2023-05-29T21:29:55.000Z",
+    "sender": "Maple 愉景住客",
+    "text": "有權",
+    "raw": "[29/5/2023, 21:29:55] Maple 愉景住客: 有權",
+    "category": "community",
+    "useful": true,
+    "summary": "Broadcast about a briefing session on foreign domestic helper matters.",
+    "entities": [],
+    "language": "zh"
+  },
+  {
+    "date": "2023-05-29",
+    "time": "22:43:07",
+    "datetime": "2023-05-29T22:43:07.000Z",
+    "sender": "~ YC",
+    "text": "同埋依照業主嘅意願要好似酒店套房咁",
+    "raw": "[29/5/2023, 22:43:07] ~ YC: 同埋依照業主嘅意願要好似酒店套房咁",
+    "category": "education",
+    "useful": true,
+    "summary": "Asking for the location of the nearest bookstore in 愉城.",
+    "entities": [
+      "愉城"
+    ],
+    "language": "zh"
+  },
+  {
+    "date": "2023-05-29",
+    "time": "16:58:06",
+    "datetime": "2023-05-29T16:58:06.000Z",
+    "sender": "拜仁Brian 卓偉賢 愉城",
+    "text": "一句講晒，業主大鑊",
+    "raw": "[29/5/2023, 16:58:06] 拜仁Brian 卓偉賢 愉城: 一句講晒，業主大鑊",
+    "category": "community",
+    "useful": true,
+    "summary": "New security guard at Block 3 replaced a quieter female guard.",
+    "entities": [
+      "三座"
+    ],
+    "language": "zh"
+  },
+  {
+    "date": "2023-05-30",
+    "time": "07:54:36",
+    "datetime": "2023-05-30T07:54:36.000Z",
+    "sender": "LALA🌺 七座37A",
+    "text": "@⁨~𝐸𝓂𝒾𝓁𝓎 𝐿𝒶𝒾🧝🏻‍♀️⁩",
+    "raw": "[30/5/2023, 07:54:36] LALA🌺 七座37A: @⁨~𝐸𝓂𝒾𝓁𝓎 𝐿𝒶𝒾🧝🏻‍♀️⁩ ",
+    "category": "news",
+    "useful": true,
+    "summary": "Scammers impersonating management staff at 荃威花園 to inspect fire safety devices and steal privacy.",
+    "entities": [
+      "荃威花園"
+    ],
+    "language": "zh"
+  },
+  {
+    "date": "2023-05-30",
+    "time": "07:55:17",
+    "datetime": "2023-05-30T07:55:17.000Z",
+    "sender": "LALA🌺 七座37A",
+    "text": "為求盡量保障大家安全",
+    "raw": "[30/5/2023, 07:55:17] LALA🌺 七座37A: 為求盡量保障大家安全",
+    "category": "community",
+    "useful": true,
+    "summary": "Stairs to the platform at Block 3 were locked last week.",
+    "entities": [
+      "三座"
+    ],
+    "language": "zh"
+  },
+  {
+    "date": "2023-05-30",
+    "time": "08:17:44",
+    "datetime": "2023-05-30T08:17:44.000Z",
+    "sender": "LALA🌺 七座37A",
+    "text": "唔好話牆先",
+    "raw": "[30/5/2023, 08:17:44] LALA🌺 七座37A: 唔好話牆先",
+    "category": "news",
+    "useful": true,
+    "summary": "Knife-wielding man threatened staff at a vegetable stall in 荃灣, subdued with no injuries.",
+    "entities": [
+      "荃灣"
+    ],
+    "language": "zh"
+  },
+  {
+    "date": "2023-05-29",
+    "time": "16:36:10",
+    "datetime": "2023-05-29T16:36:10.000Z",
+    "sender": "~ YC",
+    "text": "不過應該冇包",
+    "raw": "[29/5/2023, 16:36:10] ~ YC: 不過應該冇包",
+    "category": "doctor",
+    "useful": true,
+    "summary": "Positive review of a dentist and clinic environment.",
+    "entities": [
+      "Carman Chen"
+    ],
+    "language": "zh"
+  },
+  {
+    "date": "2023-05-29",
+    "time": "16:50:24",
+    "datetime": "2023-05-29T16:50:24.000Z",
+    "sender": "~ Ming",
+    "text": "據悉拍片前，涉事設計公司曾向相關媒體表示牆身改動合法。故不排除涉事單位疑似主力牆並非全拆，當師傅報告看到牆內有鋼筋時，負責人或認為大半牆身仍保留應有相當支撐能力，繼而決定繼續爆窿裝門。",
+    "raw": "[29/5/2023, 16:50:24] ~ Ming: 據悉拍片前，涉事設計公司曾向相關媒體表示牆身改動合法。故不排除涉事單位疑似主力牆並非全拆，當師傅報告看到牆內有鋼筋時，負責人或認為大半牆身仍保留應有相當支撐能力，繼而決定繼續爆窿裝門。",
+    "category": "restaurant",
+    "useful": true,
+    "summary": "Inquiry about fresh beef stalls at Heung Che Street Market.",
+    "entities": [
+      "香車街街市"
+    ],
+    "language": "zh"
+  },
+  {
+    "date": "2023-05-29",
+    "time": "17:01:52",
+    "datetime": "2023-05-29T17:01:52.000Z",
+    "sender": "Dicky",
+    "text": "未到call loan",
+    "raw": "[29/5/2023, 17:01:52] Dicky: 未到call loan",
+    "category": "education",
+    "useful": true,
+    "summary": "Last day of exams announced.",
+    "entities": [
+      "LALA🌺 七座37A"
+    ],
+    "language": "zh"
+  },
+  {
+    "date": "2023-05-29",
+    "time": "17:49:02",
+    "datetime": "2023-05-29T17:49:02.000Z",
+    "sender": "LALA🌺 七座37A",
+    "text": "加油丫！",
+    "raw": "[29/5/2023, 17:49:02] LALA🌺 七座37A: 加油丫！",
+    "category": "restaurant",
+    "useful": true,
+    "summary": "Warning about non-fresh beef sold at a stall.",
+    "entities": [],
+    "language": "zh"
+  },
+  {
+    "date": "2023-05-29",
+    "time": "19:56:47",
+    "datetime": "2023-05-29T19:56:47.000Z",
+    "sender": "LALA🌺 七座37A",
+    "text": "一係開冷氣",
+    "raw": "[29/5/2023, 19:56:47] LALA🌺 七座37A: 一係開冷氣",
+    "category": "traffic",
+    "useful": true,
+    "summary": "Information about a minibus station near the bus stop.",
+    "entities": [
+      "巴士站",
+      "小巴站",
+      "Kelvin 愉景新城"
+    ],
+    "language": "zh"
+  },
+  {
+    "date": "2023-05-29",
+    "time": "20:14:08",
+    "datetime": "2023-05-29T20:14:08.000Z",
+    "sender": "Maple 愉景住客",
+    "text": "日出康城主力牆風波 方國珊：屋宇署已要求業主盡快還原主力牆 15天內開展工程",
+    "raw": "[29/5/2023, 20:14:08] Maple 愉景住客: 日出康城主力牆風波 方國珊：屋宇署已要求業主盡快還原主力牆 15天內開展工程",
+    "category": "service",
+    "useful": true,
+    "summary": "Mention of Agile Laundry service.",
+    "entities": [
+      "敏捷洗衣",
+      "ISAIAH"
+    ],
+    "language": "zh"
+  },
+  {
+    "date": "2023-05-29",
+    "time": "20:50:14",
+    "datetime": "2023-05-29T20:50:14.000Z",
+    "sender": "~ Andy",
+    "text": "要做好多野先至可以補救！",
+    "raw": "[29/5/2023, 20:50:14] ~ Andy: 要做好多野先至可以補救！ ",
+    "category": "service",
+    "useful": true,
+    "summary": "Positive review of Hair Ponder salon for hair treatments.",
+    "entities": [
+      "Sandy Chan",
+      "大河道",
+      "台風拉面",
+      "hair ponder"
+    ],
+    "language": "zh"
+  },
+  {
+    "date": "2023-05-29",
+    "time": "21:29:55",
+    "datetime": "2023-05-29T21:29:55.000Z",
+    "sender": "Maple 愉景住客",
+    "text": "有權",
+    "raw": "[29/5/2023, 21:29:55] Maple 愉景住客: 有權",
+    "category": "tech_tip",
+    "useful": true,
+    "summary": "Mention of Ubiquiti Amplifi as a tech recommendation.",
+    "entities": [
+      "Ubiquiti Amplifi",
+      "🎃🎃🎃"
+    ],
+    "language": "zh"
+  },
+  {
+    "date": "2023-05-29",
+    "time": "22:42:50",
+    "datetime": "2023-05-29T22:42:50.000Z",
+    "sender": "~ YC",
+    "text": "根據嗰段片話",
+    "raw": "[29/5/2023, 22:42:50] ~ YC: 根據嗰段片話",
+    "category": "tech_tip",
+    "useful": true,
+    "summary": "Mention of purchasing a Redmi router two years ago.",
+    "entities": [
+      "紅米router",
+      "g"
+    ],
+    "language": "zh"
+  },
+  {
+    "date": "2023-05-29",
+    "time": "22:43:07",
+    "datetime": "2023-05-29T22:43:07.000Z",
+    "sender": "~ YC",
+    "text": "同埋依照業主嘅意願要好似酒店套房咁",
+    "raw": "[29/5/2023, 22:43:07] ~ YC: 同埋依照業主嘅意願要好似酒店套房咁",
+    "category": "tech_tip",
+    "useful": true,
+    "summary": "Mixed review of ASUS mesh routers.",
+    "entities": [
+      "ASUS mesh",
+      "🎃🎃🎃"
+    ],
+    "language": "zh"
+  },
+  {
+    "date": "2023-05-29",
+    "time": "23:36:56",
+    "datetime": "2023-05-29T23:36:56.000Z",
+    "sender": "Maple 愉景住客",
+    "text": "薄身唔係主力牆",
+    "raw": "[29/5/2023, 23:36:56] Maple 愉景住客: 薄身唔係主力牆",
+    "category": "tech_tip",
+    "useful": true,
+    "summary": "Recommendation of Netgear Orbi mesh routers for a 3-room setup.",
+    "entities": [
+      "netgear orbi mesh",
+      "Carol"
+    ],
+    "language": "zh"
+  },
+  {
+    "date": "2023-05-29",
+    "time": "23:37:47",
+    "datetime": "2023-05-29T23:37:47.000Z",
+    "sender": "Maple 愉景住客",
+    "text": "冇問題呀",
+    "raw": "[29/5/2023, 23:37:47] Maple 愉景住客: 冇問題呀",
+    "category": "tech_tip",
+    "useful": true,
+    "summary": "Improved experience with TP-Link mesh routers.",
+    "entities": [
+      "tp-link",
+      "🎃🎃🎃"
+    ],
+    "language": "zh"
+  },
+  {
+    "date": "2023-05-30",
+    "time": "07:55:17",
+    "datetime": "2023-05-30T07:55:17.000Z",
+    "sender": "LALA🌺 七座37A",
+    "text": "為求盡量保障大家安全",
+    "raw": "[30/5/2023, 07:55:17] LALA🌺 七座37A: 為求盡量保障大家安全",
+    "category": "shopping",
+    "useful": true,
+    "summary": "Taobao link for anti-stab tactical vest.",
+    "entities": [
+      "淘宝",
+      "鄧生 Pickleball 愉景"
+    ],
+    "language": "zh"
+  }
+]

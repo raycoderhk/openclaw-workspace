@@ -1,0 +1,291 @@
+<!DOCTYPE html>
+<html lang="zh-HK">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>🏘️ 愉城社區 Hub - 鄰里知識庫</title>
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+        
+        body {
+            font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, "Helvetica Neue", Arial, sans-serif;
+            background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
+            min-height: 100vh;
+            padding: 20px;
+        }
+        
+        .container {
+            max-width: 1200px;
+            margin: 0 auto;
+        }
+        
+        header {
+            background: white;
+            border-radius: 16px;
+            padding: 30px;
+            margin-bottom: 20px;
+            box-shadow: 0 10px 30px rgba(0,0,0,0.2);
+        }
+        
+        h1 {
+            color: #667eea;
+            font-size: 2.5em;
+            margin-bottom: 10px;
+        }
+        
+        .subtitle {
+            color: #666;
+            font-size: 1.1em;
+        }
+        
+        .stats {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(150px, 1fr));
+            gap: 15px;
+            margin-top: 20px;
+        }
+        
+        .stat-card {
+            background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
+            color: white;
+            padding: 20px;
+            border-radius: 12px;
+            text-align: center;
+        }
+        
+        .stat-number {
+            font-size: 2em;
+            font-weight: bold;
+        }
+        
+        .stat-label {
+            font-size: 0.9em;
+            opacity: 0.9;
+        }
+        
+        .filters {
+            background: white;
+            border-radius: 16px;
+            padding: 20px;
+            margin-bottom: 20px;
+            box-shadow: 0 10px 30px rgba(0,0,0,0.2);
+        }
+        
+        .filter-group {
+            display: flex;
+            flex-wrap: wrap;
+            gap: 10px;
+            margin-top: 15px;
+        }
+        
+        .filter-btn {
+            padding: 10px 20px;
+            border: 2px solid #667eea;
+            background: white;
+            color: #667eea;
+            border-radius: 25px;
+            cursor: pointer;
+            font-weight: 600;
+            transition: all 0.3s;
+        }
+        
+        .filter-btn:hover, .filter-btn.active {
+            background: #667eea;
+            color: white;
+        }
+        
+        .search-box {
+            width: 100%;
+            padding: 15px;
+            border: 2px solid #e0e0e0;
+            border-radius: 12px;
+            font-size: 1em;
+            margin-bottom: 15px;
+        }
+        
+        .search-box:focus {
+            outline: none;
+            border-color: #667eea;
+        }
+        
+        .tips-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fill, minmax(350px, 1fr));
+            gap: 20px;
+        }
+        
+        .tip-card {
+            background: white;
+            border-radius: 16px;
+            padding: 20px;
+            box-shadow: 0 5px 20px rgba(0,0,0,0.15);
+            transition: transform 0.3s;
+        }
+        
+        .tip-card:hover {
+            transform: translateY(-5px);
+        }
+        
+        .tip-header {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            margin-bottom: 15px;
+        }
+        
+        .tip-category {
+            padding: 5px 15px;
+            border-radius: 20px;
+            font-size: 0.85em;
+            font-weight: 600;
+            color: white;
+        }
+        
+        .tip-date {
+            color: #999;
+            font-size: 0.9em;
+        }
+        
+        .tip-summary {
+            font-size: 1.1em;
+            color: #333;
+            margin-bottom: 15px;
+            line-height: 1.5;
+        }
+        
+        .tip-text {
+            background: #f8f9fa;
+            padding: 15px;
+            border-radius: 8px;
+            color: #555;
+            font-size: 0.95em;
+            margin-bottom: 15px;
+            border-left: 4px solid #667eea;
+        }
+        
+        .tip-meta {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            font-size: 0.85em;
+            color: #999;
+        }
+        
+        .tip-entities {
+            display: flex;
+            flex-wrap: wrap;
+            gap: 5px;
+        }
+        
+        .entity-tag {
+            background: #e8eaf6;
+            color: #667eea;
+            padding: 3px 10px;
+            border-radius: 12px;
+            font-size: 0.85em;
+        }
+        
+        .category-traffic { background: #ff6b6b; }
+        .category-restaurant { background: #ffa502; }
+        .category-doctor { background: #2ed573; }
+        .category-repair { background: #3742fa; }
+        .category-tech_tip { background: #5352ed; }
+        .category-shopping { background: #ff4757; }
+        .category-service { background: #1e90ff; }
+        .category-community { background: #57606f; }
+        .category-event { background: #ff6348; }
+        .category-news { background: #747d8c; }
+        .category-education { background: #05c46b; }
+        .category-childcare { background: #ffa801; }
+        
+        .loading {
+            text-align: center;
+            padding: 50px;
+            color: white;
+            font-size: 1.5em;
+        }
+        
+        .no-results {
+            text-align: center;
+            padding: 50px;
+            background: white;
+            border-radius: 16px;
+            color: #666;
+        }
+        
+        footer {
+            text-align: center;
+            color: white;
+            margin-top: 30px;
+            padding: 20px;
+            opacity: 0.8;
+        }
+        
+        @media (max-width: 768px) {
+            h1 { font-size: 1.8em; }
+            .tips-grid { grid-template-columns: 1fr; }
+            .stats { grid-template-columns: repeat(2, 1fr); }
+        }
+    </style>
+</head>
+<body>
+    <div class="container">
+        <header>
+            <h1>🏘️ 愉城社區 Hub</h1>
+            <p class="subtitle">鄰里知識庫 · 從 WhatsApp 聊天提取的實用資訊</p>
+            
+            <div class="stats">
+                <div class="stat-card">
+                    <div class="stat-number" id="total-tips">-</div>
+                    <div class="stat-label">有用提示</div>
+                </div>
+                <div class="stat-card">
+                    <div class="stat-number" id="total-categories">-</div>
+                    <div class="stat-label">分類</div>
+                </div>
+                <div class="stat-card">
+                    <div class="stat-number" id="total-senders">-</div>
+                    <div class="stat-label">鄰居貢獻</div>
+                </div>
+                <div class="stat-card">
+                    <div class="stat-number" id="date-range">-</div>
+                    <div class="stat-label">數據覆蓋</div>
+                </div>
+            </div>
+        </header>
+        
+        <div class="filters">
+            <input type="text" class="search-box" id="search" placeholder="🔍 搜索提示 (例如：巴士、醫生、餐廳...)">
+            
+            <div class="filter-group" id="category-filters">
+                <button class="filter-btn active" data-category="all">全部</button>
+                <!-- Category buttons will be added dynamically -->
+            </div>
+        </div>
+        
+        <div id="loading" class="loading">
+            ⏳ 載入中...
+        </div>
+        
+        <div id="tips-container" class="tips-grid"></div>
+        
+        <div id="no-results" class="no-results" style="display: none;">
+            <h2>😕 未找到結果</h2>
+            <p>嘗試其他關鍵字或分類</p>
+        </div>
+        
+        <footer>
+            <p>数据来源：愉景新城街坊組 WhatsApp · 最後更新：<span id="last-update">-</span></p>
+            <p style="margin-top: 10px; font-size: 0.9em;">
+                🔄 背景分類進行中 · 完整數據即將推出
+            </p>
+        </footer>
+    </div>
+    
+    <script src="app.js"></script>
+</body>
+</html>

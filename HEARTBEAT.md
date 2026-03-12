@@ -11,7 +11,8 @@ If nothing needs attention, reply HEARTBEAT_OK.
 
 ## 即將到來的事件
 **今日 (3 月 11 日 星期三)** ⭐
-• 正常工作日
+• 19:00 HKT - 晚餐 @ TST
+  - 朋友：Poke / Vincent / Sam
 
 **已完成：**
 • Hugging Face Token 申請
