@@ -3,20 +3,14 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>📰 The Economist Archive - March 14, 2026</title>
+    <title>📰 The Economist - March 14, 2026 | Magazine Archive</title>
     <style>
-        :root {
-            --primary-color: #e3120b;
-            --secondary-color: #333;
-            --bg-color: #f5f5f5;
-            --table-bg: #fff;
-            --hover-color: #f0f0f0;
-        }
+        :root { --economist-red: #e3120b; --bg-color: #f5f5f5; }
         * { margin: 0; padding: 0; box-sizing: border-box; }
         body {
-            font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, "Helvetica Neue", Arial, sans-serif;
+            font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, sans-serif;
             background-color: var(--bg-color);
-            color: var(--secondary-color);
+            color: #333;
             line-height: 1.6;
             padding: 20px;
         }
@@ -29,88 +23,85 @@
             color: white;
             text-decoration: none;
             border-radius: 5px;
-            transition: background 0.2s;
         }
         .back-link:hover { background: #555; }
         header {
-            background: linear-gradient(135deg, var(--primary-color), #c4120c);
+            background: linear-gradient(135deg, var(--economist-red), #c4120c);
             color: white;
             padding: 30px;
             border-radius: 10px;
             margin-bottom: 30px;
-            box-shadow: 0 4px 6px rgba(0,0,0,0.1);
         }
         h1 { font-size: 2.5rem; margin-bottom: 10px; }
         .subtitle { font-size: 1.2rem; opacity: 0.9; }
-        .info-box {
+        .placeholder-box {
             background: white;
-            padding: 20px;
+            padding: 60px 40px;
             border-radius: 10px;
+            text-align: center;
+            box-shadow: 0 2px 4px rgba(0,0,0,0.1);
+            margin-bottom: 30px;
+        }
+        .placeholder-icon {
+            font-size: 5rem;
             margin-bottom: 20px;
-            box-shadow: 0 2px 4px rgba(0,0,0,0.1);
+            opacity: 0.5;
         }
-        .info-box h2 { color: var(--primary-color); margin-bottom: 15px; font-size: 1.5rem; }
-        .info-box ul { list-style: none; padding-left: 0; }
-        .info-box li { padding: 8px 0; border-bottom: 1px solid #eee; }
-        .info-box li:last-child { border-bottom: none; }
-        .info-box a { color: var(--primary-color); text-decoration: none; }
-        .info-box a:hover { text-decoration: underline; }
-        table {
-            width: 100%;
-            background: var(--table-bg);
-            border-radius: 10px;
-            overflow: hidden;
-            box-shadow: 0 2px 4px rgba(0,0,0,0.1);
-            border-collapse: collapse;
+        .placeholder-title {
+            font-size: 2rem;
+            color: var(--economist-red);
+            margin-bottom: 15px;
+            font-weight: bold;
         }
-        thead { background: var(--secondary-color); color: white; }
-        th { padding: 15px; text-align: left; font-weight: 600; }
-        th:nth-child(1) { width: 5%; }
-        th:nth-child(2) { width: 50%; }
-        th:nth-child(3) { width: 20%; }
-        th:nth-child(4) { width: 25%; }
-        td { padding: 15px; border-bottom: 1px solid #eee; }
-        tbody tr:hover { background-color: var(--hover-color); }
-        .category {
-            display: inline-block;
-            padding: 4px 10px;
-            background: #e0e0e0;
+        .placeholder-date {
+            font-size: 1.3rem;
+            color: #666;
+            margin-bottom: 30px;
+            padding: 10px 20px;
+            background: #f0f0f0;
             border-radius: 20px;
-            font-size: 0.85rem;
-            font-weight: 600;
+            display: inline-block;
         }
-        .category.leaders { background: #ffe0e0; color: #c4120c; }
-        .category.briefing { background: #e0f0ff; color: #0066cc; }
-        .category.world { background: #e0ffe0; color: #008800; }
-        .category.business { background: #fff0e0; color: #cc6600; }
-        .category.finance { background: #f0e0ff; color: #6633cc; }
-        .category.tech { background: #e0ffff; color: #008888; }
-        .category.culture { background: #ffe0ff; color: #cc00cc; }
-        .links { display: flex; gap: 10px; flex-wrap: wrap; }
-        .links a {
-            padding: 6px 12px;
-            border-radius: 5px;
-            text-decoration: none;
-            font-size: 0.9rem;
-            transition: all 0.2s;
+        .placeholder-desc {
+            font-size: 1.1rem;
+            color: #888;
+            max-width: 600px;
+            margin: 0 auto 30px auto;
+            line-height: 1.8;
         }
-        .original { background: #f5a623; color: white; }
-        .original:hover { background: #d48f1c; }
-        .archive { background: #333; color: white; }
-        .archive:hover { background: #555; }
+        .notify-box {
+            background: linear-gradient(135deg, #f0f9ff, #e0f2fe);
+            border-left: 4px solid #0284c7;
+            padding: 20px;
+            border-radius: 8px;
+            max-width: 600px;
+            margin: 0 auto;
+            text-align: left;
+        }
+        .notify-box h3 {
+            color: #0284c7;
+            margin-bottom: 10px;
+            font-size: 1.2rem;
+        }
+        .notify-box p {
+            color: #666;
+            line-height: 1.6;
+        }
         footer {
             text-align: center;
             padding: 30px;
             color: #666;
-            font-size: 0.9rem;
             margin-top: 30px;
         }
-        footer a { color: var(--primary-color); text-decoration: none; }
+        footer a {
+            color: var(--economist-red);
+            text-decoration: none;
+        }
         @media (max-width: 768px) {
             h1 { font-size: 1.8rem; }
-            th, td { padding: 10px; font-size: 0.9rem; }
-            .links { flex-direction: column; }
-            table { display: block; overflow-x: auto; }
+            .placeholder-box { padding: 40px 20px; }
+            .placeholder-icon { font-size: 3rem; }
+            .placeholder-title { font-size: 1.5rem; }
         }
     </style>
 </head>
@@ -120,96 +111,39 @@
         <a href="../../" class="back-link" style="margin-left: 10px;">← 返回雜誌存檔 | Back to Archive</a>
         
         <header>
-            <h1>📰 The Economist Archive</h1>
-            <p class="subtitle">March 14, 2026 期號 - 預計文章列表</p>
+            <h1>📰 The Economist</h1>
+            <p class="subtitle">March 14, 2026 Issue</p>
         </header>
         
-        <div class="info-box" style="border-left: 4px solid #f5a623; background: #fff9e6;">
-            <h2 style="color: #f5a623;">⚠️ 未來日期 - 示例數據</h2>
-            <ul>
-                <li><strong>狀態：</strong> March 14, 2026 是未來日期，The Economist 尚未出版</li>
-                <li><strong>文章標題：</strong> 以下為<strong>示例結構</strong>，僅供演示頁面格式</li>
-                <li><strong>真實內容：</strong> 請於出版後訪問 <a href="https://www.economist.com/weeklyedition/2026-03-14" target="_blank">The Economist 官方網站</a></li>
-                <li><strong>更新計劃：</strong> 出版後將使用 Tavily 搜索真實文章並更新</li>
-            </ul>
-        </div>
-        
-        <div class="info-box">
-            <h2>🔗 Archive.ph 連結公式</h2>
-            <p>當真實文章出版後，使用以下公式生成 Archive 連結：</p>
-            <code style="display: block; padding: 10px; background: #f5f5f5; border-radius: 5px; margin-top: 10px;">
-                https://archive.ph/[原始 Economist URL]
-            </code>
-            <p style="margin-top: 10px; font-size: 0.9rem; color: #666;">
-                示例：<code>https://archive.ph/https://www.economist.com/leaders/2026/03/12/example-article</code>
+        <div class="placeholder-box">
+            <div class="placeholder-icon">📅</div>
+            <h2 class="placeholder-title">即將推出 | Coming Soon</h2>
+            <div class="placeholder-date">📅 March 14, 2026</div>
+            <p class="placeholder-desc">
+                This issue has not been published yet. The Economist weekly edition for March 14, 2026 
+                will be available on the official website soon.
             </p>
-        </div>
-        
-        <div class="info-box">
-            <h2>📋 預計文章結構 (示例)</h2>
-            <ul>
-                <li><strong>Leaders：</strong> 通常 4-5 篇，涵蓋當前國際熱點</li>
-                <li><strong>Briefing：</strong> 1-2 篇深度分析</li>
-                <li><strong>World：</strong> 各地區新聞 (China, US, Europe, Middle East, Asia 等)</li>
-                <li><strong>Finance：</strong> 經濟金融分析</li>
-                <li><strong>Business：</strong> 商業新聞</li>
-                <li><strong>Technology：</strong> 科技創新</li>
-                <li><strong>Culture：</strong> 文化藝術</li>
-            </ul>
-        </div>
-        
-        <table>
-            <thead>
-                <tr>
-                    <th>#</th>
-                    <th>文章標題 (示例)</th>
-                    <th>分類</th>
-                    <th>連結</th>
-                </tr>
-            </thead>
-            <tbody>
-                <tr>
-                    <td>1</td>
-                    <td><strong>Weekly Edition - March 14, 2026</strong><br><small>封面故事 (待出版)</small></td>
-                    <td><span class="category leaders">Leaders</span></td>
-                    <td class="links">
-                        <a href="https://www.economist.com/weeklyedition/2026-03-14" class="original" target="_blank">Original (待出版)</a>
-                        <a href="https://archive.ph/https://www.economist.com/weeklyedition/2026-03-14" class="archive" target="_blank">Archive.ph</a>
-                    </td>
-                </tr>
-                <tr>
-                    <td colspan="4" style="text-align: center; color: #999; padding: 30px;">
-                        📅 真實文章列表將於出版後更新<br>
-                        <small>請查看 <a href="2026-03-07/" style="color: var(--primary-color);">March 7, 2026</a> 或 <a href="2026-03-01/" style="color: var(--primary-color);">March 1, 2026</a> 期號</small>
-                    </td>
-                </tr>
-            </tbody>
-        </table>
-        
-        <div class="info-box" style="margin-top: 30px;">
-            <h2>📚 已驗證期號</h2>
-            <div style="display: grid; grid-template-columns: repeat(auto-fit, minmax(250px, 1fr)); gap: 15px; margin-top: 15px;">
-                <a href="../2026-03-07/" style="padding: 20px; background: #f0fdf4; border: 2px solid #22c55e; border-radius: 10px; text-decoration: none; color: inherit;">
-                    <div style="font-size: 2rem; margin-bottom: 10px;">✅</div>
-                    <div style="font-weight: bold; color: #22c55e;">March 7, 2026</div>
-                    <div style="font-size: 0.9rem; color: #666;">18 篇真實文章 (已驗證)</div>
-                </a>
-                <a href="../2026-03-01/" style="padding: 20px; background: #f0fdf4; border: 2px solid #22c55e; border-radius: 10px; text-decoration: none; color: inherit;">
-                    <div style="font-size: 2rem; margin-bottom: 10px;">✅</div>
-                    <div style="font-weight: bold; color: #22c55e;">March 1, 2026</div>
-                    <div style="font-size: 0.9rem; color: #666;">12 篇真實文章 (已驗證)</div>
-                </a>
+            <p class="placeholder-desc">
+                本期尚未出版。<strong>The Economist</strong> 2026 年 3 月 14 日週刊將於官方網站發佈後更新。
+            </p>
+            
+            <div class="notify-box">
+                <h3>🔔 更新通知 | Update Notification</h3>
+                <p>
+                    <strong>文章數據 | Article Data:</strong> Will be added when available from Economist.com<br>
+                    <strong>封面圖片 | Cover Image:</strong> Will be uploaded manually<br>
+                    <strong>ESL 詞彙頁面 | ESL Vocabulary:</strong> Will be created after article verification
+                </p>
             </div>
         </div>
         
         <footer>
-            <p><strong>OpenClaw Gameworld - The Economist Archive</strong></p>
-            <p>Created: March 14, 2026 (示例) | Last Updated: March 11, 2026</p>
-            <p>⚠️ 此頁面為示例結構，真實內容將於出版後更新</p>
+            <p><strong>OpenClaw Magazine Archive - The Economist</strong></p>
+            <p>Expected Release Date: March 14, 2026 | 預計發佈日期：2026 年 3 月 14 日</p>
             <p style="margin-top: 10px;">
-                <a href="https://www.economist.com/" target="_blank">The Economist Official</a> | 
-                <a href="https://archive.ph/" target="_blank">Archive.ph</a> | 
-                <a href="/index.html">Back to GameWorld</a>
+                <a href="../">📰 Issue List</a> | 
+                <a href="../../">📚 Magazine Archive</a> | 
+                <a href="https://www.economist.com/" target="_blank">The Economist Official</a>
             </p>
         </footer>
     </div>
