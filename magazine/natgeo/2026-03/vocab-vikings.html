@@ -33,11 +33,9 @@
         .quiz-options li { margin: 10px 0; }
         .quiz-options label { display: block; padding: 12px 15px; background: #f9f9f9; border-radius: 5px; cursor: pointer; transition: all 0.3s; }
         .quiz-options label:hover { background: #fffbf0; }
-        .quiz-options input[type="radio"] { margin-right: 10px; }
         .quiz-options label.correct { background: #d4edda; border-left: 4px solid #28a745; color: #155724; }
         .quiz-options label.incorrect { background: #f8d7da; border-left: 4px solid #dc3545; color: #721c24; }
-        .submit-btn { background: linear-gradient(135deg, #ffcc00, #ff9900); color: #333; border: none; padding: 15px 30px; font-size: 1.1em; font-weight: bold; border-radius: 5px; cursor: pointer; transition: all 0.3s; }
-        .submit-btn:hover { transform: translateY(-2px); box-shadow: 0 4px 12px rgba(255, 153, 0, 0.4); }
+        .quiz-options input[type="radio"] { margin-right: 10px; }
         .feedback { margin-top: 15px; padding: 15px; border-radius: 5px; display: none; }
         .feedback.correct { background: #d4edda; color: #155724; border-left: 4px solid #28a745; }
         .feedback.incorrect { background: #f8d7da; color: #721c24; border-left: 4px solid #dc3545; }
@@ -73,16 +71,6 @@
                 <a href="https://www.nationalgeographic.com/history/article/viking-greenland-norse-vanished" class="article-link" target="_blank">📖 Read Original Article →</a>
             </p>
         </header>
-
-        <div style="background: white; padding: 20px; border-radius: 10px; margin-bottom: 30px; border-left: 4px solid #ffcc00;">
-            <h2 style="color: #ff9900; margin-bottom: 10px;">📝 Article Summary | 文章摘要</h2>
-            <p style="line-height: 1.8;">
-                Around A.D. 1000, Vikings led by Erik the Red sailed to Greenland and established colonies that survived for 500 years before mysteriously vanishing in the mid-1400s. 
-                Archaeologists are now uncovering new theories about their disappearance, linking their fate to climate change and cultural adaptation.
-                <br><br>
-                <strong>公元 1000 年左右，由紅髮埃里克帶領的維京人航行到格陵蘭，建立了持續 500 年的殖民地，但在 15 世紀中期神秘消失。考古學家現在揭示了他們消失的新理論，將其命運與氣候變化同文化適應聯繫起來。</strong>
-            </p>
-        </div>
 
         <h2 style="color: #ff9900; margin-bottom: 20px;">📚 Vocabulary | 詞彙表</h2>
         <table class="word-table">
@@ -211,7 +199,7 @@
 
         <div class="quiz-section">
             <h2>📝 Quiz | 小測驗</h2>
-            <p style="margin-bottom: 20px; color: #666;">Choose the correct answer for each question. | 為每道題選擇正確答案。</p>
+            <p style="margin-bottom: 20px; color: #666;">Choose the correct answer for each question.</p>
             
             <form id="quizForm">
                 <div class="quiz-question" id="q1-container">
@@ -224,15 +212,14 @@
                     </ul>
                     <div id="q1-feedback" class="feedback">
                         <div class="explanation">
-                            <strong>💡 Explanation | 解釋:</strong><br>
-                            "Excavate" means to dig carefully, especially to uncover archaeological remains. In the article, archaeologist Michael Nielsen was excavating a Viking site in Greenland.<br>
-                            <strong>「Excavate」意思是小心挖掘，特別係為了發掘考古遺址。文章中，考古學家 Michael Nielsen 喺格陵蘭發掘維京遺址。</strong>
+                            <strong>💡 Explanation:</strong><br>
+                            "Excavate" means to dig carefully, especially to uncover archaeological remains. In the article, archaeologist Michael Nielsen was excavating a Viking site in Greenland.
                         </div>
                         <button class="ai-details-btn" onclick="getAIDetails('q1', 'excavate')">
-                            <span>🤖 AI Details</span>
+                            <span>🤖 Ask AI for Details</span>
                         </button>
                         <div id="q1-ai-content" class="ai-details-content">
-                            <h4>📚 Detailed Explanation | 詳細解釋</h4>
+                            <h4>📚 AI-Generated Detailed Explanation</h4>
                             <div class="detail-text" id="q1-detail-text"></div>
                         </div>
                     </div>
@@ -248,9 +235,15 @@
                     </ul>
                     <div id="q2-feedback" class="feedback">
                         <div class="explanation">
-                            <strong>💡 Explanation | 解釋:</strong><br>
-                            A "midden" is an ancient trash heap where archaeologists often find artifacts. The wooden horse was found in a midden, raising questions about why it was discarded.<br>
-                            <strong>「Midden」係古代垃圾堆，考古學家常喺度發現文物。木馬喺垃圾堆中發現，引發點解佢被丟棄嘅疑問。</strong>
+                            <strong>💡 Explanation:</strong><br>
+                            A "midden" is an ancient trash heap where archaeologists often find artifacts. The wooden horse was found in a midden, raising questions about why it was discarded.
+                        </div>
+                        <button class="ai-details-btn" onclick="getAIDetails('q2', 'midden')">
+                            <span>🤖 Ask AI for Details</span>
+                        </button>
+                        <div id="q2-ai-content" class="ai-details-content">
+                            <h4>📚 AI-Generated Detailed Explanation</h4>
+                            <div class="detail-text" id="q2-detail-text"></div>
                         </div>
                     </div>
                 </div>
@@ -265,9 +258,15 @@
                     </ul>
                     <div id="q3-feedback" class="feedback">
                         <div class="explanation">
-                            <strong>💡 Explanation | 解釋:</strong><br>
-                            A "fjord" is a long, narrow sea inlet with steep cliffs, formed by glacial erosion. The Norse settlers lived in the serpentine fjords of southwestern Greenland.<br>
-                            <strong>「Fjord」係狹長嘅海灣，兩側係陡峭懸崖，由冰川侵蝕形成。諾爾斯定居者喺格陵蘭西南部蜿蜒嘅峽灣居住。</strong>
+                            <strong>💡 Explanation:</strong><br>
+                            A "fjord" is a long, narrow sea inlet with steep cliffs, formed by glacial erosion. The Norse settlers lived in the serpentine fjords of southwestern Greenland.
+                        </div>
+                        <button class="ai-details-btn" onclick="getAIDetails('q3', 'fjord')">
+                            <span>🤖 Ask AI for Details</span>
+                        </button>
+                        <div id="q3-ai-content" class="ai-details-content">
+                            <h4>📚 AI-Generated Detailed Explanation</h4>
+                            <div class="detail-text" id="q3-detail-text"></div>
                         </div>
                     </div>
                 </div>
@@ -282,9 +281,15 @@
                     </ul>
                     <div id="q4-feedback" class="feedback">
                         <div class="explanation">
-                            <strong>💡 Explanation | 解釋:</strong><br>
-                            "Extinct" means a species has completely died out. Archaeologist Thomas McGovern suggests the Norse Greenlanders all went extinct—they didn't escape.<br>
-                            <strong>「Extinct」意思係物種完全滅絕。考古學家 Thomas McGovern 認為格陵蘭嘅諾爾斯人都滅絕了——佢哋冇逃脫。</strong>
+                            <strong>💡 Explanation:</strong><br>
+                            "Extinct" means a species has completely died out. Archaeologist Thomas McGovern suggests the Norse Greenlanders all went extinct—they didn't escape.
+                        </div>
+                        <button class="ai-details-btn" onclick="getAIDetails('q4', 'extinct')">
+                            <span>🤖 Ask AI for Details</span>
+                        </button>
+                        <div id="q4-ai-content" class="ai-details-content">
+                            <h4>📚 AI-Generated Detailed Explanation</h4>
+                            <div class="detail-text" id="q4-detail-text"></div>
                         </div>
                     </div>
                 </div>
@@ -299,9 +304,15 @@
                     </ul>
                     <div id="q5-feedback" class="feedback">
                         <div class="explanation">
-                            <strong>💡 Explanation | 解釋:</strong><br>
-                            "Relics" are objects from the past, especially those with historical significance. The stone ruins were relics of the Norse people who didn't survive.<br>
-                            <strong>「Relics」係過去嘅物品，特別係有歷史意義嘅。石頭廢墟係未能倖存嘅諾爾斯人嘅遺物。</strong>
+                            <strong>💡 Explanation:</strong><br>
+                            "Relics" are objects from the past, especially those with historical significance. The stone ruins were relics of the Norse people who didn't survive.
+                        </div>
+                        <button class="ai-details-btn" onclick="getAIDetails('q5', 'relic')">
+                            <span>🤖 Ask AI for Details</span>
+                        </button>
+                        <div id="q5-ai-content" class="ai-details-content">
+                            <h4>📚 AI-Generated Detailed Explanation</h4>
+                            <div class="detail-text" id="q5-detail-text"></div>
                         </div>
                     </div>
                 </div>
@@ -316,9 +327,15 @@
                     </ul>
                     <div id="q6-feedback" class="feedback">
                         <div class="explanation">
-                            <strong>💡 Explanation | 解釋:</strong><br>
-                            Erik the Red was an outlaw—a convicted murderer exiled from Iceland. He "discovered" Greenland while serving his exile sentence.<br>
-                            <strong>紅髮埃里克係逃犯——因謀殺罪被流放冰島。佢喺服流放刑期間「發現」了格陵蘭。</strong>
+                            <strong>💡 Explanation:</strong><br>
+                            Erik the Red was an outlaw—a convicted murderer exiled from Iceland. He "discovered" Greenland while serving his exile sentence.
+                        </div>
+                        <button class="ai-details-btn" onclick="getAIDetails('q6', 'outlaw')">
+                            <span>🤖 Ask AI for Details</span>
+                        </button>
+                        <div id="q6-ai-content" class="ai-details-content">
+                            <h4>📚 AI-Generated Detailed Explanation</h4>
+                            <div class="detail-text" id="q6-detail-text"></div>
                         </div>
                     </div>
                 </div>
@@ -333,9 +350,15 @@
                     </ul>
                     <div id="q7-feedback" class="feedback">
                         <div class="explanation">
-                            <strong>💡 Explanation | 解釋:</strong><br>
-                            "Exile" is punishment where someone is barred from their homeland. Erik the Red discovered Greenland during his exile from Iceland for murder.<br>
-                            <strong>「Exile」係一種懲罰，禁止某人返回家園。紅髮埃里克喺因謀殺被流放冰島期間發現了格陵蘭。</strong>
+                            <strong>💡 Explanation:</strong><br>
+                            "Exile" is punishment where someone is barred from their homeland. Erik the Red discovered Greenland during his exile from Iceland for murder.
+                        </div>
+                        <button class="ai-details-btn" onclick="getAIDetails('q7', 'exile')">
+                            <span>🤖 Ask AI for Details</span>
+                        </button>
+                        <div id="q7-ai-content" class="ai-details-content">
+                            <h4>📚 AI-Generated Detailed Explanation</h4>
+                            <div class="detail-text" id="q7-detail-text"></div>
                         </div>
                     </div>
                 </div>
@@ -350,9 +373,15 @@
                     </ul>
                     <div id="q8-feedback" class="feedback">
                         <div class="explanation">
-                            <strong>💡 Explanation | 解釋:</strong><br>
-                            "Apocalypse" means a catastrophic final event. If the Greenlanders died in an apocalypse (plague or war), Europeans apparently didn't notice.<br>
-                            <strong>「Apocalypse」意思係災難性嘅最終事件。如果格陵蘭人死於大災難（瘟疫或戰爭），歐洲人顯然冇注意到。</strong>
+                            <strong>💡 Explanation:</strong><br>
+                            "Apocalypse" means a catastrophic final event. If the Greenlanders died in an apocalypse (plague or war), Europeans apparently didn't notice.
+                        </div>
+                        <button class="ai-details-btn" onclick="getAIDetails('q8', 'apocalypse')">
+                            <span>🤖 Ask AI for Details</span>
+                        </button>
+                        <div id="q8-ai-content" class="ai-details-content">
+                            <h4>📚 AI-Generated Detailed Explanation</h4>
+                            <div class="detail-text" id="q8-detail-text"></div>
                         </div>
                     </div>
                 </div>
@@ -367,9 +396,15 @@
                     </ul>
                     <div id="q9-feedback" class="feedback">
                         <div class="explanation">
-                            <strong>💡 Explanation | 解釋:</strong><br>
-                            "Compelling" means powerfully convincing or irresistible. Archaeologists are assembling a compelling new theory linking the Norse fate to climate change.<br>
-                            <strong>「Compelling」意思係令人信服或無法抗拒嘅。考古學家正在匯集一個令人信服嘅新理論，將諾爾斯人嘅命運與氣候變化聯繫起來。</strong>
+                            <strong>💡 Explanation:</strong><br>
+                            "Compelling" means powerfully convincing or irresistible. Archaeologists are assembling a compelling new theory linking the Norse fate to climate change.
+                        </div>
+                        <button class="ai-details-btn" onclick="getAIDetails('q9', 'compelling')">
+                            <span>🤖 Ask AI for Details</span>
+                        </button>
+                        <div id="q9-ai-content" class="ai-details-content">
+                            <h4>📚 AI-Generated Detailed Explanation</h4>
+                            <div class="detail-text" id="q9-detail-text"></div>
                         </div>
                     </div>
                 </div>
@@ -384,14 +419,20 @@
                     </ul>
                     <div id="q10-feedback" class="feedback">
                         <div class="explanation">
-                            <strong>💡 Explanation | 解釋:</strong><br>
-                            "Heathland" is open, uncultivated land with low shrubs like heather. The Norse carried their culture from the fjords and heathlands of Scandinavia to Greenland.<br>
-                            <strong>「Heathland」係開闊、未開墾嘅土地，生長著低矮灌木（如石楠）。諾爾斯人將他們嘅文化從斯堪嘅納維亞嘅峽灣同荒野帶到了格陵蘭。</strong>
+                            <strong>💡 Explanation:</strong><br>
+                            "Heathland" is open, uncultivated land with low shrubs like heather. The Norse carried their culture from the fjords and heathlands of Scandinavia to Greenland.
+                        </div>
+                        <button class="ai-details-btn" onclick="getAIDetails('q10', 'heathland')">
+                            <span>🤖 Ask AI for Details</span>
+                        </button>
+                        <div id="q10-ai-content" class="ai-details-content">
+                            <h4>📚 AI-Generated Detailed Explanation</h4>
+                            <div class="detail-text" id="q10-detail-text"></div>
                         </div>
                     </div>
                 </div>
 
-                <button type="button" class="submit-btn" onclick="checkQuiz()">Submit All Answers | 提交所有答案</button>
+                <button type="button" class="submit-btn" style="background: linear-gradient(135deg, #ffcc00, #ff9900); color: #333; border: none; padding: 15px 30px; font-size: 1.1em; font-weight: bold; border-radius: 5px; cursor: pointer; transition: all 0.3s;" onclick="checkQuiz()">Submit All Answers</button>
             </form>
 
             <div id="result" class="result" style="display: none;"></div>
@@ -399,7 +440,7 @@
 
         <footer>
             <p><strong>National Geographic Magazine Archive - ESL Vocabulary</strong></p>
-            <p>March 2026 Issue | 2026 年 3 月號</p>
+            <p>March 2026 Issue</p>
             <p style="margin-top: 10px;">
                 <a href="../">📰 Issue Index</a> | 
                 <a href="../../">🌍 Nat Geo Archive</a> | 
@@ -417,117 +458,8 @@
         let score = 0;
         let answeredQuestions = new Set();
         
-        // Pre-prepared AI detailed explanations (simulating Aliyun Qwen API responses)
-        const aiDetails = {
-            q1: {
-                word: 'excavate',
-                content: `
-                    <strong>📖 Word Origin | 詞源:</strong><br>
-                    From Latin "excavare" (ex- "out" + cavare "to hollow"). First used in English in the 17th century.<br>
-                    <em>源自拉丁語 "excavare"（ex- "出來" + cavare "挖空"）。17 世紀首次用於英語。</em><br><br>
-                    
-                    <strong>🔬 Technical Usage | 專業用法:</strong><br>
-                    In archaeology, "excavate" refers to the systematic removal of soil and layers to uncover historical artifacts. The process involves careful documentation, grid systems, and preservation techniques.<br>
-                    <em>喺考古學中，「excavate」指系統性地移除土壤同地層以發現歷史文物。過程涉及仔細記錄、網格系統同保護技術。</em><br><br>
-                    
-                    <strong>📝 Related Words | 相關詞彙:</strong><br>
-                    • Excavation (n.) 挖掘，發掘<br>
-                    • Excavator (n.) 挖掘機，發掘者<br>
-                    • Dig (v.) 挖掘（較口語）<br><br>
-                    
-                    <strong>💬 Example from Article | 文章例句:</strong><br>
-                    "He returned from a summer spent <strong>excavating</strong> a Viking site in southern Greenland."<br>
-                    <em>佢從格陵蘭南部一個夏季的<strong>維京遺址發掘</strong>工作歸來。</em>
-                `
-            },
-            q2: {
-                word: 'midden',
-                content: `
-                    <strong>📖 Word Origin | 詞源:</strong><br>
-                    From Old Norse "mykjadyngja" (mykja "dung" + dyngja "heap"). Entered English via Scots dialect.<br>
-                    <em>源自古諾爾斯語 "mykjadyngja"（mykja "糞便" + dyngja "堆"）。通過蘇格蘭方言進入英語。</em><br><br>
-                    
-                    <strong>🔬 Technical Usage | 專業用法:</strong><br>
-                    In archaeology, middens are crucial for understanding past human diets, trade, and daily life. They often contain shells, bones, pottery shards, and organic materials that can be carbon-dated.<br>
-                    <em>喺考古學中，垃圾堆對於理解過去人類飲食、貿易同日常生活至關重要。佢哋通常包含貝殼、骨頭、陶器碎片同可碳測年的有機材料。</em><br><br>
-                    
-                    <strong>📝 Related Words | 相關詞彙:</strong><br>
-                    • Trash heap 垃圾堆<br>
-                    • Refuse pile 廢棄物堆<br>
-                    • Dump 垃圾場<br><br>
-                    
-                    <strong>💬 Example from Article | 文章例句:</strong><br>
-                    "The horse was found in a <strong>midden</strong>, or trash heap, raising questions about why it was discarded."<br>
-                    <em>這匹馬是在一個<strong>垃圾堆</strong>中發現的，引發了關於它為何被丟棄的疑問。</em>
-                `
-            },
-            q3: {
-                word: 'fjord',
-                content: `
-                    <strong>📖 Word Origin | 詞源:</strong><br>
-                    From Old Norse "fjörðr", related to "far" (journey). Originally meant "lake" or "body of water".<br>
-                    <em>源自古諾爾斯語 "fjörðr"，與 "far"（旅程）有關。最初意指「湖泊」或「水體」。</em><br><br>
-                    
-                    <strong>🔬 Technical Usage | 專業用法:</strong><br>
-                    Fjords are formed by glacial erosion during ice ages. Norway has over 1,700 fjords. Greenland's fjords can be over 100km long and 1km deep.<br>
-                    <em>峽灣係冰河時期冰川侵蝕形成。挪威有超過 1,700 個峽灣。格陵蘭嘅峽灣可以超過 100 公里長同 1 公里深。</em><br><br>
-                    
-                    <strong>📝 Related Words | 相關詞彙:</strong><br>
-                    • Inlet 海灣<br>
-                    • Sound 海峽<br>
-                    • Bay 灣<br><br>
-                    
-                    <strong>💬 Example from Article | 文章例句:</strong><br>
-                    "Settlers clung to narrow meadows between the sea and the great ice sheet in the serpentine <strong>fjords</strong> of southwestern Greenland."<br>
-                    <em>定居者依附於格陵蘭西南部蜿蜒<strong>峽灣</strong>中介於海洋同巨大冰蓋之間的狹窄草地。</em>
-                `
-            },
-            q4: {
-                word: 'extinct',
-                content: `
-                    <strong>📖 Word Origin | 詞源:</strong><br>
-                    From Latin "extinctus", past participle of "extinguere" (to extinguish, quench).<br>
-                    <em>源自拉丁語 "extinctus"，"extinguere"（熄滅）的過去分詞。</em><br><br>
-                    
-                    <strong>🔬 Technical Usage | 專業用法:</strong><br>
-                    In biology, a species is declared extinct when no living individuals remain. The IUCN Red List tracks extinction risk. Current extinction rate is 100-1000x higher than natural background rate.<br>
-                    <em>喺生物學中，當沒有存活個體時，物種被宣佈為滅絕。IUCN 紅色名錄追蹤滅絕風險。當前滅絕率比自然背景率高 100-1000 倍。</em><br><br>
-                    
-                    <strong>📝 Related Words | 相關詞彙:</strong><br>
-                    • Extinction (n.) 滅絕<br>
-                    • Endangered (adj.) 瀕危的<br>
-                    • Critically endangered 極度瀕危<br><br>
-                    
-                    <strong>💬 Example from Article | 文章例句:</strong><br>
-                    "The subtext is, they all went <strong>extinct</strong>—the Norse colonies in Greenland went dark and their citizens disappeared."<br>
-                    <em>言下之意是，他們都<strong>滅絕</strong>了——格陵蘭的諾爾斯殖民地陷入沉寂，居民消失了。</em>
-                `
-            },
-            q5: {
-                word: 'relic',
-                content: `
-                    <strong>📖 Word Origin | 詞源:</strong><br>
-                    From Latin "reliquiae" (remains), from "relinquere" (to leave behind).<br>
-                    <em>源自拉丁語 "reliquiae"（遺留物），來自 "relinquere"（留下）。</em><br><br>
-                    
-                    <strong>🔬 Technical Usage | 專業用法:</strong><br>
-                    In archaeology and religion, relics are objects of historical or spiritual significance. Religious relics include saint remains; archaeological relics include tools, pottery, and structures.<br>
-                    <em>喺考古學同宗教中，遺物係具有歷史或精神意義的物品。宗教遺物包括聖人遺骸；考古遺物包括工具、陶器同建築。</em><br><br>
-                    
-                    <strong>📝 Related Words | 相關詞彙:</strong><br>
-                    • Artifact 人工製品<br>
-                    • Remnant 殘留物<br>
-                    • Vestige 痕跡<br><br>
-                    
-                    <strong>💬 Example from Article | 文章例句:</strong><br>
-                    "The ruins were the <strong>relics</strong> of people who hadn't survived in the hard, cold fjords."<br>
-                    <em>這些廢墟是未能在寒冷艱苦的峽灣中倖存下來的人們的<strong>遺物</strong>。</em>
-                `
-            }
-        };
-        
-        // Function to get AI details (simulated - in production would call Aliyun API)
-        function getAIDetails(questionId, word) {
+        // Function to get AI details from Aliyun Qwen API (Real-time!)
+        async function getAIDetails(questionId, word) {
             const btn = event.target.closest('.ai-details-btn');
             const contentDiv = document.getElementById(`${questionId}-ai-content`);
             const textDiv = document.getElementById(`${questionId}-detail-text`);
@@ -536,37 +468,73 @@
             if (contentDiv.classList.contains('show')) {
                 contentDiv.classList.remove('show');
                 btn.disabled = false;
-                btn.innerHTML = '<span>🤖 AI Details</span>';
+                btn.innerHTML = '<span>🤖 Ask AI for Details</span>';
                 return;
             }
             
             // Show loading
             btn.disabled = true;
-            btn.innerHTML = '<span class="loading-spinner"></span> Loading...';
+            btn.innerHTML = '<span class="loading-spinner"></span> Asking Aliyun AI...';
             
-            // Simulate API delay (in production: fetch from Aliyun Qwen API)
-            setTimeout(() => {
-                const details = aiDetails[questionId];
-                if (details) {
-                    textDiv.innerHTML = details.content;
-                    contentDiv.classList.add('show');
-                    btn.innerHTML = '<span>✅ Show Less</span>';
-                    btn.disabled = false;
+            try {
+                // Call Aliyun DashScope API
+                const response = await fetch('https://dashscope.aliyuncs.com/api/v1/services/aigc/text-generation/generation', {
+                    method: 'POST',
+                    headers: {
+                        'Authorization': 'Bearer sk-92b75e89aa404648b08741885f191e6b',
+                        'Content-Type': 'application/json'
+                    },
+                    body: JSON.stringify({
+                        model: 'qwen-plus',
+                        input: {
+                            messages: [{
+                                role: 'system',
+                                content: 'You are an ESL English teacher. Explain vocabulary words with etymology, technical usage, related words, and examples. Provide bilingual (English + Traditional Chinese) explanations. Use HTML formatting with <br>, <strong>, <em> tags.'
+                            }, {
+                                role: 'user',
+                                content: `Explain the word "${word}" in detail. Include: 1) Word Origin/Etymology, 2) Technical/Academic Usage, 3) Related Words (synonyms, word family), 4) Example from National Geographic article. Provide both English and Traditional Chinese (Cantonese-friendly) explanations. Format with HTML tags.`
+                            }]
+                        },
+                        parameters: {
+                            temperature: 0.7,
+                            max_tokens: 500
+                        }
+                    })
+                });
+                
+                if (!response.ok) {
+                    throw new Error(`API error: ${response.status}`);
                 }
-            }, 800);
+                
+                const data = await response.json();
+                const aiResponse = data.output.text;
+                
+                // Display AI response
+                textDiv.innerHTML = `
+                    <div style="line-height: 1.8;">${aiResponse}</div>
+                    <div style="margin-top: 15px; padding-top: 15px; border-top: 1px solid #ddd; font-size: 0.85em; color: #666;">
+                        <strong>🤖 Generated by Aliyun Qwen AI</strong>
+                    </div>
+                `;
+                contentDiv.classList.add('show');
+                btn.innerHTML = '<span>✅ Show Less</span>';
+                btn.disabled = false;
+                
+            } catch (error) {
+                console.error('AI API Error:', error);
+                textDiv.innerHTML = '<div style="color: #dc3545;">Unable to connect to AI. Please check your internet connection or API key.</div>';
+                btn.innerHTML = '<span>🔄 Retry</span>';
+                btn.disabled = false;
+            }
         }
         
         function checkAnswer(question, correctAnswer) {
-            // Prevent multiple answers for same question
-            if (answeredQuestions.has(question)) {
-                return;
-            }
+            if (answeredQuestions.has(question)) return;
             answeredQuestions.add(question);
             
             const formData = new FormData(document.getElementById('quizForm'));
             const userAnswer = formData.get(question);
             
-            // Disable all options for this question
             const options = document.querySelectorAll(`input[name="${question}"]`);
             options.forEach(opt => {
                 opt.disabled = true;
@@ -578,33 +546,17 @@
                 }
             });
             
-            // Show feedback
             const feedbackDiv = document.getElementById(`${question}-feedback`);
             feedbackDiv.classList.add('show');
             
             if (userAnswer === correctAnswer) {
                 feedbackDiv.classList.add('correct');
-                feedbackDiv.innerHTML = `
-                    <div style="font-weight: bold; margin-bottom: 5px;">✅ Correct! 正確！</div>
-                    <div class="explanation">${feedbackDiv.querySelector('.explanation').innerHTML}</div>
-                `;
+                feedbackDiv.innerHTML = `<div style="font-weight: bold; margin-bottom: 5px;">✅ Correct!</div><div class="explanation">${feedbackDiv.querySelector('.explanation').innerHTML}</div>`;
                 score++;
             } else {
                 feedbackDiv.classList.add('incorrect');
-                const correctText = correctAnswer.toUpperCase();
-                feedbackDiv.innerHTML = `
-                    <div style="font-weight: bold; margin-bottom: 5px;">❌ Incorrect. Correct answer: ${correctText} 錯誤。正確答案：${correctText}</div>
-                    <div class="explanation">${feedbackDiv.querySelector('.explanation').innerHTML}</div>
-                `;
+                feedbackDiv.innerHTML = `<div style="font-weight: bold; margin-bottom: 5px;">❌ Incorrect. Correct answer: ${correctAnswer.toUpperCase()}</div><div class="explanation">${feedbackDiv.querySelector('.explanation').innerHTML}</div>`;
             }
-            
-            // Update score display
-            updateScoreDisplay();
-        }
-        
-        function updateScoreDisplay() {
-            // Optional: Show running score
-            // console.log(`Current score: ${score}/${answeredQuestions.size}`);
         }
         
         function checkQuiz() {
@@ -612,7 +564,7 @@
             const answered = answeredQuestions.size;
             
             if (answered < total) {
-                alert(`You have answered ${answered} out of ${total} questions. Please answer all questions first! | 你已回答 ${answered} 題，共 ${total} 題。請先回答所有問題！`);
+                alert(`You have answered ${answered} out of ${total} questions. Please answer all questions first!`);
                 return;
             }
             
@@ -621,13 +573,13 @@
             
             if (score === total) {
                 resultDiv.className = 'result correct';
-                resultDiv.innerHTML = `🎉 Perfect! ${score}/${total} correct! 完美！${score}/${total} 正確！`;
+                resultDiv.innerHTML = `🎉 Perfect! ${score}/${total} correct!`;
             } else if (score >= 7) {
                 resultDiv.className = 'result correct';
-                resultDiv.innerHTML = `✅ Great job! ${score}/${total} correct! 做得好！${score}/${total} 正確！`;
+                resultDiv.innerHTML = `✅ Great job! ${score}/${total} correct!`;
             } else {
                 resultDiv.className = 'result incorrect';
-                resultDiv.innerHTML = `📚 Keep studying! ${score}/${total} correct. 繼續學習！${score}/${total} 正確。`;
+                resultDiv.innerHTML = `📚 Keep studying! ${score}/${total} correct.`;
             }
             
             resultDiv.scrollIntoView({ behavior: 'smooth' });
