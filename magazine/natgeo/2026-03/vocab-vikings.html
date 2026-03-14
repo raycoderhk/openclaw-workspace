@@ -458,7 +458,7 @@
         let score = 0;
         let answeredQuestions = new Set();
         
-        // Function to get AI details from Aliyun Qwen API via CORS proxy
+        // Function to get AI details from our serverless API (avoids CORS)
         async function getAIDetails(questionId, word) {
             const btn = event.target.closest('.ai-details-btn');
             const contentDiv = document.getElementById(`${questionId}-ai-content`);
@@ -477,47 +477,22 @@
             btn.innerHTML = '<span class="loading-spinner"></span> Asking AI...';
             
             try {
-                // Use CORS proxy to avoid browser security blocking
-                const proxyUrl = 'https://api.allorigins.win/raw?url=';
-                const apiUrl = 'https://dashscope.aliyuncs.com/api/v1/services/aigc/text-generation/generation';
-                
-                // Alternative: Use a different approach - fetch from our own server endpoint
-                // For now, let's try with allorigins proxy
-                const requestBody = JSON.stringify({
-                    model: 'qwen-plus',
-                    input: {
-                        messages: [{
-                            role: 'system',
-                            content: 'You are an ESL English teacher. Explain vocabulary words with etymology, technical usage, related words, and examples. Provide bilingual (English + Traditional Chinese) explanations. Use HTML formatting with <br>, <strong>, <em> tags. Keep it concise.'
-                        }, {
-                            role: 'user',
-                            content: `Explain the word "${word}" in detail. Include: 1) Word Origin, 2) Technical Usage, 3) Related Words, 4) Example. Provide both English and Traditional Chinese. Format with HTML.`
-                        }]
-                    },
-                    parameters: {
-                        temperature: 0.7,
-                        max_tokens: 500
-                    }
-                });
-                
-                // Try direct fetch first (might work on some browsers)
-                const response = await fetch(apiUrl, {
+                // Call OUR serverless API endpoint (no CORS issues!)
+                const response = await fetch('/api/ai-explain', {
                     method: 'POST',
                     headers: {
-                        'Authorization': 'Bearer sk-92b75e89aa404648b08741885f191e6b',
                         'Content-Type': 'application/json'
                     },
-                    body: requestBody,
-                    mode: 'cors'
+                    body: JSON.stringify({ word: word })
                 });
                 
                 if (!response.ok) {
-                    const errorText = await response.text();
-                    throw new Error(`API error ${response.status}: ${errorText}`);
+                    const errorData = await response.json();
+                    throw new Error(`API error: ${errorData.error || response.status}`);
                 }
                 
                 const data = await response.json();
-                const aiResponse = data.output.text;
+                const aiResponse = data.explanation;
                 
                 // Display AI response
                 textDiv.innerHTML = `
@@ -533,21 +508,16 @@
             } catch (error) {
                 console.error('AI API Error:', error);
                 textDiv.innerHTML = `
-                    <div style="color: #dc3545; margin-bottom: 15px;">
-                        <strong>❌ CORS Error</strong><br>
-                        Browser security blocks direct API calls.
+                    <div style="color: #dc3545;">
+                        <strong>❌ Unable to load AI explanation</strong><br>
+                        Error: ${error.message}
                     </div>
-                    <div style="background: #fff3cd; padding: 15px; border-radius: 5px; margin-bottom: 15px;">
-                        <strong>💡 Workaround:</strong><br>
-                        The AI explanation feature requires a server-side proxy.
-                        Contact the site administrator to enable serverless function.
-                    </div>
-                    <div style="font-size: 0.85em; color: #666;">
-                        <strong>Technical details:</strong> ${error.message}
-                    </div>
+                    <button onclick="getAIDetails('${questionId}', '${word}')" style="margin-top: 10px; padding: 8px 16px; background: #667eea; color: white; border: none; border-radius: 5px; cursor: pointer;">
+                        🔄 Retry
+                    </button>
                 `;
                 contentDiv.classList.add('show');
-                btn.innerHTML = '<span>ℹ️ CORS Blocked</span>';
+                btn.innerHTML = '<span>🔄 Retry</span>';
                 btn.disabled = false;
             }
         }
