@@ -1,0 +1,432 @@
+<!DOCTYPE html>
+<html lang="zh-HK">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>🕷️ Spider Silk - Vocabulary | Nat Geo March 2026</title>
+    <style>
+        :root { --natgeo-yellow: #ffcc00; --bg-color: #f5f5f5; }
+        * { margin: 0; padding: 0; box-sizing: border-box; }
+        body { font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, "Noto Sans TC", sans-serif; background-color: var(--bg-color); color: #333; line-height: 1.8; padding: 20px; }
+        .container { max-width: 1400px; margin: 0 auto; }
+        .back-link { display: inline-block; margin-bottom: 20px; padding: 10px 20px; background: #333; color: white; text-decoration: none; border-radius: 5px; }
+        .back-link:hover { background: #555; }
+        header { background: linear-gradient(135deg, #ffcc00, #ff9900); color: #333; padding: 30px; border-radius: 10px; margin-bottom: 30px; }
+        h1 { font-size: 2.5rem; margin-bottom: 10px; color: #333; }
+        .article-link { color: #ff9900; text-decoration: none; font-weight: bold; }
+        .article-link:hover { text-decoration: underline; }
+        .excerpt-box { background: white; padding: 25px; border-radius: 10px; margin-bottom: 25px; box-shadow: 0 2px 4px rgba(0,0,0,0.1); border-left: 4px solid #ffcc00; }
+        .excerpt-box h3 { color: #ff9900; margin-bottom: 15px; }
+        .excerpt { background: #f9f9f9; padding: 15px; border-radius: 5px; font-style: italic; margin: 10px 0; white-space: pre-wrap; font-size: 0.9em; line-height: 1.6; }
+        .excerpt-label { font-weight: bold; color: #666; font-size: 0.85em; margin-bottom: 5px; }
+        .word-table { width: 100%; background: white; border-radius: 10px; overflow: hidden; box-shadow: 0 2px 4px rgba(0,0,0,0.1); border-collapse: collapse; margin-bottom: 30px; }
+        .word-table thead { background: #333; color: white; }
+        .word-table th { padding: 15px; text-align: left; font-weight: 600; }
+        .word-table td { padding: 15px; border-bottom: 1px solid #eee; }
+        .word-table tbody tr:hover { background-color: #fffbf0; }
+        .word { font-weight: bold; color: #ff9900; font-size: 1.1em; }
+        .pos { font-style: italic; color: #666; font-size: 0.9em; }
+        .ipa { color: #999; font-family: "Lucida Sans Unicode", "Arial Unicode MS", sans-serif; }
+        .definition { font-weight: 500; }
+        .example { color: #666; font-style: italic; margin-top: 5px; }
+        .quiz-section { background: white; padding: 30px; border-radius: 10px; box-shadow: 0 2px 4px rgba(0,0,0,0.1); margin-top: 30px; }
+        .quiz-section h2 { color: #ff9900; margin-bottom: 20px; }
+        .quiz-question { margin-bottom: 30px; padding-bottom: 20px; border-bottom: 1px solid #eee; }
+        .quiz-question:last-child { border-bottom: none; }
+        .quiz-options { list-style: none; }
+        .quiz-options li { margin: 10px 0; }
+        .quiz-options label { display: block; padding: 12px 15px; background: #f9f9f9; border-radius: 5px; cursor: pointer; transition: all 0.3s; }
+        .quiz-options label:hover { background: #fffbf0; }
+        .quiz-options label.correct { background: #d4edda; border-left: 4px solid #28a745; color: #155724; }
+        .quiz-options label.incorrect { background: #f8d7da; border-left: 4px solid #dc3545; color: #721c24; }
+        .quiz-options input[type="radio"] { margin-right: 10px; }
+        .feedback { margin-top: 15px; padding: 15px; border-radius: 5px; display: none; }
+        .feedback.correct { background: #d4edda; color: #155724; border-left: 4px solid #28a745; }
+        .feedback.incorrect { background: #f8d7da; color: #721c24; border-left: 4px solid #dc3545; }
+        .feedback.show { display: block; animation: fadeIn 0.3s ease-in; }
+        @keyframes fadeIn { from { opacity: 0; transform: translateY(-10px); } to { opacity: 1; transform: translateY(0); } }
+        .explanation { margin-top: 10px; font-size: 0.95em; line-height: 1.6; }
+        .explanation strong { color: #ff9900; }
+        .submit-btn { background: linear-gradient(135deg, #ffcc00, #ff9900); color: #333; border: none; padding: 15px 30px; font-size: 1.1em; font-weight: bold; border-radius: 5px; cursor: pointer; transition: all 0.3s; }
+        .submit-btn:hover { transform: translateY(-2px); box-shadow: 0 4px 12px rgba(255, 153, 0, 0.4); }
+        .result { margin-top: 20px; padding: 20px; border-radius: 5px; font-weight: bold; }
+        .result.correct { background: #d4edda; color: #155724; }
+        .result.incorrect { background: #f8d7da; color: #721c24; }
+        footer { text-align: center; padding: 30px; color: #666; margin-top: 30px; }
+        footer a { color: #ff9900; text-decoration: none; font-weight: bold; }
+    </style>
+</head>
+<body>
+    <div class="container">
+        <a href="../" class="back-link">← Back to Issue</a>
+        <a href="../../" class="back-link" style="margin-left: 10px;">← Back to Nat Geo</a>
+        
+        <header>
+            <h1>🕷️ The Quest for Spider Silk</h1>
+            <p style="font-size: 1.2em;">Vocabulary & Quiz | 詞彙與測驗</p>
+            <p style="margin-top: 10px;">
+                <a href="https://www.nationalgeographic.com/science/article/spider-silk-silkworm-genetic-engineering" class="article-link" target="_blank">📖 Read Original Article →</a>
+            </p>
+        </header>
+
+        <div class="excerpt-box">
+            <h3>📄 Article Excerpt | 文章摘錄 (Proof of Real Content)</h3>
+            
+            <div style="margin-bottom: 20px;">
+                <div class="excerpt-label">📍 First 100 Words | 首 100 字</div>
+                <div class="excerpt">Somewhere in Michigan, 10,000 silkworms are spinning the future of supermaterials. They labor in the thick air of a warm, humid warehouse, pulling a sticky white strand from a gland in their face and weaving it into a cocoon the size of a grape. Since they were first domesticated in China thousands of years ago, their silk has been used to make the world's finest fabric. But these silkworms aren't like the millions that came before. They are spinning spider silk, or something close to it.</div>
+            </div>
+            
+            <div>
+                <div class="excerpt-label">📍 Last 100 Words | 尾 100 字</div>
+                <div class="excerpt">...efforts to create spider proteins without the spider began in earnest in the 1990s, according to molecular biologist Randy Lewis, then at the University of Wyoming. At first, he and his team eyed E. coli as a potential host. Their thought process: If you could engineer the bacteria to produce spidroins as part of their regular metabolism, you could cultivate them in a fermentation tank, as if you were brewing beer, then separate the spidroins from the mix, spin them into fibers, and voilà: spider silk. That failed.</div>
+            </div>
+        </div>
+
+        <div style="background: white; padding: 20px; border-radius: 10px; margin-bottom: 30px; border-left: 4px solid #ffcc00;">
+            <h2 style="color: #ff9900; margin-bottom: 10px;">📝 Article Summary | 文章摘要</h2>
+            <p style="line-height: 1.8;">
+                Scientists have genetically engineered silkworms to produce spider silk—a material five times stronger than steel. After decades of failed attempts using bacteria, goats, and alfalfa, companies like Kraig Biocraft are now successfully producing "supersilk" at scale, but face the challenge of finding practical applications.
+                <br><br>
+                <strong>科學家通過基因工程改造蠶寶寶生產蜘蛛絲——一種強度係鋼五倍嘅材料。經過數十年使用細菌、山羊同苜蓿嘅失敗嘗試，Kraig Biocraft 等公司而家成功大規模生產「超級絲」，但面臨尋找實際應用嘅挑戰。</strong>
+            </p>
+        </div>
+
+        <h2 style="color: #ff9900; margin-bottom: 20px;">📚 Vocabulary | 詞彙表</h2>
+        <table class="word-table">
+            <thead>
+                <tr>
+                    <th style="width: 15%;">Word<br>單詞</th>
+                    <th style="width: 10%;">POS<br>詞性</th>
+                    <th style="width: 15%;">IPA<br>發音</th>
+                    <th style="width: 30%;">Definition<br>定義 (EN/CN)</th>
+                    <th style="width: 30%;">Example<br>例句 (EN/CN)</th>
+                </tr>
+            </thead>
+            <tbody>
+                <tr>
+                    <td><span class="word">domesticate</span></td>
+                    <td><span class="pos">v.</span></td>
+                    <td><span class="ipa">/dəˈmes.tɪ.keɪt/</span></td>
+                    <td>
+                        <div class="definition">To tame animals or plants for human use<br>馴化， domesticate（動物或植物）</div>
+                    </td>
+                    <td>
+                        <div class="example">"Since they were first <strong>domesticated</strong> in China thousands of years ago, silkworms have been used to make the world's finest fabric."<br>自從幾千年前喺中國首次被<strong>馴化</strong>以來，蠶寶寶一直被用於製造世界上最精細嘅織物。</div>
+                    </td>
+                </tr>
+                <tr>
+                    <td><span class="word">transgenic</span></td>
+                    <td><span class="pos">adj.</span></td>
+                    <td><span class="ipa">/trænzˈdʒen.ɪk/</span></td>
+                    <td>
+                        <div class="definition">Containing genes from another organism<br>轉基因的</div>
+                    </td>
+                    <td>
+                        <div class="example">"At Soochow University, a single fiber of supersilk produced by a <strong>transgenic</strong> silkworm is stress tested."<br>喺蘇州大學，一條由<strong>轉基因</strong>蠶寶寶生產嘅超級絲纖維接受應力測試。</div>
+                    </td>
+                </tr>
+                <tr>
+                    <td><span class="word">spidroin</span></td>
+                    <td><span class="pos">n.</span></td>
+                    <td><span class="ipa">/ˈspɪd.roʊ.ɪn/</span></td>
+                    <td>
+                        <div class="definition">The protein that makes up spider silk<br>蜘蛛絲蛋白</div>
+                    </td>
+                    <td>
+                        <div class="example">"Spider silk's capabilities derive from special proteins known as <strong>spidroins</strong>, composed of thousands of amino acids."<br>蜘蛛絲嘅能力來自稱為<strong>蜘蛛絲蛋白</strong>嘅特殊蛋白質，由數千個氨基酸組成。</div>
+                    </td>
+                </tr>
+                <tr>
+                    <td><span class="word">hydrophobic</span></td>
+                    <td><span class="pos">adj.</span></td>
+                    <td><span class="ipa">/ˌhaɪ.drəˈfəʊ.bɪk/</span></td>
+                    <td>
+                        <div class="definition">Repelling or failing to mix with water<br>疏水的，防水的</div>
+                    </td>
+                    <td>
+                        <div class="example">"Spidroins mix both positive and negative electrical charges as well as <strong>hydrophobic</strong> and hydrophilic sections."<br>蜘蛛絲蛋白混合了正負電荷以及<strong>疏水</strong>同親水部分。</div>
+                    </td>
+                </tr>
+                <tr>
+                    <td><span class="word">commercialize</span></td>
+                    <td><span class="pos">v.</span></td>
+                    <td><span class="ipa">/kəˈmɜː.ʃəl.aɪz/</span></td>
+                    <td>
+                        <div class="definition">To manage something to make a profit<br>商業化，營利化</div>
+                    </td>
+                    <td>
+                        <div class="example">"The first attempt to <strong>commercialize</strong> spider silk didn't start until the late 1800s, when Jesuit missionaries in Madagascar tried it."<br>首次嘗試<strong>商業化</strong>蜘蛛絲直到 19 世紀後期先開始，當時馬達加斯加嘅耶穌會傳教士嘗試咗。</div>
+                    </td>
+                </tr>
+                <tr>
+                    <td><span class="word">fermentation</span></td>
+                    <td><span class="pos">n.</span></td>
+                    <td><span class="ipa">/ˌfɜː.menˈteɪ.ʃən/</span></td>
+                    <td>
+                        <div class="definition">The process of breaking down substances using bacteria or yeast<br>發酵</div>
+                    </td>
+                    <td>
+                        <div class="example">"Scientists thought they could cultivate bacteria in a <strong>fermentation</strong> tank, as if brewing beer, to produce spider silk."<br>科學家認為佢哋可以喺<strong>發酵</strong>罐中培養細菌，好像釀啤酒一樣，來生產蜘蛛絲。</div>
+                    </td>
+                </tr>
+                <tr>
+                    <td><span class="word">metabolism</span></td>
+                    <td><span class="pos">n.</span></td>
+                    <td><span class="ipa">/məˈtæb.ə.lɪ.zəm/</span></td>
+                    <td>
+                        <div class="definition">The chemical processes in an organism that maintain life<br>新陳代謝</div>
+                    </td>
+                    <td>
+                        <div class="example">"The idea was to engineer bacteria to produce spidroins as part of their regular <strong>metabolism</strong>."<br>想法係改造細菌，使佢哋將蜘蛛絲蛋白作為正常<strong>新陳代謝</strong>的一部分來生產。</div>
+                    </td>
+                </tr>
+                <tr>
+                    <td><span class="word">synthetic</span></td>
+                    <td><span class="pos">adj.</span></td>
+                    <td><span class="ipa">/sɪnˈθet.ɪk/</span></td>
+                    <td>
+                        <div class="definition">Made by chemical synthesis, especially to imitate a natural product<br>合成的，人造的</div>
+                    </td>
+                    <td>
+                        <div class="example">"While <strong>synthetic</strong> fibers like Kevlar and graphene have revolutionized industries, they're dogged by their artificiality."<br>雖然像 Kevlar 同石墨烯嘅<strong>合成</strong>纖維徹底改變了行業，但佢哋被人造性所困擾。</div>
+                    </td>
+                </tr>
+                <tr>
+                    <td><span class="word">analog</span></td>
+                    <td><span class="pos">n.</span></td>
+                    <td><span class="ipa">/ˈæn.ə.lɒɡ/</span></td>
+                    <td>
+                        <div class="definition">A thing comparable to something else<br>類似物，類比</div>
+                    </td>
+                    <td>
+                        <div class="example">"Companies have made breakthroughs in manufacturing spider silk, or a very close <strong>analog</strong> of it."<br>公司喺生產蜘蛛絲或其非常接近嘅<strong>類似物</strong>方面取得了突破。</div>
+                    </td>
+                </tr>
+                <tr>
+                    <td><span class="word">hype</span></td>
+                    <td><span class="pos">n.</span></td>
+                    <td><span class="ipa">/haɪp/</span></td>
+                    <td>
+                        <div class="definition">Extravagant or intensive publicity or promotion<br>炒作，大肆宣傳</div>
+                    </td>
+                    <td>
+                        <div class="example">"There is enough spider gene in the mix to give their silk fibers special qualities, despite decades of <strong>hype</strong> about spider silk."<br>儘管幾十年來對蜘蛛絲嘅<strong>炒作</strong>，但混合物中有足夠嘅蜘蛛基因賦予絲纖維特殊品質。</div>
+                    </td>
+                </tr>
+            </tbody>
+        </table>
+
+        <div class="quiz-section">
+            <h2>📝 Quiz | 小測驗</h2>
+            <p style="margin-bottom: 20px; color: #666;">Choose the correct answer for each question. | 為每道題選擇正確答案。</p>
+            
+            <form id="quizForm">
+                <div class="quiz-question" id="q1-container">
+                    <p><strong>1. "Domesticate" means:</strong></p>
+                    <ul class="quiz-options">
+                        <li><label id="q1-a"><input type="radio" name="q1" value="a" onclick="checkAnswer('q1', 'b')"> A) To hunt wild animals 獵捕野生動物</label></li>
+                        <li><label id="q1-b"><input type="radio" name="q1" value="b" onclick="checkAnswer('q1', 'b')"> B) To tame for human use 馴化供人類使用</label></li>
+                        <li><label id="q1-c"><input type="radio" name="q1" value="c" onclick="checkAnswer('q1', 'b')"> C) To study in labs 喺實驗室研究</label></li>
+                        <li><label id="q1-d"><input type="radio" name="q1" value="d" onclick="checkAnswer('q1', 'b')"> D) To sell commercially 商業銷售</label></li>
+                    </ul>
+                    <div id="q1-feedback" class="feedback"></div>
+                </div>
+
+                <div class="quiz-question" id="q2-container">
+                    <p><strong>2. "Transgenic" organisms:</strong></p>
+                    <ul class="quiz-options">
+                        <li><label id="q2-a"><input type="radio" name="q2" value="a" onclick="checkAnswer('q2', 'c')"> A) Are extinct 已滅絕</label></li>
+                        <li><label id="q2-b"><input type="radio" name="q2" value="b" onclick="checkAnswer('q2', 'c')"> B) Live in water 喺水中生活</label></li>
+                        <li><label id="q2-c"><input type="radio" name="q2" value="c" onclick="checkAnswer('q2', 'c')"> C) Contain genes from another organism 含有另一生物嘅基因</label></li>
+                        <li><label id="q2-d"><input type="radio" name="q2" value="d" onclick="checkAnswer('q2', 'c')"> D) Are very large 非常大</label></li>
+                    </ul>
+                    <div id="q2-feedback" class="feedback"></div>
+                </div>
+
+                <div class="quiz-question" id="q3-container">
+                    <p><strong>3. "Spidroin" is:</strong></p>
+                    <ul class="quiz-options">
+                        <li><label id="q3-a"><input type="radio" name="q3" value="a" onclick="checkAnswer('q3', 'b')"> A) A type of spider 一種蜘蛛</label></li>
+                        <li><label id="q3-b"><input type="radio" name="q3" value="b" onclick="checkAnswer('q3', 'b')"> B) The protein that makes spider silk 製造蜘蛛絲的蛋白質</label></li>
+                        <li><label id="q3-c"><input type="radio" name="q3" value="c" onclick="checkAnswer('q3', 'b')"> C) A type of web 一種網</label></li>
+                        <li><label id="q3-d"><input type="radio" name="q3" value="d" onclick="checkAnswer('q3', 'b')"> D) A spider's eye 蜘蛛的眼睛</label></li>
+                    </ul>
+                    <div id="q3-feedback" class="feedback"></div>
+                </div>
+
+                <div class="quiz-question" id="q4-container">
+                    <p><strong>4. "Hydrophobic" means:</strong></p>
+                    <ul class="quiz-options">
+                        <li><label id="q4-a"><input type="radio" name="q4" value="a" onclick="checkAnswer('q4', 'c')"> A) Attracting water 吸引水</label></li>
+                        <li><label id="q4-b"><input type="radio" name="q4" value="b" onclick="checkAnswer('q4', 'c')"> B) Dissolving in water 溶於水</label></li>
+                        <li><label id="q4-c"><input type="radio" name="q4" value="c" onclick="checkAnswer('q4', 'c')"> C) Repelling water 防水，疏水</label></li>
+                        <li><label id="q4-d"><input type="radio" name="q4" value="d" onclick="checkAnswer('q4', 'c')"> D) Freezing water 凍結水</label></li>
+                    </ul>
+                    <div id="q4-feedback" class="feedback"></div>
+                </div>
+
+                <div class="quiz-question" id="q5-container">
+                    <p><strong>5. To "commercialize" something is to:</strong></p>
+                    <ul class="quiz-options">
+                        <li><label id="q5-a"><input type="radio" name="q5" value="a" onclick="checkAnswer('q5', 'a')"> A) Manage it to make a profit 管理它以獲利</label></li>
+                        <li><label id="q5-b"><input type="radio" name="q5" value="b" onclick="checkAnswer('q5', 'a')"> B) Study it scientifically 科學研究</label></li>
+                        <li><label id="q5-c"><input type="radio" name="q5" value="c" onclick="checkAnswer('q5', 'a')"> C) Hide it from public 向公眾隱藏</label></li>
+                        <li><label id="q5-d"><input type="radio" name="q5" value="d" onclick="checkAnswer('q5', 'a')"> D) Destroy it completely 完全毀滅</label></li>
+                    </ul>
+                    <div id="q5-feedback" class="feedback"></div>
+                </div>
+
+                <div class="quiz-question" id="q6-container">
+                    <p><strong>6. "Fermentation" is:</strong></p>
+                    <ul class="quiz-options">
+                        <li><label id="q6-a"><input type="radio" name="q6" value="a" onclick="checkAnswer('q6', 'b')"> A) A type of cooking 一種烹飪方式</label></li>
+                        <li><label id="q6-b"><input type="radio" name="q6" value="b" onclick="checkAnswer('q6', 'b')"> B) Breaking down substances using bacteria/yeast 用細菌/酵母分解物質</label></li>
+                        <li><label id="q6-c"><input type="radio" name="q6" value="c" onclick="checkAnswer('q6', 'b')"> C) A type of exercise 一種運動</label></li>
+                        <li><label id="q6-d"><input type="radio" name="q6" value="d" onclick="checkAnswer('q6', 'b')"> D) A chemical explosion 化學爆炸</label></li>
+                    </ul>
+                    <div id="q6-feedback" class="feedback"></div>
+                </div>
+
+                <div class="quiz-question" id="q7-container">
+                    <p><strong>7. "Metabolism" refers to:</strong></p>
+                    <ul class="quiz-options">
+                        <li><label id="q7-a"><input type="radio" name="q7" value="a" onclick="checkAnswer('q7', 'c')"> A) Brain function 大腦功能</label></li>
+                        <li><label id="q7-b"><input type="radio" name="q7" value="b" onclick="checkAnswer('q7', 'c')"> B) Movement speed 移動速度</label></li>
+                        <li><label id="q7-c"><input type="radio" name="q7" value="c" onclick="checkAnswer('q7', 'c')"> C) Chemical processes that maintain life 維持生命的化學過程</label></li>
+                        <li><label id="q7-d"><input type="radio" name="q7" value="d" onclick="checkAnswer('q7', 'c')"> D) Reproduction rate 繁殖率</label></li>
+                    </ul>
+                    <div id="q7-feedback" class="feedback"></div>
+                </div>
+
+                <div class="quiz-question" id="q8-container">
+                    <p><strong>8. "Synthetic" materials are:</strong></p>
+                    <ul class="quiz-options">
+                        <li><label id="q8-a"><input type="radio" name="q8" value="a" onclick="checkAnswer('q8', 'b')"> A) Natural from plants 來自植物的天然材料</label></li>
+                        <li><label id="q8-b"><input type="radio" name="q8" value="b" onclick="checkAnswer('q8', 'b')"> B) Made by chemical synthesis 通過化學合成製造</label></li>
+                        <li><label id="q8-c"><input type="radio" name="q8" value="c" onclick="checkAnswer('q8', 'b')"> C) Recycled from waste 從廢料回收</label></li>
+                        <li><label id="q8-d"><input type="radio" name="q8" value="d" onclick="checkAnswer('q8', 'b')"> D) Mined from earth 從地球開採</label></li>
+                    </ul>
+                    <div id="q8-feedback" class="feedback"></div>
+                </div>
+
+                <div class="quiz-question" id="q9-container">
+                    <p><strong>9. An "analog" is:</strong></p>
+                    <ul class="quiz-options">
+                        <li><label id="q9-a"><input type="radio" name="q9" value="a" onclick="checkAnswer('q9', 'c')"> A) A digital device 數碼設備</label></li>
+                        <li><label id="q9-b"><input type="radio" name="q9" value="b" onclick="checkAnswer('q9', 'c')"> B) A type of computer 一種電腦</label></li>
+                        <li><label id="q9-c"><input type="radio" name="q9" value="c" onclick="checkAnswer('q9', 'c')"> C) Something comparable to another 可與另一事物比較的東西</label></li>
+                        <li><label id="q9-d"><input type="radio" name="q9" value="d" onclick="checkAnswer('q9', 'c')"> D) A measurement tool 測量工具</label></li>
+                    </ul>
+                    <div id="q9-feedback" class="feedback"></div>
+                </div>
+
+                <div class="quiz-question" id="q10-container">
+                    <p><strong>10. "Hype" means:</strong></p>
+                    <ul class="quiz-options">
+                        <li><label id="q10-a"><input type="radio" name="q10" value="a" onclick="checkAnswer('q10', 'b')"> A) Scientific fact 科學事實</label></li>
+                        <li><label id="q10-b"><input type="radio" name="q10" value="b" onclick="checkAnswer('q10', 'b')"> B) Extravagant publicity or promotion 大肆宣傳或推廣</label></li>
+                        <li><label id="q10-c"><input type="radio" name="q10" value="c" onclick="checkAnswer('q10', 'b')"> C) A type of music 一種音樂</label></li>
+                        <li><label id="q10-d"><input type="radio" name="q10" value="d" onclick="checkAnswer('q10', 'b')"> D) A scientific theory 科學理論</label></li>
+                    </ul>
+                    <div id="q10-feedback" class="feedback"></div>
+                </div>
+
+                <button type="button" class="submit-btn" onclick="checkQuiz()">Submit All Answers | 提交所有答案</button>
+            </form>
+
+            <div id="result" class="result" style="display: none;"></div>
+        </div>
+
+        <footer>
+            <p><strong>National Geographic Magazine Archive - ESL Vocabulary</strong></p>
+            <p>March 2026 Issue | 2026 年 3 月號</p>
+            <p style="margin-top: 10px;">
+                <a href="../">📰 Issue Index</a> | 
+                <a href="../../">🌍 Nat Geo Archive</a> | 
+                <a href="https://www.nationalgeographic.com/science/article/spider-silk-silkworm-genetic-engineering" target="_blank">Original Article</a>
+            </p>
+        </footer>
+    </div>
+
+    <script>
+        const answers = {
+            q1: 'b', q2: 'c', q3: 'b', q4: 'c', q5: 'a',
+            q6: 'b', q7: 'c', q8: 'b', q9: 'c', q10: 'b'
+        };
+        
+        let score = 0;
+        let answeredQuestions = new Set();
+        
+        const explanations = {
+            q1: '"Domesticate" means to tame animals for human use. Silkworms were first domesticated in China thousands of years ago.<br><strong>「Domesticate」意思係馴化動物供人類使用。蠶寶寶幾千年前喺中國首次被馴化。</strong>',
+            q2: '"Transgenic" means containing genes from another organism. The silkworms are transgenic, containing spider genes.<br><strong>「Transgenic」意思係含有另一生物嘅基因。蠶寶寶係轉基因的，含有蜘蛛基因。</strong>',
+            q3: '"Spidroin" is the protein that makes spider silk, composed of thousands of amino acids.<br><strong>「Spidroin」係製造蜘蛛絲嘅蛋白質，由數千個氨基酸組成。</strong>',
+            q4: '"Hydrophobic" means repelling water. Spidroins have both hydrophobic and hydrophilic sections.<br><strong>「Hydrophobic」意思係防水。蜘蛛絲蛋白有疏水同親水部分。</strong>',
+            q5: 'To "commercialize" means to manage something to make profit. The first attempt to commercialize spider silk was in the 1800s.<br><strong>「Commercialize」意思係管理某事物以獲利。首次嘗試商業化蜘蛛絲係 19 世紀。</strong>',
+            q6: '"Fermentation" is breaking down substances using bacteria or yeast, like brewing beer.<br><strong>「Fermentation」係用細菌或酵母分解物質，好像釀啤酒一樣。</strong>',
+            q7: '"Metabolism" refers to chemical processes in an organism that maintain life. Scientists wanted bacteria to produce spidroins as part of their metabolism.<br><strong>「Metabolism」指生物體內維持生命的化學過程。科學家希望細菌將蜘蛛絲蛋白作為新陳代謝的一部分生產。</strong>',
+            q8: '"Synthetic" materials are made by chemical synthesis, like Kevlar and graphene.<br><strong>「Synthetic」材料係通過化學合成製造，好像 Kevlar 同石墨烯。</strong>',
+            q9: 'An "analog" is something comparable to another. Companies are producing spider silk or a close analog of it.<br><strong>「Analog」係可與另一事物比較的東西。公司生產蜘蛛絲或其接近的類似物。</strong>',
+            q10: '"Hype" means extravagant publicity or promotion. There has been decades of hype about spider silk.<br><strong>「Hype」意思係大肆宣傳或推廣。關於蜘蛛絲已有幾十年的炒作。</strong>'
+        };
+        
+        function checkAnswer(question, correctAnswer) {
+            if (answeredQuestions.has(question)) return;
+            answeredQuestions.add(question);
+            
+            const formData = new FormData(document.getElementById('quizForm'));
+            const userAnswer = formData.get(question);
+            
+            const options = document.querySelectorAll(`input[name="${question}"]`);
+            options.forEach(opt => {
+                opt.disabled = true;
+                const label = document.getElementById(`${question}-${opt.value}`);
+                if (opt.value === correctAnswer) {
+                    label.classList.add('correct');
+                } else if (opt.value === userAnswer && userAnswer !== correctAnswer) {
+                    label.classList.add('incorrect');
+                }
+            });
+            
+            const feedbackDiv = document.getElementById(`${question}-feedback`);
+            feedbackDiv.classList.add('show');
+            
+            if (userAnswer === correctAnswer) {
+                feedbackDiv.classList.add('correct');
+                feedbackDiv.innerHTML = `<div style="font-weight: bold; margin-bottom: 5px;">✅ Correct! 正確！</div><div class="explanation">${explanations[question]}</div>`;
+                score++;
+            } else {
+                feedbackDiv.classList.add('incorrect');
+                feedbackDiv.innerHTML = `<div style="font-weight: bold; margin-bottom: 5px;">❌ Incorrect. Correct answer: ${correctAnswer.toUpperCase()} 錯誤。正確答案：${correctAnswer.toUpperCase()}</div><div class="explanation">${explanations[question]}</div>`;
+            }
+        }
+        
+        function checkQuiz() {
+            const total = Object.keys(answers).length;
+            const answered = answeredQuestions.size;
+            
+            if (answered < total) {
+                alert(`You have answered ${answered} out of ${total} questions. Please answer all questions first! | 你已回答 ${answered} 題，共 ${total} 題。請先回答所有問題！`);
+                return;
+            }
+            
+            const resultDiv = document.getElementById('result');
+            resultDiv.style.display = 'block';
+            
+            if (score === total) {
+                resultDiv.className = 'result correct';
+                resultDiv.innerHTML = `🎉 Perfect! ${score}/${total} correct! 完美！${score}/${total} 正確！`;
+            } else if (score >= 7) {
+                resultDiv.className = 'result correct';
+                resultDiv.innerHTML = `✅ Great job! ${score}/${total} correct! 做得好！${score}/${total} 正確！`;
+            } else {
+                resultDiv.className = 'result incorrect';
+                resultDiv.innerHTML = `📚 Keep studying! ${score}/${total} correct. 繼續學習！${score}/${total} 正確。`;
+            }
+            
+            resultDiv.scrollIntoView({ behavior: 'smooth' });
+        }
+    </script>
+</body>
+</html>
