@@ -23,6 +23,8 @@ If nothing needs attention, reply HEARTBEAT_OK.
 
 **3 月 18 日 (星期三)**
 • 13:00-16:00 - [Raymond] 匹克球 @ 會所 (3 hours)
+• 16:10 [Raymond] 下午茶 with Chris @ 愉景新城
+  - 📍 愉景新城
 • [Family] 用百佳 $50 現金券 (HSBC Credit Card Coupon)
   - 📍 百佳
   - 💳 帶 HSBC Credit Card
