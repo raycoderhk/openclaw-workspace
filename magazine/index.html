@@ -3,504 +3,257 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>📚 雜誌存檔 | Magazine Archive - OpenClaw Gameworld</title>
+    <title>📰 OpenClaw Magazine | 技術部落格</title>
     <style>
-        :root {
-            --primary-color: #667eea;
-            --secondary-color: #764ba2;
-            --bg-color: #f5f5f5;
-            --card-bg: #fff;
-        }
-        
         * {
             margin: 0;
             padding: 0;
             box-sizing: border-box;
         }
-        
+
         body {
-            font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, "Helvetica Neue", Arial, sans-serif;
-            background: linear-gradient(135deg, var(--primary-color) 0%, var(--secondary-color) 100%);
+            font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, 'Helvetica Neue', Arial, sans-serif;
+            background: linear-gradient(135deg, #f093fb 0%, #f5576c 100%);
             min-height: 100vh;
             padding: 40px 20px;
         }
-        
+
         .container {
-            max-width: 1200px;
+            max-width: 1000px;
             margin: 0 auto;
         }
-        
+
         .header {
             text-align: center;
             margin-bottom: 50px;
-        }
-        
-        .title {
-            font-size: 3.5em;
             color: white;
-            margin-bottom: 10px;
+        }
+
+        .header h1 {
+            font-size: 3em;
+            margin-bottom: 15px;
             text-shadow: 0 4px 20px rgba(0, 0, 0, 0.3);
         }
-        
-        .subtitle {
+
+        .header p {
             font-size: 1.3em;
-            color: rgba(255, 255, 255, 0.9);
+            opacity: 0.95;
         }
-        
+
         .back-link {
             display: inline-block;
-            margin-bottom: 30px;
-            padding: 12px 24px;
-            background: rgba(255, 255, 255, 0.2);
             color: white;
             text-decoration: none;
-            border-radius: 10px;
-            backdrop-filter: blur(10px);
+            padding: 10px 20px;
+            background: rgba(255,255,255,0.2);
+            border-radius: 25px;
+            margin-bottom: 30px;
             transition: all 0.3s;
-            border: 2px solid rgba(255, 255, 255, 0.3);
         }
-        
+
         .back-link:hover {
-            background: rgba(255, 255, 255, 0.3);
+            background: rgba(255,255,255,0.3);
             transform: translateY(-2px);
         }
-        
-        .magazine-grid {
+
+        .articles-grid {
             display: grid;
             grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
-            gap: 30px;
+            gap: 25px;
             padding: 20px;
         }
-        
-        .magazine-card {
-            background: var(--card-bg);
-            border-radius: 20px;
-            overflow: hidden;
+
+        .article-card {
+            background: white;
+            border-radius: 15px;
+            padding: 25px;
             text-decoration: none;
             color: inherit;
             transition: all 0.3s;
             box-shadow: 0 10px 30px rgba(0, 0, 0, 0.2);
+            display: block;
         }
-        
-        .magazine-card:hover {
-            transform: translateY(-10px);
+
+        .article-card:hover {
+            transform: translateY(-5px);
             box-shadow: 0 20px 50px rgba(0, 0, 0, 0.3);
         }
-        
-        .magazine-cover {
-            width: 100%;
-            height: 400px;
-            object-fit: cover;
-            background: linear-gradient(135deg, #e3120b 0%, #c4120c 100%);
-            display: flex;
-            align-items: center;
-            justify-content: center;
-            color: white;
-            font-size: 5em;
-            position: relative;
-            overflow: hidden;
-        }
-        
-        .issue-thumbnails {
-            display: grid;
-            grid-template-columns: 1fr 1fr;
-            grid-template-rows: 1fr 1fr;
-            gap: 3px;
-            width: 100%;
-            height: 100%;
-            padding: 10px;
-            box-sizing: border-box;
-        }
-        
-        .issue-thumb {
-            background: linear-gradient(135deg, #e3120b, #c4120c);
-            border-radius: 8px;
-            overflow: hidden;
-            position: relative;
-            display: flex;
-            flex-direction: column;
-            align-items: center;
-            justify-content: center;
-            color: white;
-            box-shadow: 0 2px 8px rgba(0,0,0,0.3);
-            transition: transform 0.3s;
-        }
-        
-        .issue-thumb:hover {
-            transform: scale(1.05);
-        }
-        
-        .issue-thumb.large {
-            grid-column: 1 / -1;
-            grid-row: 1;
-        }
-        
-        .issue-thumb.small {
-            grid-row: 2;
-        }
-        
-        .issue-thumb img {
-            width: 100%;
-            height: 100%;
-            object-fit: cover;
-            position: absolute;
-            top: 0;
-            left: 0;
-        }
-        
-        .issue-thumb-label {
-            position: absolute;
-            bottom: 0;
-            left: 0;
-            right: 0;
-            background: rgba(0, 0, 0, 0.7);
-            color: white;
-            padding: 5px 8px;
-            font-size: 0.7em;
-            text-align: center;
-            font-weight: bold;
-            z-index: 2;
-        }
-        
-        .issue-thumb-emoji {
+
+        .article-icon {
             font-size: 3em;
-            z-index: 1;
+            margin-bottom: 15px;
         }
-        
-        .issue-thumbnails.three-issues {
-            grid-template-rows: 1fr 1fr;
-            grid-template-columns: 1fr 1fr;
-        }
-        
-        .issue-thumbnails.three-issues .issue-thumb.large {
-            grid-column: 1 / -1;
-            grid-row: 1;
-        }
-        
-        .issue-thumbnails.three-issues .issue-thumb.small {
-            grid-row: 2;
-        }
-            overflow: hidden;
-        }
-        
-        .issue-thumbnails {
-            display: grid;
-            grid-template-columns: 1fr 1fr;
-            grid-template-rows: 1fr 1fr;
-            gap: 3px;
-            width: 100%;
-            height: 100%;
-            padding: 10px;
-            box-sizing: border-box;
-        }
-        
-        .issue-thumb {
-            background: linear-gradient(135deg, #e3120b, #c4120c);
-            border-radius: 8px;
-            overflow: hidden;
-            position: relative;
-            display: flex;
-            flex-direction: column;
-            align-items: center;
-            justify-content: center;
-            color: white;
-            box-shadow: 0 2px 8px rgba(0,0,0,0.3);
-            transition: transform 0.3s;
-        }
-        
-        .issue-thumb:hover {
-            transform: scale(1.05);
-        }
-        
-        .issue-thumb.large {
-            grid-column: 1 / -1;
-            grid-row: 1;
-        }
-        
-        .issue-thumb.small {
-            grid-row: 2;
-        }
-        
-        /* 2-issue layout (no March 14 yet) */
-        .issue-thumbnails.two-issues {
-            grid-template-rows: 1fr;
-            grid-template-columns: 1fr 1fr;
-        }
-        
-        .issue-thumbnails.two-issues .issue-thumb {
-            grid-row: 1;
-        }
-        
-        .issue-thumb img {
-            width: 100%;
-            height: 100%;
-            object-fit: cover;
-            position: absolute;
-            top: 0;
-            left: 0;
-        }
-        
-        .issue-thumb-label {
-            position: absolute;
-            bottom: 0;
-            left: 0;
-            right: 0;
-            background: rgba(0, 0, 0, 0.7);
-            color: white;
-            padding: 5px 8px;
-            font-size: 0.7em;
-            text-align: center;
-            font-weight: bold;
-            z-index: 2;
-        }
-        
-        .issue-thumb-emoji {
-            font-size: 3em;
-            z-index: 1;
-        }
-        
-        .magazine-info {
-            padding: 25px;
-        }
-        
-        .magazine-name {
-            font-size: 1.8em;
+
+        .article-title {
+            font-size: 1.4em;
             font-weight: bold;
             color: #333;
             margin-bottom: 10px;
+            line-height: 1.4;
         }
-        
-        .magazine-desc {
+
+        .article-desc {
             font-size: 1em;
             color: #666;
             line-height: 1.6;
             margin-bottom: 15px;
         }
-        
-        .magazine-stats {
+
+        .article-meta {
             display: flex;
-            gap: 20px;
+            justify-content: space-between;
+            align-items: center;
             font-size: 0.9em;
             color: #888;
         }
-        
-        .stat {
-            display: flex;
-            align-items: center;
-            gap: 5px;
-        }
-        
-        .tag {
-            display: inline-block;
-            padding: 5px 15px;
-            background: linear-gradient(135deg, var(--primary-color), var(--secondary-color));
+
+        .article-tag {
+            background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
             color: white;
-            border-radius: 20px;
+            padding: 5px 12px;
+            border-radius: 15px;
             font-size: 0.85em;
             font-weight: bold;
-            margin-bottom: 10px;
         }
-        
-        .tag.new {
-            background: linear-gradient(135deg, #f093fb, #f5576c);
+
+        .article-tag.debug {
+            background: linear-gradient(135deg, #f093fb 0%, #f5576c 100%);
         }
-        
-        .coming-soon {
-            opacity: 0.6;
-            filter: grayscale(50%);
+
+        .article-tag.oauth {
+            background: linear-gradient(135deg, #4facfe 0%, #00f2fe 100%);
         }
-        
-        .coming-soon .magazine-card {
-            cursor: not-allowed;
+
+        .article-tag.skill {
+            background: linear-gradient(135deg, #43e97b 0%, #38f9d7 100%);
+            color: #333;
         }
-        
+
         .footer {
             text-align: center;
             margin-top: 50px;
-            color: rgba(255, 255, 255, 0.8);
-            font-size: 1em;
+            color: rgba(255, 255, 255, 0.9);
+            font-size: 1.1em;
         }
-        
+
         .footer a {
             color: white;
             text-decoration: underline;
         }
-        
+
+        /* Mobile Responsive */
         @media (max-width: 768px) {
-            .title { font-size: 2.5em; }
-            .subtitle { font-size: 1.1em; }
-            .magazine-cover { height: 300px; }
-            .magazine-grid { grid-template-columns: 1fr; }
+            .header h1 {
+                font-size: 2em;
+            }
+
+            .header p {
+                font-size: 1.1em;
+            }
+
+            .article-title {
+                font-size: 1.2em;
+            }
+
+            .articles-grid {
+                grid-template-columns: 1fr;
+            }
         }
     </style>
 </head>
 <body>
     <div class="container">
-        <a href="/" class="back-link">← 返回遊戲世界 | Back to GameWorld</a>
-        
         <div class="header">
-            <h1 class="title">📚 雜誌存檔</h1>
-            <p class="subtitle">Magazine Archive - 精選雜誌文章存檔</p>
+            <a href="../" class="back-link">← 返回遊戲世界</a>
+            <h1>📰 OpenClaw Magazine</h1>
+            <p>技術文章、開發心得、OpenClaw 技能分享</p>
         </div>
-        
-        <div class="magazine-grid">
-            <!-- The Economist -->
-            <a href="economist/" class="magazine-card">
-                <div class="magazine-cover">
-                    <div class="issue-thumbnails three-issues">
-                        <!-- March 14, 2026 - Large Top (Latest) -->
-                        <div class="issue-thumb large">
-                            <img src="economist/2026-03-14/cover.jpg" alt="March 14, 2026" onerror="this.style.display='none'; this.parentElement.innerHTML='<div class=\'issue-thumb-emoji\'>📰</div><div class=\'issue-thumb-label\'>Mar 14</div>'">
-                            <div class="issue-thumb-label">Mar 14, 2026 ✨</div>
-                        </div>
-                        <!-- February 28, 2026 - Bottom Left -->
-                        <div class="issue-thumb small">
-                            <img src="economist/2026-02-28/cover.jpg" alt="February 28, 2026" onerror="this.style.display='none'; this.parentElement.innerHTML='<div class=\'issue-thumb-emoji\'>📊</div><div class=\'issue-thumb-label\'>Feb 28</div>'">
-                            <div class="issue-thumb-label">Feb 28</div>
-                        </div>
-                        <!-- March 7, 2026 - Bottom Right -->
-                        <div class="issue-thumb small">
-                            <img src="economist/2026-03-07/cover.jpg" alt="March 7, 2026" onerror="this.style.display='none'; this.parentElement.innerHTML='<div class=\'issue-thumb-emoji\'>🌍</div><div class=\'issue-thumb-label\'>Mar 7</div>'">
-                            <div class="issue-thumb-label">Mar 7</div>
-                        </div>
-                    </div>
-                </div>
-                <div class="magazine-info">
-                    <span class="tag new">✨ 熱門</span>
-                    <h2 class="magazine-name">The Economist</h2>
-                    <p class="magazine-desc">全球領先的商業和國際事務週刊。深度分析、獨到見解，為您解讀世界大事。</p>
-                    <div class="magazine-stats">
-                        <span class="stat">📅 3 期</span>
-                        <span class="stat">📝 227 篇文章</span>
-                        <span class="stat">🆕 2026-03-14</span>
-                    </div>
+
+        <div class="articles-grid">
+            <!-- Why Build Skill Not Curl -->
+            <a href="../blog/why-build-skill-not-curl.md" class="article-card" target="_blank">
+                <div class="article-icon">🛠️</div>
+                <h2 class="article-title">為什麼要創建 Skill 而不是用 Curl？</h2>
+                <p class="article-desc">探索 OpenClaw Skill 架構的優勢，從模組化、可維護性到團隊協作的完整分析。</p>
+                <div class="article-meta">
+                    <span>📅 2026-03-05</span>
+                    <span class="article-tag skill">💡 Skill 架構</span>
                 </div>
             </a>
-            
-            <!-- HKEJ 信報 -->
-            <a href="hkej/" class="magazine-card">
-                <div class="magazine-cover" style="background: linear-gradient(135deg, #1e3a8a 0%, #3b5998 100%);">
-                    <div style="text-align: center; position: relative; z-index: 2;">
-                        <div style="font-size: 4em; margin-bottom: 20px;">📰</div>
-                        <div style="font-size: 2.5em; font-weight: bold; margin-bottom: 10px;">信報</div>
-                        <div style="font-size: 1.2em; opacity: 0.9;">HKEJ</div>
-                        <div style="margin-top: 20px; padding: 10px 20px; background: rgba(255,255,255,0.2); border-radius: 20px; display: inline-block;">
-                            <div style="font-size: 1em; font-weight: bold;">March 12, 2026</div>
-                            <div style="font-size: 0.8em; opacity: 0.8;">今日要聞</div>
-                        </div>
-                    </div>
-                </div>
-                <div class="magazine-info">
-                    <span class="tag new">✨ 新增</span>
-                    <h2 class="magazine-name">HKEJ 信報</h2>
-                    <p class="magazine-desc">香港經濟日報，本地財經新聞第一選擇。要聞、評論、投資，掌握香港經濟脈搏。</p>
-                    <div class="magazine-stats">
-                        <span class="stat">📅 1 期</span>
-                        <span class="stat">📝 10 篇要聞</span>
-                        <span class="stat">🆕 2026-03-12</span>
-                    </div>
+
+            <!-- Kanban Supabase Realtime -->
+            <a href="../blog/kanban-supabase-realtime-setup.md" class="article-card" target="_blank">
+                <div class="article-icon">📊</div>
+                <h2 class="article-title">Kanban Board 與 Supabase Realtime 整合</h2>
+                <p class="article-desc">實時同步的 Kanban 看板實現指南，從資料庫設計到前端整合的完整教學。</p>
+                <div class="article-meta">
+                    <span>📅 2026-03-03</span>
+                    <span class="article-tag oauth">🔐 資料庫</span>
                 </div>
             </a>
-            
-            <!-- Coming Soon: TIME -->
-            <div class="coming-soon">
-                <div class="magazine-card">
-                    <div class="magazine-cover" style="background: linear-gradient(135deg, #e74c3c, #c0392b);">
-                        🕐
-                    </div>
-                    <div class="magazine-info">
-                        <span class="tag">即將推出</span>
-                        <h2 class="magazine-name">TIME</h2>
-                        <p class="magazine-desc">美國最具影響力的新聞週刊，涵蓋政治、科技、健康等多個領域。</p>
-                        <div class="magazine-stats">
-                            <span class="stat">📅 即將推出</span>
-                        </div>
-                    </div>
-                </div>
-            </div>
-            
-            <!-- Wired -->
-            <a href="wired/" class="magazine-card">
-                <div class="magazine-cover" style="background: linear-gradient(135deg, #000, #333);">
-                    <div style="text-align: center; position: relative; z-index: 2;">
-                        <div style="font-size: 4em; margin-bottom: 20px;">🔌</div>
-                        <div style="font-size: 2em; font-weight: bold; margin-bottom: 10px; color: white;">WIRED</div>
-                        <div style="font-size: 1em; color: rgba(255,255,255,0.8);">Coming Soon</div>
-                    </div>
-                </div>
-                <div class="magazine-info">
-                    <span class="tag">🔬 科技</span>
-                    <h2 class="magazine-name">Wired</h2>
-                    <p class="magazine-desc">探索科技、文化、商業的未來趨勢，創新思維的搖籃。</p>
-                    <div class="magazine-stats">
-                        <span class="stat">📅 即將推出</span>
-                        <span class="stat">🔬 科技前沿</span>
-                    </div>
+
+            <!-- Kanban OAuth Troubleshooting -->
+            <a href="../blog/kanban-oauth-rls-troubleshooting.md" class="article-card" target="_blank">
+                <div class="article-icon">🔍</div>
+                <h2 class="article-title">Kanban OAuth + RLS 問題排查</h2>
+                <p class="article-desc">Google OAuth 與 Supabase RLS 整合遇到的挑戰與解決方案，包含詳細的除錯過程。</p>
+                <div class="article-meta">
+                    <span>📅 2026-03-04</span>
+                    <span class="article-tag oauth">🔐 OAuth</span>
                 </div>
             </a>
-            
-            <!-- National Geographic -->
-            <a href="natgeo/" class="magazine-card">
-                <div class="magazine-cover">
-                    <div class="issue-thumbnails three-issues">
-                        <!-- March 2026 - Large Top (Latest) -->
-                        <div class="issue-thumb large">
-                            <img src="natgeo/2026-03/cover.jpg" alt="March 2026" onerror="this.style.display='none'; this.parentElement.innerHTML='<div class=\'issue-thumb-emoji\'>🌍</div><div class=\'issue-thumb-label\'>Mar 2026</div>'">
-                            <div class="issue-thumb-label">Mar 2026 ✨</div>
-                        </div>
-                        <!-- February 2026 - Bottom Left -->
-                        <div class="issue-thumb small">
-                            <img src="natgeo/2026-02/cover.svg" alt="February 2026">
-                            <div class="issue-thumb-label">Feb 2026</div>
-                        </div>
-                        <!-- January 2026 - Bottom Right -->
-                        <div class="issue-thumb small">
-                            <img src="natgeo/2026-01/cover.svg" alt="January 2026">
-                            <div class="issue-thumb-label">Jan 2026</div>
-                        </div>
-                    </div>
-                </div>
-                <div class="magazine-info">
-                    <span class="tag">🌿 自然</span>
-                    <h2 class="magazine-name">National Geographic</h2>
-                    <p class="magazine-desc">探索世界、自然、科學和歷史的經典雜誌。</p>
-                    <div class="magazine-stats">
-                        <span class="stat">📅 3 期</span>
-                        <span class="stat">📝 16 篇文章</span>
-                        <span class="stat">🆕 2026-03</span>
-                    </div>
+
+            <!-- Kanban Postmortem -->
+            <a href="../blog/kanban-google-oauth-supabase-postmortem.md" class="article-card" target="_blank">
+                <div class="article-icon">📝</div>
+                <h2 class="article-title">Kanban v3.3 項目回顧</h2>
+                <p class="article-desc">從 JSON 到資料庫的遷移經驗，包含 6 個關鍵教訓與可重用的架構模式。</p>
+                <div class="article-meta">
+                    <span>📅 2026-03-03</span>
+                    <span class="article-tag">📋 項目回顧</span>
                 </div>
             </a>
-            
-            <!-- Bloomberg -->
-            <a href="bloomberg/" class="magazine-card">
-                <div class="magazine-cover" style="background: linear-gradient(135deg, #002878, #003399);">
-                    <div class="issue-thumbnails three-issues">
-                        <!-- March 1, 2026 - Large Top (Latest) -->
-                        <div class="issue-thumb large" style="background: url('bloomberg/2026-03-01/cover.jpg') center/cover; background-color: #002878;">
-                            <div class="issue-thumb-label">Mar 1, 2026 ✨</div>
-                        </div>
-                    </div>
+
+            <!-- GameWorld Deployment -->
+            <a href="../blog/gameworld-deployment-lessons-learned.md" class="article-card" target="_blank">
+                <div class="article-icon">🎮</div>
+                <h2 class="article-title">GameWorld 部署經驗分享</h2>
+                <p class="article-desc">Zeabur 部署多個小遊戲的架構設計，包含路徑管理、資源優化與故障排除。</p>
+                <div class="article-meta">
+                    <span>📅 2026-03-03</span>
+                    <span class="article-tag debug">🚀 部署</span>
                 </div>
-                <div class="magazine-info">
-                    <span class="tag new">💼 財經</span>
-                    <h2 class="magazine-name">Bloomberg</h2>
-                    <p class="magazine-desc">全球金融新聞和數據分析，商業和投資者的首選。</p>
-                    <div class="magazine-stats">
-                        <span class="stat">📅 1 期</span>
-                        <span class="stat">📝 19 篇文章</span>
-                        <span class="stat">🆕 2026-03-01</span>
-                    </div>
+            </a>
+
+            <!-- 404 to Success -->
+            <a href="../blog/404-to-success-nextjs-zeabur-debugging.md" class="article-card" target="_blank">
+                <div class="article-icon">🐛</div>
+                <h2 class="article-title">從 404 到成功：Next.js 除錯記</h2>
+                <p class="article-desc">Mission Control 部署到 Zeabur 遇到的 404 錯誤完整除錯過程與解決方案。</p>
+                <div class="article-meta">
+                    <span>📅 2026-03-03</span>
+                    <span class="article-tag debug">🐛 除錯</span>
+                </div>
+            </a>
+
+            <!-- Mission Control Deployment -->
+            <a href="../blog/mission-control-zeabur-deployment.md" class="article-card" target="_blank">
+                <div class="article-icon">🎯</div>
+                <h2 class="article-title">Mission Control 部署指南</h2>
+                <p class="article-desc">Next.js 應用部署到 Zeabur 的完整步驟，包含環境變數配置與資料庫遷移。</p>
+                <div class="article-meta">
+                    <span>📅 2026-03-03</span>
+                    <span class="article-tag">🚀 部署</span>
                 </div>
             </a>
         </div>
-        
+
         <div class="footer">
-            <p>📚 Magazine Archive © 2026 | Made with ❤️ by Jarvis</p>
+            <p>📰 OpenClaw Magazine © 2026</p>
             <p style="margin-top: 10px;">
-                <a href="/">🎮 GameWorld</a>
+                <a href="https://github.com/raycoderhk/2048-game" target="_blank">GitHub Repo</a>
                 <span style="margin: 0 10px;">|</span>
-                <a href="https://github.com/raycoderhk/mini-games" target="_blank">GitHub</a>
+                <a href="../">🎮 返回遊戲世界</a>
             </p>
         </div>
     </div>
