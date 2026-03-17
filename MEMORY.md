@@ -194,6 +194,11 @@ async function getOrCreateUser(email, name, googleId, image) {
 - **Weak:** Chinese (borderline concern)
 - **Strategy:** Strong subjects should compensate, Chinese needs attention
 
+**Personal Context:**
+- Age: 17 (December born)
+- One of the younger/smaller kids in his class
+- This can add pressure — comparing himself to older classmates
+
 **Family Context:**
 - High-stress period for the family
 - Son needs support and quiet study environment

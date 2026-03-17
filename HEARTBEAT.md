@@ -47,6 +47,12 @@ If nothing needs attention, reply HEARTBEAT_OK.
   - 🎯 Use iPad Pro as second screen for MacBook Air
   - 🦐 Research: OpenClaw setup & features
 
+**3 月 24 日 (星期二)** 🏥
+• 10:15 [Grandma] Grandma 瑪嘉烈醫院複診
+  - 📍 瑪嘉烈醫院 K 座 7/F
+  - 😷 帶口罩
+  - 🧥 帶兩件外套
+
 **3 月 14 日 (星期六)** ✅ 已報名成功
 • 08:45-16:30 [Family] 伊利沙伯中學 PTA 新春親子旅行 (已中籤)
   - 集合：08:45 (待定地點)
@@ -82,8 +88,11 @@ If nothing needs attention, reply HEARTBEAT_OK.
   - 📍 深圳市南山區科苑南路 2516 號
   - 🚇 地鐵 13 號線「人才公園站」B1 出口
   - 🖼️ 必睇：《我心歸處》+《匠作中國》+《一個世紀的椅子》
-• 13:00-18:00 [Couple] Didi to 港灣一号 (午餐 + Lobby + Spa)
-  - 📍 深圳福田口岸附近
+• 13:00-18:00 [Couple] 康悦故事·足道奢华 SPA 会馆 (午餐 + Spa)
+  - 📍 深圳市南山區南山大道 1039 號希尔顿花园酒店 5 樓
+  - 💰 ¥258/人
+  - 🏨 酒店大堂一樓電梯上 5 樓
+  - 🔗 http://dpurl.cn/2hxeYdpz
 • 18:00-20:00 [Couple] 週年紀念晚餐
   - 📍 地點待定
 • 20:00-21:00 [Couple] Didi 皇崗口岸 返港

@@ -1,0 +1,44 @@
+{
+  "projects": [
+    {
+      "id": "proj-000",
+      "title": "Seed Project",
+      "description": "Initial seed project for ID generation",
+      "status": "done",
+      "priority": "low",
+      "created": "2026-03-17",
+      "updated": "2026-03-17T13:03:00Z",
+      "tags": [
+        "seed"
+      ],
+      "notes": []
+    },
+    {
+      "id": "proj-001",
+      "title": "⚠️ HIGH [Email] Fwd: Payment instruction advice付款指示通知書",
+      "description": "Automatically created from email - Raymond <raymondcuhk@gmail.com>",
+      "status": "todo",
+      "priority": "high",
+      "created": "2026-03-17",
+      "updated": "2026-03-17T05:03:28.143455Z",
+      "tags": [
+        "email",
+        "auto-added",
+        "financial"
+      ],
+      "notes": [
+        "📧 Email ID: 78",
+        "📬 From: Raymond <raymondcuhk@gmail.com>",
+        "📅 Date: Tue, 17 Mar 2026 12:27:53 +0800",
+        "🔗 Message-ID: <6CB824A1-D5F9-4F72-AD72-805AA43B6E0D@gmail.com>",
+        "",
+        "📝 Summary:",
+        ""
+      ]
+    }
+  ],
+  "meta": {
+    "created": "2026-03-17T13:02:36+08:00",
+    "updated": "2026-03-17T05:03:28.143464Z"
+  }
+}
