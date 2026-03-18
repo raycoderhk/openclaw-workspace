@@ -82,25 +82,61 @@
 
 ## 🔧 自動化腳本
 
+### Tavily Web Search (推薦方法)
+
+**API:** https://api.tavily.com/search  
+**配置:** `TAVILY_API_KEY` 環境變量  
+**優點:** 無 CAPTCHA、結構化數據、快速響應
+
+**Python 示例:**
+```python
+import os
+import json
+import urllib.request
+
+api_key = os.environ.get('TAVILY_API_KEY', '')
+query = 'Bloomberg Businessweek latest issue March 2026'
+
+payload = {
+    'query': query,
+    'api_key': api_key,
+    'max_results': 5,
+    'search_depth': 'basic',
+    'include_answer': True
+}
+
+req = urllib.request.Request(
+    'https://api.tavily.com/search',
+    data=json.dumps(payload).encode('utf-8'),
+    headers={'Content-Type': 'application/json'},
+    method='POST'
+)
+
+with urllib.request.urlopen(req, timeout=30) as response:
+    result = json.loads(response.read().decode('utf-8'))
+
+print(result.get('answer', 'No answer'))
+```
+
 ### 檢查腳本位置
 ```
 /workspace/scripts/check-magazine-updates.py
 ```
 
 ### 腳本功能
-1. 訪問各雜誌官方網站
+1. 使用 Tavily API 搜尋各雜誌最新期數
 2. 檢測最新期數日期
-3. 與本地最新期數比較
+3. 與本地最新期數比較 (`memory/magazine-check-state.json`)
 4. 如果有更新 → 發送 Discord 通知
 5. 自動創建 issue 目錄結構
 
 ### 運行方式
 ```bash
-# 手動運行
-python3 /workspace/scripts/check-magazine-updates.py
+# 手動運行 (Tavily)
+python3 /workspace/scripts/check-magazine-updates.py --tavily
 
 # Cron 自動運行 (每日 08:00 HKT)
-0 0 * * * python3 /workspace/scripts/check-magazine-updates.py
+0 0 * * * python3 /workspace/scripts/check-magazine-updates.py --tavily
 ```
 
 ---

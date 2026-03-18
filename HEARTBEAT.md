@@ -351,25 +351,34 @@ If nothing needs attention, reply HEARTBEAT_OK.
 
 ---
 
-### 📰 Daily Magazine Update Check (每日 08:00 HKT)
+### 📰 Daily Magazine Update Check (每日 08:00 HKT) - Tavily
 **目標:** 自動檢查 4 本雜誌是否有最新一期出版  
 **頻率:** 每日 08:00 HKT (日間時段)  
-**文檔:** `/workspace/docs/daily-magazine-check.md`
+**文檔:** `/workspace/docs/daily-magazine-check.md`  
+**方法:** Tavily Web Search API (無 CAPTCHA 阻擋)
 
 **檢查清單:**
 | Magazine | Frequency | Latest Issue | Next Expected |
 |----------|-----------|--------------|---------------|
 | **Bloomberg** | 每週一 | 2026-03-01 | 2026-03-08 |
 | **Economist** | 每週四 | 2026-03-14 | 2026-03-21 |
-| **HKEJ** | 每週一 - 六 | 2026-03-12 | 2026-03-13 |
+| **HKEJ** | 每週一 - 六 | 2026-03-12 | 2026-03-19 |
 | **Nat Geo** | 每月 | 2026-03 | 2026-04 |
 
-**檢查步驟:**
-1. 訪問各雜誌官方網站
-2. 記錄最新期數日期
-3. 與本地最新期數比較 (`/workspace/magazine/`)
+**檢查步驟 (Tavily):**
+1. 使用 Tavily API 搜尋各雜誌最新期數
+   - Query: "[Magazine] latest issue March 2026 cover date"
+   - API: https://api.tavily.com/search
+   - Max results: 5, Include answer: true
+2. 提取 Tavily 回答中的最新期數日期
+3. 與本地最新期數比較 (`memory/magazine-check-state.json`)
 4. 如果有新期數 → 發送 Discord 通知 (#magazine-updates)
 5. 記錄檢查結果到 `memory/magazine-check-YYYY-MM-DD.md`
+
+**Tavily API 配置:**
+- API Key: `TAVILY_API_KEY` (環境變量)
+- Search depth: basic
+- Timeout: 30 seconds
 
 **通知格式:**
 ```
