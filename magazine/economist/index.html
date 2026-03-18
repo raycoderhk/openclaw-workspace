@@ -77,6 +77,78 @@
             transition: all 0.3s;
             box-shadow: 0 5px 20px rgba(0, 0, 0, 0.1);
             display: block;
+            position: relative;
+        }
+
+        /* Learning badges */
+        .read-badge {
+            position: absolute;
+            top: 15px;
+            right: 15px;
+            background: linear-gradient(135deg, #43e97b 0%, #38f9d7 100%);
+            color: #333;
+            padding: 6px 12px;
+            border-radius: 20px;
+            font-size: 0.8em;
+            font-weight: bold;
+            z-index: 10;
+            display: none;
+        }
+
+        .read-badge.visible {
+            display: block;
+        }
+
+        /* Learning action buttons */
+        .learning-actions {
+            padding: 15px 20px;
+            display: flex;
+            gap: 10px;
+            border-top: 1px solid #f0f0f0;
+        }
+
+        .btn-learn {
+            flex: 1;
+            padding: 10px 15px;
+            border: none;
+            border-radius: 8px;
+            font-size: 0.9em;
+            font-weight: 600;
+            cursor: pointer;
+            transition: all 0.3s;
+            text-decoration: none;
+            text-align: center;
+        }
+
+        .btn-read {
+            background: linear-gradient(135deg, var(--economist-red) 0%, #c4120c 100%);
+            color: white;
+        }
+
+        .btn-read:hover {
+            transform: translateY(-2px);
+            box-shadow: 0 5px 15px rgba(227, 18, 11, 0.3);
+        }
+
+        .btn-study {
+            background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
+            color: white;
+        }
+
+        .btn-study:hover {
+            transform: translateY(-2px);
+            box-shadow: 0 5px 15px rgba(102, 126, 234, 0.3);
+        }
+
+        .btn-study.locked {
+            background: #e0e0e0;
+            color: #999;
+            cursor: not-allowed;
+        }
+
+        .btn-study.locked:hover {
+            transform: none;
+            box-shadow: none;
         }
         
         .issue-card:hover {
@@ -236,64 +308,85 @@
         
         <div class="issues-grid">
             <!-- March 14, 2026 Issue -->
-            <a href="2026-03-14/" class="issue-card">
-                <div class="issue-cover has-image">
-                    <img src="2026-03-14/cover.jpg" alt="The Economist March 14, 2026 Cover" onerror="this.style.display='none'; this.parentElement.innerHTML='<div class=\'cover-icon\'>📰</div><div class=\'cover-content\'><div class=\'cover-date\'>March 14, 2026</div><div class=\'cover-label\'>Weekly Edition</div></div>'">
-                    <div class="cover-content">
-                        <div class="cover-date">March 14, 2026</div>
-                        <div class="cover-label">Weekly Edition</div>
+            <div class="issue-card" data-issue-id="economist-2026-03-14">
+                <span class="read-badge" id="badge-2026-03-14">✅ Read</span>
+                <a href="2026-03-14/" style="text-decoration: none; color: inherit; display: block;">
+                    <div class="issue-cover has-image">
+                        <img src="2026-03-14/cover.jpg" alt="The Economist March 14, 2026 Cover" onerror="this.style.display='none'; this.parentElement.innerHTML='<div class=\'cover-icon\'>📰</div><div class=\'cover-content\'><div class=\'cover-date\'>March 14, 2026</div><div class=\'cover-label\'>Weekly Edition</div></div>'">
+                        <div class="cover-content">
+                            <div class="cover-date">March 14, 2026</div>
+                            <div class="cover-label">Weekly Edition</div>
+                        </div>
                     </div>
-                </div>
-                <div class="issue-info">
-                    <span class="tag new">✨ 最新</span>
-                    <h2 class="issue-headline">An attack on the world economy</h2>
-                    <div class="issue-meta">
-                        <span class="meta-item">📝 75 篇文章</span>
-                        <span class="meta-item">📊 封面故事</span>
-                        <span class="meta-item">🆕 2026-03-14</span>
+                    <div class="issue-info">
+                        <span class="tag new">✨ 最新</span>
+                        <h2 class="issue-headline">An attack on the world economy</h2>
+                        <div class="issue-meta">
+                            <span class="meta-item">📝 75 篇文章</span>
+                            <span class="meta-item">📊 封面故事</span>
+                            <span class="meta-item">🆕 2026-03-14</span>
+                        </div>
                     </div>
+                </a>
+                <div class="learning-actions">
+                    <button class="btn-learn btn-read" onclick="markAsRead('economist-2026-03-14', event)">📖 Mark Read</button>
+                    <button class="btn-learn btn-study" id="study-2026-03-14" onclick="handleStudy('economist-2026-03-14', event)">📖 Study 🔒</button>
                 </div>
-            </a>
+            </div>
             
             <!-- March 7, 2026 Issue -->
-            <a href="2026-03-07/" class="issue-card">
-                <div class="issue-cover has-image">
-                    <img src="2026-03-07/cover.jpg" alt="The Economist March 7, 2026 Cover">
-                    <div class="cover-content">
-                        <div class="cover-date">March 7, 2026</div>
-                        <div class="cover-label">Weekly Edition</div>
+            <div class="issue-card" data-issue-id="economist-2026-03-07">
+                <span class="read-badge" id="badge-2026-03-07">✅ Read</span>
+                <a href="2026-03-07/" style="text-decoration: none; color: inherit; display: block;">
+                    <div class="issue-cover has-image">
+                        <img src="2026-03-07/cover.jpg" alt="The Economist March 7, 2026 Cover">
+                        <div class="cover-content">
+                            <div class="cover-date">March 7, 2026</div>
+                            <div class="cover-label">Weekly Edition</div>
+                        </div>
                     </div>
-                </div>
-                <div class="issue-info">
-                    <span class="tag">✨ 熱門</span>
-                    <h2 class="issue-headline">A war without a strategy</h2>
-                    <div class="issue-meta">
-                        <span class="meta-item">📝 74 篇文章</span>
-                        <span class="meta-item">📊 封面故事</span>
-                        <span class="meta-item">🆕 2026-03-07</span>
+                    <div class="issue-info">
+                        <span class="tag">✨ 熱門</span>
+                        <h2 class="issue-headline">A war without a strategy</h2>
+                        <div class="issue-meta">
+                            <span class="meta-item">📝 74 篇文章</span>
+                            <span class="meta-item">📊 封面故事</span>
+                            <span class="meta-item">🆕 2026-03-07</span>
+                        </div>
                     </div>
+                </a>
+                <div class="learning-actions">
+                    <button class="btn-learn btn-read" onclick="markAsRead('economist-2026-03-07', event)">📖 Mark Read</button>
+                    <button class="btn-learn btn-study" id="study-2026-03-07" onclick="handleStudy('economist-2026-03-07', event)">📖 Study 🔒</button>
                 </div>
-            </a>
+            </div>
             
             <!-- February 28, 2026 Issue -->
-            <a href="2026-02-28/" class="issue-card">
-                <div class="issue-cover has-image">
-                    <img src="2026-02-28/cover.jpg" alt="The Economist February 28, 2026 Cover">
-                    <div class="cover-content">
-                        <div class="cover-date">February 28, 2026</div>
-                        <div class="cover-label">Weekly Edition</div>
+            <div class="issue-card" data-issue-id="economist-2026-02-28">
+                <span class="read-badge" id="badge-2026-02-28">✅ Read</span>
+                <a href="2026-02-28/" style="text-decoration: none; color: inherit; display: block;">
+                    <div class="issue-cover has-image">
+                        <img src="2026-02-28/cover.jpg" alt="The Economist February 28, 2026 Cover">
+                        <div class="cover-content">
+                            <div class="cover-date">February 28, 2026</div>
+                            <div class="cover-label">Weekly Edition</div>
+                        </div>
                     </div>
-                </div>
-                <div class="issue-info">
-                    <span class="tag">存檔</span>
-                    <h2 class="issue-headline">The global economy at a crossroads</h2>
-                    <div class="issue-meta">
-                        <span class="meta-item">📝 77 篇文章</span>
-                        <span class="meta-item">📊 封面故事</span>
-                        <span class="meta-item">🆕 2026-02-28</span>
+                    <div class="issue-info">
+                        <span class="tag">存檔</span>
+                        <h2 class="issue-headline">The global economy at a crossroads</h2>
+                        <div class="issue-meta">
+                            <span class="meta-item">📝 77 篇文章</span>
+                            <span class="meta-item">📊 封面故事</span>
+                            <span class="meta-item">🆕 2026-02-28</span>
+                        </div>
                     </div>
+                </a>
+                <div class="learning-actions">
+                    <button class="btn-learn btn-read" onclick="markAsRead('economist-2026-02-28', event)">📖 Mark Read</button>
+                    <button class="btn-learn btn-study" id="study-2026-02-28" onclick="handleStudy('economist-2026-02-28', event)">📖 Study 🔒</button>
                 </div>
-            </a>
+            </div>
         </div>
         
         <div class="footer">
@@ -307,5 +400,224 @@
             </p>
         </div>
     </div>
+
+    <script>
+        // Current user state
+        let currentUser = null;
+        let readArticles = [];
+
+        // Initialize on page load
+        function init() {
+            // Check if user is signed in
+            const userStr = localStorage.getItem('magazine_user');
+            if (userStr) {
+                currentUser = JSON.parse(userStr);
+            }
+
+            // Load read articles
+            loadReadArticles();
+
+            // Update UI
+            updateStudyButtons();
+        }
+
+        // Load read articles from localStorage
+        function loadReadArticles() {
+            const stored = localStorage.getItem('magazine_read_articles');
+            if (stored) {
+                readArticles = JSON.parse(stored);
+                // Show read badges
+                readArticles.forEach(articleId => {
+                    const badge = document.getElementById(`badge-${articleId.split('-').slice(2).join('-')}`);
+                    if (badge) {
+                        badge.classList.add('visible');
+                    }
+                });
+            }
+        }
+
+        // Mark article as read
+        function markAsRead(articleId, event) {
+            event.preventDefault();
+            event.stopPropagation();
+
+            if (!readArticles.includes(articleId)) {
+                readArticles.push(articleId);
+                localStorage.setItem('magazine_read_articles', JSON.stringify(readArticles));
+
+                // Show badge
+                const issueDate = articleId.replace('economist-', '');
+                const badge = document.getElementById(`badge-${issueDate}`);
+                if (badge) {
+                    badge.classList.add('visible');
+                }
+
+                // Show success message
+                showToast('✅ Marked as read!');
+
+                // Update study button
+                updateStudyButton(articleId);
+            } else {
+                showToast('📖 Already read!');
+            }
+        }
+
+        // Handle study button click
+        function handleStudy(articleId, event) {
+            event.preventDefault();
+            event.stopPropagation();
+
+            if (!currentUser) {
+                // Not signed in - show login prompt
+                showLoginModal(articleId);
+            } else {
+                // Signed in - go to study session
+                window.location.href = `../learning/study.html?article=${articleId}`;
+            }
+        }
+
+        // Update study buttons based on read status
+        function updateStudyButtons() {
+            const studyButtons = document.querySelectorAll('.btn-study');
+            studyButtons.forEach(button => {
+                const issueCard = button.closest('.issue-card');
+                const articleId = issueCard.dataset.issueId;
+                const issueDate = articleId.replace('economist-', '');
+
+                if (readArticles.includes(articleId)) {
+                    button.classList.remove('locked');
+                    button.innerHTML = '📖 Study ✅';
+                } else {
+                    button.classList.add('locked');
+                    button.innerHTML = '📖 Study 🔒';
+                }
+            });
+        }
+
+        // Update single study button
+        function updateStudyButton(articleId) {
+            const issueDate = articleId.replace('economist-', '');
+            const button = document.getElementById(`study-${issueDate}`);
+            if (button) {
+                button.classList.remove('locked');
+                button.innerHTML = '📖 Study ✅';
+            }
+        }
+
+        // Show login modal
+        function showLoginModal(articleId) {
+            const modal = document.createElement('div');
+            modal.id = 'login-modal';
+            modal.style.cssText = `
+                position: fixed;
+                top: 0;
+                left: 0;
+                right: 0;
+                bottom: 0;
+                background: rgba(0,0,0,0.6);
+                display: flex;
+                align-items: center;
+                justify-content: center;
+                z-index: 1000;
+            `;
+            modal.innerHTML = `
+                <div style="
+                    background: white;
+                    border-radius: 20px;
+                    padding: 40px;
+                    max-width: 450px;
+                    width: 90%;
+                    text-align: center;
+                    box-shadow: 0 20px 60px rgba(0,0,0,0.3);
+                ">
+                    <div style="font-size: 4em; margin-bottom: 20px;">📖</div>
+                    <h2 style="color: #333; margin-bottom: 15px;">Sign In to Study</h2>
+                    <p style="color: #666; margin-bottom: 30px; line-height: 1.6;">
+                        Sign in to save vocabulary, track your progress, and access learning features!
+                    </p>
+                    <button onclick="goToSignIn('${articleId}')" style="
+                        display: inline-flex;
+                        align-items: center;
+                        gap: 12px;
+                        padding: 15px 30px;
+                        background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
+                        color: white;
+                        border: none;
+                        border-radius: 10px;
+                        font-size: 1.1em;
+                        font-weight: 600;
+                        cursor: pointer;
+                        margin-bottom: 20px;
+                    ">
+                        Sign In with Google
+                    </button>
+                    <br>
+                    <button onclick="closeLoginModal()" style="
+                        padding: 12px 30px;
+                        background: transparent;
+                        color: #666;
+                        border: 2px solid #ddd;
+                        border-radius: 8px;
+                        font-size: 1em;
+                        cursor: pointer;
+                    ">Maybe Later</button>
+                </div>
+            `;
+            document.body.appendChild(modal);
+        }
+
+        // Close login modal
+        function closeLoginModal() {
+            const modal = document.getElementById('login-modal');
+            if (modal) {
+                modal.remove();
+            }
+        }
+
+        // Go to sign in page
+        function goToSignIn(articleId) {
+            localStorage.setItem('magazine_redirect_after_signin', articleId);
+            window.location.href = '../auth/signin.html';
+        }
+
+        // Show toast notification
+        function showToast(message) {
+            const toast = document.createElement('div');
+            toast.style.cssText = `
+                position: fixed;
+                bottom: 30px;
+                left: 50%;
+                transform: translateX(-50%);
+                background: #333;
+                color: white;
+                padding: 15px 30px;
+                border-radius: 10px;
+                font-weight: 600;
+                z-index: 1000;
+                animation: slideUp 0.3s ease;
+            `;
+            toast.textContent = message;
+            document.body.appendChild(toast);
+
+            setTimeout(() => {
+                toast.style.opacity = '0';
+                toast.style.transition = 'opacity 0.3s';
+                setTimeout(() => toast.remove(), 300);
+            }, 2000);
+        }
+
+        // Add animation keyframe
+        const style = document.createElement('style');
+        style.textContent = `
+            @keyframes slideUp {
+                from { transform: translateX(-50%) translateY(20px); opacity: 0; }
+                to { transform: translateX(-50%) translateY(0); opacity: 1; }
+            }
+        `;
+        document.head.appendChild(style);
+
+        // Initialize on load
+        init();
+    </script>
 </body>
 </html>

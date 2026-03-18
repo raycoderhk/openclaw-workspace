@@ -1,0 +1,617 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>📖 Study Session | Learning Center</title>
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+
+        body {
+            font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, 'Helvetica Neue', Arial, sans-serif;
+            background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
+            min-height: 100vh;
+            padding: 40px 20px;
+        }
+
+        .container {
+            max-width: 900px;
+            margin: 0 auto;
+        }
+
+        .header {
+            background: white;
+            border-radius: 20px;
+            padding: 30px;
+            margin-bottom: 30px;
+            box-shadow: 0 10px 40px rgba(0, 0, 0, 0.2);
+        }
+
+        .header-top {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            margin-bottom: 20px;
+        }
+
+        .btn-back {
+            padding: 10px 20px;
+            background: #f0f0f0;
+            border: none;
+            border-radius: 8px;
+            cursor: pointer;
+            font-weight: 600;
+            transition: all 0.3s;
+        }
+
+        .btn-back:hover {
+            background: #e0e0e0;
+        }
+
+        .session-info {
+            text-align: center;
+        }
+
+        .session-info h1 {
+            font-size: 2em;
+            color: #333;
+            margin-bottom: 10px;
+        }
+
+        .session-info p {
+            color: #666;
+            font-size: 1.1em;
+        }
+
+        /* Timer */
+        .timer-section {
+            background: white;
+            border-radius: 20px;
+            padding: 25px;
+            margin-bottom: 30px;
+            text-align: center;
+            box-shadow: 0 10px 40px rgba(0, 0, 0, 0.2);
+        }
+
+        .timer {
+            font-size: 3em;
+            font-weight: bold;
+            color: #667eea;
+            font-family: 'Courier New', monospace;
+        }
+
+        .timer-label {
+            color: #666;
+            margin-top: 10px;
+        }
+
+        /* Vocabulary Form */
+        .vocab-form {
+            background: white;
+            border-radius: 20px;
+            padding: 30px;
+            box-shadow: 0 10px 40px rgba(0, 0, 0, 0.2);
+        }
+
+        .form-title {
+            font-size: 1.5em;
+            color: #333;
+            margin-bottom: 25px;
+            display: flex;
+            align-items: center;
+            gap: 10px;
+        }
+
+        .vocab-entry {
+            border: 2px solid #f0f0f0;
+            border-radius: 15px;
+            padding: 25px;
+            margin-bottom: 20px;
+            transition: all 0.3s;
+        }
+
+        .vocab-entry:hover {
+            border-color: #667eea;
+            background: #f8f9fa;
+        }
+
+        .vocab-entry:focus-within {
+            border-color: #667eea;
+            box-shadow: 0 5px 20px rgba(102, 126, 234, 0.2);
+        }
+
+        .form-group {
+            margin-bottom: 20px;
+        }
+
+        .form-group:last-child {
+            margin-bottom: 0;
+        }
+
+        label {
+            display: block;
+            font-weight: 600;
+            color: #333;
+            margin-bottom: 8px;
+            font-size: 1em;
+        }
+
+        input[type="text"],
+        textarea {
+            width: 100%;
+            padding: 12px 15px;
+            border: 2px solid #e0e0e0;
+            border-radius: 8px;
+            font-size: 1em;
+            font-family: inherit;
+            transition: all 0.3s;
+        }
+
+        input[type="text"]:focus,
+        textarea:focus {
+            outline: none;
+            border-color: #667eea;
+            box-shadow: 0 0 0 3px rgba(102, 126, 234, 0.1);
+        }
+
+        textarea {
+            min-height: 80px;
+            resize: vertical;
+        }
+
+        .btn-add-word {
+            width: 100%;
+            padding: 15px;
+            background: linear-gradient(135deg, #43e97b 0%, #38f9d7 100%);
+            color: #333;
+            border: none;
+            border-radius: 10px;
+            font-size: 1.1em;
+            font-weight: 600;
+            cursor: pointer;
+            transition: all 0.3s;
+            margin-top: 20px;
+        }
+
+        .btn-add-word:hover {
+            transform: translateY(-2px);
+            box-shadow: 0 5px 20px rgba(67, 233, 123, 0.4);
+        }
+
+        .btn-save-session {
+            width: 100%;
+            padding: 15px;
+            background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
+            color: white;
+            border: none;
+            border-radius: 10px;
+            font-size: 1.2em;
+            font-weight: 600;
+            cursor: pointer;
+            transition: all 0.3s;
+            margin-top: 30px;
+        }
+
+        .btn-save-session:hover {
+            transform: translateY(-2px);
+            box-shadow: 0 10px 30px rgba(102, 126, 234, 0.4);
+        }
+
+        /* Words List */
+        .words-list {
+            margin-top: 30px;
+            padding-top: 30px;
+            border-top: 2px solid #f0f0f0;
+        }
+
+        .words-list h3 {
+            font-size: 1.3em;
+            color: #333;
+            margin-bottom: 15px;
+        }
+
+        .word-item {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            padding: 15px;
+            background: #f8f9fa;
+            border-radius: 8px;
+            margin-bottom: 10px;
+        }
+
+        .word-item .word-text {
+            font-weight: 600;
+            color: #667eea;
+            font-size: 1.1em;
+        }
+
+        .word-item .word-def {
+            color: #666;
+            font-size: 0.95em;
+        }
+
+        .btn-remove {
+            padding: 5px 12px;
+            background: #ff4757;
+            color: white;
+            border: none;
+            border-radius: 6px;
+            cursor: pointer;
+            font-size: 0.9em;
+            transition: all 0.3s;
+        }
+
+        .btn-remove:hover {
+            background: #ff3838;
+        }
+
+        /* Stats */
+        .stats-bar {
+            display: flex;
+            gap: 20px;
+            margin-top: 20px;
+            padding: 15px;
+            background: #f8f9fa;
+            border-radius: 10px;
+        }
+
+        .stat-item {
+            text-align: center;
+            flex: 1;
+        }
+
+        .stat-value {
+            font-size: 1.8em;
+            font-weight: bold;
+            color: #667eea;
+        }
+
+        .stat-label {
+            font-size: 0.9em;
+            color: #666;
+        }
+
+        /* Responsive */
+        @media (max-width: 768px) {
+            .header-top {
+                flex-direction: column;
+                gap: 15px;
+            }
+
+            .timer {
+                font-size: 2em;
+            }
+
+            .stats-bar {
+                flex-direction: column;
+                gap: 10px;
+            }
+        }
+    </style>
+</head>
+<body>
+    <div class="container">
+        <!-- Header -->
+        <div class="header">
+            <div class="header-top">
+                <button onclick="goBack()" class="btn-back">← Back</button>
+                <div class="session-info">
+                    <h1 id="article-title">📖 Study Session</h1>
+                    <p id="article-source">Loading...</p>
+                </div>
+                <div style="width: 100px;"></div> <!-- Spacer for centering -->
+            </div>
+        </div>
+
+        <!-- Timer -->
+        <div class="timer-section">
+            <div class="timer" id="timer">00:00</div>
+            <div class="timer-label">⏱️ Learning Session Time</div>
+        </div>
+
+        <!-- Vocabulary Form -->
+        <div class="vocab-form">
+            <h2 class="form-title">📝 Add New Word</h2>
+            
+            <div class="vocab-entry">
+                <div class="form-group">
+                    <label>Word *</label>
+                    <input type="text" id="word-input" placeholder="e.g., automation">
+                </div>
+
+                <div class="form-group">
+                    <label>Definition (English)</label>
+                    <input type="text" id="def-input" placeholder="e.g., The use of machines to do work">
+                </div>
+
+                <div class="form-group">
+                    <label>Definition (Chinese)</label>
+                    <input type="text" id="def-zh-input" placeholder="e.g., 自動化">
+                </div>
+
+                <div class="form-group">
+                    <label>Context Sentence (from article)</label>
+                    <textarea id="context-input" placeholder="e.g., 'Automation is transforming the workplace...'"></textarea>
+                </div>
+
+                <div class="form-group">
+                    <label>My Sentence (use the word)</label>
+                    <textarea id="sentence-input" placeholder="Write your own sentence..."></textarea>
+                </div>
+
+                <button onclick="addWord()" class="btn-add-word">+ Add Word</button>
+            </div>
+
+            <!-- Words Added This Session -->
+            <div class="words-list" id="words-list" style="display: none;">
+                <h3>📚 Words Added This Session: <span id="word-count">0</span></h3>
+                <div id="words-container"></div>
+            </div>
+
+            <!-- Stats -->
+            <div class="stats-bar">
+                <div class="stat-item">
+                    <div class="stat-value" id="stat-words">0</div>
+                    <div class="stat-label">Words Added</div>
+                </div>
+                <div class="stat-item">
+                    <div class="stat-value" id="stat-time">0:00</div>
+                    <div class="stat-label">Time Spent</div>
+                </div>
+            </div>
+
+            <!-- Save Button -->
+            <button onclick="saveSession()" class="btn-save-session">💾 Save Learning Session</button>
+        </div>
+    </div>
+
+    <script>
+        let articleId = '';
+        let articleData = {};
+        let wordsAdded = [];
+        let timerSeconds = 0;
+        let timerInterval = null;
+
+        // Initialize on page load
+        function init() {
+            // Check authentication
+            const userStr = localStorage.getItem('magazine_user');
+            if (!userStr) {
+                window.location.href = '../auth/signin.html';
+                return;
+            }
+
+            // Get article ID from URL
+            const urlParams = new URLSearchParams(window.location.search);
+            articleId = urlParams.get('article');
+            
+            if (!articleId) {
+                alert('No article specified!');
+                window.location.href = '../economist/';
+                return;
+            }
+
+            // Load article data (demo for now)
+            loadArticleData();
+
+            // Start timer
+            startTimer();
+        }
+
+        // Load article data
+        function loadArticleData() {
+            // Demo data - will be replaced with actual API call
+            articleData = {
+                id: articleId,
+                title: 'AI and the Future of Work',
+                source: 'The Economist',
+                date: '2026-03-14'
+            };
+
+            document.getElementById('article-title').textContent = `📖 ${articleData.title}`;
+            document.getElementById('article-source').textContent = `${articleData.source} • ${articleData.date}`;
+        }
+
+        // Start timer
+        function startTimer() {
+            timerInterval = setInterval(() => {
+                timerSeconds++;
+                updateTimerDisplay();
+            }, 1000);
+        }
+
+        // Update timer display
+        function updateTimerDisplay() {
+            const minutes = Math.floor(timerSeconds / 60);
+            const seconds = timerSeconds % 60;
+            document.getElementById('timer').textContent = 
+                `${minutes.toString().padStart(2, '0')}:${seconds.toString().padStart(2, '0')}`;
+            document.getElementById('stat-time').textContent = 
+                `${minutes}:${seconds.toString().padStart(2, '0')}`;
+        }
+
+        // Add word to list
+        function addWord() {
+            const word = document.getElementById('word-input').value.trim();
+            const def = document.getElementById('def-input').value.trim();
+            const defZh = document.getElementById('def-zh-input').value.trim();
+            const context = document.getElementById('context-input').value.trim();
+            const sentence = document.getElementById('sentence-input').value.trim();
+
+            if (!word) {
+                alert('Please enter a word!');
+                return;
+            }
+
+            const newWord = {
+                id: Date.now(),
+                word,
+                definition: def,
+                definitionZh: defZh,
+                context,
+                sentence,
+                articleId,
+                addedAt: new Date().toISOString()
+            };
+
+            wordsAdded.push(newWord);
+            renderWordsList();
+            clearForm();
+
+            // Show success
+            showToast(`✅ "${word}" added!`);
+        }
+
+        // Render words list
+        function renderWordsList() {
+            const container = document.getElementById('words-container');
+            const list = document.getElementById('words-list');
+            const count = document.getElementById('word-count');
+
+            if (wordsAdded.length === 0) {
+                list.style.display = 'none';
+                return;
+            }
+
+            list.style.display = 'block';
+            count.textContent = wordsAdded.length;
+            document.getElementById('stat-words').textContent = wordsAdded.length;
+
+            container.innerHTML = wordsAdded.map(w => `
+                <div class="word-item">
+                    <div>
+                        <div class="word-text">${w.word}</div>
+                        <div class="word-def">${w.definitionZh || w.definition}</div>
+                    </div>
+                    <button onclick="removeWord(${w.id})" class="btn-remove">Remove</button>
+                </div>
+            `).join('');
+        }
+
+        // Remove word
+        function removeWord(id) {
+            wordsAdded = wordsAdded.filter(w => w.id !== id);
+            renderWordsList();
+        }
+
+        // Clear form
+        function clearForm() {
+            document.getElementById('word-input').value = '';
+            document.getElementById('def-input').value = '';
+            document.getElementById('def-zh-input').value = '';
+            document.getElementById('context-input').value = '';
+            document.getElementById('sentence-input').value = '';
+            document.getElementById('word-input').focus();
+        }
+
+        // Save session
+        function saveSession() {
+            if (wordsAdded.length === 0) {
+                if (confirm('No words added. End session anyway?')) {
+                    endSession();
+                }
+                return;
+            }
+
+            // Save to localStorage (will be replaced with API call)
+            const userStr = localStorage.getItem('magazine_user');
+            const user = JSON.parse(userStr);
+
+            // Get existing vocabulary
+            let vocabData = { words: [] };
+            try {
+                const stored = localStorage.getItem('magazine_vocabulary');
+                if (stored) {
+                    vocabData = JSON.parse(stored);
+                }
+            } catch (e) {}
+
+            // Add new words
+            wordsAdded.forEach(w => {
+                vocabData.words.push({
+                    ...w,
+                    user: user.email,
+                    mastered: false,
+                    reviewCount: 0,
+                    nextReview: new Date(Date.now() + 86400000).toISOString() // Tomorrow
+                });
+            });
+
+            // Save
+            localStorage.setItem('magazine_vocabulary', JSON.stringify(vocabData));
+
+            // Mark article as studied
+            let readArticles = [];
+            try {
+                const stored = localStorage.getItem('magazine_read_articles');
+                if (stored) {
+                    readArticles = JSON.parse(stored);
+                }
+            } catch (e) {}
+
+            if (!readArticles.includes(articleId)) {
+                readArticles.push(articleId);
+                localStorage.setItem('magazine_read_articles', JSON.stringify(readArticles));
+            }
+
+            // Success!
+            alert(`✅ Session saved!\n\n${wordsAdded.length} words added to your vocabulary.\n\nRedirecting to Learning Center...`);
+            endSession();
+        }
+
+        // End session and redirect
+        function endSession() {
+            clearInterval(timerInterval);
+            window.location.href = '../learning-center/';
+        }
+
+        // Go back
+        function goBack() {
+            if (wordsAdded.length > 0) {
+                if (confirm('You have unsaved words. Save before leaving?')) {
+                    saveSession();
+                } else {
+                    clearInterval(timerInterval);
+                    window.location.href = '../economist/';
+                }
+            } else {
+                clearInterval(timerInterval);
+                window.location.href = '../economist/';
+            }
+        }
+
+        // Show toast
+        function showToast(message) {
+            const toast = document.createElement('div');
+            toast.style.cssText = `
+                position: fixed;
+                bottom: 30px;
+                left: 50%;
+                transform: translateX(-50%);
+                background: #333;
+                color: white;
+                padding: 15px 30px;
+                border-radius: 10px;
+                font-weight: 600;
+                z-index: 1000;
+            `;
+            toast.textContent = message;
+            document.body.appendChild(toast);
+
+            setTimeout(() => {
+                toast.style.opacity = '0';
+                toast.style.transition = 'opacity 0.3s';
+                setTimeout(() => toast.remove(), 300);
+            }, 2000);
+        }
+
+        // Initialize
+        init();
+    </script>
+</body>
+</html>

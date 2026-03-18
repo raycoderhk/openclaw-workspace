@@ -1,0 +1,251 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>📖 Sign In - Magazine Learning Center</title>
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+
+        body {
+            font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, 'Helvetica Neue', Arial, sans-serif;
+            background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
+            min-height: 100vh;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            padding: 20px;
+        }
+
+        .signin-container {
+            background: white;
+            border-radius: 20px;
+            padding: 50px;
+            max-width: 450px;
+            width: 100%;
+            box-shadow: 0 20px 60px rgba(0, 0, 0, 0.3);
+            text-align: center;
+        }
+
+        .logo {
+            font-size: 4em;
+            margin-bottom: 20px;
+        }
+
+        h1 {
+            font-size: 2em;
+            color: #333;
+            margin-bottom: 15px;
+        }
+
+        .subtitle {
+            color: #666;
+            font-size: 1.1em;
+            margin-bottom: 40px;
+            line-height: 1.6;
+        }
+
+        .features {
+            text-align: left;
+            background: #f8f9fa;
+            padding: 25px;
+            border-radius: 15px;
+            margin-bottom: 30px;
+        }
+
+        .features h3 {
+            color: #333;
+            margin-bottom: 15px;
+            font-size: 1.1em;
+        }
+
+        .features ul {
+            list-style: none;
+        }
+
+        .features li {
+            padding: 8px 0;
+            color: #555;
+            display: flex;
+            align-items: center;
+        }
+
+        .features li::before {
+            content: '✅';
+            margin-right: 10px;
+        }
+
+        .btn-google {
+            display: inline-flex;
+            align-items: center;
+            justify-content: center;
+            gap: 12px;
+            width: 100%;
+            padding: 15px 30px;
+            background: white;
+            border: 2px solid #ddd;
+            border-radius: 10px;
+            font-size: 1.1em;
+            font-weight: 600;
+            color: #333;
+            cursor: pointer;
+            transition: all 0.3s;
+            text-decoration: none;
+            margin-bottom: 20px;
+        }
+
+        .btn-google:hover {
+            background: #f8f9fa;
+            border-color: #ccc;
+            transform: translateY(-2px);
+            box-shadow: 0 5px 20px rgba(0, 0, 0, 0.1);
+        }
+
+        .btn-google img {
+            width: 24px;
+            height: 24px;
+        }
+
+        .btn-skip {
+            display: inline-block;
+            padding: 12px 30px;
+            background: transparent;
+            color: #666;
+            text-decoration: none;
+            border-radius: 8px;
+            font-size: 1em;
+            transition: all 0.3s;
+        }
+
+        .btn-skip:hover {
+            background: #f0f0f0;
+            color: #333;
+        }
+
+        .back-link {
+            display: inline-block;
+            margin-top: 20px;
+            color: #667eea;
+            text-decoration: none;
+            font-size: 0.95em;
+        }
+
+        .back-link:hover {
+            text-decoration: underline;
+        }
+
+        .demo-mode {
+            margin-top: 30px;
+            padding: 20px;
+            background: linear-gradient(135deg, #f093fb 0%, #f5576c 100%);
+            border-radius: 15px;
+            color: white;
+        }
+
+        .demo-mode h4 {
+            margin-bottom: 10px;
+            font-size: 1.1em;
+        }
+
+        .demo-mode p {
+            font-size: 0.95em;
+            opacity: 0.95;
+            margin-bottom: 15px;
+        }
+
+        .btn-demo {
+            display: inline-block;
+            padding: 10px 25px;
+            background: white;
+            color: #f5576c;
+            text-decoration: none;
+            border-radius: 8px;
+            font-weight: 600;
+            transition: all 0.3s;
+        }
+
+        .btn-demo:hover {
+            transform: translateY(-2px);
+            box-shadow: 0 5px 15px rgba(0, 0, 0, 0.2);
+        }
+    </style>
+</head>
+<body>
+    <div class="signin-container">
+        <div class="logo">📖</div>
+        <h1>Magazine Learning Center</h1>
+        <p class="subtitle">Sign in to track your reading, save vocabulary, and boost your English learning!</p>
+
+        <div class="features">
+            <h3>What you'll get:</h3>
+            <ul>
+                <li>Track articles you've read</li>
+                <li>Save vocabulary with context</li>
+                <li>Spaced repetition reviews</li>
+                <li>Progress statistics & streaks</li>
+                <li>Sync across devices</li>
+            </ul>
+        </div>
+
+        <!-- Google Sign-In Button -->
+        <a href="#" onclick="signInWithGoogle(); return false;" class="btn-google">
+            <img src="https://www.gstatic.com/firebasejs/ui/2.0.0/images/auth/google.svg" alt="Google">
+            Sign in with Google
+        </a>
+
+        <!-- Skip for now -->
+        <a href="../economist/" class="btn-skip">Maybe Later</a>
+
+        <br>
+        <a href="../" class="back-link">← Back to Magazine</a>
+
+        <!-- Demo Mode Notice -->
+        <div class="demo-mode">
+            <h4>🚧 Demo Mode Available</h4>
+            <p>Want to try without signing in? Use demo mode to explore features (data won't be saved).</p>
+            <a href="../learning-center/?demo=true" class="btn-demo">Try Demo Mode</a>
+        </div>
+    </div>
+
+    <script>
+        // Check if user is already signed in
+        function checkExistingSession() {
+            const user = localStorage.getItem('magazine_user');
+            if (user) {
+                const userData = JSON.parse(user);
+                // Redirect to learning center
+                window.location.href = `../learning-center/?user=${encodeURIComponent(userData.email)}`;
+            }
+        }
+
+        // Sign in with Google (simplified - will integrate with actual OAuth later)
+        function signInWithGoogle() {
+            // For now, show a simple prompt
+            const email = prompt('Enter your email for demo (will be replaced with real OAuth):');
+            if (email && email.includes('@')) {
+                const user = {
+                    email: email,
+                    name: email.split('@')[0],
+                    signedInAt: new Date().toISOString()
+                };
+                localStorage.setItem('magazine_user', JSON.stringify(user));
+                
+                // Show success message
+                alert(`Welcome, ${user.name}! You're now signed in.`);
+                
+                // Redirect to learning center
+                window.location.href = `../learning-center/?user=${encodeURIComponent(email)}`;
+            } else if (email) {
+                alert('Please enter a valid email address.');
+            }
+        }
+
+        // Check on page load
+        checkExistingSession();
+    </script>
+</body>
+</html>
