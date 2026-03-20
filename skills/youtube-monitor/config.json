@@ -9,6 +9,16 @@
       "id": "UCBJycsmduvYEL83R_U4JriQ",
       "name": "Marques Brownlee",
       "enabled": true
+    },
+    {
+      "id": "UCfQNB91qRP_5ILeu_S_bSkg",
+      "name": "Alex Finn",
+      "enabled": true
+    },
+    {
+      "id": "UCaIIFXfdQUYf3OHPIFNDdrQ",
+      "name": "Alan Chen",
+      "enabled": true
     }
   ],
   "checkIntervalMinutes": 30,
