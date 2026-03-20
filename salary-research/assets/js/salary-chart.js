@@ -149,7 +149,7 @@ function initCharts() {
     createProspectsChart();
 }
 
-// Create Salary Box Plot Chart (with parent-friendly labels)
+// Create Salary Point Chart with Median Line
 function createSalaryBoxPlot() {
     const ctx = document.getElementById('salaryChart').getContext('2d');
     
@@ -158,74 +158,88 @@ function createSalaryBoxPlot() {
         return emoji + ind.name.split(' (')[0];
     });
     
-    // Calculate IQR segments (25th to 75th)
-    const iqrData = filteredData.map(ind => (ind.salary.upperQuartile - ind.salary.lowerQuartile) / 1000);
+    // Point data for each quartile
+    const bottomData = filteredData.map((ind, i) => ({ x: ind.salary.bottom / 1000, y: i }));
+    const lowerData = filteredData.map((ind, i) => ({ x: ind.salary.lowerQuartile / 1000, y: i }));
+    const medianData = filteredData.map((ind, i) => ({ x: ind.salary.median / 1000, y: i }));
+    const upperData = filteredData.map((ind, i) => ({ x: ind.salary.upperQuartile / 1000, y: i }));
+    const topData = filteredData.map((ind, i) => ({ x: ind.salary.top / 1000, y: i }));
     
-    // Box plot data
-    const boxData = {
+    // Point chart data with median line
+    const pointData = {
         labels: labels,
         datasets: [
-            {
-                type: 'bar',
-                label: '中間 50% (25th-75th)',
-                data: iqrData,
-                backgroundColor: 'rgba(52, 152, 219, 0.9)',
-                borderColor: 'rgba(40, 120, 180, 1)',
-                borderWidth: 2,
-                barPercentage: 0.6,
-                categoryPercentage: 0.8
-            },
-            {
-                type: 'scatter',
-                label: '中位數 (50th)',
-                data: filteredData.map((ind, i) => ({
-                    x: ind.salary.median / 1000,
-                    y: i
-                })),
-                backgroundColor: 'rgba(231, 76, 60, 1)',
-                borderColor: 'rgba(231, 76, 60, 1)',
-                pointRadius: 8,
-                pointHoverRadius: 10,
-                pointStyle: 'rectRot',
-                rotation: 0,
-                order: -1
-            },
+            // Bottom (10th) - Point
             {
                 type: 'scatter',
                 label: '入行起薪 (10th)',
-                data: filteredData.map((ind, i) => ({
-                    x: ind.salary.bottom / 1000,
-                    y: i
-                })),
+                data: bottomData,
                 backgroundColor: 'rgba(230, 126, 34, 1)',
                 borderColor: 'rgba(230, 126, 34, 1)',
-                pointRadius: 4,
-                pointHoverRadius: 6,
-                pointStyle: 'line',
-                rotation: 90,
-                order: 0
+                pointRadius: 6,
+                pointHoverRadius: 8,
+                pointStyle: 'circle',
+                order: 4
             },
+            // Lower (25th) - Point
+            {
+                type: 'scatter',
+                label: '初級水平 (25th)',
+                data: lowerData,
+                backgroundColor: 'rgba(241, 196, 15, 1)',
+                borderColor: 'rgba(241, 196, 15, 1)',
+                pointRadius: 6,
+                pointHoverRadius: 8,
+                pointStyle: 'circle',
+                order: 3
+            },
+            // Median (50th) - Point + Line
+            {
+                type: 'line',
+                label: '中位數 (50th)',
+                data: medianData,
+                backgroundColor: 'rgba(46, 204, 113, 1)',
+                borderColor: 'rgba(46, 204, 113, 1)',
+                borderWidth: 3,
+                pointRadius: 8,
+                pointHoverRadius: 10,
+                pointStyle: 'circle',
+                pointBackgroundColor: 'rgba(46, 204, 113, 1)',
+                pointBorderColor: 'rgba(255, 255, 255, 1)',
+                pointBorderWidth: 2,
+                order: 0,
+                fill: false
+            },
+            // Upper (75th) - Point
+            {
+                type: 'scatter',
+                label: '資深水平 (75th)',
+                data: upperData,
+                backgroundColor: 'rgba(52, 152, 219, 1)',
+                borderColor: 'rgba(52, 152, 219, 1)',
+                pointRadius: 6,
+                pointHoverRadius: 8,
+                pointStyle: 'circle',
+                order: 2
+            },
+            // Top (90th) - Point
             {
                 type: 'scatter',
                 label: '頂尖收入 (90th)',
-                data: filteredData.map((ind, i) => ({
-                    x: ind.salary.top / 1000,
-                    y: i
-                })),
+                data: topData,
                 backgroundColor: 'rgba(155, 89, 182, 1)',
                 borderColor: 'rgba(155, 89, 182, 1)',
-                pointRadius: 4,
-                pointHoverRadius: 6,
-                pointStyle: 'line',
-                rotation: 90,
-                order: 0
+                pointRadius: 6,
+                pointHoverRadius: 8,
+                pointStyle: 'circle',
+                order: 1
             }
         ]
     };
     
     const config = {
-        type: 'bar',
-        data: boxData,
+        type: 'scatter',
+        data: pointData,
         options: {
             indexAxis: 'y',
             responsive: true,
@@ -236,11 +250,11 @@ function createSalaryBoxPlot() {
                         label: function(context) {
                             const ind = filteredData[context.dataIndex];
                             const monthlyMedian = (ind.salary.median / 12).toLocaleString(undefined, {maximumFractionDigits: 0});
+                            const datasetLabel = context.dataset.label || '';
+                            const value = context.parsed.x;
                             return [
+                                `${datasetLabel}: HK$${value.toFixed(0)}K/年`,
                                 `💰 中位數：HK$${monthlyMedian}/月`,
-                                `📊 入行起薪：HK$${(ind.salary.bottom/1000).toFixed(0)}K/年`,
-                                `📊 累積經驗後：HK$${(ind.salary.median/1000).toFixed(0)}K/年`,
-                                `📊 頂尖收入：HK$${(ind.salary.top/1000).toFixed(0)}K/年`,
                                 ``,
                                 `⏰ 工時：${ind.workingHours.median} 小時/週`,
                                 `😰 壓力：${ind.stressLevel.score}/10`,
@@ -254,7 +268,7 @@ function createSalaryBoxPlot() {
                     labels: {
                         usePointStyle: true,
                         padding: 15,
-                        boxWidth: 20
+                        boxWidth: 15
                     }
                 }
             },
@@ -266,7 +280,8 @@ function createSalaryBoxPlot() {
                         text: '年薪 (HKD 千)',
                         font: { size: 14, weight: 'bold' }
                     },
-                    ticks: { callback: function(value) { return '$' + value + 'K'; } }
+                    ticks: { callback: function(value) { return '$' + value + 'K'; } },
+                    grid: { color: 'rgba(0, 0, 0, 0.05)' }
                 },
                 y: {
                     title: {
@@ -274,7 +289,8 @@ function createSalaryBoxPlot() {
                         text: '職位',
                         font: { size: 14, weight: 'bold' }
                     },
-                    ticks: { autoSkip: false, font: { size: 11 } }
+                    ticks: { autoSkip: false, font: { size: 11 } },
+                    grid: { color: 'rgba(0, 0, 0, 0.05)' }
                 }
             }
         }
@@ -290,12 +306,11 @@ function createScatterPlot() {
     
     const scatterData = filteredData.map(ind => ({
         x: ind.stressLevel.score,
-        y: ind.salary.median / 12, // Monthly salary in HKD
+        y: ind.salary.median / 12,
         label: ind.name.split(' (')[0],
         id: ind.id
     }));
     
-    // Calculate averages for quadrants
     const avgStress = filteredData.reduce((sum, ind) => sum + ind.stressLevel.score, 0) / filteredData.length;
     const avgSalary = filteredData.reduce((sum, ind) => sum + ind.salary.median, 0) / filteredData.length / 12;
     
@@ -304,10 +319,10 @@ function createScatterPlot() {
             label: '職位',
             data: scatterData,
             backgroundColor: scatterData.map(d => {
-                if (d.x <= avgStress && d.y >= avgSalary) return 'rgba(39, 174, 96, 0.8)'; // High Pay, Low Stress
-                if (d.x > avgStress && d.y >= avgSalary) return 'rgba(241, 196, 15, 0.8)'; // High Pay, High Stress
-                if (d.x <= avgStress && d.y < avgSalary) return 'rgba(52, 152, 219, 0.8)'; // Low Pay, Low Stress
-                return 'rgba(231, 76, 60, 0.8)'; // Low Pay, High Stress
+                if (d.x <= avgStress && d.y >= avgSalary) return 'rgba(39, 174, 96, 0.8)';
+                if (d.x > avgStress && d.y >= avgSalary) return 'rgba(241, 196, 15, 0.8)';
+                if (d.x <= avgStress && d.y < avgSalary) return 'rgba(52, 152, 219, 0.8)';
+                return 'rgba(231, 76, 60, 0.8)';
             }),
             borderColor: scatterData.map(d => {
                 if (d.x <= avgStress && d.y >= avgSalary) return 'rgba(39, 174, 96, 1)';
@@ -341,23 +356,11 @@ function createScatterPlot() {
                 x: {
                     min: 0,
                     max: 10,
-                    title: {
-                        display: true,
-                        text: '壓力指數 (1-10 分)',
-                        font: { size: 14, weight: 'bold' }
-                    }
+                    title: { display: true, text: '壓力指數 (1-10 分)', font: { size: 14, weight: 'bold' } }
                 },
                 y: {
-                    title: {
-                        display: true,
-                        text: '月薪中位數 (HKD)',
-                        font: { size: 14, weight: 'bold' }
-                    },
-                    ticks: {
-                        callback: function(value) {
-                            return '$' + (value/1000).toFixed(0) + 'K';
-                        }
-                    }
+                    title: { display: true, text: '月薪中位數 (HKD)', font: { size: 14, weight: 'bold' } },
+                    ticks: { callback: function(value) { return '$' + (value/1000).toFixed(0) + 'K'; } }
                 }
             }
         }
