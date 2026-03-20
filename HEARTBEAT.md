@@ -22,15 +22,31 @@ If nothing needs attention, reply HEARTBEAT_OK.
 • 10:00-12:00 - [Raymond] 匹克球 Morning Social Play @ Pickledise.hk (Pink court)
 
 **3 月 18 日 (星期三)**
-• 13:00-16:00 - [Raymond] 匹克球 @ 會所 (3 hours)
+• 12:45 [Raymond] 匹克球集合 @ 7-11
+• 13:00-16:00 [Raymond] 匹克球 @ 愉景新城會所
+  - 💰 會所費 $28 + 場租 $9/小時
+  - 👥 8 人滿：Rex🐻 / 珠珠 / 陳太 / 黃生 / So / 君 / 文 / 徐
 • 16:10 [Raymond] 下午茶 with Chris @ 愉景新城
   - 📍 愉景新城
 • [Family] 用百佳 $50 現金券 (HSBC Credit Card Coupon)
   - 📍 百佳
   - 💳 帶 HSBC Credit Card
 
+**3 月 19 日 (星期四)**
+• 17:15 [Raymond] Gym
+  - 🦐 帶蝦子
+
+**3 月 20 日 (星期五)**
+• 11:15 [Raymond] Gym
+
 **3 月 21 日 (星期六)**
 • 12:00-13:00 - [Raymond] 匹克球 @ 荃灣愉景新城 BayPickle
+
+**3 月 25 日 (星期三)**
+• 9:45 [Raymond] 匹克球集合 @ 7-11
+• 10:00-13:00 [Raymond] 匹克球 @ 愉景新城會所
+  - 💰 會所費 $28 + 場租 $9/小時
+  - 👥 8 人滿：Rex🐻 / 珠珠 / 鄧生 (10-11:30) / 陳太 / 黃生 / So / 君 / 文
 
 **3 月 23 日 (星期一)**
 • 10:15-10:20 [Raymond] Meet Sheng @ 7-Eleven (D park)
@@ -113,8 +129,19 @@ If nothing needs attention, reply HEARTBEAT_OK.
 • 08:15 [Daughter UT] 科學
 • 09:45 [Daughter UT] 中國歷史
 
-**4 月 1 日 (星期三)** 🥋
-• 16:30-18:30 [Daughter] 武術補堂
+**4 月 1 日 (星期三)**
+• [Raymond] 匹克球 @ 愉景新城會所 (TBD 10-12 或 10-13)
+  - 👥 預報：Rex🐻 / 珠珠 / 陳太 / So / 黃生 / ?
+• 16:30-18:30 [Daughter] 武術補堂 🥋
+
+**4 月 12 日 (星期日)**
+• [Raymond] AASFP X 中國香港新興運動協會高級匹克球教練 (體適能訓練) 證書課程
+  - 📍 地點待定
+  - 🎓 高級匹克球教練證書課程
+
+**4 月 8 日 (星期三)**
+• [Raymond] 匹克球 @ 愉景新城會所 (TBD)
+  - 👥 預報：Rex🐻 / 珠珠 / 鄧生 / 陳太 / ? / ?
 
 **已完成 (Past Events):**
 • Hugging Face Token 申請
