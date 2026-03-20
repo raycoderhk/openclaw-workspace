@@ -1,11 +1,11 @@
 #!/usr/bin/env python3
 """
-YouTube Monitor - OpenClaw Integration
-Sends new video notifications to Discord via OpenClaw message tool
+YouTube Monitor - Discord Integration
+Sends new video notifications to Discord using Discord Bot API
 """
 
 import json
-import subprocess
+import requests
 import sys
 from pathlib import Path
 from datetime import datetime, timezone
@@ -14,6 +14,10 @@ WORKSPACE = Path.home() / ".openclaw" / "workspace"
 MEMORY_DIR = WORKSPACE / "memory"
 NEW_VIDEOS_FILE = MEMORY_DIR / "youtube-new-videos.json"
 SENT_VIDEOS_FILE = MEMORY_DIR / "youtube-sent.json"
+
+# Discord Configuration
+DISCORD_BOT_TOKEN = "***REMOVED***.jsSkxiXWYrcCUAkrP7PiBUHVeYDaCAMvmo_h1c"
+DISCORD_CHANNEL_ID = "1484466586445287434"  # #youtube-alert
 
 def load_json(path, default=None):
     if default is None:
@@ -29,11 +33,27 @@ def save_json(path, data):
     with open(path, 'w', encoding='utf-8') as f:
         json.dump(data, f, indent=2, ensure_ascii=False)
 
-def send_discord_message(message):
-    """Send message to Discord via OpenClaw message tool"""
-    # This would be called by OpenClaw's exec or cron system
-    # For now, we output the message for OpenClaw to process
-    print(f"DISCORD_MESSAGE:{message}")
+def send_discord_message(channel_id, message):
+    """Send message to Discord channel using Bot API"""
+    url = f"https://discord.com/api/v10/channels/{channel_id}/messages"
+    headers = {
+        "Authorization": f"Bot {DISCORD_BOT_TOKEN}",
+        "Content-Type": "application/json"
+    }
+    
+    payload = {"content": message, "tts": False}
+    
+    try:
+        response = requests.post(url, headers=headers, json=payload, timeout=10)
+        if response.status_code == 200:
+            print(f"✅ Sent to Discord: {channel_id}")
+            return True
+        else:
+            print(f"❌ Discord API error: {response.status_code} - {response.text}")
+            return False
+    except Exception as e:
+        print(f"❌ Failed to send: {e}")
+        return False
     
 def main():
     """Check for new videos and send notifications"""
@@ -86,7 +106,7 @@ def main():
         if len(description) > 500:
             description = description[:500] + "..."
         
-        message = f"""## 🎬 新片通知！
+        message = f"""## 🎬 YouTube 新片通知！
 
 **頻道:** {channel_name}
 **標題:** {video['title']}
@@ -100,10 +120,8 @@ def main():
 ---
 *YouTube Monitor - OpenClaw*"""
         
-        # Output for OpenClaw to capture
-        print(f"\n=== DISCORD_NOTIFICATION ===")
-        print(message)
-        print(f"=== END_NOTIFICATION ===\n")
+        # Send to Discord
+        send_discord_message(DISCORD_CHANNEL_ID, message)
     
     # Save sent video IDs
     save_json(SENT_VIDEOS_FILE, {

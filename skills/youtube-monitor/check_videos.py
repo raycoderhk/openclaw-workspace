@@ -7,6 +7,7 @@ Uses YouTube RSS feeds (no API key required)
 import json
 import os
 import sys
+import subprocess
 from datetime import datetime, timezone
 from pathlib import Path
 import feedparser
@@ -166,18 +167,17 @@ def check_new_videos():
     if new_videos_found:
         print(f"\n✅ Found {len(new_videos_found)} new video(s)!")
         
-        # Save new videos for OpenClaw to send notifications
+        # Save new videos for notify_discord.py to send
         new_videos_file = MEMORY_DIR / "youtube-new-videos.json"
         save_json(new_videos_file, {
             'timestamp': datetime.now(timezone.utc).isoformat(),
             'videos': new_videos_found
         })
         
-        # Print Discord messages
-        for item in new_videos_found:
-            print("\n--- DISCORD MESSAGE ---")
-            print(format_discord_message(item['video'], item['channel_name']))
-            print("--- END MESSAGE ---\n")
+        # Call notify_discord.py to send Discord notifications
+        print("\n📬 Sending Discord notifications...")
+        notify_script = SKILL_DIR / "notify_discord.py"
+        subprocess.run([sys.executable, str(notify_script)], check=False)
     else:
         print("\n✅ No new videos found")
     
