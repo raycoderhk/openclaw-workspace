@@ -44,43 +44,43 @@ function createSalaryBoxPlot() {
     const upperData = salaryData.map(ind => (ind.salary.upperQuartile - ind.salary.median) / 1000);
     const topData = salaryData.map(ind => (ind.salary.top - ind.salary.upperQuartile) / 1000);
     
-    // Box plot data - stacked bars
+    // Box plot data - stacked bars with high-contrast colors
     const boxData = {
         labels: labels,
         datasets: [
             {
                 label: 'Bottom (10th) - 入行起薪',
                 data: bottomData,
-                backgroundColor: 'rgba(212, 230, 241, 1)',
-                borderColor: 'rgba(180, 200, 220, 1)',
+                backgroundColor: 'rgba(230, 126, 34, 1)',    // 🔶 Orange
+                borderColor: 'rgba(200, 100, 20, 1)',
                 borderWidth: 1
             },
             {
                 label: 'Lower (25th) - 中下水平',
                 data: lowerData,
-                backgroundColor: 'rgba(174, 214, 241, 1)',
-                borderColor: 'rgba(140, 180, 210, 1)',
+                backgroundColor: 'rgba(241, 196, 15, 1)',    // 🟡 Yellow
+                borderColor: 'rgba(210, 170, 10, 1)',
                 borderWidth: 1
             },
             {
                 label: 'Median (50th) - 中位數',
                 data: medianData,
-                backgroundColor: 'rgba(133, 193, 233, 1)',
-                borderColor: 'rgba(100, 160, 200, 1)',
+                backgroundColor: 'rgba(46, 204, 113, 1)',    // 🟢 Green
+                borderColor: 'rgba(35, 180, 90, 1)',
                 borderWidth: 1
             },
             {
                 label: 'Upper (75th) - 中上水平',
                 data: upperData,
-                backgroundColor: 'rgba(93, 173, 226, 1)',
-                borderColor: 'rgba(60, 140, 190, 1)',
+                backgroundColor: 'rgba(52, 152, 219, 1)',    // 🔵 Blue
+                borderColor: 'rgba(40, 120, 180, 1)',
                 borderWidth: 1
             },
             {
                 label: 'Top (90th) - 高收入者',
                 data: topData,
-                backgroundColor: 'rgba(52, 152, 219, 1)',
-                borderColor: 'rgba(40, 120, 180, 1)',
+                backgroundColor: 'rgba(155, 89, 182, 1)',    // 🟣 Purple
+                borderColor: 'rgba(130, 70, 160, 1)',
                 borderWidth: 1
             }
         ]

@@ -113,11 +113,11 @@ h3 {
     border-radius: 4px;
 }
 
-.legend-box.top { background: #3498db; }
-.legend-box.upper { background: #5dade2; }
-.legend-box.median { background: #85c1e9; }
-.legend-box.lower { background: #aed6f1; }
-.legend-box.bottom { background: #d4e6f1; }
+.legend-box.bottom { background: #e67e22; }  /* 🔶 Orange */
+.legend-box.lower { background: #f1c40f; }   /* 🟡 Yellow */
+.legend-box.median { background: #2ecc71; }  /* 🟢 Green */
+.legend-box.upper { background: #3498db; }   /* 🔵 Blue */
+.legend-box.top { background: #9b59b6; }     /* 🟣 Purple */
 
 /* Metrics Section */
 .metrics-section {
