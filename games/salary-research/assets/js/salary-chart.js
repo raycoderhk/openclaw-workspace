@@ -37,51 +37,72 @@ function createSalaryBoxPlot() {
         return emoji + ind.name.split(' (')[0];
     });
     
-    // Create segmented bar data - one bar per industry with colored segments
-    const bottomData = salaryData.map(ind => ind.salary.bottom / 1000);
-    const lowerData = salaryData.map(ind => (ind.salary.lowerQuartile - ind.salary.bottom) / 1000);
-    const medianData = salaryData.map(ind => (ind.salary.median - ind.salary.lowerQuartile) / 1000);
-    const upperData = salaryData.map(ind => (ind.salary.upperQuartile - ind.salary.median) / 1000);
-    const topData = salaryData.map(ind => (ind.salary.top - ind.salary.upperQuartile) / 1000);
+    // Calculate IQR segments (25th to 75th)
+    const iqrData = salaryData.map(ind => (ind.salary.upperQuartile - ind.salary.lowerQuartile) / 1000);
     
-    // Box plot data - stacked bars with high-contrast colors
+    // Box plot data - show IQR as main bar, whiskers as thin lines
     const boxData = {
         labels: labels,
         datasets: [
+            // IQR Bar (25th to 75th) - main visible bar
             {
-                label: 'Bottom (10th) - 入行起薪',
-                data: bottomData,
-                backgroundColor: 'rgba(230, 126, 34, 1)',    // 🔶 Orange
-                borderColor: 'rgba(200, 100, 20, 1)',
-                borderWidth: 1
-            },
-            {
-                label: 'Lower (25th) - 中下水平',
-                data: lowerData,
-                backgroundColor: 'rgba(241, 196, 15, 1)',    // 🟡 Yellow
-                borderColor: 'rgba(210, 170, 10, 1)',
-                borderWidth: 1
-            },
-            {
-                label: 'Median (50th) - 中位數',
-                data: medianData,
-                backgroundColor: 'rgba(46, 204, 113, 1)',    // 🟢 Green
-                borderColor: 'rgba(35, 180, 90, 1)',
-                borderWidth: 1
-            },
-            {
-                label: 'Upper (75th) - 中上水平',
-                data: upperData,
-                backgroundColor: 'rgba(52, 152, 219, 1)',    // 🔵 Blue
+                type: 'bar',
+                label: 'IQR (25th-75th) - 中間 50%',
+                data: iqrData,
+                // Start from 25th percentile (using chartjs plugin or offset)
+                backgroundColor: 'rgba(52, 152, 219, 0.9)',  // 🔵 Blue
                 borderColor: 'rgba(40, 120, 180, 1)',
-                borderWidth: 1
+                borderWidth: 2,
+                barPercentage: 0.6,
+                categoryPercentage: 0.8
             },
+            // Median line overlay
             {
-                label: 'Top (90th) - 高收入者',
-                data: topData,
-                backgroundColor: 'rgba(155, 89, 182, 1)',    // 🟣 Purple
-                borderColor: 'rgba(130, 70, 160, 1)',
-                borderWidth: 1
+                type: 'scatter',
+                label: 'Median (50th) - 中位數',
+                data: salaryData.map((ind, i) => ({
+                    x: ind.salary.median / 1000,
+                    y: i
+                })),
+                backgroundColor: 'rgba(231, 76, 60, 1)',  // 🔴 Red
+                borderColor: 'rgba(231, 76, 60, 1)',
+                pointRadius: 8,
+                pointHoverRadius: 10,
+                pointStyle: 'rectRot',
+                rotation: 0,
+                order: -1
+            },
+            // Bottom whisker (10th to 25th) - thin line
+            {
+                type: 'scatter',
+                label: 'Bottom (10th-25th)',
+                data: salaryData.map((ind, i) => ({
+                    x: ind.salary.bottom / 1000,
+                    y: i
+                })),
+                backgroundColor: 'rgba(230, 126, 34, 1)',  // 🟠 Orange
+                borderColor: 'rgba(230, 126, 34, 1)',
+                pointRadius: 4,
+                pointHoverRadius: 6,
+                pointStyle: 'line',
+                rotation: 90,
+                order: 0
+            },
+            // Top whisker (75th to 90th) - thin line
+            {
+                type: 'scatter',
+                label: 'Top (75th-90th)',
+                data: salaryData.map((ind, i) => ({
+                    x: ind.salary.top / 1000,
+                    y: i
+                })),
+                backgroundColor: 'rgba(155, 89, 182, 1)',  // 🟣 Purple
+                borderColor: 'rgba(155, 89, 182, 1)',
+                pointRadius: 4,
+                pointHoverRadius: 6,
+                pointStyle: 'line',
+                rotation: 90,
+                order: 0
             }
         ]
     };
@@ -97,28 +118,18 @@ function createSalaryBoxPlot() {
                 tooltip: {
                     callbacks: {
                         label: function(context) {
-                            const label = context.dataset.label || '';
-                            const value = context.parsed.x;
                             const ind = salaryData[context.dataIndex];
-                            
-                            // Calculate cumulative value for this segment
-                            let cumulative = 0;
-                            const datasets = context.chart.data.datasets;
-                            for (let i = 0; i <= context.dataIndex; i++) {
-                                // This is simplified - tooltip will show segment value
-                            }
-                            
-                            return `${label}: HK$${value.toLocaleString(undefined, {maximumFractionDigits: 1})}K`;
-                        },
-                        afterLabel: function(context) {
-                            const index = context.dataIndex;
-                            const ind = salaryData[index];
                             const monthlyMedian = (ind.salary.median / 12).toLocaleString(undefined, {maximumFractionDigits: 0});
                             return [
-                                `中位數：HK$${monthlyMedian}/月`,
-                                `工時：${ind.workingHours.median} 小時/週`,
-                                `壓力：${ind.stressLevel.score}/10`,
-                                `前景：${ind.prospects.score}/10`
+                                `💰 中位數：HK$${monthlyMedian}/月`,
+                                `📊 10th: HK$${(ind.salary.bottom/1000).toFixed(0)}K`,
+                                `📊 25th: HK$${(ind.salary.lowerQuartile/1000).toFixed(0)}K`,
+                                `📊 75th: HK$${(ind.salary.upperQuartile/1000).toFixed(0)}K`,
+                                `📊 90th: HK$${(ind.salary.top/1000).toFixed(0)}K`,
+                                ``,
+                                `⏰ 工時：${ind.workingHours.median} 小時/週`,
+                                `😰 壓力：${ind.stressLevel.score}/10`,
+                                `📈 前景：${ind.prospects.score}/10`
                             ];
                         }
                     }
@@ -128,14 +139,52 @@ function createSalaryBoxPlot() {
                     labels: {
                         usePointStyle: true,
                         padding: 15,
-                        boxWidth: 20
+                        boxWidth: 20,
+                        generateLabels: function(chart) {
+                            return [
+                                {
+                                    text: '🔵 IQR (25th-75th) - 中間 50%',
+                                    fillStyle: 'rgba(52, 152, 219, 0.9)',
+                                    strokeStyle: 'rgba(40, 120, 180, 1)',
+                                    lineWidth: 2,
+                                    hidden: false,
+                                    datasetIndex: 0
+                                },
+                                {
+                                    text: '🔴 Median (50th) - 中位數',
+                                    fillStyle: 'rgba(231, 76, 60, 1)',
+                                    strokeStyle: 'rgba(231, 76, 60, 1)',
+                                    lineWidth: 2,
+                                    pointStyle: 'rectRot',
+                                    hidden: false,
+                                    datasetIndex: 1
+                                },
+                                {
+                                    text: '🟠 Bottom (10th-25th)',
+                                    fillStyle: 'rgba(230, 126, 34, 1)',
+                                    strokeStyle: 'rgba(230, 126, 34, 1)',
+                                    lineWidth: 2,
+                                    pointStyle: 'line',
+                                    hidden: false,
+                                    datasetIndex: 2
+                                },
+                                {
+                                    text: '🟣 Top (75th-90th)',
+                                    fillStyle: 'rgba(155, 89, 182, 1)',
+                                    strokeStyle: 'rgba(155, 89, 182, 1)',
+                                    lineWidth: 2,
+                                    pointStyle: 'line',
+                                    hidden: false,
+                                    datasetIndex: 3
+                                }
+                            ];
+                        }
                     }
                 }
             },
             scales: {
                 x: {
                     beginAtZero: true,
-                    stacked: true,
                     title: {
                         display: true,
                         text: '年薪 (HKD 千)',
@@ -148,10 +197,12 @@ function createSalaryBoxPlot() {
                         callback: function(value) {
                             return '$' + value + 'K';
                         }
+                    },
+                    grid: {
+                        color: 'rgba(0, 0, 0, 0.05)'
                     }
                 },
                 y: {
-                    stacked: true,
                     title: {
                         display: true,
                         text: '職位',
@@ -165,6 +216,9 @@ function createSalaryBoxPlot() {
                         font: {
                             size: 11
                         }
+                    },
+                    grid: {
+                        color: 'rgba(0, 0, 0, 0.05)'
                     }
                 }
             }

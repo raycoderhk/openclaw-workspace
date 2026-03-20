@@ -97,27 +97,24 @@ h3 {
     gap: 20px;
     justify-content: center;
     margin-top: 20px;
+    font-size: 0.9em;
+    color: #7f8c8d;
 }
 
 .legend-item {
     display: flex;
     align-items: center;
     gap: 8px;
-    font-size: 0.9em;
-    color: #7f8c8d;
 }
 
-.legend-box {
-    width: 30px;
-    height: 20px;
-    border-radius: 4px;
+.legend-symbol {
+    display: inline-block;
+    width: 24px;
+    height: 24px;
+    text-align: center;
+    line-height: 24px;
+    font-size: 1.2em;
 }
-
-.legend-box.bottom { background: #e67e22; }  /* 🔶 Orange */
-.legend-box.lower { background: #f1c40f; }   /* 🟡 Yellow */
-.legend-box.median { background: #2ecc71; }  /* 🟢 Green */
-.legend-box.upper { background: #3498db; }   /* 🔵 Blue */
-.legend-box.top { background: #9b59b6; }     /* 🟣 Purple */
 
 /* Metrics Section */
 .metrics-section {
