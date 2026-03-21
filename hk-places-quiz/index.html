@@ -488,7 +488,7 @@
         // Load quiz data
         async function loadQuizData() {
             try {
-                const response = await fetch('quiz-data.json');
+                const response = await fetch('quiz-data.json?v=' + Date.now());
                 quizData = await response.json();
             } catch (error) {
                 console.error('Error loading quiz data:', error);
