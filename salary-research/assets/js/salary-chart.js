@@ -167,8 +167,35 @@ function highlightFilter(activeSubject) {
 
 // Update all charts with filtered data
 function updateCharts() {
+    // Destroy existing charts first
+    if (window.salaryChartInstance) {
+        window.salaryChartInstance.destroy();
+    }
+    if (window.scatterChartInstance) {
+        window.scatterChartInstance.destroy();
+    }
+    if (window.hoursChartInstance) {
+        window.hoursChartInstance.destroy();
+    }
+    if (window.stressChartInstance) {
+        window.stressChartInstance.destroy();
+    }
+    if (window.prospectsChartInstance) {
+        window.prospectsChartInstance.destroy();
+    }
+    
+    // Recreate all charts
     createSalaryBoxPlot();
     createScatterPlot();
+    createHoursChart();
+    createStressChart();
+    createProspectsChart();
+    
+    // Close insights section if open
+    const insightsSection = document.getElementById('insightsSection');
+    if (insightsSection) {
+        insightsSection.style.display = 'none';
+    }
 }
 
 // Initialize all charts
@@ -334,7 +361,7 @@ function createSalaryBoxPlot() {
         }
     };
     
-    new Chart(ctx, config);
+    window.salaryChartInstance = new Chart(ctx, config);
 }
 
 // Show Industry Insights
@@ -504,7 +531,7 @@ function createScatterPlot() {
         }
     };
     
-    new Chart(ctx, config);
+    window.scatterChartInstance = new Chart(ctx, config);
 }
 
 // Create Working Hours Chart
@@ -561,7 +588,7 @@ function createHoursChart() {
         }
     };
     
-    new Chart(ctx, config);
+    window.hoursChartInstance = new Chart(ctx, config);
 }
 
 // Create Stress Level Chart
@@ -618,7 +645,7 @@ function createStressChart() {
         }
     };
     
-    new Chart(ctx, config);
+    window.stressChartInstance = new Chart(ctx, config);
 }
 
 // Create Career Prospects Chart
@@ -675,7 +702,7 @@ function createProspectsChart() {
         }
     };
     
-    new Chart(ctx, config);
+    window.prospectsChartInstance = new Chart(ctx, config);
 }
 
 // Load data when page loads
