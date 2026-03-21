@@ -28,6 +28,51 @@
             <div class="chart-container">
                 <canvas id="salaryChart"></canvas>
             </div>
+            <p class="chart-hint">💡 提示：點擊任何行業查看詳細資訊</p>
+        </section>
+
+        <!-- Industry Insights Box -->
+        <section class="insights-section" id="insightsSection" style="display: none;">
+            <h2>📋 行業詳細資訊</h2>
+            <button class="close-btn" onclick="closeInsights()">✕ 關閉</button>
+            
+            <div class="insights-grid">
+                <div class="insights-card">
+                    <h3 id="insightName">-</h3>
+                    <div class="insight-emoji" id="insightEmoji">💼</div>
+                </div>
+                
+                <div class="insights-card">
+                    <h4>💰 薪金詳情</h4>
+                    <ul class="salary-details" id="insightSalary"></ul>
+                </div>
+                
+                <div class="insights-card">
+                    <h4>⏰ 工作情況</h4>
+                    <ul class="work-details" id="insightWork"></ul>
+                </div>
+                
+                <div class="insights-card">
+                    <h4>📈 行業前景</h4>
+                    <ul class="prospect-details" id="insightProspect"></ul>
+                </div>
+                
+                <div class="insights-card full-width">
+                    <h4>🎓 相關大學科系</h4>
+                    <div class="degree-list" id="insightDegrees"></div>
+                </div>
+                
+                <div class="insights-card full-width">
+                    <h4>💪 所需技能</h4>
+                    <div class="skill-tags" id="insightSkills"></div>
+                </div>
+                
+                <div class="insights-card full-width">
+                    <h4>📚 數據來源</h4>
+                    <p class="source-text" id="insightSource"></p>
+                </div>
+            </div>
+        </section>
             <div class="chart-legend">
                 <div class="legend-item">
                     <span class="legend-point" style="background:#e67e22"></span>

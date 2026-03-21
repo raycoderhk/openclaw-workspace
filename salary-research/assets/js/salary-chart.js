@@ -243,6 +243,13 @@ function createSalaryBoxPlot() {
         options: {
             responsive: true,
             maintainAspectRatio: false,
+            onClick: function(evt, elements) {
+                if (elements.length > 0) {
+                    const index = elements[0].index;
+                    const datasetIndex = elements[0].datasetIndex;
+                    showIndustryInsights(index);
+                }
+            },
             plugins: {
                 tooltip: {
                     callbacks: {
@@ -299,6 +306,75 @@ function createSalaryBoxPlot() {
     };
     
     new Chart(ctx, config);
+}
+
+// Show Industry Insights
+window.showIndustryInsights = function(index) {
+    const ind = filteredData[index];
+    const section = document.getElementById('insightsSection');
+    
+    if (!section) return;
+    
+    // Name & Emoji
+    document.getElementById('insightName').textContent = ind.name;
+    document.getElementById('insightEmoji').textContent = ind.id.includes('game') ? '🎮' : '💼';
+    
+    // Salary Details
+    const salaryHTML = `
+        <li><span class="salary-label">入行起薪 (10th)</span><span class="salary-value">$${(ind.salary.bottom/12).toFixed(0)}K/月</span></li>
+        <li><span class="salary-label">初級水平 (25th)</span><span class="salary-value">$${(ind.salary.lowerQuartile/12).toFixed(0)}K/月</span></li>
+        <li><span class="salary-label">中位數 (50th)</span><span class="salary-value">$${(ind.salary.median/12).toFixed(0)}K/月</span></li>
+        <li><span class="salary-label">資深水平 (75th)</span><span class="salary-value">$${(ind.salary.upperQuartile/12).toFixed(0)}K/月</span></li>
+        <li><span class="salary-label">頂尖收入 (90th)</span><span class="salary-value">$${(ind.salary.top/12).toFixed(0)}K/月</span></li>
+    `;
+    document.getElementById('insightSalary').innerHTML = salaryHTML;
+    
+    // Work Details
+    const prospectInfo = getProspectInfo(ind.prospects.score);
+    const workHTML = `
+        <li><span class="salary-label">每週工時</span><span class="work-value">${ind.workingHours.median} 小時</span></li>
+        <li><span class="salary-label">工時範圍</span><span class="work-value">${ind.workingHours.min}-${ind.workingHours.max} 小時</span></li>
+        <li><span class="salary-label">壓力指數</span><span class="work-value">${ind.stressLevel.score}/10</span></li>
+        <li><span class="salary-label">前景評分</span><span class="prospect-badge" style="background:${prospectInfo.bg};color:${prospectInfo.color}">${prospectInfo.text}</span></li>
+    `;
+    document.getElementById('insightWork').innerHTML = workHTML;
+    
+    // Prospect Details
+    const prospectHTML = `
+        <li><span class="salary-label">行業增長</span><span class="work-value">${ind.prospects.growth}</span></li>
+        <li><span class="salary-label">詳細說明</span><span style="color:#7f8c8d;font-size:0.9em">${ind.prospects.note}</span></li>
+        <li><span class="salary-label">工作備註</span><span style="color:#7f8c8d;font-size:0.9em">${ind.workingHours.note}</span></li>
+        <li><span class="salary-label">壓力說明</span><span style="color:#7f8c8d;font-size:0.9em">${ind.stressLevel.note}</span></li>
+    `;
+    document.getElementById('insightProspect').innerHTML = prospectHTML;
+    
+    // Degrees
+    const degreesHTML = ind.relatedDegrees.map(d => `<span class="degree-tag">${d}</span>`).join('');
+    document.getElementById('insightDegrees').innerHTML = degreesHTML;
+    
+    // Skills
+    const skillsHTML = ind.skills.map(s => `<span class="skill-tag">${s}</span>`).join('');
+    document.getElementById('insightSkills').innerHTML = skillsHTML;
+    
+    // Source
+    document.getElementById('insightSource').textContent = ind.source;
+    
+    // Show section
+    section.style.display = 'block';
+    section.scrollIntoView({ behavior: 'smooth', block: 'start' });
+};
+
+// Close Insights
+window.closeInsights = function() {
+    document.getElementById('insightsSection').style.display = 'none';
+};
+
+// Get Prospect Info
+function getProspectInfo(score) {
+    if (score >= 8) return { text: '極高需求', color: '#27ae60', bg: '#d5f5e3' };
+    if (score >= 6) return { text: '高需求', color: '#27ae60', bg: '#d5f5e3' };
+    if (score >= 4) return { text: '穩定', color: '#f39c12', bg: '#fae5d3' };
+    return { text: '高風險', color: '#e74c3c', bg: '#fadbd8' };
 }
 
 // Create Salary vs Stress Scatter Plot (ROI Analysis)
