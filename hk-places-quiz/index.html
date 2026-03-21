@@ -111,6 +111,78 @@
             font-size: 0.95em;
         }
 
+        /* Image Zoom Modal */
+        .image-modal {
+            display: none;
+            position: fixed;
+            z-index: 1000;
+            left: 0;
+            top: 0;
+            width: 100%;
+            height: 100%;
+            background-color: rgba(0, 0, 0, 0.9);
+            animation: fadeIn 0.3s ease;
+        }
+
+        .image-modal.show {
+            display: flex;
+            justify-content: center;
+            align-items: center;
+        }
+
+        .image-modal-content {
+            max-width: 90%;
+            max-height: 90%;
+            object-fit: contain;
+            border-radius: 10px;
+            box-shadow: 0 0 30px rgba(255, 255, 255, 0.3);
+        }
+
+        .image-modal-close {
+            position: absolute;
+            top: 20px;
+            right: 40px;
+            color: white;
+            font-size: 50px;
+            font-weight: bold;
+            cursor: pointer;
+            transition: all 0.3s;
+            z-index: 1001;
+        }
+
+        .image-modal-close:hover {
+            color: #667eea;
+            transform: scale(1.2);
+        }
+
+        .image-modal-caption {
+            position: absolute;
+            bottom: 30px;
+            left: 50%;
+            transform: translateX(-50%);
+            color: white;
+            font-size: 1.2em;
+            text-align: center;
+            background: rgba(0, 0, 0, 0.6);
+            padding: 10px 20px;
+            border-radius: 10px;
+        }
+
+        @keyframes fadeIn {
+            from { opacity: 0; }
+            to { opacity: 1; }
+        }
+
+        /* Clickable image hint */
+        .question-image {
+            cursor: zoom-in;
+            transition: transform 0.3s;
+        }
+
+        .question-image:hover {
+            transform: scale(1.02);
+        }
+
         /* Game Container */
         .game-container {
             background: white;
@@ -507,7 +579,7 @@
                 </div>
                 <div class="question-counter" id="question-counter">Question 1 of 3</div>
 
-                <img src="" alt="Question" class="question-image" id="question-image">
+                <img src="" alt="Question" class="question-image" id="question-image" onclick="openImageModal(this.src)">
 
                 <div class="options-grid" id="options-grid">
                     <!-- Options will be populated by JavaScript -->
@@ -526,6 +598,34 @@
 
             <!-- Result Screen -->
             <div class="result-screen" id="result-screen">
+                <div class="result-icon" id="result-icon">🏆</div>
+                <div class="result-title">完成！</div>
+                <div class="result-score" id="result-score">2/3</div>
+                <div class="result-message" id="result-message"></div>
+
+                <div class="result-stats">
+                    <div class="stat-item">
+                        <div class="stat-number" id="stat-correct">0</div>
+                        <div class="stat-label">正確</div>
+                    </div>
+                    <div class="stat-item">
+                        <div class="stat-number" id="stat-wrong">0</div>
+                        <div class="stat-label">錯誤</div>
+                    </div>
+                </div>
+
+                <button onclick="retryGame()" class="btn-retry">再玩一次 🔄</button>
+                <button onclick="goHome()" class="btn-home">返回主頁 🏠</button>
+            </div>
+        </div>
+    </div>
+
+    <!-- Image Zoom Modal -->
+    <div class="image-modal" id="image-modal" onclick="closeImageModal(event)">
+        <span class="image-modal-close">&times;</span>
+        <img class="image-modal-content" id="image-modal-content">
+        <div class="image-modal-caption">撳多一下或者撳 ESC 關閉</div>
+    </div>
                 <div class="result-icon" id="result-icon">🏆</div>
                 <div class="result-title">完成！</div>
                 <div class="result-score" id="result-score">2/3</div>
@@ -850,6 +950,31 @@
         function goHome() {
             window.location.reload();
         }
+
+        // Image Modal Functions
+        function openImageModal(imageSrc) {
+            const modal = document.getElementById('image-modal');
+            const modalImg = document.getElementById('image-modal-content');
+            modalImg.src = imageSrc;
+            modal.classList.add('show');
+            document.body.style.overflow = 'hidden'; // Prevent scrolling
+        }
+
+        function closeImageModal(event) {
+            // Only close if clicking the modal background or close button, not the image
+            if (!event || event.target.id === 'image-modal' || event.target.className === 'image-modal-close') {
+                const modal = document.getElementById('image-modal');
+                modal.classList.remove('show');
+                document.body.style.overflow = 'auto'; // Restore scrolling
+            }
+        }
+
+        // Handle ESC key to close modal
+        document.addEventListener('keydown', function(e) {
+            if (e.key === 'Escape') {
+                closeImageModal();
+            }
+        });
 
         // Initialize
         loadQuizData().then(() => {
