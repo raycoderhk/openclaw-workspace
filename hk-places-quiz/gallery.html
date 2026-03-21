@@ -1,0 +1,574 @@
+<!DOCTYPE html>
+<html lang="zh-HK">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>📸 香港地標圖庫 | HK Places Gallery</title>
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+
+        body {
+            font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', 'Microsoft JhengHei', sans-serif;
+            background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
+            min-height: 100vh;
+            padding: 20px;
+        }
+
+        .container {
+            max-width: 1400px;
+            margin: 0 auto;
+        }
+
+        .header {
+            background: white;
+            border-radius: 20px;
+            padding: 30px;
+            margin-bottom: 30px;
+            box-shadow: 0 10px 40px rgba(0, 0, 0, 0.2);
+            text-align: center;
+        }
+
+        .header h1 {
+            font-size: 2.5em;
+            color: #333;
+            margin-bottom: 10px;
+        }
+
+        .header p {
+            color: #666;
+            font-size: 1.2em;
+        }
+
+        .back-link {
+            display: inline-block;
+            margin-bottom: 20px;
+            color: white;
+            text-decoration: none;
+            font-size: 1.1em;
+            padding: 10px 20px;
+            background: rgba(255,255,255,0.2);
+            border-radius: 10px;
+            transition: all 0.3s;
+        }
+
+        .back-link:hover {
+            background: rgba(255,255,255,0.3);
+        }
+
+        /* Filter Section */
+        .filter-section {
+            background: white;
+            border-radius: 20px;
+            padding: 25px;
+            margin-bottom: 30px;
+            box-shadow: 0 10px 40px rgba(0, 0, 0, 0.2);
+        }
+
+        .filter-section h3 {
+            color: #667eea;
+            margin-bottom: 15px;
+            font-size: 1.3em;
+        }
+
+        .filter-options {
+            display: flex;
+            flex-wrap: wrap;
+            gap: 10px;
+            margin-bottom: 15px;
+        }
+
+        .filter-btn {
+            padding: 10px 20px;
+            background: #f8f9fa;
+            border: 2px solid #e0e0e0;
+            border-radius: 10px;
+            font-size: 1em;
+            cursor: pointer;
+            transition: all 0.3s;
+            color: #555;
+        }
+
+        .filter-btn:hover {
+            border-color: #667eea;
+            background: #f0f0ff;
+        }
+
+        .filter-btn.active {
+            background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
+            color: white;
+            border-color: #667eea;
+        }
+
+        .sort-options {
+            display: flex;
+            gap: 15px;
+            align-items: center;
+            color: #666;
+        }
+
+        .sort-options label {
+            cursor: pointer;
+        }
+
+        /* Gallery Grid */
+        .gallery-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fill, minmax(300px, 1fr));
+            gap: 25px;
+            margin-bottom: 30px;
+        }
+
+        .gallery-item {
+            background: white;
+            border-radius: 15px;
+            overflow: hidden;
+            box-shadow: 0 5px 20px rgba(0, 0, 0, 0.15);
+            transition: all 0.3s;
+        }
+
+        .gallery-item:hover {
+            transform: translateY(-5px);
+            box-shadow: 0 10px 30px rgba(0, 0, 0, 0.25);
+        }
+
+        .gallery-image {
+            width: 100%;
+            height: 250px;
+            object-fit: cover;
+            cursor: pointer;
+            transition: transform 0.3s;
+        }
+
+        .gallery-image:hover {
+            transform: scale(1.05);
+        }
+
+        .gallery-info {
+            padding: 20px;
+        }
+
+        .gallery-name {
+            font-size: 1.4em;
+            font-weight: bold;
+            color: #333;
+            margin-bottom: 8px;
+        }
+
+        .gallery-category {
+            display: inline-block;
+            padding: 5px 12px;
+            background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
+            color: white;
+            border-radius: 20px;
+            font-size: 0.85em;
+            margin-bottom: 10px;
+        }
+
+        .gallery-location {
+            color: #666;
+            font-size: 0.95em;
+            margin-bottom: 10px;
+        }
+
+        .gallery-date {
+            color: #999;
+            font-size: 0.85em;
+            margin-bottom: 15px;
+        }
+
+        /* Vote Button */
+        .vote-section {
+            display: flex;
+            align-items: center;
+            gap: 10px;
+            padding-top: 15px;
+            border-top: 2px solid #f0f0f0;
+        }
+
+        .vote-btn {
+            padding: 8px 20px;
+            background: linear-gradient(135deg, #ff6b6b 0%, #ee5a6f 100%);
+            color: white;
+            border: none;
+            border-radius: 25px;
+            font-size: 1em;
+            cursor: pointer;
+            transition: all 0.3s;
+            display: flex;
+            align-items: center;
+            gap: 5px;
+        }
+
+        .vote-btn:hover {
+            transform: scale(1.05);
+            box-shadow: 0 5px 15px rgba(255, 107, 107, 0.4);
+        }
+
+        .vote-btn.voted {
+            background: linear-gradient(135deg, #51cf66 0%, #37b24d 100%);
+            cursor: not-allowed;
+        }
+
+        .vote-count {
+            font-size: 1.3em;
+            font-weight: bold;
+            color: #ff6b6b;
+        }
+
+        .vote-count.voted {
+            color: #37b24d;
+        }
+
+        /* Stats Section */
+        .stats-section {
+            background: white;
+            border-radius: 20px;
+            padding: 25px;
+            margin-bottom: 30px;
+            box-shadow: 0 10px 40px rgba(0, 0, 0, 0.2);
+        }
+
+        .stats-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+            gap: 20px;
+        }
+
+        .stat-card {
+            background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
+            color: white;
+            padding: 20px;
+            border-radius: 15px;
+            text-align: center;
+        }
+
+        .stat-number {
+            font-size: 2.5em;
+            font-weight: bold;
+            margin-bottom: 5px;
+        }
+
+        .stat-label {
+            font-size: 1em;
+            opacity: 0.9;
+        }
+
+        /* Image Modal */
+        .image-modal {
+            display: none;
+            position: fixed;
+            z-index: 1000;
+            left: 0;
+            top: 0;
+            width: 100%;
+            height: 100%;
+            background-color: rgba(0, 0, 0, 0.9);
+            animation: fadeIn 0.3s ease;
+        }
+
+        .image-modal.show {
+            display: flex;
+            justify-content: center;
+            align-items: center;
+        }
+
+        .image-modal-content {
+            max-width: 90%;
+            max-height: 90%;
+            object-fit: contain;
+            border-radius: 10px;
+        }
+
+        .image-modal-close {
+            position: absolute;
+            top: 20px;
+            right: 40px;
+            color: white;
+            font-size: 50px;
+            font-weight: bold;
+            cursor: pointer;
+            transition: all 0.3s;
+        }
+
+        .image-modal-close:hover {
+            color: #667eea;
+            transform: scale(1.2);
+        }
+
+        @keyframes fadeIn {
+            from { opacity: 0; }
+            to { opacity: 1; }
+        }
+
+        /* Responsive */
+        @media (max-width: 768px) {
+            .header h1 {
+                font-size: 1.8em;
+            }
+
+            .gallery-grid {
+                grid-template-columns: repeat(auto-fill, minmax(250px, 1fr));
+            }
+        }
+    </style>
+</head>
+<body>
+    <div class="container">
+        <a href="./" class="back-link">← 返回 Quiz 遊戲</a>
+
+        <div class="header">
+            <h1>📸 香港地標圖庫</h1>
+            <p>瀏覽所有地標，投俾你鍾意嘅相！</p>
+        </div>
+
+        <!-- Stats -->
+        <div class="stats-section">
+            <div class="stats-grid">
+                <div class="stat-card">
+                    <div class="stat-number" id="total-landmarks">0</div>
+                    <div class="stat-label">地標總數</div>
+                </div>
+                <div class="stat-card">
+                    <div class="stat-number" id="total-votes">0</div>
+                    <div class="stat-label">總投票數</div>
+                </div>
+                <div class="stat-card">
+                    <div class="stat-number" id="total-categories">0</div>
+                    <div class="stat-label">分類數量</div>
+                </div>
+                <div class="stat-card">
+                    <div class="stat-number" id="top-voted">0</div>
+                    <div class="stat-label">最高票數</div>
+                </div>
+            </div>
+        </div>
+
+        <!-- Filter Section -->
+        <div class="filter-section">
+            <h3>📑 篩選分類</h3>
+            <div class="filter-options" id="category-filters">
+                <button class="filter-btn active" onclick="filterByCategory('all', this)">全部</button>
+                <!-- Categories will be populated by JavaScript -->
+            </div>
+            
+            <div class="sort-options">
+                <span>🔀 排序：</span>
+                <label>
+                    <input type="radio" name="sort" value="date" checked onchange="sortGallery()"> 
+                    📅 日期（最新）
+                </label>
+                <label>
+                    <input type="radio" name="sort" value="votes" onchange="sortGallery()"> 
+                    🔥 票數（最多）
+                </label>
+                <label>
+                    <input type="radio" name="sort" value="name" onchange="sortGallery()"> 
+                    🔤 名稱（A-Z）
+                </label>
+            </div>
+        </div>
+
+        <!-- Gallery Grid -->
+        <div class="gallery-grid" id="gallery-grid">
+            <!-- Gallery items will be populated by JavaScript -->
+        </div>
+    </div>
+
+    <!-- Image Modal -->
+    <div class="image-modal" id="image-modal" onclick="closeImageModal(event)">
+        <span class="image-modal-close">&times;</span>
+        <img class="image-modal-content" id="image-modal-content">
+    </div>
+
+    <script>
+        let galleryData = [];
+        let currentFilter = 'all';
+
+        // Load gallery data
+        async function loadGalleryData() {
+            try {
+                const response = await fetch('quiz-data.json?v=' + Date.now());
+                const data = await response.json();
+                galleryData = data.questions;
+                
+                // Load votes from localStorage
+                galleryData.forEach(q => {
+                    const savedVotes = localStorage.getItem(`vote_${q.id}`);
+                    if (savedVotes) {
+                        q.userVoted = true;
+                    }
+                });
+                
+                // Populate category filters
+                populateCategoryFilters();
+                
+                // Update stats
+                updateStats();
+                
+                // Render gallery
+                renderGallery();
+                
+            } catch (error) {
+                console.error('Error loading gallery data:', error);
+                alert('載入圖庫失敗，請刷新頁面重試');
+            }
+        }
+
+        // Populate category filters
+        function populateCategoryFilters() {
+            const categories = [...new Set(galleryData.map(q => q.category))];
+            const filterContainer = document.getElementById('category-filters');
+            
+            categories.forEach(cat => {
+                const btn = document.createElement('button');
+                btn.className = 'filter-btn';
+                btn.textContent = cat;
+                btn.onclick = () => filterByCategory(cat, btn);
+                filterContainer.appendChild(btn);
+            });
+            
+            document.getElementById('total-categories').textContent = categories.length;
+        }
+
+        // Filter by category
+        function filterByCategory(category, btnElement) {
+            currentFilter = category;
+            
+            // Update button styles
+            document.querySelectorAll('#category-filters .filter-btn').forEach(btn => {
+                btn.classList.remove('active');
+            });
+            btnElement.classList.add('active');
+            
+            renderGallery();
+        }
+
+        // Sort gallery
+        function sortGallery() {
+            const sortType = document.querySelector('input[name="sort"]:checked').value;
+            
+            if (sortType === 'date') {
+                galleryData.sort((a, b) => new Date(b.dateAdded) - new Date(a.dateAdded));
+            } else if (sortType === 'votes') {
+                galleryData.sort((a, b) => b.votes - a.votes);
+            } else if (sortType === 'name') {
+                galleryData.sort((a, b) => a.correctAnswer.localeCompare(b.correctAnswer, 'zh-HK'));
+            }
+            
+            renderGallery();
+        }
+
+        // Render gallery
+        function renderGallery() {
+            const grid = document.getElementById('gallery-grid');
+            grid.innerHTML = '';
+            
+            let filtered = galleryData;
+            if (currentFilter !== 'all') {
+                filtered = galleryData.filter(q => q.category === currentFilter);
+            }
+            
+            filtered.forEach(q => {
+                const item = document.createElement('div');
+                item.className = 'gallery-item';
+                item.innerHTML = `
+                    <img src="${q.image}" alt="${q.correctAnswer}" class="gallery-image" onclick="openImageModal(this.src)">
+                    <div class="gallery-info">
+                        <div class="gallery-name">${q.correctAnswer}</div>
+                        <div class="gallery-category">${q.category}</div>
+                        <div class="gallery-location">📍 ${q.extra?.location || '位置不詳'}</div>
+                        <div class="gallery-date">📅 加入日期：${q.dateAdded}</div>
+                        <div class="vote-section">
+                            <button class="vote-btn ${q.userVoted ? 'voted' : ''}" 
+                                    onclick="vote(${q.id}, this)" 
+                                    ${q.userVoted ? 'disabled' : ''}>
+                                ${q.userVoted ? '✓ 已投票' : '❤️ 投票'}
+                            </button>
+                            <span class="vote-count ${q.userVoted ? 'voted' : ''}" id="vote-count-${q.id}">${q.votes} 票</span>
+                        </div>
+                    </div>
+                `;
+                grid.appendChild(item);
+            });
+            
+            document.getElementById('total-landmarks').textContent = filtered.length;
+        }
+
+        // Vote function
+        function vote(questionId, btnElement) {
+            const question = galleryData.find(q => q.id === questionId);
+            if (!question || question.userVoted) return;
+            
+            // Update vote count
+            question.votes++;
+            question.userVoted = true;
+            
+            // Save to localStorage
+            localStorage.setItem(`vote_${questionId}`, 'true');
+            
+            // Save to server (optional - for now just localStorage)
+            saveVotesToServer();
+            
+            // Update UI
+            btnElement.textContent = '✓ 已投票';
+            btnElement.classList.add('voted');
+            btnElement.disabled = true;
+            
+            const voteCountEl = document.getElementById(`vote-count-${questionId}`);
+            voteCountEl.textContent = `${question.votes} 票`;
+            voteCountEl.classList.add('voted');
+            
+            // Update stats
+            updateStats();
+        }
+
+        // Save votes to server (placeholder for future backend)
+        async function saveVotesToServer() {
+            // TODO: Implement backend API to save votes
+            // For now, just log to console
+            const votes = galleryData.map(q => ({ id: q.id, votes: q.votes }));
+            console.log('Votes to save:', votes);
+        }
+
+        // Update stats
+        function updateStats() {
+            const totalVotes = galleryData.reduce((sum, q) => sum + q.votes, 0);
+            const maxVotes = Math.max(...galleryData.map(q => q.votes), 0);
+            
+            document.getElementById('total-votes').textContent = totalVotes;
+            document.getElementById('top-voted').textContent = maxVotes;
+        }
+
+        // Image modal functions
+        function openImageModal(imageSrc) {
+            const modal = document.getElementById('image-modal');
+            const modalImg = document.getElementById('image-modal-content');
+            modalImg.src = imageSrc;
+            modal.classList.add('show');
+            document.body.style.overflow = 'hidden';
+        }
+
+        function closeImageModal(event) {
+            if (!event || event.target.id === 'image-modal') {
+                const modal = document.getElementById('image-modal');
+                modal.classList.remove('show');
+                document.body.style.overflow = 'auto';
+            }
+        }
+
+        // Handle ESC key
+        document.addEventListener('keydown', function(e) {
+            if (e.key === 'Escape') {
+                closeImageModal();
+            }
+        });
+
+        // Initialize
+        loadGalleryData();
+    </script>
+</body>
+</html>
