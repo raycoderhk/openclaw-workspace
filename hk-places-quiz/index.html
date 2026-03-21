@@ -183,6 +183,14 @@
             transform: scale(1.02);
         }
 
+        /* Question Text */
+        .question-text {
+            background: #f8f9fa;
+            padding: 20px;
+            border-radius: 15px;
+            border-left: 5px solid #667eea;
+        }
+
         /* Game Container */
         .game-container {
             background: white;
@@ -581,6 +589,8 @@
 
                 <img src="" alt="Question" class="question-image" id="question-image" onclick="openImageModal(this.src)">
 
+                <div class="question-text" id="question-text" style="display:none; margin-bottom:20px; font-size:1.3em; font-weight:bold; color:#333; text-align:center;"></div>
+
                 <div class="options-grid" id="options-grid">
                     <!-- Options will be populated by JavaScript -->
                 </div>
@@ -782,6 +792,15 @@
 
             // Set image
             document.getElementById('question-image').src = question.image;
+
+            // Set question text if available
+            const questionTextEl = document.getElementById('question-text');
+            if (question.questionText) {
+                questionTextEl.textContent = question.questionText;
+                questionTextEl.style.display = 'block';
+            } else {
+                questionTextEl.style.display = 'none';
+            }
 
             // Create options
             const optionsGrid = document.getElementById('options-grid');
