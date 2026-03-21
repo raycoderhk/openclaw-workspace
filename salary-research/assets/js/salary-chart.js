@@ -158,12 +158,12 @@ function createSalaryBoxPlot() {
         return emoji + ind.name.split(' (')[0];
     });
     
-    // Point data for each quartile
-    const bottomData = filteredData.map((ind, i) => ({ x: ind.salary.bottom / 1000, y: i }));
-    const lowerData = filteredData.map((ind, i) => ({ x: ind.salary.lowerQuartile / 1000, y: i }));
-    const medianData = filteredData.map((ind, i) => ({ x: ind.salary.median / 1000, y: i }));
-    const upperData = filteredData.map((ind, i) => ({ x: ind.salary.upperQuartile / 1000, y: i }));
-    const topData = filteredData.map((ind, i) => ({ x: ind.salary.top / 1000, y: i }));
+    // Point data for each quartile (monthly salary in HKD)
+    const bottomData = filteredData.map((ind, i) => ({ x: ind.salary.bottom / 12 / 1000, y: i }));
+    const lowerData = filteredData.map((ind, i) => ({ x: ind.salary.lowerQuartile / 12 / 1000, y: i }));
+    const medianData = filteredData.map((ind, i) => ({ x: ind.salary.median / 12 / 1000, y: i }));
+    const upperData = filteredData.map((ind, i) => ({ x: ind.salary.upperQuartile / 12 / 1000, y: i }));
+    const topData = filteredData.map((ind, i) => ({ x: ind.salary.top / 12 / 1000, y: i }));
     
     // Point chart data with median line
     const pointData = {
@@ -248,12 +248,12 @@ function createSalaryBoxPlot() {
                     callbacks: {
                         label: function(context) {
                             const ind = filteredData[context.dataIndex];
-                            const monthlyMedian = (ind.salary.median / 12).toLocaleString(undefined, {maximumFractionDigits: 0});
                             const datasetLabel = context.dataset.label || '';
                             const value = context.parsed.x;
+                            const annualValue = value * 12;
                             return [
-                                `${datasetLabel}: HK$${value.toFixed(0)}K/年`,
-                                `💰 中位數：HK$${monthlyMedian}/月`,
+                                `${datasetLabel}: HK$${value.toFixed(0)}K/月`,
+                                `(年薪：HK$${annualValue.toFixed(0)}K)`,
                                 ``,
                                 `⏰ 工時：${ind.workingHours.median} 小時/週`,
                                 `😰 壓力：${ind.stressLevel.score}/10`,
@@ -276,7 +276,7 @@ function createSalaryBoxPlot() {
                     beginAtZero: true,
                     title: {
                         display: true,
-                        text: '年薪 (HKD 千)',
+                        text: '月薪 (HKD 千)',
                         font: { size: 14, weight: 'bold' }
                     },
                     ticks: { callback: function(value) { return '$' + value + 'K'; } },
@@ -308,13 +308,13 @@ function createScatterPlot() {
     
     const scatterData = filteredData.map(ind => ({
         x: ind.stressLevel.score,
-        y: ind.salary.median / 12,
+        y: ind.salary.median / 12,  // Monthly salary
         label: ind.name.split(' (')[0],
         id: ind.id
     }));
     
     const avgStress = filteredData.reduce((sum, ind) => sum + ind.stressLevel.score, 0) / filteredData.length;
-    const avgSalary = filteredData.reduce((sum, ind) => sum + ind.salary.median, 0) / filteredData.length / 12;
+    const avgSalary = filteredData.reduce((sum, ind) => sum + ind.salary.median / 12, 0) / filteredData.length;
     
     const data = {
         datasets: [{
@@ -348,7 +348,8 @@ function createScatterPlot() {
                     callbacks: {
                         label: function(context) {
                             const d = context.raw;
-                            return `${d.label}\n月薪：HK$${d.y.toLocaleString()}\n壓力：${d.x}/10`;
+                            const annualSalary = d.y * 12;
+                            return `${d.label}\n月薪：HK$${d.y.toLocaleString(undefined, {maximumFractionDigits: 0})}\n年薪：HK$${annualSalary.toLocaleString(undefined, {maximumFractionDigits: 0)})\n壓力：${d.x}/10`;
                         }
                     }
                 },
@@ -361,8 +362,8 @@ function createScatterPlot() {
                     title: { display: true, text: '壓力指數 (1-10 分)', font: { size: 14, weight: 'bold' } }
                 },
                 y: {
-                    title: { display: true, text: '月薪中位數 (HKD)', font: { size: 14, weight: 'bold' } },
-                    ticks: { callback: function(value) { return '$' + (value/1000).toFixed(0) + 'K'; } }
+                    title: { display: true, text: '月薪中位數 (HKD 千)', font: { size: 14, weight: 'bold' } },
+                    ticks: { callback: function(value) { return '$' + value.toFixed(0) + 'K'; } }
                 }
             }
         }
