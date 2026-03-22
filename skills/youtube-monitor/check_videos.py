@@ -61,21 +61,49 @@ def fetch_videos(rss_url):
         return []
 
 def summarize_video(description, title):
-    """Use AI to summarize video content"""
-    # For now, extract key info from description
-    # Can be enhanced to call OpenClaw's AI API
+    """Clean and summarize video description (remove links, extract key info)"""
+    import re
     
-    # Clean up description
-    clean_desc = description.strip()
-    if len(clean_desc) > 500:
-        clean_desc = clean_desc[:500] + "..."
+    if not description or description == '無描述':
+        return '無描述'
     
-    return clean_desc if clean_desc else "無描述"
+    # Remove all URLs
+    url_pattern = r'https?://[^\s\n]+'
+    clean_text = re.sub(url_pattern, '', description)
+    
+    # Remove YouTube boilerplate
+    boilerplate_patterns = [
+        r'🔔.*?subscribe',
+        r'👉.*?follow',
+        r'💬.*?comment',
+        r'👍.*?like',
+        r'📢.*?share',
+        r'Follow.*?social',
+        r'Check out.*?channel',
+        r'🔗.*?link',
+    ]
+    
+    for pattern in boilerplate_patterns:
+        clean_text = re.sub(pattern, '', clean_text, flags=re.IGNORECASE)
+    
+    # Clean up whitespace
+    clean_text = '\n'.join([line.strip() for line in clean_text.split('\n') if line.strip()])
+    
+    # Extract first 2-3 meaningful lines as summary
+    lines = [l for l in clean_text.split('\n') if len(l) > 20 and not l.startswith('#')]
+    summary_lines = lines[:3]
+    
+    if summary_lines:
+        summary = '\n'.join(summary_lines)
+        if len(summary) > 400:
+            summary = summary[:397] + '...'
+        return summary
+    
+    return clean_text[:400] + '...' if len(clean_text) > 400 else clean_text
 
 def format_discord_message(video, channel_name):
     """Format message for Discord notification"""
     published = video.get('published', '')
-    # Convert published time to HKT
     try:
         dt = datetime.fromisoformat(published.replace('Z', '+00:00'))
         hkt_time = dt.astimezone(timezone.utc).strftime('%Y-%m-%d %H:%M HKT')
@@ -84,19 +112,16 @@ def format_discord_message(video, channel_name):
     
     summary = summarize_video(video.get('description', ''), video.get('title', ''))
     
-    message = f"""## 🎬 新片通知！
+    message = f"""## 🎬 YouTube 新片通知
 
 **頻道:** {channel_name}
 **標題:** {video['title']}
 **發布:** {hkt_time}
 
-**簡介:**
+**總結:**
 {summary}
 
-[📺 觀看視頻]({video['url']})
-
----
-*YouTube Monitor - OpenClaw*"""
+📺 觀看視頻：{video['url']}"""
     
     return message
 

@@ -55,6 +55,47 @@ def send_discord_message(channel_id, message):
         print(f"❌ Failed to send: {e}")
         return False
     
+def clean_description(description):
+    """Clean description: remove URLs, extract key info for summary"""
+    import re
+    
+    if not description or description == '無描述':
+        return '無描述'
+    
+    # Remove all URLs (http, https, youtu.be, youtube.com)
+    url_pattern = r'https?://[^\s\n]+'
+    clean_text = re.sub(url_pattern, '', description)
+    
+    # Remove common YouTube boilerplate
+    boilerplate_patterns = [
+        r'🔔.*?subscribe',
+        r'👉.*?follow',
+        r'💬.*?comment',
+        r'👍.*?like',
+        r'📢.*?share',
+        r'Follow.*?social',
+        r'Check out.*?channel',
+        r'🔗.*?link',
+    ]
+    
+    for pattern in boilerplate_patterns:
+        clean_text = re.sub(pattern, '', clean_text, flags=re.IGNORECASE)
+    
+    # Clean up whitespace
+    clean_text = '\n'.join([line.strip() for line in clean_text.split('\n') if line.strip()])
+    
+    # Extract first 2-3 meaningful lines as summary
+    lines = [l for l in clean_text.split('\n') if len(l) > 20 and not l.startswith('#')]
+    summary_lines = lines[:3]
+    
+    if summary_lines:
+        summary = '\n'.join(summary_lines)
+        if len(summary) > 400:
+            summary = summary[:397] + '...'
+        return summary
+    
+    return clean_text[:400] + '...' if len(clean_text) > 400 else clean_text
+
 def main():
     """Check for new videos and send notifications"""
     print(f"[{datetime.now().isoformat()}] Checking for new videos to notify...")
@@ -102,23 +143,19 @@ def main():
         except:
             hkt_time = published
         
-        description = video.get('description', '無描述')
-        if len(description) > 500:
-            description = description[:500] + "..."
+        # Clean and summarize description (remove all links except main video)
+        summary = clean_description(video.get('description', ''))
         
-        message = f"""## 🎬 YouTube 新片通知！
+        message = f"""## 🎬 YouTube 新片通知
 
 **頻道:** {channel_name}
 **標題:** {video['title']}
 **發布:** {hkt_time}
 
-**簡介:**
-{description}
+**總結:**
+{summary}
 
-[📺 觀看視頻]({video['url']})
-
----
-*YouTube Monitor - OpenClaw*"""
+📺 觀看視頻：{video['url']}"""
         
         # Send to Discord
         send_discord_message(DISCORD_CHANNEL_ID, message)

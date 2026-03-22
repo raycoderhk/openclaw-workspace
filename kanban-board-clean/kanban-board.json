@@ -1,7 +1,7 @@
 {
   "meta": {
     "created": "2026-02-26T07:45:00Z",
-    "updated": "2026-03-15T05:04:15.691515Z",
+    "updated": "2026-03-20T14:23:24.247939Z",
     "version": "1.2"
   },
   "columns": {
@@ -881,6 +881,46 @@
         "📞 AWS Support:",
         "  - Console: https://console.aws.amazon.com",
         "  - Billing dashboard for usage details"
+      ]
+    },
+    {
+      "id": "proj-025",
+      "title": "🎬 Project Hail Mary - Movie with Son",
+      "description": "Cinema.com.hk booking - Tsuen Wan",
+      "status": "done",
+      "priority": "medium",
+      "created": "2026-03-20",
+      "updated": "2026-03-20T14:23:24.247900Z",
+      "tags": [
+        "family",
+        "movie",
+        "son",
+        "completed"
+      ],
+      "notes": [
+        "📧 Email received: 2026-03-20 22:02 HKT",
+        "📅 Event: 2026-03-22 09:25 HKT",
+        "✅ Added to Google Calendar",
+        "",
+        "🎬 Movie Details:",
+        "  - Movie: Project Hail Mary",
+        "  - Cinema: Tsuen Wan (Cinema.com.hk)",
+        "  - House: 3",
+        "  - Seats: H7, H8",
+        "  - Category: IIA",
+        "  - Time: 9:25 AM",
+        "",
+        "🎫 Order Info:",
+        "  - Order No.: TW20260320-056234",
+        "  - Ticket IDs: 112343, 112344",
+        "  - Total: $180 ($80 x 2 + $10 service)",
+        "  - Payment: Alipay",
+        "",
+        "📱 Info:",
+        "  - Website: www.cinema.com.hk",
+        "  - Hotline: 2388-0002",
+        "",
+        "✅ QR code ready for auto-ticketing machine"
       ]
     }
   ],

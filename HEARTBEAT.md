@@ -64,10 +64,6 @@ If nothing needs attention, reply HEARTBEAT_OK.
   - 🦐 Research: OpenClaw setup & features
 
 **3 月 24 日 (星期二)** 🏥
-• 10:15 [Grandma] Grandma 瑪嘉烈醫院複診
-  - 📍 瑪嘉烈醫院 K 座 7/F
-  - 😷 帶口罩
-  - 🧥 帶兩件外套
 
 **3 月 14 日 (星期六)** ✅ 已報名成功
 • 08:45-16:30 [Family] 伊利沙伯中學 PTA 新春親子旅行 (已中籤)
@@ -122,10 +118,6 @@ If nothing needs attention, reply HEARTBEAT_OK.
 
 **3 月 24 日 (星期二)** 💼
 • [Wife] 出差 第 2 日
-• 🏥 10:15 [Grandma] 瑪嘉烈醫院複診
-  - 📍 瑪嘉烈醫院 K 座 7/F
-  - 😷 帶口罩
-  - 🧥 帶兩件外套
 
 **3 月 25 日 (星期三)** 💼
 • [Wife] 出差 第 3 日
@@ -152,6 +144,14 @@ If nothing needs attention, reply HEARTBEAT_OK.
 • 08:15 [Daughter UT] 科學
 • 09:45 [Daughter UT] 中國歷史
 
+• [Son] 學校復活節假期 (Easter Holiday)
+  - 📅 3/30 (一) - 4/7 (二)
+  - 🏫 學校：伊利沙伯中學
+
+• [Daughter] 學校復活節假期 (Easter Holiday)
+  - 📅 4/1 (三) - 4/8 (二)
+  - 🏫 學校：待定
+
 **4 月 1 日 (星期三)**
 • [Raymond] 匹克球 @ 愉景新城會所 (TBD 10-12 或 10-13)
   - 👥 預報：Rex🐻 / 珠珠 / 陳太 / So / 黃生 / ?
@@ -161,6 +161,12 @@ If nothing needs attention, reply HEARTBEAT_OK.
 • [Raymond] AASFP X 中國香港新興運動協會高級匹克球教練 (體適能訓練) 證書課程
   - 📍 地點待定
   - 🎓 高級匹克球教練證書課程
+
+**4 月 16 日 (星期四)**
+• [Raymond] 🔔 使用 D·PARK $50 現金券 (2 星期前提醒)
+  - 📍 愉景新城 (D·PARK)
+  - 💰 HK$50 電子現金券
+  - ⚠️ 4 月 30 日到期
 
 **4 月 8 日 (星期三)**
 • [Raymond] 匹克球 @ 愉景新城會所 (TBD)
@@ -193,6 +199,10 @@ If nothing needs attention, reply HEARTBEAT_OK.
   - 📱 下載：App Store / Google Play 搜尋「醫健通」
   - 🔢 醫健通號碼：391967263789
   - ⚠️ 邀請有效期：30 日
+• 12:15 [Family] 家庭午餐 @ 荃灣紅茶
+  - 🎬 睇完戲之後 (right after movie)
+  - 📍 荃灣紅茶
+• 17:15 [Raymond] Gym
 
 **✅ 已完成**
 • Hugging Face Token 申請 - ✅ Done (3 月 1 日)
