@@ -426,10 +426,33 @@
       "dateAdded": "2026-03-21",
       "category": "橋樑",
       "votes": 0
+    },
+    {
+      "id": 16,
+      "image": "assets/garden-bakery.jpg",
+      "correctAnswer": "嘉頓麵包",
+      "options": [
+        "嘉頓麵包",
+        "聖安娜餅屋",
+        "美心西餅",
+        "奇華餅家"
+      ],
+      "hint": "深水埗，香港老字號麵包廠，紅白藍包裝好經典",
+      "fact": "嘉頓（Garden Bakery）係香港著名麵包廠，1926 年喺深水埗創立，至今已經成百年歷史。嘉頓係香港第一間生產麵包嘅工廠，經典產品包括雞尾包、紅豆沙包、維他奶夾麵包等。紅白藍包裝深入民心，係幾代香港人嘅集體回憶。而家嘉頓屬於嘉頓國際集團，除咗麵包仲生產餅乾、糕點等。",
+      "extra": {
+        "height": "百年老字號",
+        "location": "九龍深水埗青山道",
+        "features": ["1926 年創立", "香港第一間麵包廠", "紅白藍經典包裝", "雞尾包始祖", "百年老店"],
+        "history": "1926 年創立→1950 年代黃金時期→1990 年代被收購→而家係嘉頓國際集團",
+        "organization": "嘉頓國際集團（Vitasoy International）"
+      },
+      "dateAdded": "2026-03-21",
+      "category": "飲食老字號",
+      "votes": 0
     }
   ],
   "settings": {
-    "passingScore": 9,
+    "passingScore": 10,
     "timePerQuestion": 15,
     "showFactAfterAnswer": true,
     "showExtraInfo": true
