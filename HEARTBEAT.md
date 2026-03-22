@@ -178,6 +178,18 @@ If nothing needs attention, reply HEARTBEAT_OK.
   - 🩺 耳鼻喉科 / Ear, Nose and Throat (ENT)
   - 📋 門診 (Outpatient)
 
+**6 月 3 日 (星期三)** 🏥
+• 15:15 [Grandma] WONG T* Y* 預約就診 @ 瑪嘉烈醫院
+  - 🏥 瑪嘉烈醫院 (Princess Margaret Hospital)
+  - 🩺 兒童及青少年科 / Paediatrics and Adolescent Medicine
+  - 📋 門診 (Outpatient)
+
+**10 月 28 日 (星期三)** 🏥
+• 11:00 [Grandma] WONG T* Y* 預約就診 @ 明愛醫院
+  - 🏥 明愛醫院 (Caritas Medical Centre)
+  - 🩺 聽力學 / Audiology
+  - 📋 門診 (Outpatient)
+
 **5 月 15 日 (星期五)** 🏥
 • 12:00 [Grandma] WONG T* M* 預約就診 @ 仁濟醫院
   - 🏥 仁濟醫院 (Yan Chai Hospital)
@@ -215,11 +227,7 @@ If nothing needs attention, reply HEARTBEAT_OK.
 **✅ 已完成**
 5. ✅ **添加 Grandma ENT 預約** - 2026-05-05 10:15 @ 明愛醫院 (耳鼻喉科)
 
-**3 月 22 日 (星期日)** 🏥
-• [Son] 醫健通 - 兒子滿 16 歲註冊 (截止)
-  - 📱 下載：App Store / Google Play 搜尋「醫健通」
-  - 🔢 醫健通號碼：391967263789
-  - ⚠️ 邀請有效期：30 日
+**3 月 22 日 (星期日)**
 • 12:15 [Family] 家庭午餐 @ 荃灣紅茶
   - 🎬 睇完戲之後 (right after movie)
   - 📍 荃灣紅茶

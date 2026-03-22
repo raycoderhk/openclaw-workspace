@@ -241,9 +241,17 @@ async function getOrCreateUser(email, name, googleId, image) {
   - Department: General Surgery (Outpatient)
   - Time: 12:00 PM
 
+**June 3 (Wed):** 🏥 Grandma WONG T* Y* medical appointment @ Princess Margaret Hospital
+  - Department: Paediatrics and Adolescent Medicine / 兒童及青少年科
+  - Time: 3:15 PM
+
 **September 22 (Tue):** 🏥 Grandma WONG T* M* medical appointment @ Princess Margaret Hospital
   - Department: Urology (泌尿外科)
   - Time: 11:30 AM
+
+**October 28 (Wed):** 🏥 Grandma WONG T* Y* medical appointment @ Caritas Medical Centre
+  - Department: Audiology / 聽力學
+  - Time: 11:00 AM
 
 ## 🎓 Son's DSE Exams (2026)
 **Status:** Critical exam period  
