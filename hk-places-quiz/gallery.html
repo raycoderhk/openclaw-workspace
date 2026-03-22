@@ -115,7 +115,7 @@
             cursor: pointer;
         }
 
-        #date-order-btn {
+        #sort-order-btn {
             padding: 6px 12px;
             border: 2px solid #ddd;
             border-radius: 8px;
@@ -125,7 +125,7 @@
             transition: all 0.3s;
         }
 
-        #date-order-btn:hover {
+        #sort-order-btn:hover {
             border-color: #667eea;
             background: #f8f9ff;
         }
@@ -377,7 +377,6 @@
                     <input type="radio" name="sort" value="date" checked onchange="sortGallery()"> 
                     📅 日期
                 </label>
-                <button class="filter-btn" id="date-order-btn" onclick="toggleDateOrder()">🔽 倒序（最新排最前）</button>
                 <label>
                     <input type="radio" name="sort" value="votes" onchange="sortGallery()"> 
                     🔥 票數
@@ -386,6 +385,7 @@
                     <input type="radio" name="sort" value="name" onchange="sortGallery()"> 
                     🔤 名稱
                 </label>
+                <button class="filter-btn" id="sort-order-btn" onclick="toggleSortOrder()">🔽 倒序</button>
             </div>
         </div>
 
@@ -404,7 +404,7 @@
     <script>
         let galleryData = [];
         let currentFilter = 'all';
-        let dateSortOrder = 'desc'; // 'desc' = 倒序（最新排最前）, 'asc' = 順序（最舊排最前）
+        let currentSortOrder = 'desc'; // 'desc' = 倒序（排最前）, 'asc' = 順序（排最後）
 
         // Load gallery data
         async function loadGalleryData() {
@@ -423,6 +423,7 @@
                 
                 // Sort by date descending (newest first) - default sort
                 galleryData.sort((a, b) => new Date(b.dateAdded) - new Date(a.dateAdded));
+                currentSortOrder = 'desc'; // Initialize order state
                 
                 // Populate category filters
                 populateCategoryFilters();
@@ -468,15 +469,22 @@
             renderGallery();
         }
 
-        // Toggle date sort order (desc/asc)
-        function toggleDateOrder() {
-            dateSortOrder = dateSortOrder === 'desc' ? 'asc' : 'desc';
+        // Toggle sort order (desc/asc) for all sort types
+        function toggleSortOrder() {
+            currentSortOrder = currentSortOrder === 'desc' ? 'asc' : 'desc';
             
-            const btn = document.getElementById('date-order-btn');
-            if (dateSortOrder === 'desc') {
-                btn.textContent = '🔽 倒序（最新排最前）';
+            const btn = document.getElementById('sort-order-btn');
+            const sortType = document.querySelector('input[name="sort"]:checked').value;
+            
+            // Update button text based on current sort type
+            if (currentSortOrder === 'desc') {
+                if (sortType === 'date') btn.textContent = '🔽 倒序';
+                else if (sortType === 'votes') btn.textContent = '🔽 倒序';
+                else if (sortType === 'name') btn.textContent = '🔽 倒序';
             } else {
-                btn.textContent = '🔼 順序（最舊排最前）';
+                if (sortType === 'date') btn.textContent = '🔼 順序';
+                else if (sortType === 'votes') btn.textContent = '🔼 順序';
+                else if (sortType === 'name') btn.textContent = '🔼 順序';
             }
             
             sortGallery();
@@ -487,15 +495,31 @@
             const sortType = document.querySelector('input[name="sort"]:checked').value;
             
             if (sortType === 'date') {
-                if (dateSortOrder === 'desc') {
+                if (currentSortOrder === 'desc') {
                     galleryData.sort((a, b) => new Date(b.dateAdded) - new Date(a.dateAdded));
                 } else {
                     galleryData.sort((a, b) => new Date(a.dateAdded) - new Date(b.dateAdded));
                 }
             } else if (sortType === 'votes') {
-                galleryData.sort((a, b) => b.votes - a.votes);
+                if (currentSortOrder === 'desc') {
+                    galleryData.sort((a, b) => b.votes - a.votes);
+                } else {
+                    galleryData.sort((a, b) => a.votes - b.votes);
+                }
             } else if (sortType === 'name') {
-                galleryData.sort((a, b) => a.correctAnswer.localeCompare(b.correctAnswer, 'zh-HK'));
+                if (currentSortOrder === 'desc') {
+                    galleryData.sort((a, b) => b.correctAnswer.localeCompare(a.correctAnswer, 'zh-HK'));
+                } else {
+                    galleryData.sort((a, b) => a.correctAnswer.localeCompare(b.correctAnswer, 'zh-HK'));
+                }
+            }
+            
+            // Update button text
+            const btn = document.getElementById('sort-order-btn');
+            if (currentSortOrder === 'desc') {
+                btn.textContent = '🔽 倒序';
+            } else {
+                btn.textContent = '🔼 順序';
             }
             
             renderGallery();
