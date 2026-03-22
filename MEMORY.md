@@ -222,7 +222,7 @@ async function getOrCreateUser(email, name, googleId, image) {
 
 ---
 
-## 📅 Upcoming Events (March 2026)
+## 📅 Upcoming Events (March - May 2026)
 
 **March 7 (Sat):** Son's school parent day (time TBD)  
 **March 8 (Sun):** School field trip (HKUST + Yim Tin Tsai)  
@@ -232,7 +232,10 @@ async function getOrCreateUser(email, name, googleId, image) {
   - Trip: 08:45-16:30, $90/person (subsidized)
   - Itinerary: Dragon fruit farm → Kimchi workshop → Abalone lunch (Flow Shan) → Mural Village  
 **March 15 (Sun):** Son's birthday, Maxim's vouchers expire ($250 x 2)  
-**March 17 (Tue):** Wedding anniversary @ Ocean Park Marriott
+**March 17 (Tue):** Wedding anniversary @ Ocean Park Marriott  
+**May 15 (Fri):** 🏥 Grandma WONG T* M* medical appointment @ Yan Chai Hospital
+  - Department: General Surgery (Outpatient)
+  - Time: 12:00 PM
 
 ## 🎓 Son's DSE Exams (2026)
 **Status:** Critical exam period  

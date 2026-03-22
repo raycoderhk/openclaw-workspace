@@ -172,6 +172,12 @@ If nothing needs attention, reply HEARTBEAT_OK.
 • [Raymond] 匹克球 @ 愉景新城會所 (TBD)
   - 👥 預報：Rex🐻 / 珠珠 / 鄧生 / 陳太 / ? / ?
 
+**5 月 15 日 (星期五)** 🏥
+• 12:00 [Grandma] WONG T* M* 預約就診 @ 仁濟醫院
+  - 🏥 仁濟醫院 (Yan Chai Hospital)
+  - 🩺 外科 / General Surgery
+  - 📋 門診 (Outpatient)
+
 **已完成 (Past Events):**
 • Hugging Face Token 申請
 • 營養師 App 配置 + 測試成功
