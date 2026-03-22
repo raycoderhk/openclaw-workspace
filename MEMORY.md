@@ -233,15 +233,17 @@ async function getOrCreateUser(email, name, googleId, image) {
   - Itinerary: Dragon fruit farm → Kimchi workshop → Abalone lunch (Flow Shan) → Mural Village  
 **March 15 (Sun):** Son's birthday, Maxim's vouchers expire ($250 x 2)  
 **March 17 (Tue):** Wedding anniversary @ Ocean Park Marriott  
-**May 5 (Tue):** 🏥 Grandma WONG T* Y* medical appointment @ Caritas Medical Centre
+
+**May 5 (Tue):** 🏥 **Son** WONG T* Y* medical appointment @ Caritas Medical Centre
   - Department: Ear, Nose and Throat / 耳鼻喉科 (ENT)
   - Time: 10:15 AM
+  - Note: After turning 16, transitioning from paediatrics to adult ENT
 
 **May 15 (Fri):** 🏥 Grandma WONG T* M* medical appointment @ Yan Chai Hospital
   - Department: General Surgery (Outpatient)
   - Time: 12:00 PM
 
-**June 3 (Wed):** 🏥 Grandma WONG T* Y* medical appointment @ Princess Margaret Hospital
+**June 3 (Wed):** 🏥 **Son** WONG T* Y* medical appointment @ Princess Margaret Hospital
   - Department: Paediatrics and Adolescent Medicine / 兒童及青少年科
   - Time: 3:15 PM
 
@@ -249,7 +251,7 @@ async function getOrCreateUser(email, name, googleId, image) {
   - Department: Urology (泌尿外科)
   - Time: 11:30 AM
 
-**October 28 (Wed):** 🏥 Grandma WONG T* Y* medical appointment @ Caritas Medical Centre
+**October 28 (Wed):** 🏥 **Son** WONG T* Y* medical appointment @ Caritas Medical Centre
   - Department: Audiology / 聽力學
   - Time: 11:00 AM
 

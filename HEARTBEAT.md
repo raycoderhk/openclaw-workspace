@@ -173,19 +173,19 @@ If nothing needs attention, reply HEARTBEAT_OK.
   - 👥 預報：Rex🐻 / 珠珠 / 鄧生 / 陳太 / ? / ?
 
 **5 月 5 日 (星期二)** 🏥
-• 10:15 [Grandma] WONG T* Y* 預約就診 @ 明愛醫院
+• 10:15 [Son] WONG T* Y* 預約就診 @ 明愛醫院
   - 🏥 明愛醫院 (Caritas Medical Centre)
   - 🩺 耳鼻喉科 / Ear, Nose and Throat (ENT)
   - 📋 門診 (Outpatient)
 
 **6 月 3 日 (星期三)** 🏥
-• 15:15 [Grandma] WONG T* Y* 預約就診 @ 瑪嘉烈醫院
+• 15:15 [Son] WONG T* Y* 預約就診 @ 瑪嘉烈醫院
   - 🏥 瑪嘉烈醫院 (Princess Margaret Hospital)
   - 🩺 兒童及青少年科 / Paediatrics and Adolescent Medicine
   - 📋 門診 (Outpatient)
 
 **10 月 28 日 (星期三)** 🏥
-• 11:00 [Grandma] WONG T* Y* 預約就診 @ 明愛醫院
+• 11:00 [Son] WONG T* Y* 預約就診 @ 明愛醫院
   - 🏥 明愛醫院 (Caritas Medical Centre)
   - 🩺 聽力學 / Audiology
   - 📋 門診 (Outpatient)
