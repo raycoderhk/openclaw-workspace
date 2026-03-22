@@ -374,7 +374,7 @@
     },
     {
       "id": 14,
-      "image": "assets/shing-mun-reservoir.jpg",
+      "image": "assets/shing-mun-reservoir.png",
       "correctAnswer": "城門水塘",
       "options": [
         "城門水塘",
@@ -396,7 +396,7 @@
         ],
         "history": "1936 年建成→香港第 12 個水塘→二戰時期用作軍事防禦→而家係郊遊熱點"
       },
-      "dateAdded": "2026-03-21",
+      "dateAdded": "2026-03-22",
       "category": "水塘",
       "votes": 0
     },
