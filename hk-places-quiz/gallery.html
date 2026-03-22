@@ -108,10 +108,26 @@
             gap: 15px;
             align-items: center;
             color: #666;
+            flex-wrap: wrap;
         }
 
         .sort-options label {
             cursor: pointer;
+        }
+
+        #date-order-btn {
+            padding: 6px 12px;
+            border: 2px solid #ddd;
+            border-radius: 8px;
+            background: white;
+            cursor: pointer;
+            font-size: 14px;
+            transition: all 0.3s;
+        }
+
+        #date-order-btn:hover {
+            border-color: #667eea;
+            background: #f8f9ff;
         }
 
         /* Gallery Grid */
@@ -359,15 +375,16 @@
                 <span>🔀 排序：</span>
                 <label>
                     <input type="radio" name="sort" value="date" checked onchange="sortGallery()"> 
-                    📅 日期（最新）
+                    📅 日期
                 </label>
+                <button class="filter-btn" id="date-order-btn" onclick="toggleDateOrder()">🔽 倒序（最新排最前）</button>
                 <label>
                     <input type="radio" name="sort" value="votes" onchange="sortGallery()"> 
-                    🔥 票數（最多排最前）
+                    🔥 票數
                 </label>
                 <label>
                     <input type="radio" name="sort" value="name" onchange="sortGallery()"> 
-                    🔤 名稱（A-Z）
+                    🔤 名稱
                 </label>
             </div>
         </div>
@@ -387,6 +404,7 @@
     <script>
         let galleryData = [];
         let currentFilter = 'all';
+        let dateSortOrder = 'desc'; // 'desc' = 倒序（最新排最前）, 'asc' = 順序（最舊排最前）
 
         // Load gallery data
         async function loadGalleryData() {
@@ -450,12 +468,30 @@
             renderGallery();
         }
 
+        // Toggle date sort order (desc/asc)
+        function toggleDateOrder() {
+            dateSortOrder = dateSortOrder === 'desc' ? 'asc' : 'desc';
+            
+            const btn = document.getElementById('date-order-btn');
+            if (dateSortOrder === 'desc') {
+                btn.textContent = '🔽 倒序（最新排最前）';
+            } else {
+                btn.textContent = '🔼 順序（最舊排最前）';
+            }
+            
+            sortGallery();
+        }
+
         // Sort gallery
         function sortGallery() {
             const sortType = document.querySelector('input[name="sort"]:checked').value;
             
             if (sortType === 'date') {
-                galleryData.sort((a, b) => new Date(b.dateAdded) - new Date(a.dateAdded));
+                if (dateSortOrder === 'desc') {
+                    galleryData.sort((a, b) => new Date(b.dateAdded) - new Date(a.dateAdded));
+                } else {
+                    galleryData.sort((a, b) => new Date(a.dateAdded) - new Date(b.dateAdded));
+                }
             } else if (sortType === 'votes') {
                 galleryData.sort((a, b) => b.votes - a.votes);
             } else if (sortType === 'name') {
