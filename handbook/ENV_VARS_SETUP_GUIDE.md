@@ -87,7 +87,7 @@ DEEPSEEK_API_KEY=sk-xxxxxxxxxxxxxxxxxxxxxxxx
 OPENROUTER_API_KEY=sk-or-xxxxxxxxxxxxxxxxxxxxxxxx
 
 # Discord Bot Token
-DISCORD_BOT_TOKEN=MTQ3NjUwMTI4Nzc0MTk1MjEwMA.xxxxxxxx.xxxxxxxxxxxxxxxxxxxxxxxxxxx
+DISCORD_BOT_TOKEN=your-discord-bot-token-here
 
 # Telegram Bot Token
 TELEGRAM_BOT_TOKEN=1234567890:ABCdefGHIjklMNOpqrsTUVwxyz
