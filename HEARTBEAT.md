@@ -172,6 +172,12 @@ If nothing needs attention, reply HEARTBEAT_OK.
 • [Raymond] 匹克球 @ 愉景新城會所 (TBD)
   - 👥 預報：Rex🐻 / 珠珠 / 鄧生 / 陳太 / ? / ?
 
+**5 月 5 日 (星期二)** 🏥
+• 10:15 [Grandma] WONG T* Y* 預約就診 @ 明愛醫院
+  - 🏥 明愛醫院 (Caritas Medical Centre)
+  - 🩺 耳鼻喉科 / Ear, Nose and Throat (ENT)
+  - 📋 門診 (Outpatient)
+
 **5 月 15 日 (星期五)** 🏥
 • 12:00 [Grandma] WONG T* M* 預約就診 @ 仁濟醫院
   - 🏥 仁濟醫院 (Yan Chai Hospital)
@@ -200,11 +206,14 @@ If nothing needs attention, reply HEARTBEAT_OK.
 2. 3 月 14 日同鄉會晚宴 - 確認 (Tentative 18:30 @North Point)
 3. Lunch with Chris - Reschedule to next week
 
-**🔴 今日待辦 (3 月 12 日)**
+**🔴 今日待辦 (3 月 21 日)**
 4. ⚠️ **預約深圳灣文化廣場** - 微信小程式「深圳灣文化廣場 DBAY」
    - 日期：3 月 17 日 (星期二) 11:00 時段
    - 人數：2 人 (夫婦)
    - 截止：今日內完成預約
+
+**✅ 已完成**
+5. ✅ **添加 Grandma ENT 預約** - 2026-05-05 10:15 @ 明愛醫院 (耳鼻喉科)
 
 **3 月 22 日 (星期日)** 🏥
 • [Son] 醫健通 - 兒子滿 16 歲註冊 (截止)

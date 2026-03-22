@@ -233,6 +233,10 @@ async function getOrCreateUser(email, name, googleId, image) {
   - Itinerary: Dragon fruit farm → Kimchi workshop → Abalone lunch (Flow Shan) → Mural Village  
 **March 15 (Sun):** Son's birthday, Maxim's vouchers expire ($250 x 2)  
 **March 17 (Tue):** Wedding anniversary @ Ocean Park Marriott  
+**May 5 (Tue):** 🏥 Grandma WONG T* Y* medical appointment @ Caritas Medical Centre
+  - Department: Ear, Nose and Throat / 耳鼻喉科 (ENT)
+  - Time: 10:15 AM
+
 **May 15 (Fri):** 🏥 Grandma WONG T* M* medical appointment @ Yan Chai Hospital
   - Department: General Surgery (Outpatient)
   - Time: 12:00 PM

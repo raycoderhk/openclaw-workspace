@@ -1,0 +1,186 @@
+{
+  "search_date": "2026-03-22T12:31:54.501448",
+  "total_results": 30,
+  "results": [
+    {
+      "title": "A guide to REST API authentication - Merge",
+      "url": "https://www.merge.dev/blog/rest-api-authentication",
+      "content": "Related: What you need to know about REST API rate limits\n\n### API key authentication\n\nIn API key authentication, the API provider assigns a unique key to each client accessing the API. The client needs to include their API key as part of the request to authenticate themselves. The API key can be included anywhere in the request, such as the header, body, or query parameters. It ultimately depends on the API's design and is communicated to the developers via the API documentation.\n\nThe following example shows how to authenticate with a REST API that uses API keys in Python using the requests l",
+      "query": "Reclub app API key authentication REST endpoint"
+    },
+    {
+      "title": "How to Implement API Key Authentication for Your App - LinkedIn",
+      "url": "https://www.linkedin.com/posts/samuel-olagoroye-bamicole_authentication-apikeys-webdevelopment-activity-7381630952986357760-_DD4",
+      "content": "𝗪𝗵𝗲𝗻 𝗦𝗵𝗼𝘂𝗹𝗱 𝗬𝗼𝘂𝗿 𝗔𝗽𝗽 𝗜𝗺𝗽𝗹𝗲𝗺𝗲𝗻𝘁 𝗔𝗣𝗜 𝗞𝗲𝘆 𝗔𝘂𝘁𝗵𝗲𝗻𝘁𝗶𝗰𝗮𝘁𝗶𝗼𝗻? As developers, we’re always looking for secure, efficient ways to let our apps communicate with external services or allow other systems to access ours. API key authentication is one of the simplest tools in our toolbox, but when does it shine, and how do you implement it? Let’s dive into API key authentication, keeping it clear and approachable for everyone. An API key is a unique string that authenticates an application, 𝗧𝗔𝗞𝗘 𝗡𝗢𝗧𝗘 - not a user, when accessing a system’s resources. Think of it as a special passcode your app flashes to unl",
+      "query": "Reclub app API key authentication REST endpoint"
+    },
+    {
+      "title": "Best practices for REST API security: Authentication and authorization",
+      "url": "https://stackoverflow.blog/2021/10/06/best-practices-for-authentication-and-authorization-for-rest-apis/",
+      "content": "Use API keys to give existing users programmatic access\n\nWhile your REST endpoints can serve your own website, a big advantage of REST is that it provides a standard way for other programs to interact with your service. To keep things simple, don't make your users do OAuth2 locally or make them provide a username/password combo—that would defeat the point of having used OAuth2 for authentication in the first place. Instead, keep things simple for yourself and your users, and issue API keys. Here's how:\n\n1.   When a user signs up for access to your API, generate an API key:\n\n`var token = crypto",
+      "query": "Reclub app API key authentication REST endpoint"
+    },
+    {
+      "title": "Platform - Reclub",
+      "url": "https://reclub.co/platform",
+      "content": "Reclub\n\n# Platform\n\nWe provide world-class tools that help you run your club, meet, or competition.\n\n## Clubs\n\nReady to bring people together, but tired of doing it with multiple apps? All the tools you need to manage your players, in one place.\n\n## Competitions\n\nThere’s never been an easier way to register, seed, draw, and track matches. No excel required.\n\n## Meets\n\nIt's game time! Instantly setup the details and manage your players with team assignments, RSVP's + waitlists. Tools built for sports.\n\n## Community\n\nConnect with fellow athletes, celebrate victories and share MOMENTS within the ",
+      "query": "Reclub app API key authentication REST endpoint"
+    },
+    {
+      "title": "REST API Authentication and Security Best Practices - CQL",
+      "url": "https://www.cqlcorp.com/insights/best-practices-for-securing-your-rest-api-authentication-options/",
+      "content": "Maintaining security is important when relying on a REST API, but there are many ways to authenticate a user’s identity and allow them to access your API endpoint. While it is possible to create a RESTful API that is open to the public, the recommended best practice is to fully restrict access to only appropriate users for each API endpoint. In this article, we are going to discuss a number of methods to authenticate a user to your API endpoint.\n\nNote that all access to API endpoints SHOULD require SSL/TLS security (HTTPS) in order to ensure that a user’s authentication data is not exposed to ",
+      "query": "Reclub app API key authentication REST endpoint"
+    },
+    {
+      "title": "Essential REST API Authentication Methods Every Developer Must ...",
+      "url": "https://medium.com/@gupta-deepak/unlocking-the-gates-essential-rest-api-authentication-methods-every-developer-must-master-6accdae0e173",
+      "content": "Sitemap\n\nOpen in app\n\nSign in\n\nSign in\n\n# Unlocking the Gates: Essential REST API Authentication Methods Every Developer Must Master\n\nDeepak Gupta\n\nDeepak Gupta\n\n4 min readMay 27, 2025\n\n> Understanding these fundamental security approaches can make or break your application’s protection in an era of sophisticated cyber threats\n\nIn today’s interconnected digital landscape, your API endpoints are the front lines of your security defense. As someone who has built authentication systems protecting millions of user accounts, I’ve witnessed how the right authentication strategy can be the difference",
+      "query": "Reclub app API key authentication REST endpoint"
+    },
+    {
+      "title": "How to Use the Secret Key Authentication with REST API?",
+      "url": "https://techdocs.broadcom.com/us/en/ca-enterprise-software/business-management/ca-service-management/17-4/building/building-ca-service-desk-manager/ca-sdm-rest-api/how-to-use-the-secret-key-authentication-with-rest-api.html",
+      "content": "- The CA SDM secret\\_key is a 40-character alphanumeric sequence and is dynamically generated by CA SDM during REST access key creation. This secret\\_key is encrypted before it is stored in the CA SDM database (usp\\_rest\\_access table).\n- The secret\\_key needs to be used thereafter by the client to be able to properly authenticate itself as a valid client against the CA SDM REST server. This is performed by the client program which sends a Signed Header as part of its requests.\n- The signature, a Keyed-Hash based Message Authentication Code (HMAC - Hash-based Message Authentication Code) is ca",
+      "query": "Reclub app API key authentication REST endpoint"
+    },
+    {
+      "title": "Frequently Asked Questions - Reclub",
+      "url": "https://reclub.co/faq",
+      "content": "Reclub\n\n# Frequently Asked Questions\n\nThere are no frequently asked questions for this category.\n\nFor the love of the game\nReclub logo\n\n## Reclub\n\nA platform empowering sports communities. Built for us all, for the love of the game.\n\n© 2026 Reclub. All rights reserved\n\n### PLATFORM\n\n### COMPANY\n\nApple App Store\nGoogle Play Store\n\n© 2026 Reclub. All rights reserved",
+      "query": "Reclub app API key authentication REST endpoint"
+    },
+    {
+      "title": "How Do You Set Up Proper API Authentication for Mobile Apps?",
+      "url": "https://thisisglance.com/learning-centre/how-do-you-set-up-proper-api-authentication-for-mobile-apps",
+      "content": "## Understanding API Authentication Basics\n\nAPI authentication is like having a bouncer at the door of your mobile app—it decides who gets in and who stays out. When your app needs to talk to a server or another service, authentication makes sure that conversation happens safely and securely.\n\nThink of it this way: your mobile app wants to grab some data from your backend server. Without authentication, anyone could pretend to be your app and steal information or cause trouble. That's obviously not what we want! Authentication solves this by making your app prove it's really who it says it is ",
+      "query": "Reclub app API key authentication REST endpoint"
+    },
+    {
+      "title": "API Key Authentication using Hawk - Chris DeCairos",
+      "url": "https://chrisdecairos.ca/api-key-authentication-using-hawk/",
+      "content": "1. The server generates and stores an ID and a secret key. The ID and key are sent to the client over some secure channel.\n2. To make a request to the server, the client generates an Authorization header using hawk, passing Hawk its ID, key, request URL, payload, a nonce, and a time stamp. Behind the scenes, Hawk uses this information to generate a MAC. The header looks something like this:\n    `Authorization: Hawk id=\"dh37fgj492je\", ts=\"1353832234\", nonce=\"j4h3g2\", mac=\"6R4rV5iE+NPoym+WwjeHzjAGXUtLNIxmo1vpMofpLAE=\"`\n3. Notice that the Key is not a part of the Authorization header!\n4. The requ",
+      "query": "Reclub app API key authentication REST endpoint"
+    },
+    {
+      "title": "The global social sports pickleball platform, powering clubs, leagues ...",
+      "url": "https://pickleball.reclub.co/videos/v/welcome-to-reclub-explainer-video",
+      "content": "Reclub Pickleball\nReclub Pickleball\n\n## Welcome to Reclub - Explainer Video\n\nJoin Reclub to be part of the global social pickleball network! Find clubs, activities, or compete in tournaments on the app. DUPR integration sends scores in seconds. Organize games, manage clubs, and connect with players across the globe. Download the app today!\n\n## Join a Pickleball competition on Reclub\n\n## How To: Rotating Partners Round Robins, Kudos + Street Cred\n\n## You Might Also Like\n\nRelated Video Item Thumbnail\nRelated Video Item Thumbnail\nRelated Video Item Thumbnail\nRelated Video Item Thumbnail\nRelated E",
+      "query": "Reclub sports booking app webhook integration"
+    },
+    {
+      "title": "Reclub: A platform empowering sports communities",
+      "url": "https://reclub.co/",
+      "content": "Reclub\n\nOur PlatformCommunitiesSupported Sports\n\n# FOR THE LOVE OF THE GAME\n\n[](\n\nRead our charter\n\n## All the Tools You Need\n\nRun your club, organize meets, manage competitions, and build your community - all in one place.\n\n## Competitions\n\nThere’s never been an easier way to register, seed, draw, and track matches. No excel required.\n\nLearn more\n\n#### Community\n\nConnect with fellow athletes, celebrate victories and share MOMENTS within the Reclub Community.\n\nLearn more\n\n#### Clubs\n\nReady to bring people together, but tired of doing it with multiple apps? All the tools you need to manage your",
+      "query": "Reclub sports booking app webhook integration"
+    },
+    {
+      "title": "Platform",
+      "url": "https://reclub.co/platform",
+      "content": "Reclub\n\n# Platform\n\nWe provide world-class tools that help you run your club, meet, or competition.\n\n## Clubs\n\nReady to bring people together, but tired of doing it with multiple apps? All the tools you need to manage your players, in one place.\n\n## Competitions\n\nThere’s never been an easier way to register, seed, draw, and track matches. No excel required.\n\n## Meets\n\nIt's game time! Instantly setup the details and manage your players with team assignments, RSVP's + waitlists. Tools built for sports.\n\n## Community\n\nConnect with fellow athletes, celebrate victories and share MOMENTS within the ",
+      "query": "Reclub sports booking app webhook integration"
+    },
+    {
+      "title": "Club Setup - Add Players Tutorial - YouTube",
+      "url": "https://www.youtube.com/watch?v=gHvCeVVID4s",
+      "content": "... in the app to your club. Reclub. Your local, social, sports app. Found in the App or Play Store. Want to know more? Check our website.",
+      "query": "Reclub sports booking app webhook integration"
+    },
+    {
+      "title": "Sports Club Run Better on Reclub Reclub is taking ... - Facebook",
+      "url": "https://www.facebook.com/reclubapp/videos/sports-club-run-better-on-reclubreclub-is-taking-sports-clubs-to-the-next-level-/3233891753605131/",
+      "content": "Let's download the app today and get you in the game as a host or player. Reclub. Powering the Global Sports Community #Reclub #Powering #",
+      "query": "Reclub sports booking app webhook integration"
+    },
+    {
+      "title": "Frequently Asked Questions - Reclub",
+      "url": "https://reclub.co/faq",
+      "content": "Reclub\n\n# Frequently Asked Questions\n\nThere are no frequently asked questions for this category.\n\nFor the love of the game\nReclub logo\n\n## Reclub\n\nA platform empowering sports communities. Built for us all, for the love of the game.\n\n© 2026 Reclub. All rights reserved\n\n### PLATFORM\n\n### COMPANY\n\nApple App Store\nGoogle Play Store\n\n© 2026 Reclub. All rights reserved",
+      "query": "Reclub sports booking app webhook integration"
+    },
+    {
+      "title": "Getting Started | Help Center - Reclub",
+      "url": "https://help.reclub.co/hc/reclub-help/en/categories/users-getting-started",
+      "content": "Reclub prioritizes transparency and community engagement. We believe that seeing who is playing helps build trust and stronger connections within the sports community. Account Visibility Policy Because our platform is built to foster connections and friendly competition, please keep the following in mind: - Transparency by Design: Currently, we do not have an account privacy feature that allows users to hide their profile or participation from the community. - Public Participation: All participant lists for meets and competitions are visible. This is intended to encourage interaction among use",
+      "query": "Reclub sports booking app webhook integration"
+    },
+    {
+      "title": "Welcome to Reclub - YouTube",
+      "url": "https://www.youtube.com/watch?v=0MlweOwSxKc",
+      "content": "A quick video showcasing the app features for players and organizers. 0:00 - Welcome to Reclub Video Intro 0:10 - Home Screen 0:25 - Meets",
+      "query": "Reclub sports booking app webhook integration"
+    },
+    {
+      "title": "Support | Help Center - Reclub",
+      "url": "https://help.reclub.co/hc/reclub-help/en/categories/support",
+      "content": "You can report bugs, safety concerns, or community violations in two primary ways: reporting directly where the issue occurred or through your personal profile settings. Method 1: Report at the Source This is the best way to report specific content, such as an inappropriate match comment, an incorrect score, or a problematic player profile. - Step 1: Locate the specific meet, player, or comment you wish to report. - Step 2: Tap the \"...\" (three dots) icon or burger menu (3 horizontal stripes), typically found in the top-right corner of the screen. - Step 3: Select \"Report\" from the dropdown me",
+      "query": "Reclub sports booking app webhook integration"
+    },
+    {
+      "title": "Webhooks and API Integrations - YouTube",
+      "url": "https://www.youtube.com/watch?v=DSTNW1H7rI8",
+      "content": "In this video, learn how to use Webhooks and API actions when using Breakdance Forms.",
+      "query": "Reclub sports booking app webhook integration"
+    },
+    {
+      "title": "Platform - Reclub",
+      "url": "https://reclub.co/platform",
+      "content": "© 2026 Reclub. All rights reserved\n\n### PLATFORM\n\n### COMPANY\n\nApple App Store\nGoogle Play Store\n\n© 2026 Reclub. All rights reserved [...] Reclub\n\n# Platform\n\nWe provide world-class tools that help you run your club, meet, or competition.\n\n## Clubs\n\nReady to bring people together, but tired of doing it with multiple apps? All the tools you need to manage your players, in one place.\n\n## Competitions\n\nThere’s never been an easier way to register, seed, draw, and track matches. No excel required.\n\n## Meets\n\nIt's game time! Instantly setup the details and manage your players with team assignments,",
+      "query": "Reclub app mobile scraping automation 2026"
+    },
+    {
+      "title": "Web Scraping Report 2026: Market Trends, Growth & Key Insights",
+      "url": "https://www.promptcloud.com/blog/state-of-web-scraping-2026-report/",
+      "content": "### 5. Web vs Mobile APIs: The New Frontline\n\nWhile web endpoints remain the main target (17.6% automation on average), mobile APIs are the new frontier.\n\n Hospitality leads with 4.53% of all mobile API traffic coming from scrapers.\n Banks and credit unions face the most advanced attacks, with 99.24% of mobile API scrapers classified as “advanced.” These bots often mimic app requests to extract rates, branch data, or customer offers – information meant for authenticated users. [...] Mobile scraping requires higher technical investment, but its reward – access to structured, authenticated data ",
+      "query": "Reclub app mobile scraping automation 2026"
+    },
+    {
+      "title": "Host - Help Center - Reclub",
+      "url": "https://help.reclub.co/hc/reclub-help/en/categories/host",
+      "content": "Last updated on Jan 27, 2026\n\n### How to fix competition matches or scheduling issues?\n\nIf you’re running a competition and notice that things aren't looking quite right, perhaps the matches didn't populate, schedules aren't showing, or the brackets seem \"stuck\", there is a built-in tool designed to refresh the logic. The \"Quick Fix\": Recalculate In most cases, a simple Recalculate request will sync the server and fix display errors. Follow these steps: 1. Open your Competition. 2. Tap the three stripes (hamburger menu) in the top right corner. 3. Select Request Support. 4. Tap Recalculate. Th",
+      "query": "Reclub app mobile scraping automation 2026"
+    },
+    {
+      "title": "Top 12 Web Scraping Tools for Scrapers in 2026 - Multilogin",
+      "url": "https://multilogin.com/blog/top-web-scraping-tools-for-scrapers/",
+      "content": "This approach gives you Puppeteer’s powerful Chrome automation with Multilogin’s comprehensive stealth, creating scraping sessions that are virtually undetectable. The browser behaves exactly like a real user’s Chrome while you maintain full programmatic control.\n\nBest for:\n\n Sites requiring Chrome-specific features or rendering engines\n Google property scraping (Maps, Shopping, SERP)\n Chrome extension development and testing\n PDF generation and screenshot capture at scale\n JavaScript-heavy SPAs and React applications\n E-commerce scraping requiring Chrome compatibility [...] Used together with",
+      "query": "Reclub app mobile scraping automation 2026"
+    },
+    {
+      "title": "10 Web Scraping Tools Powering Smarter Data Strategies in 2026",
+      "url": "https://www.designrush.com/agency/it-services/trends/web-scraping-tools",
+      "content": "This approach lowers the technical barrier significantly, making it accessible to business owners, marketers, and operations teams who want data without writing scripts. It’s particularly effective for recurring data pulls from structured websites.\n\nFor small businesses that want fast setup and minimal maintenance, Browse AI delivers practical automation without the complexity of traditional scraping tools.\n\nPricing:\n\n Free\n Personal: $48/month\n Professional: $87/month\n Premium: Starts at $500\n\n> View this post on Instagram\n>\n> A post shared by Browse AI (@browse.ai)\n\n### Notable Features [...",
+      "query": "Reclub app mobile scraping automation 2026"
+    },
+    {
+      "title": "10 Leading AI Web Scraping Tools for Scalable Data in 2026",
+      "url": "https://www.designrush.com/agency/it-services/trends/ai-web-scraping",
+      "content": "| Octoparse | Visual workflow automation | ✅ | ❌ | ✅ | $83/month | [...] ### AI Web Scraping Tools: Key Findings\n\nBright Data, Import.io, and Diffbot deliver scalable, governed, production-ready web data systems with advanced orchestration and compliance capabilities.\n\nBrowse AI, Thunderbit, Gumloop, Octoparse, and Firecrawl focus on AI-driven automation, offering adaptive extraction, faster deployment, and workflow-friendly platforms.\n\nKadoa, Diffbot, and Tavily emphasize intelligence and context, extending beyond basic extraction to provide semantic understanding and real-time relevance.\n\n##",
+      "query": "Reclub app mobile scraping automation 2026"
+    },
+    {
+      "title": "9 Best Tools for Dynamic Web Scraping in 2026 - Firecrawl",
+      "url": "https://www.firecrawl.dev/blog/dynamic-scraping-tools",
+      "content": "If you're dealing with high-volume data extraction from sites with aggressive protection, Bright Data's massive global proxy network is hard to beat. We're talking about millions of IPs across residential, datacenter, and mobile networks, which means you can rotate through legitimate-looking requests at scale without getting blocked.\n\nThe platform offers pre-configured scraping solutions for major sites, managed APIs that handle all the anti-bot complexity, and robust support for handling CAPTCHAs, JavaScript rendering, and rate limiting automatically. This is the tool large enterprises choose",
+      "query": "Reclub app mobile scraping automation 2026"
+    },
+    {
+      "title": "8 Best Web Scraping Tools in 2026: AI-Native Scrapers Compared",
+      "url": "https://www.reddit.com/r/Agent_AI/comments/1rpqqr2/8_best_web_scraping_tools_in_2026_ainative/",
+      "content": "ScraperAPI – this is the “plug it into your code and forget about infrastructure” option. instead of managing proxies, headless browsers, and captcha solvers yourself, you just send a request to their API and it handles all that behind the scenes.\n\nBright Data – this is basically the enterprise beast of the scraping world. massive proxy network (residential, mobile, datacenter) and a full toolbox of scraping APIs, browser automation, and even pre-built datasets if you don’t want to scrape yourself. a lot of big companies run their scraping infrastructure on top of it [...] Apify – honestly the",
+      "query": "Reclub app mobile scraping automation 2026"
+    },
+    {
+      "title": "The Top Web Scraping Tools To Extract Information in 2026",
+      "url": "https://www.almabetter.com/bytes/articles/web-scraping-tools",
+      "content": "## Best Web Scraping Tools\n\n### Apify\n\nApify stands out as the foremost tool for web automation and web scraping, renowned for its comprehensive suite of over 200 tools designed for extracting data from diverse sources, including e-commerce websites and social media platforms. Available in both free trial and paid versions, Apify is embraced by a wide spectrum of professionals, ranging from large enterprises to freelancers. Its user-friendly and intuitive structure ensures easy navigation and understanding. [...] ### Oxylabs\n\nOxylabs is a premier provider of proxy services, boasting a versatil",
+      "query": "Reclub app mobile scraping automation 2026"
+    },
+    {
+      "title": "9 Best Web Scraping Tools for 2026 (+AI Scraping Agents) - YouTube",
+      "url": "https://www.youtube.com/watch?v=f5eb46JT2Zk",
+      "content": "stacks built for tough, high-volume targets; and integration-first automation platforms that scrape via HTTP modules, parse HTML, and schedule runs on your terms. By the end, you’ll know which path fits your team—whether you’re a developer who wants a drop-in API, an ops lead who needs point-and-click extraction, or a business that prioritizes reliability, compliance, and hands-off scheduling.…...more [...] Browser API) 11:55 – Best RPA-style scraping + desktop/web automation in one 15:06 – Best no-code point-and-click scraper with cloud runs & templates 18:00 – Best integration-first “scrape ",
+      "query": "Reclub app mobile scraping automation 2026"
+    }
+  ]
+}
