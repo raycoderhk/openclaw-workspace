@@ -74,6 +74,36 @@
             font-size: 1.3em;
         }
 
+        .audio-filter-section {
+            margin: 25px 0;
+            padding: 20px;
+            background: linear-gradient(135deg, #fff5f5 0%, #fff0f0 100%);
+            border-radius: 12px;
+            border-left: 5px solid #ff6b6b;
+        }
+
+        .audio-filter-section h3 {
+            color: #ff6b6b;
+            margin-bottom: 12px;
+        }
+
+        .audio-filter-btn {
+            background: white;
+            border: 2px solid #ffcccc;
+            color: #ff6b6b;
+        }
+
+        .audio-filter-btn:hover {
+            border-color: #ff6b6b;
+            background: #fff0f0;
+        }
+
+        .audio-filter-btn.active {
+            background: linear-gradient(135deg, #ff6b6b 0%, #ee5a6f 100%);
+            color: white;
+            border-color: #ff6b6b;
+        }
+
         .filter-options {
             display: flex;
             flex-wrap: wrap;
@@ -575,6 +605,41 @@
             opacity: 0.9;
         }
 
+        /* Audio Stats */
+        .audio-stats-section {
+            background: linear-gradient(135deg, #fff5f5 0%, #fff0f0 100%);
+            border-radius: 12px;
+            padding: 20px;
+            margin: 20px 0;
+            border-left: 5px solid #ff6b6b;
+            display: flex;
+            justify-content: space-around;
+            flex-wrap: wrap;
+            gap: 15px;
+        }
+
+        .audio-stat {
+            text-align: center;
+            padding: 10px 20px;
+            background: white;
+            border-radius: 8px;
+            box-shadow: 0 3px 10px rgba(255, 107, 107, 0.1);
+            min-width: 150px;
+        }
+
+        .audio-stat .stat-label {
+            color: #ff6b6b;
+            font-weight: bold;
+            font-size: 0.9em;
+            margin-bottom: 5px;
+        }
+
+        .audio-stat .stat-value {
+            font-size: 1.8em;
+            font-weight: bold;
+            color: #333;
+        }
+
         /* Image Modal */
         .image-modal {
             display: none;
@@ -665,12 +730,27 @@
             </div>
         </div>
 
+        <!-- Audio Stats -->
+        <div class="audio-stats-section" id="audio-stats">
+            <!-- Will be populated by JavaScript -->
+        </div>
+
         <!-- Filter Section -->
         <div class="filter-section">
             <h3>📑 篩選分類</h3>
             <div class="filter-options" id="category-filters">
                 <button class="filter-btn active" onclick="filterByCategory('all', this)">全部</button>
                 <!-- Categories will be populated by JavaScript -->
+            </div>
+            
+            <!-- Audio Filter -->
+            <div class="audio-filter-section">
+                <h3>🎤 語音導航篩選</h3>
+                <div class="filter-options">
+                    <button class="filter-btn audio-filter-btn active" onclick="filterByAudio('all', this)">全部地標</button>
+                    <button class="filter-btn audio-filter-btn" onclick="filterByAudio('with_audio', this)">有語音導航</button>
+                    <button class="filter-btn audio-filter-btn" onclick="filterByAudio('without_audio', this)">未有語音</button>
+                </div>
             </div>
             
             <div class="sort-options">
@@ -749,6 +829,7 @@
     <script>
         let galleryData = [];
         let currentFilter = 'all';
+        let currentAudioFilter = 'all'; // 'all', 'with_audio', 'without_audio'
         let currentSortOrder = 'desc'; // 'desc' = 倒序（排最前）, 'asc' = 順序（排最後）
 
         // Load gallery data
@@ -809,6 +890,19 @@
             
             // Update button styles
             document.querySelectorAll('#category-filters .filter-btn').forEach(btn => {
+                btn.classList.remove('active');
+            });
+            btnElement.classList.add('active');
+            
+            renderGallery();
+        }
+
+        // Filter by audio availability
+        function filterByAudio(filterType, btnElement) {
+            currentAudioFilter = filterType;
+            
+            // Update button styles
+            document.querySelectorAll('.audio-filter-btn').forEach(btn => {
                 btn.classList.remove('active');
             });
             btnElement.classList.add('active');
@@ -888,9 +982,21 @@
             grid.innerHTML = '';
             
             let filtered = galleryData;
+            
+            // Apply category filter
             if (currentFilter !== 'all') {
-                filtered = galleryData.filter(q => q.category === currentFilter);
+                filtered = filtered.filter(q => q.category === currentFilter);
             }
+            
+            // Apply audio filter
+            if (currentAudioFilter === 'with_audio') {
+                filtered = filtered.filter(q => q.audio);
+            } else if (currentAudioFilter === 'without_audio') {
+                filtered = filtered.filter(q => !q.audio);
+            }
+            
+            // Update audio stats
+            updateAudioStats(filtered);
             
             filtered.forEach(q => {
                 const item = document.createElement('div');
@@ -910,7 +1016,7 @@
                             </button>
                             <span class="vote-count ${q.userVoted ? 'voted' : ''}" id="vote-count-${q.id}">${q.votes} 票</span>
                             <button class="details-btn" onclick="showDetails(${q.id})">📋 詳情</button>
-                            <button class="audio-btn" onclick="playAudio(${q.id})">🎤 語音導航</button>
+                            ${q.audio ? `<button class="audio-btn" onclick="playAudio(${q.id})">🎤 語音導航</button>` : ''}
                         </div>
                     </div>
                 `;
@@ -963,6 +1069,35 @@
             
             document.getElementById('total-votes').textContent = totalVotes;
             document.getElementById('top-voted').textContent = maxVotes;
+            
+            // Update audio stats
+            updateAudioStats(galleryData);
+        }
+
+        // Update audio stats
+        function updateAudioStats(data) {
+            const totalWithAudio = data.filter(q => q.audio).length;
+            const totalWithoutAudio = data.filter(q => !q.audio).length;
+            const totalLandmarks = data.length;
+            
+            // Update stats display if elements exist
+            const audioStatsEl = document.getElementById('audio-stats');
+            if (audioStatsEl) {
+                audioStatsEl.innerHTML = `
+                    <div class="audio-stat">
+                        <span class="stat-label">🎤 有語音：</span>
+                        <span class="stat-value">${totalWithAudio}</span>
+                    </div>
+                    <div class="audio-stat">
+                        <span class="stat-label">🔇 未有語音：</span>
+                        <span class="stat-value">${totalWithoutAudio}</span>
+                    </div>
+                    <div class="audio-stat">
+                        <span class="stat-label">📊 語音覆蓋率：</span>
+                        <span class="stat-value">${totalLandmarks > 0 ? Math.round((totalWithAudio / totalLandmarks) * 100) : 0}%</span>
+                    </div>
+                `;
+            }
         }
 
         // Image modal functions
