@@ -5,7 +5,7 @@
     {
       "id": 1,
       "image": "assets/fisherman.jpg",
-      "audio": "assets/audio/fisherman.mp3",
+      "audio": "assets/audio/fisherman.wav",
       "correctAnswer": "釣魚翁",
       "options": [
         "釣魚翁",
