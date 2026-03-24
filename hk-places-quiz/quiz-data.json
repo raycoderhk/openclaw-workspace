@@ -628,6 +628,29 @@
       "dateAdded": "2026-03-24",
       "category": "教育機構",
       "votes": 0
+    },
+    {
+      "id": 23,
+      "image": "assets/diocesan-school.jpg",
+      "correctAnswer": "拔萃小學",
+      "options": [
+        "拔萃小學",
+        "喇沙小學",
+        "聖保羅書院小學",
+        "英華小學"
+      ],
+      "hint": "旺角，傳統名校，有中學部",
+      "fact": "拔萃小學 (Diocesan Boys' School Primary Division) 位於九龍旺角亞皆老街，係拔萃男書院嘅附屬小學。學校 1869 年創校，係香港歷史最悠久嘅學校之一。拔萃以優質教育聞名，培養咗唔少社會精英，包括前特首曾蔭權、諾貝爾獎得主高錕等。學校採用英語教學，注重全人發展。",
+      "extra": {
+        "height": "傳統校舍建築",
+        "location": "九龍旺角亞皆老街",
+        "features": ["1869 年創校", "傳統名校", "英語教學", "全人發展", "拔萃男書院附屬小學"],
+        "history": "1869 年創校→香港歷史最悠久學校之一→培養眾多社會精英",
+        "organization": "拔萃男書院 (Diocesan Boys' School)"
+      },
+      "dateAdded": "2026-03-24",
+      "category": "教育機構",
+      "votes": 0
     }
   ],
   "settings": {
