@@ -922,6 +922,160 @@
         "",
         "✅ QR code ready for auto-ticketing machine"
       ]
+    },
+    {
+      "id": "proj-026",
+      "title": "🥚 爛 Gag 收集系統",
+      "description": "遊戲平台新增爛 Gag 收集系統，用於收集和展示爛 gag笑話，類似香港地方猜猜猜遊戲",
+      "status": "done",
+      "priority": "medium",
+      "created": "2026-03-23",
+      "updated": "2026-03-23T11:25:00Z",
+      "completed": "2026-03-23T11:25:00Z",
+      "tags": [
+        "game",
+        "gag",
+        "humor",
+        "gameworld",
+        "discord"
+      ],
+      "notes": [
+        "2026-03-23: Jarvis 創建爛 Gag 收集系統",
+        "📁 路徑: games/gag/",
+        "✅ 主要功能:",
+        "  - 加入新爛 gag (含日期、出品人 tag)",
+        "  - 按出品人 filter",
+        "  - 統計數據顯示",
+        "🌐 部署: https://gameworld.zeabur.app/gag/",
+        "👥 出品人: @Raymond, @MW (目前)",
+        "📊 5 個 gag 已收集"
+      ]
+    },
+    {
+      "id": "proj-027",
+      "title": "📰 Morning Newspaper Cron Job - 16次 Timeout",
+      "description": "Morning Newspaper 晨報 cron job 連續16次超時失敗，需要修復或停用",
+      "status": "blocked",
+      "priority": "high",
+      "created": "2026-03-24",
+      "updated": "2026-03-24T02:00:00Z",
+      "tags": [
+        "cron",
+        "email",
+        "timeout",
+        "newspaper",
+        "telegram"
+      ],
+      "notes": [
+        "⚠️ 問題: Cron job timeout (600秒) - 連續16次失敗",
+        "📅 開始時間: 2026-03-23 08:00 HKT",
+        "🔧 任務: 為78歲母親創建每日晨報",
+        "📡 投遞: Telegram (7027796937)",
+        "❌ 最後錯誤: Error: cron: job execution timed out",
+        "⏰ 最後運行: 2026-03-24 08:00 HKT",
+        "🔍 可能原因:",
+        "  1. 新聞網站被封鎖或 rate-limited",
+        "  2. 10分鐘 timeout 不夠用",
+        "  3. 網絡連接問題",
+        "💡 解決方案:",
+        "  1. 增加 timeout 或簡化任務",
+        "  2. 停用並手動運行測試",
+        "  3. 改用更快的資訊源"
+      ]
+    },
+    {
+      "id": "proj-028",
+      "title": "🐛 MiniMax Usage Display Bug - 顯示錯誤百分比",
+      "description": "session_status 顯示 '8% left' 但實際是 '8% used' (92% remaining)，需要修復顯示邏輯",
+      "status": "in_progress",
+      "priority": "medium",
+      "created": "2026-03-26",
+      "updated": "2026-03-26T06:16:00Z",
+      "tags": [
+        "bug",
+        "minimax",
+        "openclaw",
+        "usage",
+        "display"
+      ],
+      "notes": [
+        "2026-03-26: 發現 session_status usage 顯示錯誤",
+        "❌ 錯誤顯示: '8% left' (錯誤)",
+        "✅ 正確解讀: '8% used / 92% remaining'",
+        "",
+        "📊 MiniMax 配額數據:",
+        "  - Text generation: 363/4500 minutes = 8.07% used",
+        "  - Reset 時間: 47 分鐘 (15:00 UTC+8)",
+        "",
+        "🔍 問題根源:",
+        "  - OpenClaw gateway 計算 percentage",
+        "  - 但錯誤地將 used% 顯示為 remaining%",
+        "",
+        "📝 影響範圍:",
+        "  - minimax-coding session",
+        "  - 可能所有 MiniMax 相關 session",
+        "",
+        "💡 需要:",
+        "  1. 修復 OpenClaw gateway 源碼",
+        "  2. 或向 OpenClaw 報告 bug"
+      ]
+    },
+    {
+      "id": "proj-029",
+      "title": "📊 OpenClaw MiniMax 配額監控",
+      "description": "切換到 MiniMax M2.7 模型以節省成本，需要監控配額使用情況",
+      "status": "todo",
+      "priority": "high",
+      "created": "2026-03-26",
+      "updated": "2026-03-26T06:00:00Z",
+      "tags": [
+        "minimax",
+        "model",
+        "quota",
+        "cost",
+        "configuration"
+      ],
+      "notes": [
+        "2026-03-26: Raymond 要求切換到 MiniMax M2.7",
+        "💡 原因: 善用配額，節省 DeepSeek 費用",
+        "📊 當前配額: 4500 minutes/week",
+        "📈 已用: 363 minutes (8%)",
+        "⏰ 重置: 每週 15:00 UTC+8",
+        "",
+        "✅ 已完成:",
+        "  - 模型列表已更新",
+        "  - minimax-coding 已切換",
+        "",
+        "📋 待確認:",
+        "  - 其他 agents 是否需要個別調整",
+        "  - 是否需要設置配額警告"
+      ]
+    },
+    {
+      "id": "proj-030",
+      "title": "🎬 Project Hail Mary 電影觀看 (2026-03-22)",
+      "description": "與仔仔於荃灣百老匯戲院觀看 Project Hail Mary",
+      "status": "done",
+      "priority": "medium",
+      "created": "2026-03-20",
+      "updated": "2026-03-22T09:25:00Z",
+      "completed": "2026-03-22T09:25:00Z",
+      "tags": [
+        "family",
+        "movie",
+        "son",
+        "hkdavision",
+        "completed"
+      ],
+      "notes": [
+        "📅 觀看日期: 2026-03-22 09:25 HKT",
+        "👨‍👦 同行: 與仔仔",
+        "🏠 戲院: Tsuen Wan (Cinema.com.hk)",
+        "💺 座位: H7, H8 (House 3)",
+        "🎬 電影: Project Hail Mary",
+        "💰 費用: $180 ($80 x 2 + $10 service)",
+        "✅ 已完成觀看"
+      ]
     }
   ],
   "settings": {
