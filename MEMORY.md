@@ -164,6 +164,26 @@ async function getOrCreateUser(email, name, googleId, image) {
 
 ## 🔧 Development Workflows
 
+### Deployment — READ FIRST ⚠️
+**Before any deployment advice, read:** `DEPLOYMENT_REFERENCE.md`
+
+**Our deployment pipeline:** GitHub push → Zeabur auto-deploys (no manual CI/CD)
+- Projects live in workspace (`/home/node/.openclaw/workspace/`) and get pushed to GitHub
+- Zeabur webhook triggers on `git push origin main`
+- Most projects are **static HTML** — no build step needed
+- Run `./deploy.sh [gameworld|kanban|all]` from workspace root
+
+**Key repos:**
+- `raycoderhk/mini-games` — Gameworld, HK Places Quiz, GeoBite
+- `raycoderhk/kanban-board` — Kanban + Media Trackers
+- `raycoderhk/mission-control` — Mission Control
+
+**Live URLs:**
+- Gameworld: https://gameworld.zeabur.app
+- HK Places Quiz: https://gameworld.zeabur.app/hk-places-quiz/
+- Kanban: https://kanban-board.zeabur.app/
+- Mission Control: https://mission-control.zeabur.app/
+
 ### Zeabur Deployment Checklist
 1. Push code to GitHub main branch
 2. Zeabur auto-deploys (2-3 minutes)
@@ -309,4 +329,44 @@ async function getOrCreateUser(email, name, googleId, image) {
 
 ---
 
-*Last updated: March 8th, 2026*
+## 🦞 Minimax M2.7 Configuration (March 26, 2026)
+
+### Subscription Details
+- **Plan:** M2.7 Token Plan Plus
+- **Price:** 179 RMB/year (90% discount from regular $240/year)
+- **Features:** Text generation + Vision models + Image generation + Voice synthesis
+- **Billing:** Pay-per-use, separate for image/voice services
+
+### Configured Agents
+1. **Coding Agent** (`minimax-coding-agent.json`) - Programming, debugging, technical tasks
+2. **Imaging Agent** (`minimax-imaging-agent.json`) - Image analysis, visual QA (uses abab6.5s-vision)
+3. **Video Agent** (`minimax-video-agent.json`) - Script writing, storyboarding, creative content
+4. **General Agent** (`minimax-m2.7-agent.json`) - General purpose tasks
+
+### Available Models
+- **Text:** abab6-chat, abab6.5-chat, abab6.5s-chat
+- **Vision:** abab6.5s-vision (already working in nutritionist app)
+- **Image Generation:** Available (separate billing)
+- **Voice Synthesis:** Available (separate billing)
+
+### Usage Strategy
+- **Default model unchanged** (DeepSeek remains default)
+- **Switch manually** using `sessions_spawn(agentId="minimax-coding-agent")`
+- **Cost-effective priority:** Text models → Vision → Image generation → Voice synthesis
+- **Estimated cost:** $0.90-$18.00/month depending on usage
+
+### Key Files
+- `agents/MINIMAX_AGENTS_SETUP.md` - Complete setup guide
+- `agents/example-usage.md` - Usage templates and examples
+- `agents/test-all-minimax-models.py` - Validation script
+- `skills/vision/config.env` - API key location (⚠️ DO NOT commit to GitHub)
+
+### Status
+- ✅ All agents configured and tested
+- ✅ Vision model confirmed working (nutritionist app)
+- ✅ API key validated
+- ✅ Ready for immediate use with `sessions_spawn`
+
+---
+
+*Last updated: March 26th, 2026*

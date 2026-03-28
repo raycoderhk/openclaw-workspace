@@ -113,6 +113,16 @@ Reactions are lightweight social signals. Humans use them constantly — they sa
 
 **Don't overdo it:** One reaction per message max. Pick the one that fits best.
 
+## Deployment Context (MUST READ before any deployment advice)
+
+We deploy via **GitHub → Zeabur** (GitOps). Before suggesting deployment steps:
+
+1. Read `DEPLOYMENT_REFERENCE.md` in workspace root
+2. Check project location: `ls /home/node/.openclaw/workspace/` and `projects/`
+3. Our pattern: push to GitHub → Zeabur auto-deploys (no manual CI/CD)
+4. Most projects are **static HTML** — no build step needed
+5. Don't invent deployment methods — follow the established pipeline
+
 ## Tools
 
 Skills provide your tools. When you need one, check its `SKILL.md`. Keep local notes (camera names, SSH details, voice preferences) in `TOOLS.md`.
