@@ -16,7 +16,7 @@ import urllib.error
 
 # 阿里雲 API 配置
 ALIYUN_API_KEY = os.environ.get("ALIYUN_API_KEY", "")
-ALIYUN_API_URL = "https://dashscope.aliyuncs.com/api/v1/services/aigc/text-generation/generation"
+ALIYUN_API_URL = "https://dashscope.aliyuncs.com/compatible-mode/v1/chat/completions"
 
 # 測試的模型列表
 MODELS = [
@@ -58,23 +58,18 @@ def call_aliyun_model(model_id: str, prompt: str) -> Dict:
     
     payload = {
         "model": model_id,
-        "input": {
-            "messages": [
-                {
-                    "role": "system",
-                    "content": "你是一個有幫助的助手。"
-                },
-                {
-                    "role": "user",
-                    "content": prompt
-                }
-            ]
-        },
-        "parameters": {
-            "max_tokens": 1024,
-            "temperature": 0.7,
-            "top_p": 0.8
-        }
+        "messages": [
+            {
+                "role": "system",
+                "content": "你是一個有幫助的助手。"
+            },
+            {
+                "role": "user",
+                "content": prompt
+            }
+        ],
+        "max_tokens": 1024,
+        "temperature": 0.7
     }
     
     start_time = time.time()
@@ -94,8 +89,7 @@ def call_aliyun_model(model_id: str, prompt: str) -> Dict:
         response_time = end_time - start_time
         
         # 提取回應內容
-        output = result.get("output", {})
-        choices = output.get("choices", [])
+        choices = result.get("choices", [])
         message = choices[0].get("message", {}) if choices else {}
         content = message.get("content", "")
         
