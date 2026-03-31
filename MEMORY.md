@@ -369,4 +369,23 @@ async function getOrCreateUser(email, name, googleId, image) {
 
 ---
 
-*Last updated: March 26th, 2026*
+## 🐛 Bug Troubleshooting Pattern (2026-03-31)
+
+**Lesson from Gameworld Index.html incident:**
+- Discord agent incorrectly assumed Zeabur repo connection issue
+- **Correct approach:** Use `git log --follow <file>` to trace file history
+- Workspace git history is the most reliable source of truth
+- `git log --oneline -10 -- <file>` shows exact commit that changed file
+- Don't speculate — check git log first
+
+**Key Commands:**
+```bash
+git log --oneline -10 -- index.html  # Trace file changes
+git log --follow --oneline index.html   # Follow renames
+git show <commit>:index.html           # View file at specific commit
+git diff a7d6c41..b44c2ce -- index.html # Compare two commits
+```
+
+---
+
+*Last updated: March 31st, 2026*
