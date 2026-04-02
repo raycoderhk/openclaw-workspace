@@ -1,0 +1,57 @@
+{
+  "channel_config": {
+    "name": "minimax-chat",
+    "purpose": "Discord channel that defaults to Minimax M2.7 models",
+    "default_agent": "minimax-m2.7-agent",
+    "available_agents": {
+      "coding": "minimax-coding-agent",
+      "imaging": "minimax-imaging-agent",
+      "video": "minimax-video-agent",
+      "general": "minimax-m2.7-agent"
+    },
+    "environment_variables": {
+      "OPENAI_API_KEY": "sk-cp-mqDZwvwYG1u79lQAq_IoECIzYAvT1eBVcSOj3dIvTKcqRbRux_chEqTj1aHbvOtUCZ65CO6xYLSotXR1ocvisRzU4k6Zj1RiCpaf15ioXj5XW3DA1d8T5no",
+      "OPENAI_BASE_URL": "https://api.minimaxi.com/v1",
+      "OPENAI_MODEL": "MiniMax-M2.7"
+    },
+    "channel_commands": {
+      "!minimax": "Switch to Minimax M2.7",
+      "!coding": "Use minimax-coding-agent",
+      "!imaging": "Use minimax-imaging-agent",
+      "!video": "Use minimax-video-agent",
+      "!help": "Show available commands"
+    }
+  },
+  "setup_instructions": {
+    "1": "Create Discord channel named 'minimax-chat'",
+    "2": "Configure OpenClaw Discord bot to join this channel",
+    "3": "Set environment variables for this channel's session",
+    "4": "Test with simple message to verify Minimax is responding"
+  },
+  "bot_configuration": {
+    "bot_name": "Minimax-Assistant",
+    "response_prefix": "🤖 [Minimax]: ",
+    "thinking_enabled": true,
+    "reasoning_split": true,
+    "temperature": 0.7,
+    "max_tokens": 2048
+  },
+  "usage_examples": [
+    "User: Write a Python function",
+    "Bot (using minimax-coding-agent): Here's a Python function...",
+    "",
+    "User: !imaging Describe this image",
+    "Bot (using minimax-imaging-agent): I see...",
+    "",
+    "User: !video Create a script for a tutorial",
+    "Bot (using minimax-video-agent): Here's a script outline..."
+  ],
+  "monitoring": {
+    "cost_tracking": true,
+    "usage_logging": true,
+    "response_time_monitoring": true,
+    "error_alerts": true
+  },
+  "created": "2026-03-26",
+  "version": "1.0.0"
+}

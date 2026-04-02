@@ -1,0 +1,91 @@
+{
+  "configuration_name": "Targeted Minimax Discord Channel",
+  "date": "2026-03-26",
+  "status": "ready",
+  
+  "channel_specific_config": {
+    "channel_name": "minimax-chat",
+    "channel_id": "1486557433886281769",
+    "purpose": "Dedicated channel for Minimax M2.7 testing and usage",
+    "default_model": "MiniMax-M2.7",
+    "model_provider": "openai",
+    "base_url": "https://api.minimaxi.com/v1",
+    "api_key": "sk-cp-mqDZwvwYG1u79lQAq_IoECIzYAvT1eBVcSOj3dIvTKcqRbRux_chEqTj1aHbvOtUCZ65CO6xYLSotXR1ocvisRzU4k6Zj1RiCpaf15ioXj5XW3DA1d8T5no"
+  },
+  
+  "other_channels": {
+    "status": "unchanged",
+    "models": "DeepSeek (default)",
+    "channels": [
+      "system-status (1476504784583393394)",
+      "All other Discord channels"
+    ]
+  },
+  
+  "jarvis_configuration": {
+    "status": "unchanged",
+    "model": "DeepSeek",
+    "purpose": "Stability and rollback support",
+    "accessible_channels": "All channels"
+  },
+  
+  "setup_commands": {
+    "test_minimax_api": "./test-minimax-simple.sh",
+    "send_test_message": "openclaw message send --channel discord --to 1486557433886281769 --message 'Testing Minimax in this channel'",
+    "verify_configuration": "Check Discord #minimax-chat for Minimax responses"
+  },
+  
+  "environment_variables": {
+    "for_minimax_channel_only": {
+      "MINIMAX_CHANNEL_ID": "1486557433886281769",
+      "MINIMAX_API_KEY": "sk-cp-mqDZwvwYG1u79lQAq_IoECIzYAvT1eBVcSOj3dIvTKcqRbRux_chEqTj1aHbvOtUCZ65CO6xYLSotXR1eBVcSOj3dIvTKcqRbRux_chEqTj1aHbvOtUCZ65CO6xYLSotXR1ocvisRzU4k6Zj1RiCpaf15ioXj5XW3DA1d8T5no",
+      "MINIMAX_BASE_URL": "https://api.minimaxi.com/v1",
+      "MINIMAX_MODEL": "MiniMax-M2.7"
+    }
+  },
+  
+  "testing_procedure": [
+    "1. Send message to #minimax-chat: 'What model are you using?'",
+    "2. Expected: 'I'm using Minimax M2.7'",
+    "3. Send message to #system-status: 'What model are you using?'",
+    "4. Expected: 'I'm using DeepSeek' (unchanged)",
+    "5. Test commands in #minimax-chat: !coding, !imaging, !video"
+  ],
+  
+  "rollback_procedure": [
+    "1. Jarvis monitors #minimax-chat for issues",
+    "2. If issues detected, revert channel to DeepSeek",
+    "3. Only one channel affected, minimal disruption",
+    "4. Jarvis can execute rollback automatically"
+  ],
+  
+  "cost_management": {
+    "scope": "Single channel only",
+    "estimated_daily_cost": "$0.05-0.20",
+    "monitoring": "Track #minimax-chat usage separately",
+    "advantage": "Low risk, isolated testing"
+  },
+  
+  "success_metrics": {
+    "technical": [
+      "#minimax-chat uses Minimax M2.7",
+      "Other channels use DeepSeek (unchanged)",
+      "Jarvis remains on DeepSeek",
+      "No cross-channel interference"
+    ],
+    "user_experience": [
+      "Clear separation of models",
+      "Easy to test Minimax features",
+      "Stable fallback (other channels)",
+      "Jarvis available for help"
+    ]
+  },
+  
+  "notes": [
+    "This is the SAFEST approach - only one channel changes",
+    "Perfect for testing Minimax capabilities",
+    "Easy to rollback if needed",
+    "Costs are minimal and isolated",
+    "Can expand to more channels later if successful"
+  ]
+}

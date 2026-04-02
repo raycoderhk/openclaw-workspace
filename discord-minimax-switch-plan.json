@@ -1,0 +1,132 @@
+{
+  "plan_name": "Switch All Discord Channels to Minimax",
+  "date": "2026-03-26",
+  "status": "ready_for_execution",
+  
+  "current_configuration": {
+    "default_model": "deepseek/deepseek-chat",
+    "discord_model": "deepseek/deepseek-chat",
+    "telegram_model": "deepseek/deepseek-chat",
+    "jarvis_model": "deepseek/deepseek-chat"
+  },
+  
+  "proposed_configuration": {
+    "default_model": "deepseek/deepseek-chat (unchanged)",
+    "discord_model": "MiniMax-M2.7 (via OpenAI-compatible API)",
+    "telegram_model": "deepseek/deepseek-chat (unchanged)",
+    "jarvis_model": "deepseek/deepseek-chat (unchanged - for rollback)",
+    "webchat_model": "deepseek/deepseek-chat (unchanged)"
+  },
+  
+  "rollback_strategy": {
+    "primary": "Jarvis remains on DeepSeek for troubleshooting",
+    "fallback_1": "Environment variable toggle",
+    "fallback_2": "Configuration file restore",
+    "fallback_3": "Manual command switch",
+    "emergency": "Restart OpenClaw with default config"
+  },
+  
+  "testing_phases": [
+    {
+      "phase": 1,
+      "action": "Test Minimax API connectivity",
+      "verification": "API returns HTTP 200",
+      "rollback": "None needed"
+    },
+    {
+      "phase": 2,
+      "action": "Test single Discord channel",
+      "verification": "Channel responds with Minimax",
+      "rollback": "Revert single channel config"
+    },
+    {
+      "phase": 3,
+      "action": "Switch all Discord channels",
+      "verification": "All Discord channels use Minimax",
+      "rollback": "Revert all Discord configs"
+    },
+    {
+      "phase": 4,
+      "action": "Monitor for 24 hours",
+      "verification": "No errors, acceptable cost",
+      "rollback": "Full rollback if issues"
+    }
+  ],
+  
+  "environment_variables_needed": {
+    "for_minimax": {
+      "OPENAI_API_KEY": "sk-cp-mqDZwvwYG1u79lQAq_IoECIzYAvT1eBVcSOj3dIvTKcqRbRux_chEqTj1aHbvOtUCZ65CO6xYLSotXR1ocvisRzU4k6Zj1RiCpaf15ioXj5XW3DA1d8T5no",
+      "OPENAI_BASE_URL": "https://api.minimaxi.com/v1",
+      "OPENAI_MODEL": "MiniMax-M2.7"
+    },
+    "for_rollback": {
+      "DEEPSEEK_API_KEY": "Already configured",
+      "ALIYUN_API_KEY": "Already configured"
+    }
+  },
+  
+  "cost_implications": {
+    "current_daily": "~$0.10-0.50 (DeepSeek)",
+    "projected_daily": "~$0.30-1.50 (Minimax)",
+    "increase_factor": "3x (estimated)",
+    "monitoring": "https://platform.minimaxi.com/user-center/payment/token-plan",
+    "alert_threshold": "$5.00 daily or $50.00 monthly"
+  },
+  
+  "jarvis_responsibilities": {
+    "during_switch": [
+      "Monitor API responses",
+      "Check for error 1008 (insufficient balance)",
+      "Verify Discord channel responses",
+      "Track token usage"
+    ],
+    "after_switch": [
+      "24-hour monitoring",
+      "Cost tracking",
+      "Performance comparison",
+      "User feedback collection"
+    ],
+    "rollback_scenarios": [
+      "Minimax API consistently fails",
+      "Cost exceeds 5x DeepSeek cost",
+      "Response quality unacceptable",
+      "User requests rollback"
+    ]
+  },
+  
+  "execution_commands": {
+    "test_minimax": "cd /home/node/.openclaw/workspace && ./test-minimax-simple.sh",
+    "test_discord_channel": "openclaw message send --channel discord --to '#test-channel' --message 'Testing Minimax'",
+    "switch_single_channel": "Configure OpenClaw Discord binding for specific channel",
+    "switch_all_discord": "Update OpenClaw Discord default configuration",
+    "rollback_single": "Revert single channel binding",
+    "rollback_all": "Restore original Discord configuration"
+  },
+  
+  "success_metrics": {
+    "technical": [
+      "Minimax API response time < 5 seconds",
+      "No error 1008 (insufficient balance)",
+      "All Discord channels responsive",
+      "Jarvis remains on DeepSeek"
+    ],
+    "financial": [
+      "Cost increase < 5x current",
+      "No unexpected charges",
+      "Usage within Token Plan limits"
+    ],
+    "user_experience": [
+      "Response quality equal or better",
+      "No noticeable latency increase",
+      "Specialized agents available (!coding, !imaging, !video)"
+    ]
+  },
+  
+  "notes": [
+    "Jarvis (DeepSeek) will handle all rollback operations",
+    "Telegram remains on DeepSeek for stable communication",
+    "Webchat remains on DeepSeek for control UI",
+    "Cost monitoring is critical - set up alerts",
+    "Test with low-traffic channel first"
+  ]
+}

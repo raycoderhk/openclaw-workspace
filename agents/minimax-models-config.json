@@ -1,0 +1,84 @@
+{
+  "minimax_models": {
+    "text_models": [
+      {
+        "name": "MiniMax-M2.7",
+        "description": "Standard M2.7 model for general text tasks (OpenAI-compatible)",
+        "context_length": 204800,
+        "best_for": ["general_chat", "analysis", "summarization", "translation", "coding"],
+        "cost_input": 0.30,
+        "cost_output": 1.20,
+        "unit": "per_million_tokens"
+      },
+      {
+        "name": "MiniMax-M2.7-highspeed",
+        "description": "Fast M2.7 model for quick responses",
+        "context_length": 204800,
+        "best_for": ["quick_responses", "simple_tasks", "conversation"],
+        "cost_input": 0.30,
+        "cost_output": 1.20,
+        "unit": "per_million_tokens"
+      },
+      {
+        "name": "MiniMax-M2.5",
+        "description": "M2.5 model for balanced performance",
+        "context_length": 204800,
+        "best_for": ["balanced_tasks", "cost_effective"],
+        "cost_input": 0.30,
+        "cost_output": 1.20,
+        "unit": "per_million_tokens"
+      }
+    ],
+    "vision_models": [
+      {
+        "name": "MiniMax-M2.7",
+        "description": "Vision capabilities included in M2.7 model (OpenAI-compatible)",
+        "context_length": 4096,
+        "best_for": ["image_analysis", "visual_qa", "object_detection", "scene_description"],
+        "cost_input": 0.30,
+        "cost_output": 1.20,
+        "unit": "per_million_tokens",
+        "note": "Vision capabilities are part of the M2.7 model, not a separate vision model"
+      }
+    ],
+    "image_generation": {
+      "available": true,
+      "description": "Separate image generation service with different pricing",
+      "best_for": ["creative_images", "illustrations", "design_concepts"],
+      "note": "Billed separately from text/vision models"
+    },
+    "voice_synthesis": {
+      "available": true,
+      "description": "Separate voice synthesis service",
+      "best_for": ["audio_content", "voiceovers", "podcasts", "accessibility"],
+      "note": "Billed separately from text/vision models"
+    }
+  },
+  "subscription_info": {
+    "plan": "M2.7 Token Plan Plus",
+    "price": "179 RMB/year",
+    "discount": "90% off regular price",
+    "features": ["text_generation", "image_generation", "voice_synthesis", "vision_models"],
+    "billing_model": "pay_per_use_separate",
+    "api_keys": {
+      "text_vision": "MINIMAX_API_KEY (sk-cp-...)",
+      "image_gen": "Separate API key needed",
+      "voice_synth": "Separate API key needed"
+    }
+  },
+  "agent_configurations": {
+    "coding_agent": "minimax-coding-agent.json",
+    "imaging_agent": "minimax-imaging-agent.json",
+    "video_agent": "minimax-video-agent.json",
+    "general_agent": "minimax-m2.7-agent.json"
+  },
+  "usage_recommendations": {
+    "cost_effective": "Use text models for most tasks (best value)",
+    "moderate_use": "Use vision models when needed for image analysis",
+    "controlled_use": "Use image generation sparingly (higher cost)",
+    "specialized_use": "Use voice synthesis for specific audio needs"
+  },
+  "created": "2026-03-26",
+  "updated": "2026-03-26",
+  "version": "1.0.0"
+}

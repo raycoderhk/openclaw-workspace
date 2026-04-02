@@ -56,3 +56,21 @@ Add whatever helps you do your job. This is your cheat sheet.
 
 ### Config Location
 `~/.config/himalaya/config.toml`
+
+## GitHub Configuration
+
+**Personal Access Token:** Stored in environment variable `GITHUB_TOKEN`
+**Scope:** `repo` (full control of private repositories)
+
+### Usage
+Used by agents/scripts to push code to GitHub repos:
+- `raycoderhk/study-set`
+- `raycoderhk/mini-games`
+- `raycoderhk/kanban-board`
+- `raycoderhk/mission-control`
+
+### Setup
+1. Create PAT: https://github.com/settings/tokens
+2. Select `repo` scope
+3. Add to environment: `export GITHUB_TOKEN=ghp_xxx`
+4. Or add to OpenClaw config for persistent access

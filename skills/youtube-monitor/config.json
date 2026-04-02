@@ -1,12 +1,20 @@
 {
   "channels": [
     {
-      "id": "UCK8MqQt94uWvpWv2h9gZ3sA",
-      "name": "All In Podcast",
+      "id": "UCESLZhusAkFfsNsApnjF_Cg",
+      "name": "All-In Podcast",
+      "enabled": true
+    },
+    {
+      "id": "UCSHZKyawb77ixDdsGog4iWA",
+      "name": "Lex Fridman",
       "enabled": true
     }
   ],
   "checkIntervalMinutes": 30,
   "notifyDiscord": true,
-  "createKanbanTask": true
+  "createKanbanTask": true,
+  "discord_webhook": "https://discord.com/api/webhooks/1488017483368501299/X2YLwe54qZFzURcWLpZ_MU_GB_JWMS5HP1hNqJmq7Q5xtBK_Xsb6A_rp98AjEe0s4GSi",
+  "discord_webhook_token": "X2YLwe54qZFzURcWLpZ_MU_GB_JWMS5HP1hNqJmq7Q5xtBK_Xsb6A_rp98AjEe0s4GSi",
+  "discord_webhook_id": "1488017483368501299"
 }

@@ -1,0 +1,109 @@
+{
+  "name": "Minimax Discord Channel Integration",
+  "description": "Configure #minimax-chat channel to use Minimax M2.7 by default",
+  "date": "2026-03-26",
+  
+  "channel_configuration": {
+    "channel_name": "minimax-chat",
+    "channel_topic": "Minimax M2.7 AI Assistant - Specialized agents available",
+    "default_agent": "minimax-m2.7-agent",
+    "model_provider": "openai",
+    "model_name": "MiniMax-M2.7",
+    "base_url": "https://api.minimaxi.com/v1",
+    "api_key_env": "MINIMAX_API_KEY"
+  },
+  
+  "agent_configurations": {
+    "minimax-m2.7-agent": {
+      "name": "Minimax General Agent",
+      "description": "General purpose agent using Minimax M2.7",
+      "model": "MiniMax-M2.7",
+      "model_provider": "openai",
+      "temperature": 0.7,
+      "max_tokens": 2048
+    },
+    "minimax-coding-agent": {
+      "name": "Minimax Coding Agent",
+      "description": "Specialized for programming tasks",
+      "model": "MiniMax-M2.7",
+      "model_provider": "openai",
+      "temperature": 0.2,
+      "max_tokens": 4096
+    },
+    "minimax-imaging-agent": {
+      "name": "Minimax Imaging Agent",
+      "description": "Specialized for image analysis (vision capabilities)",
+      "model": "MiniMax-M2.7",
+      "model_provider": "openai",
+      "temperature": 0.7,
+      "max_tokens": 2048
+    },
+    "minimax-video-agent": {
+      "name": "Minimax Video Agent",
+      "description": "Specialized for script writing and creative content",
+      "model": "MiniMax-M2.7",
+      "model_provider": "openai",
+      "temperature": 0.8,
+      "max_tokens": 4096
+    }
+  },
+  
+  "discord_commands": {
+    "!minimax-help": "Show all Minimax commands",
+    "!minimax-coding": "Switch to coding agent",
+    "!minimax-imaging": "Switch to imaging agent",
+    "!minimax-video": "Switch to video agent",
+    "!minimax-status": "Show current agent and model",
+    "!minimax-models": "Show available Minimax models",
+    "!minimax-reset": "Reset conversation history"
+  },
+  
+  "setup_instructions": [
+    "1. Create Discord channel named 'minimax-chat'",
+    "2. Add OpenClaw bot to the channel",
+    "3. Configure OpenClaw to use this configuration",
+    "4. Set environment variables:",
+    "   - OPENAI_API_KEY=sk-cp-... (from vision/config.env)",
+    "   - OPENAI_BASE_URL=https://api.minimaxi.com/v1",
+    "   - OPENAI_MODEL=MiniMax-M2.7",
+    "5. Test with message: 'Hello from Minimax!'"
+  ],
+  
+  "environment_variables": {
+    "required": {
+      "OPENAI_API_KEY": "sk-cp-mqDZwvwYG1u79lQAq_IoECIzYAvT1eBVcSOj3dIvTKcqRbRux_chEqTj1aHbvOtUCZ65CO6xYLSotXR1ocvisRzU4k6Zj1RiCpaf15ioXj5XW3DA1d8T5no",
+      "OPENAI_BASE_URL": "https://api.minimaxi.com/v1",
+      "OPENAI_MODEL": "MiniMax-M2.7"
+    },
+    "optional": {
+      "MINIMAX_REASONING_SPLIT": "true",
+      "MINIMAX_TEMPERATURE": "0.7",
+      "MINIMAX_MAX_TOKENS": "2048"
+    }
+  },
+  
+  "testing_procedure": [
+    "1. Send message to #minimax-chat: 'What model are you using?'",
+    "2. Bot should respond: 'I'm using Minimax M2.7'",
+    "3. Test command: !minimax-coding",
+    "4. Bot should confirm switch to coding agent",
+    "5. Ask coding question: 'Write Python function to sort list'",
+    "6. Bot should respond with Python code"
+  ],
+  
+  "cost_management": {
+    "estimated_cost_per_message": "0.0001-0.001 USD",
+    "monthly_estimate_light": "0.90 USD",
+    "monthly_estimate_medium": "3.90 USD",
+    "monthly_estimate_heavy": "18.00 USD",
+    "monitoring_url": "https://platform.minimaxi.com/user-center/payment/token-plan"
+  },
+  
+  "notes": [
+    "This channel will ONLY use Minimax models",
+    "Other channels continue using default models (DeepSeek/Aliyun)",
+    "Vision capabilities are part of M2.7 model (no separate vision model)",
+    "Error 1008 means quota allocation needed for native API",
+    "OpenAI-compatible API works with Token Plan"
+  ]
+}

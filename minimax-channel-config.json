@@ -1,0 +1,19 @@
+{
+  "minimax_channel_config": {
+    "channel_name": "minimax-chat",
+    "channel_id": "1486557433886281769",
+    "model": "MiniMax-M2.7",
+    "base_url": "https://api.minimaxi.com/v1",
+    "api_key": "sk-cp-mqDZwvwYG1u79lQAq_IoECIzYAvT1eBVcSOj3dIvTKcqRbRux_chEqTj1aHbvOtUCZ65CO6xYLSotXR1ocvisRzU4k6Zj1RiCpaf15ioXj5XW3DA1d8T5no",
+    "status": "active",
+    "created": "2026-03-26T02:54:12+00:00",
+    "commands": {
+      "!minimax-help": "Show Minimax commands",
+      "!minimax-coding": "Switch to coding agent",
+      "!minimax-imaging": "Switch to imaging agent",
+      "!minimax-video": "Switch to video agent",
+      "!minimax-status": "Show current settings",
+      "!minimax-models": "Show available models"
+    }
+  }
+}

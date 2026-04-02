@@ -23,18 +23,27 @@ We deploy via **GitHub → Zeabur** (GitOps pattern). Push to GitHub → Zeabur 
 
 ```
 /home/node/.openclaw/workspace/           ← Main workspace (git repo root)
-  hk-places-quiz/                        ← Static HTML games (→ mini-games repo)
-  kanban-board/                          ← Kanban backend (→ kanban-board repo)
-  kanban-zeabur/                         ← Old Kanban, being replaced
-  games/2048-game/                       ← 2048 game (→ 2048-game repo)
-
-/home/node/.openclaw/agents/coding/workspace/projects/  ← Coding agent projects
-  gameworld/geobite/                     ← GeoBite (→ mini-games repo subfolder)
+  mini-games/                            ← Gameworld repo (→ raycoderhk/mini-games)
+  kanban-board/                          ← Kanban backend (→ raycoderhk/kanban-board)
+  mission-control/                       ← Mission Control (→ raycoderhk/mission-control)
+  projects/                              ← Community projects (→ raycoderhk/openclaw-workspace)
 ```
 
-### Step 2: Copy project to correct location
+### Step 2: Create project in correct location
 
-For static HTML games → place in `workspace/hk-places-quiz/` or create subfolder in `workspace/games/`
+**⚠️ IMPORTANT: Coding Agent Restrictions**
+- Coding agent CANNOT write to `/home/node/.openclaw/workspace/mini-games/`
+- Coding agent's workspace is: `/home/node/.openclaw/agents/coding/workspace/projects/`
+- This means: **Coding agent must be told to write directly to the correct repo path**
+
+**正確做法：直接在工作區創建**
+```bash
+# For gameworld projects, always use:
+cd /home/node/.openclaw/workspace/mini-games/
+mkdir -p your-project/
+```
+
+**If coding agent creates files in wrong location:** Main agent (Jarvis) will need to manually copy them.
 
 ### Step 3: Run deploy script
 

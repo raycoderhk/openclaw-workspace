@@ -172,6 +172,9 @@ If nothing needs attention, reply HEARTBEAT_OK.
   - 👥 預報：Rex🐻 / 珠珠 / 陳太 / So / 黃生 / ?
 • 16:30-18:30 [Daughter] 武術補堂 🥋
 
+**4 月 2 日 (星期四)**
+• 09:00-10:00 [Raymond] Pickleball / Badminton Court Booking
+
 **4 月 3 日 (星期五)**
 • 14:00-17:00 [Raymond] Pickle City Tsuen Wan with Pulley
   - 📍 Pickle City at Cable TV tower 27/F
@@ -203,13 +206,16 @@ If nothing needs attention, reply HEARTBEAT_OK.
   - 🎫 Sun Life Presents: SANDY LAM RESONANCE : Reconstructed Hong Kong Exclusive
   - 📍 Ticket collection via kiosk/courier
   - 🔢 Transaction No.: 771005620000181
+  - 💰 已購票：$988 x 2 = $1,976 (3月26日成功購票)
 
 **5 月 17 日 (星期日)**
 • 19:00 [Couple] 林憶蓮演唱會 @ Kai Tak Stadium
   - 🎫 Sun Life Presents: SANDY LAM RESONANCE : Reconstructed Hong Kong Exclusive
   - 📍 Kai Tak Stadium, Kai Tak Sports Park
   - 👥 2 tickets (夫婦)
+  - 💰 票價：$988 x 2 = $1,976
   - 🔢 Transaction No.: 771005620000181
+  - ✅ 購票狀態：已成功購票 (3月26日)
 
 **4 月 8 日 (星期三)**
 • [Raymond] 匹克球 @ 愉景新城會所 (TBD)
