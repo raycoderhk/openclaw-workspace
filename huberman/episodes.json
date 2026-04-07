@@ -1,0 +1,79 @@
+{
+  "last_updated": "2026-04-07",
+  "source": "hubermanlab.com + podcastnotes.org",
+  "total_episodes": 100,
+  "completed": 2,
+  "episodes": [
+    {
+      "id": 1,
+      "title": "Sleep Toolkit: Tools for Optimizing Sleep & Sleep-Wake Timing",
+      "episode": "Ep 84",
+      "duration": "90 min",
+      "status": "done",
+      "source": "podcastnotes.org",
+      "key_protocols": [
+        "Morning sunlight 30-60 min after waking",
+        "Consistent sleep/wake schedule",
+        "Avoid blue light 10pm-4am",
+        "Magnesium + Theanine + Apigenin stack",
+        "Nasal breathing for sleep"
+      ],
+      "key_insights": [
+        "Morning light anchors circadian rhythm",
+        "Sunset viewing offsets evening light damage",
+        "Sleep stack: Magnesium 145mg + Theanine 100-400mg + Apigenin 50mg",
+        "Consistent schedule 7 days/week critical"
+      ],
+      "action_items": [
+        "Get 10-30 min outdoor light immediately after waking",
+        "Set consistent sleep/wake time",
+        "Dim lights 10pm-4am"
+      ]
+    },
+    {
+      "id": 2,
+      "title": "Controlling Your Dopamine for Motivation, Focus & Satisfaction",
+      "episode": "Ep 39",
+      "duration": "80 min",
+      "status": "done",
+      "source": "hubermanlab.com",
+      "key_protocols": [
+        "Deliberate cold exposure",
+        "Caffeine timing",
+        "Dopamine stacking prevention",
+        "Reward completion"
+      ],
+      "key_insights": [
+        "Cold exposure raises baseline dopamine",
+        "Pre-bed dopamine = next day motivation",
+        "Discipline = dopamine management"
+      ],
+      "action_items": [
+        "Morning cold shower 2-5 min",
+        "Delay caffeine 90-120 min after waking",
+        "Clear dopamine stack before bed"
+      ]
+    },
+    {
+      "id": 3,
+      "title": "How to Build Endurance Using Science",
+      "episode": "Ep 88",
+      "duration": "100 min",
+      "status": "new",
+      "source": "hubermanlab.com",
+      "key_protocols": [
+        "Zone 2 training",
+        "Nasal breathing",
+        "Phrenic nerve training"
+      ],
+      "key_insights": [
+        "Nasal breathing enhances endurance",
+        "Side stitch = phrenic nerve issue"
+      ],
+      "action_items": [
+        "Zone 2 training 3-4x/week",
+        "Practice nasal breathing during exercise"
+      ]
+    }
+  ]
+}
