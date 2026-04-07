@@ -552,19 +552,20 @@ If nothing needs attention, reply HEARTBEAT_OK.
 
 ---
 
-### 🎬 YouTube Monitor (每次 Heartbeat 檢查)
+### 🎬 YouTube Monitor (停用中)
 **目標:** 自動監控 YouTube 頻道新片並發送 Discord 通知  
 **頻率:** 每次 Heartbeat (約 30 分鐘)  
 **位置:** `skills/youtube-monitor/check_videos.py`  
-**通知:** Discord #youtube-alert (1484466586445287434)
+**狀態:** ❌ 已停用 (2026-04-07)
 
 ---
 
-### 🥚 爛 Gag Discord Monitor (每次 Heartbeat 檢查)
+### 🥚 爛 Gag Discord Monitor (停用中)
 **目標:** 自動監察 #gag channel 新訊息，解析並提交爛 gag 到 GitHub  
 **頻率:** 每次 Heartbeat (約 30 分鐘)  
 **位置:** `scripts/add_gag_from_discord.py`  
-**Channel:** #gag (1485598655430918165)
+**Channel:** #gag (1485598655430918165)  
+**狀態:** ❌ 已停用 (2026-04-07)
 
 **檢查步驟:**
 1. 讀取 #gag channel 最近 10 條訊息
