@@ -267,6 +267,10 @@ async function getOrCreateUser(email, name, googleId, image) {
   - Department: Paediatrics and Adolescent Medicine / 兒童及青少年科
   - Time: 3:15 PM
 
+**June 20 (Sat):** 🏸 **Raymond** 深圳 匹克球聯賽 (Confirmed time: 10:00-14:00)
+  - Location: 深圳
+  - Time adjusted from 10:00-18:00 to 10:00-14:00
+
 **September 22 (Tue):** 🏥 Grandma WONG T* M* medical appointment @ Princess Margaret Hospital
   - Department: Urology (泌尿外科)
   - Time: 11:30 AM

@@ -227,6 +227,11 @@ If nothing needs attention, reply HEARTBEAT_OK.
   - 🩺 耳鼻喉科 / Ear, Nose and Throat (ENT)
   - 📋 門診 (Outpatient)
 
+**6 月 20 日 (星期六)** 🏸
+• 10:00-14:00 [Raymond] 深圳 匹克球聯賽 (確認)
+  - 📍 深圳
+  - ⏰ 時間調整：10:00-14:00（原 10:00-18:00）
+
 **6 月 3 日 (星期三)** 🏥
 • 15:15 [Son] WONG T* Y* 預約就診 @ 瑪嘉烈醫院
   - 🏥 瑪嘉烈醫院 (Princess Margaret Hospital)
